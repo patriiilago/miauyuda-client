@@ -1,6 +1,6 @@
 import React from "react"
-import Navigation from './../Components/Navbar/Navbar'
-import AppRoutes from "./../Routes/AppRoutes"
+import Navigation from './components/Navbar/Navbar'
+import AppRoutes from "./routes/AppRoutes"
 
 
 
