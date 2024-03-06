@@ -1,68 +1,141 @@
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
+import { Container, Button, Form, Col, Row } from "react-bootstrap"
+import PetForm from "../PetForm/PetForm";
+import '../../components/SignUpFormClient/SignUpFormClient.css'
+import { useState } from "react"
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
-const VITE_BASE_URL = "http://localhost:5005"
+const VTE_SERVER_URL = "http://localhost:5005"
 
 
-// const navigate = useNavigate()
-
-const handleFormSubmit = (event) => {
-    event.preventDefault()
-}
 const SignUpFormClient = () => {
 
+    const [clientData, setClientData] = useState({
+        email: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        street: "",
+        phone: "",
+        city: "",
+        country: "",
+        zipCode: "",
+    })
+
+    const navigate = useNavigate()
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault()
+
+        axios
+            .post(`${VTE_SERVER_URL}/api/auth/signup`, clientData)
+            .then(() => navigate('/'))
+            .catch(err => console.log(err))
+
+    }
+
+    const handleInputChange = (event) => {
+        const { value, name } = event.target
+        setClientData({ ...clientData, [name]: value })
+
+    }
+
+
+
     return (
-
-
-
         <Container>
-            <Form>
-                <Row className="mb-3">
+            <Form onSubmit={handleFormSubmit}>
+                <Row className="mb-3 mt-3">
                     <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="Introduce tu email" />
+                        <Form.Label>Email:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            type="email"
+                            placeholder="Introduce tu email"
+                            value={clientData.email}
+                            name={"email"}
+                        />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPassword">
-                        <Form.Label>Contraseña</Form.Label>
-                        <Form.Control type="password" placeholder="Contraseña" />
+                        <Form.Label>Contraseña:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            type="password"
+                            placeholder="Contraseña"
+                            value={clientData.password}
+                            name={"password"}
+                        />
                     </Form.Group>
                 </Row>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridName">
-                        <Form.Label>Nombre</Form.Label>
-                        <Form.Control type="text" placeholder="Introduce tu email" />
+                        <Form.Label>Nombre:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            type="text"
+                            placeholder="Introduce tu nombre"
+                            value={clientData.firstName}
+                            name={"firstName"}
+                        />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridLastName">
-                        <Form.Label>Apellidos</Form.Label>
-                        <Form.Control type="text" placeholder="Contraseña" />
+                        <Form.Label>Apellidos:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            type="text"
+                            placeholder="Introduce tus apellidos"
+                            value={clientData.lastName}
+                            name={"lastName"}
+                        />
                     </Form.Group>
                 </Row>
 
-                <Form.Group className="mb-3" controlId="formGridAddress1">
-                    <Form.Label>Dirección</Form.Label>
-                    <Form.Control placeholder="Introduce tu dirección" />
-                </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formGridAddress2">
-                    <Form.Label>Detalles dirección</Form.Label>
-                    <Form.Control placeholder="Piso, estudio, apartamento..." />
-                </Form.Group>
+                <Row className="mb-3">
+                    <Form.Group as={Col} className="mb-3" controlId="formGridAddress1">
+                        <Form.Label>Dirección:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            placeholder="Introduce tu dirección"
+                            value={clientData.street}
+                            name={"street"}
+                        />
+                    </Form.Group>
+
+                    <Form.Group as={Col} className="mb-3" controlId="formGridPhone">
+                        <Form.Label>Teléfono de contacto:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            placeholder="Teléfono 1"
+                            value={clientData.phone}
+                            name={"phone"}
+                        />
+                    </Form.Group>
+                </Row>
+
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label>Ciudad</Form.Label>
-                        <Form.Control />
+                        <Form.Label>Ciudad:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            placeholder="Ciudad"
+                            value={clientData.city}
+                            name={"city"}
+                        />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label>País</Form.Label>
-                        <Form.Select defaultValue="Choose...">
+                        <Form.Label>País:</Form.Label>
+                        <Form.Select
+                            onChange={handleInputChange}
+                            type="text"
+                            value={clientData.country}
+                            name={"country"}
+                        >
                             <option>España</option>
                             <option>Portugal</option>
                             <option>Francia</option>
@@ -74,38 +147,28 @@ const SignUpFormClient = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label>C.P.</Form.Label>
-                        <Form.Control />
+                        <Form.Label>C.P.:</Form.Label>
+                        <Form.Control
+                            onChange={handleInputChange}
+                            placeholder="Código Postal"
+                            value={clientData.zipcode}
+                            name={"zipCode"}
+                        />
                     </Form.Group>
                 </Row>
 
                 <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridNumberPets">
-                        <Form.Label>Número de mascotas</Form.Label>
-                        <Form.Control type="number" placeholder="Número de mascotas" />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridStateAnimals">
-                        <Form.Label>Tipo de mascota</Form.Label>
-                        <Form.Select defaultValue="Choose...">
-                            <option>Perro</option>
-                            <option>Gato</option>
-                            <option>Conejo</option>
-                            <option>Pájaro</option>
-                            <option>Reptil</option>
-                            <option>Hurón</option>
-                            <option>Otros</option>
-                        </Form.Select>
-                    </Form.Group>
+                    <PetForm />
                 </Row>
 
                 <Form.Group className="mb-3" id="formGridCheckbox">
                     <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." />
                 </Form.Group>
 
-                <Button variant="dark" type="submit">
-                    Enviar
+                <Button onClick={handleFormSubmit} variant="dark mb-3" type="submit">
+                    Dar de alta
                 </Button>
+
             </Form>
         </Container>
     );
