@@ -1,15 +1,30 @@
-import { Button, Nav, Navbar } from 'react-bootstrap'
-import { NavLink, Link } from "react-router-dom"
+import { Button, Nav, Navbar, Modal, Form } from 'react-bootstrap'
+import { NavLink, Link, useNavigate } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "./../../context/auth.context";
+import LoginForm from "./../../components/LoginForm/LoginForm"
 
 
-function Navigation() {
+const VITE_BASE_URL = 'http://localhost:5005'
 
+function Navigation(handleLoginSubmit) {
     const { user, isLoggedIn, logout } = useContext(AuthContext)
 
+    const [show, setShow] = useState(false);
+    const navigate = useNavigate()
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+
+
+
     return (
+
+
+
 
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" >
             <Container>
@@ -44,7 +59,25 @@ function Navigation() {
                                     <Button onClick={logout} className='nav-link' to={"/"}>Salir</Button>
 
                                     <p>¡Hola, {user.name}!</p>
+
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                            Mi perfil
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Link to={`/userprofile`}>
+                                                <Dropdown.Item href="#/action-1">Mi perfil</Dropdown.Item>
+                                            </Link>
+                                            <Link to={`/login`}>
+                                                <Dropdown.Item href="#/action-2">Cerrar sesión</Dropdown.Item>
+                                            </Link>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+
                                 </>
+
+
                             )
                         }
 
@@ -53,13 +86,23 @@ function Navigation() {
                                 <>
 
                                     <Link to={`/signup`}>
-                                        <Button variant="dark" className='btn-signup'>Crear Cuenta</Button>
+                                        <Button variant="dark" className='btn-signup' >Crear Cuenta</Button>
                                     </Link>
 
                                     <Link to={`/login`}>
-                                        <Button variant="dark" className='btn-login'>Iniciar Sesión</Button>
+                                        <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
                                     </Link>
 
+
+
+                                    <Modal show={show} onHide={handleClose}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Inicia Sesión</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <LoginForm />
+                                        </Modal.Body>
+                                    </Modal>
 
                                 </>
                             )
