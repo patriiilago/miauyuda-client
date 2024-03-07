@@ -5,9 +5,20 @@ const UserProfilePage = () => {
 
     const { user } = useContext(AuthContext)
 
-    return (
-        <h1>Este es tu perfil {user.name}</h1>
-    )
+    const [professionals, setProfessionals] = useState([])
+
+    useEffect(() => loadProfesional(), [])
+
+    const loadProfesional = () => {
+        ProfessionalServices
+            .getAllProfessionals(professionals)
+            .then(({ data }) => setProfessionals(data))
+            .catch(err => console.log(err))
+
+        return (
+            <h1>Este es tu perfil {user.name}</h1>
+        )
+    }
 }
 
 export default UserProfilePage
