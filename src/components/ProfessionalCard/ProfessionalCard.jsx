@@ -40,11 +40,11 @@ const ProfessionalCard = ({
                     <>
                         <strong>Especialidad:</strong> {schedule}
                         <br />
-                        <strong>Emergencias?:</strong> {emergencies ? "Yes" : "No"}
+                        <strong>Urgencias?:</strong> {emergencies ? "Yes" : "No"}
                         <br />
-                        <strong>Clinica:</strong> {name}
+                        <strong>Clínica:</strong> {name}
                         <br />
-                        <strong>Donde encontrarme:</strong>
+                        <strong>Dónde encontrarme:</strong>
                         {street}
                         {zipCode}
                         {city}
@@ -62,7 +62,7 @@ const ProfessionalCard = ({
                     </>
                 </Card.Text>
 
-                <Button variant="primary"><strong> Consulta</strong> </Button>
+                <Button variant="dark"><strong>Consultar</strong> </Button>
             </Card.Body>
         </Card>
 
