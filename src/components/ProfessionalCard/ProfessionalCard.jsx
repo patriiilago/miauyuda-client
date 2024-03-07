@@ -38,7 +38,7 @@ const ProfessionalCard = ({
                 <Card.Text>
                     <strong>Especialidad:</strong> {schedule}
                     <br />
-                    <strong>Urgencias?:</strong> {emergencies ? "Yes" : "No"}
+                    <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
                     <br />
                     <strong>Clínica:</strong> {name}
                     <br />

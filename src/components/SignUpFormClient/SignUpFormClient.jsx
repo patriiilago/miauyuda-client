@@ -1,4 +1,4 @@
-import { Container, Button, Form, Col, Row } from "react-bootstrap"
+import { Button, Form, Col, Row } from "react-bootstrap"
 import PetForm from "../PetForm/PetForm";
 import '../../components/SignUpFormClient/SignUpFormClient.css'
 import { useState } from "react"
@@ -6,9 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import uploadServices from "../../services/upload.services";
 import { COUNTRIES_LIST } from "../../consts/client.consts";
-
-const VTE_SERVER_URL = "http://localhost:5005"
-
+import authServices from "../../services/auth.services";
 
 const SignUpFormClient = () => {
 
@@ -30,9 +28,9 @@ const SignUpFormClient = () => {
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
-        // TODO
-        axios
-            .post(`${VTE_SERVER_URL}/api/auth/signup`, clientData)
+
+        authServices
+        postSignup(clientData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 
