@@ -56,7 +56,7 @@ function LoginForm({ handleClose }) {
                     onChange={handleImputChange}
                 />
 
-                <Button type="submit" variant="primary" onSubmit={handleClose}>Iniciar sesión</Button>
+                <Button type="submit" variant="primary" onClick={handleClose}>Iniciar sesión</Button>
 
             </Form.Group>
         </Form>

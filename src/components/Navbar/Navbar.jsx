@@ -6,7 +6,7 @@ import { AuthContext } from "./../../context/auth.context";
 import LoginForm from "./../../components/LoginForm/LoginForm"
 
 
-function Navigation(handleLoginSubmit) {
+function Navigation() {
     const { user, isLoggedIn, logout } = useContext(AuthContext)
 
     const [show, setShow] = useState(false);
@@ -49,9 +49,6 @@ function Navigation(handleLoginSubmit) {
                             isLoggedIn && (
                                 <>
 
-
-                                    <Button onClick={logout} className='nav-link' to={"/"}>Salir</Button>
-
                                     <p>¡Hola, {user.name}!</p>
 
                                     <Dropdown>
@@ -61,10 +58,10 @@ function Navigation(handleLoginSubmit) {
 
                                         <Dropdown.Menu>
                                             <Link to={`/userprofile`}>
-                                                <Dropdown.Item href="#/action-1">Mi perfil</Dropdown.Item>
+                                                <Dropdown.Item >Mi perfil</Dropdown.Item>
                                             </Link>
                                             <Link to={`/`}>
-                                                <Dropdown.Item href="#/action-2">Cerrar sesión</Dropdown.Item>
+                                                <Dropdown.Item onClick={logout}>Cerrar sesión</Dropdown.Item>
                                             </Link>
                                         </Dropdown.Menu>
                                     </Dropdown>
@@ -104,7 +101,7 @@ function Navigation(handleLoginSubmit) {
 
 
             <Modal show={modalShow}>
-                <Modal.Header closeButton>
+                <Modal.Header>
                     <Modal.Title id="contained-modal-title-vcenter">
                         Darte de alta como:
                     </Modal.Title>
@@ -113,10 +110,14 @@ function Navigation(handleLoginSubmit) {
                     <Container>
                         <Row>
                             <Col xs={9} md={6}>
-                                <img src="https://asset.cloudinary.com/dxfey6stw/f2f2aacc880a3d6ea9c644b69cdb219f" alt="imagen cliente" />
+                                <Link to={"/signupClient"} onClick={handleModalClose}>
+                                    <img src="https://rsc.lavanguardia.com/img/APP-v1001193.png" alt="imagen cliente" />
+                                </Link>
                             </Col>
-                            <Col xs={9} md={6}>
-                                <img src="https://asset.cloudinary.com/dxfey6stw/b3db1282fa24e6a8acaaf9ffad8f9079" alt="imagen profesional" />
+                            <Col xs={9} md={6} onClick={handleModalClose}>
+                                <Link to={"/signupProfessional"}>
+                                    <img src="https://rsc.lavanguardia.com/img/PAPEL-v1001193.png" alt="imagen profesional" />
+                                </Link>
                             </Col>
                         </Row>
                     </Container>

@@ -1,8 +1,9 @@
 import { Container, Button, Form, FloatingLabel, Col, Row } from "react-bootstrap"
-
 import uploadServices from "../../services/upload.services"
 import authServices from "../../services/auth.services"
-
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { COUNTRIES_LIST } from "../../consts/client.consts"
 const SignUpFormProfessional = () => {
 
     const [professionalData, setProfessionalData] = useState({
@@ -153,7 +154,7 @@ const SignUpFormProfessional = () => {
                         <Form.Label>Nombre de la clínica:</Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Nombre de tu clínica"
+                            placeholder="Nombre de la clínica"
                             onChange={handleInputChange}
                             value={professionalData.name}
                             name={"name"}
@@ -164,7 +165,7 @@ const SignUpFormProfessional = () => {
                         <Form.Label>Dirección de la clínica:</Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Calle, portal, piso, escalera"
+                            placeholder="Calle"
                             onChange={handleInputChange}
                             value={professionalData.street}
                             name={"street"}
@@ -199,7 +200,7 @@ const SignUpFormProfessional = () => {
                             onChange={handleInputChange}
                             type="text"
                             placeholder="País"
-                            value={clientData.country}
+                            value={professionalData.country}
                             name={"city"}
                         >
                             {

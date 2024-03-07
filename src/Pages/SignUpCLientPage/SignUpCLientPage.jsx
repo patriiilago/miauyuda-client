@@ -1,10 +1,10 @@
-import SignUpFormClient from './../../components/SignUpFormClient/SignUpFormClient'
+import SignUpFormClient from '../../components/SignUpFormClient/SignUpFormClient'
 import { Container } from "react-bootstrap"
 
-function SignupPage() {
+function SignupClientPage() {
 
     return (
-        <div className="SignupPage">
+        <div className="SignupClientPage">
 
             <Container>
 
@@ -18,4 +18,4 @@ function SignupPage() {
     )
 }
 
-export default SignupPage;
+export default SignupClientPage;
