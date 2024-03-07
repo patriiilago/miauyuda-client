@@ -1,11 +1,7 @@
 import { Container, Button, Form, FloatingLabel, Col, Row } from "react-bootstrap"
 
 import uploadServices from "../../services/upload.services"
-
-
-const VITE_BASE_URL = "http://localhost:5005"
-
-
+import authServices from "../../services/auth.services"
 
 const SignUpFormProfessional = () => {
 
@@ -36,8 +32,8 @@ const SignUpFormProfessional = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault()
 
-        axios
-            .post(`${VTE_SERVER_URL}/api/auth/signup`, professionalData)
+        authServices
+            .postSignup(professionalData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 
@@ -159,7 +155,7 @@ const SignUpFormProfessional = () => {
                             type="text"
                             placeholder="Nombre de tu clínica"
                             onChange={handleInputChange}
-                            value={professionalData.clinic.name}
+                            value={professionalData.name}
                             name={"name"}
                         />
                     </Form.Group>
@@ -170,7 +166,7 @@ const SignUpFormProfessional = () => {
                             type="text"
                             placeholder="Calle, portal, piso, escalera"
                             onChange={handleInputChange}
-                            value={professionalData.clinic.address.street}
+                            value={professionalData.street}
                             name={"street"}
                         />
                     </Form.Group>
@@ -181,7 +177,7 @@ const SignUpFormProfessional = () => {
                             type="text"
                             placeholder="Código Postal"
                             onChange={handleInputChange}
-                            value={professionalData.clinic.address.zipCode}
+                            value={professionalData.zipCode}
                             name={"zipCode"}
                         />
                     </Form.Group>
@@ -192,7 +188,7 @@ const SignUpFormProfessional = () => {
                             type="text"
                             placeholder="Ciudad"
                             onChange={handleInputChange}
-                            value={professionalData.clinic.address.city}
+                            value={professionalData.city}
                             name={"city"}
                         />
                     </Form.Group>
@@ -203,16 +199,12 @@ const SignUpFormProfessional = () => {
                             onChange={handleInputChange}
                             type="text"
                             placeholder="País"
-                            value={clientData.clinic.address.city}
+                            value={clientData.country}
                             name={"city"}
                         >
-                            <option>España</option>
-                            <option>Portugal</option>
-                            <option>Francia</option>
-                            <option>Italia</option>
-                            <option>Grecia</option>
-                            <option>Mexico</option>
-                            <option>Colombia</option>
+                            {
+                                COUNTRIES_LIST.map(elm => <option>{elm}</option>)
+                            }
                         </Form.Select>
                     </Form.Group>
                 </Row>

@@ -17,11 +17,12 @@ const professionalList = () => {
     }
 
     return (
-        professionals.map(professional => {
-            return (
+        <>
+            {professionals.map(professional => (
                 <ProfessionalCard  {...professional} key={professional._id} />
-            )
-        })
+
+            ))}
+        </>
     )
 }
 
