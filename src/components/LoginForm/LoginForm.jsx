@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { useNavigate, } from "react-router-dom"
 import { AuthContext } from "../../context/auth.context"
 import { Form, Button } from "react-bootstrap"
-import authServices from "../../services/auth.services"
+import AuthServices from "../../services/auth.services"
 
 function LoginForm({ handleClose }) {
 
@@ -18,7 +18,7 @@ function LoginForm({ handleClose }) {
     const handleLoginSubmit = (e) => {
         e.preventDefault()
 
-        authServices
+        AuthServices
             .login(clientData)
             .then((response) => {
                 storeToken(response.data.authToken)

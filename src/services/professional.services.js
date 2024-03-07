@@ -20,9 +20,9 @@ class ProfessionalServices {
         })
     }
 
-    // getAllProfessionals = () => {
-    //     return this.axiosApp.get(`/api/professionals`)
-    // }
+    getAllProfessionals = () => {
+        return this.axiosApp.get(`/api/professionals`)
+    }
     saveNewProfessional = () => {
         return this.axiosApp.post(`/api/professionals/newProfessional`)
     }
