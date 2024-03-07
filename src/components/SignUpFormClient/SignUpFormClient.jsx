@@ -12,6 +12,7 @@ const VTE_SERVER_URL = "http://localhost:5005"
 const SignUpFormClient = () => {
 
     const [clientData, setClientData] = useState({
+        image: "",
         email: "",
         password: "",
         firstName: "",
@@ -24,6 +25,7 @@ const SignUpFormClient = () => {
     })
 
     const navigate = useNavigate()
+    const [loadingImage, setLoadingImage] = useState(false)
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
@@ -42,7 +44,7 @@ const SignUpFormClient = () => {
     }
 
     const handleFileUpload = e => {
-
+        setLoadingImage(true)
         const formData = new FormData()
         formData.append('imageData', e.target.files[0])
 
@@ -50,8 +52,12 @@ const SignUpFormClient = () => {
             .uploadimage(formData)
             .then(res => {
                 setClientData({ ...clientData, image: res.data.cloudinary_url })
+                setLoadingImage(false)
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+                setLoadingImage(false)
+            })
     }
 
 
@@ -195,8 +201,8 @@ const SignUpFormClient = () => {
                         label="He leído y acepto los términos y condiciones." />
                 </Form.Group>
 
-                <Button onClick={handleFormSubmit} variant="dark mb-3" type="submit">
-                    Dar de alta
+                <Button onClick={handleFormSubmit} disabled={loadingImage} variant="dark mb-3" type="submit">
+                    {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
                 </Button>
 
             </Form>
