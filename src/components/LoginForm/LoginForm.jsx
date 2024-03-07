@@ -3,10 +3,11 @@ import { Link, useNavigate, } from "react-router-dom"
 import { AuthContext } from "../../context/auth.context"
 import { Form, Button } from "react-bootstrap"
 import axios from "axios"
+import authServices from "../../services/auth.services"
 
 const VITE_BASE_URL = "http://localhost:5005"
 
-function LoginPage() {
+function LoginPage({ handleClose }) {
     const [clientData, setClientData] = useState({
         email: "",
         password: ""
@@ -15,16 +16,17 @@ function LoginPage() {
     const { errorMessage, setErrorMessage } = useState(undefined)
     const { storeToken, setStoreToken } = useContext(AuthContext)
 
-    const handleLoginSubmit = (e) => {
-        e.preventDefault();
-        const { email, password } = clientData
-        const requestBody = { email, password }
+    const navigate = useNavigate
 
-        axios
-            .post(`${VITE_BASE_URL}/api/auth/login`, requestBody)
+    const handleLoginSubmit = (e) => {
+        e.preventDefault()
+
+        authServices
+            .login(clientData)
             .then((response) => {
                 storeToken(response.data.authToken)
                 autenticateUser()
+                handleClose()
                 navigate('/')
             })
             .catch(err => console.log(err))
@@ -36,7 +38,7 @@ function LoginPage() {
     }
 
     return (
-        <Form>
+        <Form onSubmit={handleLoginSubmit} >
             <Form.Group className="mb-3" controlId="FormLoginEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
@@ -56,9 +58,10 @@ function LoginPage() {
                     name='password'
                     onChange={handleImputChange}
                 />
-                <Button type="submit" variant="primary" onClick={handleLoginSubmit}>
-                    Iniciar sesión
-                </Button>
+
+                <Button type="submit" variant="primary">Iniciar sesión</Button>
+
+
             </Form.Group>
         </Form>
     )

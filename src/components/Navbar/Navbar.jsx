@@ -12,7 +12,7 @@ function Navigation(handleLoginSubmit) {
     const { user, isLoggedIn, logout } = useContext(AuthContext)
 
     const [show, setShow] = useState(false);
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -62,7 +62,7 @@ function Navigation(handleLoginSubmit) {
                                             <Link to={`/userprofile`}>
                                                 <Dropdown.Item href="#/action-1">Mi perfil</Dropdown.Item>
                                             </Link>
-                                            <Link to={`/login`}>
+                                            <Link to={`/`}>
                                                 <Dropdown.Item href="#/action-2">Cerrar sesión</Dropdown.Item>
                                             </Link>
                                         </Dropdown.Menu>
@@ -91,6 +91,8 @@ function Navigation(handleLoginSubmit) {
                                         <Modal.Body>
                                             <LoginForm />
                                         </Modal.Body>
+
+
                                     </Modal>
 
                                 </>
