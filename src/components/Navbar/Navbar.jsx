@@ -10,7 +10,6 @@ function Navigation(handleLoginSubmit) {
     const { user, isLoggedIn, logout } = useContext(AuthContext)
 
     const [show, setShow] = useState(false);
-    // const navigate = useNavigate()
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
