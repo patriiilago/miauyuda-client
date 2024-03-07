@@ -3,6 +3,7 @@ import '../../components/PetForm/PetForm.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import uploadServices from "../../services/upload.services"
 
 
 const VTE_SERVER_URL = "http://localhost:5005"
@@ -39,6 +40,19 @@ const PetForm = () => {
 
     }
 
+    const handleFileUpload = e => {
+
+        const formData = new FormData()
+        formData.append('imageData', e.target.files[0])
+
+        uploadServices
+            .uploadimage(formData)
+            .then(res => {
+                setPetData({ ...petData, imageUrl: res.data.cloudinary_url })
+            })
+            .catch(err => console.log(err))
+    }
+
 
     return (
 
@@ -46,6 +60,11 @@ const PetForm = () => {
             <Accordion.Item eventKey="0">
                 <Accordion.Header onSubmit={handleFormSubmit} variant="dark"><strong>Asegurar mascota:</strong> </Accordion.Header>
                 <Accordion.Body>
+
+                    <Form.Group className="mb-3" controlId="image">
+                        <Form.Label>Imagen (URL)</Form.Label>
+                        <Form.Control type="file" onChange={handleFileUpload} />
+                    </Form.Group>
 
                     <Row className="mb-3">
                         <Form.Group as={Col} variant="dark" className="mb-3" controlId="formGridPetName">

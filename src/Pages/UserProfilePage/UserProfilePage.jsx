@@ -1,12 +1,12 @@
+import { useContext } from "react"
+import { AuthContext } from './../../context/auth.context'
+
 const UserProfilePage = () => {
 
-
+    const { user } = useContext(AuthContext)
 
     return (
-        <div className="UserProfilePage">
-
-
-        </div >
+        <h1>Este es tu perfil {user.name}</h1>
     )
 }
 

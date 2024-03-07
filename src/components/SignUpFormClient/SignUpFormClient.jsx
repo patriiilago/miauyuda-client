@@ -4,6 +4,7 @@ import '../../components/SignUpFormClient/SignUpFormClient.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import uploadServices from "../../services/upload.services";
 
 const VTE_SERVER_URL = "http://localhost:5005"
 
@@ -40,11 +41,33 @@ const SignUpFormClient = () => {
 
     }
 
+    const handleFileUpload = e => {
+
+        const formData = new FormData()
+        formData.append('imageData', e.target.files[0])
+
+        uploadServices
+            .uploadimage(formData)
+            .then(res => {
+                setClientData({ ...clientData, imageUrl: res.data.cloudinary_url })
+            })
+            .catch(err => console.log(err))
+    }
+
 
 
     return (
         <Container>
             <Form onSubmit={handleFormSubmit}>
+
+                <Form.Group className="mb-3" controlId="image">
+                    <Form.Label>Imagen (URL)</Form.Label>
+                    <Form.Control
+                        type="file"
+                        onChange={handleFileUpload}
+                    />
+                </Form.Group>
+
                 <Row className="mb-3 mt-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email:</Form.Label>
@@ -99,6 +122,7 @@ const SignUpFormClient = () => {
                         <Form.Label>Dirección:</Form.Label>
                         <Form.Control
                             onChange={handleInputChange}
+                            type="text"
                             placeholder="Introduce tu dirección"
                             value={clientData.street}
                             name={"street"}
@@ -109,6 +133,7 @@ const SignUpFormClient = () => {
                         <Form.Label>Teléfono de contacto:</Form.Label>
                         <Form.Control
                             onChange={handleInputChange}
+                            type="text"
                             placeholder="Teléfono 1"
                             value={clientData.phone}
                             name={"phone"}
@@ -122,6 +147,7 @@ const SignUpFormClient = () => {
                         <Form.Label>Ciudad:</Form.Label>
                         <Form.Control
                             onChange={handleInputChange}
+                            type="text"
                             placeholder="Ciudad"
                             value={clientData.city}
                             name={"city"}
@@ -133,6 +159,7 @@ const SignUpFormClient = () => {
                         <Form.Select
                             onChange={handleInputChange}
                             type="text"
+                            placeholder="País"
                             value={clientData.country}
                             name={"country"}
                         >
@@ -150,8 +177,9 @@ const SignUpFormClient = () => {
                         <Form.Label>C.P.:</Form.Label>
                         <Form.Control
                             onChange={handleInputChange}
+                            text="text"
                             placeholder="Código Postal"
-                            value={clientData.zipcode}
+                            value={clientData.zipCode}
                             name={"zipCode"}
                         />
                     </Form.Group>
@@ -162,7 +190,9 @@ const SignUpFormClient = () => {
                 </Row>
 
                 <Form.Group className="mb-3" id="formGridCheckbox">
-                    <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." />
+                    <Form.Check
+                        type="checkbox"
+                        label="He leído y acepto los términos y condiciones." />
                 </Form.Group>
 
                 <Button onClick={handleFormSubmit} variant="dark mb-3" type="submit">

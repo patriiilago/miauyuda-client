@@ -1,55 +1,51 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import React, { useState, useEffect } from "react"
+
+const API_URL = 'http://localhost:5005'
 
 const AuthContext = React.createContext();
 
-const API_URL = 'http://localhost:5005'
 
 function AuthProviderWrapper(props) {
 
     useEffect(() => authenticateUser(), [])
 
-    const [user, setUser] = useState(null);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [user, setUser] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
 
-    const storeToken = tokenValue => {
-        localStorage.setItem('authToken', tokenValue)
-    }
+    // const storeToken = tokenValue => {
+    //     localStorage.setItem('authToken', tokenValue)
+    // }
 
     const authenticateUser = () => {
 
-        const storedToken = localStorage.getItem('authToken');
+        const token = localStorage.getItem('authToken');
 
-        console.log('estamos en el contexto', storedToken)
 
-        if (storedToken) {
-
-            axios
-                .get(`${API_URL}/api/auth/verify`, {
-                    headers: { Authorization: `Bearer ${storedToken}` }
+        if (token) {
+            authService
+                .verify(token)
+                .then(({ data }) => {
+                    setUser(data)
+                    setIsLoading(false)
                 })
-                .then((response) => {
-                    const { userInfo } = response.data;
-                    setIsLoggedIn(true);
-                    setUser(userInfo);
-                })
-                .catch((error) => {
-                    setIsLoggedIn(false);
-                    setUser(null);
-                })
-        } else {
-            logout()
+                .catch(err => logout())
         }
     }
 
     const logout = () => {
-        setUser(null)
-        setIsLoggedIn(false)
         localStorage.removeItem('authToken')
+        setUser(null)
+        setIsLoading(false)
     }
 
+    useEffect(() => {
+        authenticateUser()
+    }, [])
+
+
+
     return (
-        <AuthContext.Provider value={{ user, isLoggedIn, storeToken, authenticateUser, logout }}>
+        <AuthContext.Provider value={{ authenticateUser, user, logout, setIsLoading }}>
             {props.children}
         </AuthContext.Provider>
     )

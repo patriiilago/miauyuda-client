@@ -10,6 +10,7 @@ import UserProfilePage from './../Pages/UserProfilePage/UserProfilePage'
 import NotFoundPage from './../Pages/NotFoundPage/NotFoundPage'
 import AboutUsPage from './../Pages/AboutUsPage/AboutUsPage'
 import LoginPage from './../Pages/LoginPage/LoginPage'
+import PrivateRoute from "./PrivateRoute"
 
 const AppRoutes = () => {
 
@@ -25,7 +26,11 @@ const AppRoutes = () => {
             <Route path="/euthanasia" element={<EuthanasiaPage />} />
             <Route path="/editform" element={<EditFormPage />} />
             <Route path="/newrequest" element={<NewRequestPage />} />
-            <Route path="/userprofile" element={<UserProfilePage />} />
+
+            <Route element={<PrivateRoute />}>
+                <Route path="/userprofile" element={<UserProfilePage />} />
+            </Route>
+
             <Route path="/*" element={<NotFoundPage />} />
             <Route path="/about" element={<AboutUsPage />} />
 
