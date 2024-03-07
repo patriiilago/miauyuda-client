@@ -1,12 +1,20 @@
+import { Container } from "react-bootstrap"
+
 const EmergenciesPage = () => {
 
 
 
     return (
-        <div className="EmergenciesPage">
 
+        <Container>
+            <div className="EmergenciesPage">
 
-        </div >
+                <h1>Veterinarios de Urgencias</h1>
+
+                <ProfessionalList />
+
+            </div>
+        </Container>
     )
 }
 
