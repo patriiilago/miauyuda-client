@@ -1,6 +1,6 @@
 import axios from "axios"
 
-class ClientServices {
+class PetServices {
 
     constructor() {
 
@@ -20,19 +20,22 @@ class ClientServices {
         })
     }
 
-    saveNewClient = () => {
-        return this.axiosApp.post(`/api/clients/newClient`)
+    getAllPets = () => {
+        return this.axiosApp.get(`/api/pets`)
     }
-    getClient = () => {
-        return this.axiosApp.get(`/api/clients/CientId`)
+    savetNewPet = () => {
+        return this.axiosApp.post(`/api/pets/newPet`)
     }
-    editClient = () => {
-        return this.axiosApp.put(`/api/clients/CientId`)
+    getPet = () => {
+        return this.axiosApp.get(`/api/pets/PetId`)
     }
-    deleteClient = () => {
-        return this.axiosApp.delete(`/api/clients/CientId`)
+    editPet = () => {
+        return this.axiosApp.put(`/api/pets/PetId`)
+    }
+    deletePet = () => {
+        return this.axiosApp.delete(`/api/pets/PetId`)
     }
 
 }
 
-export default new ClientServices()
+export default new PetServices()

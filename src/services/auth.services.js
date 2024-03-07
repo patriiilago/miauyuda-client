@@ -1,6 +1,6 @@
 import axios from "axios"
 
-class ClientServices {
+class AuthServices {
 
     constructor() {
 
@@ -20,19 +20,15 @@ class ClientServices {
         })
     }
 
-    saveNewClient = () => {
-        return this.axiosApp.post(`/api/clients/newClient`)
+    postSignup = () => {
+        return this.axiosApp.post(`/api/auth/signup`)
     }
-    getClient = () => {
-        return this.axiosApp.get(`/api/clients/CientId`)
+    postlogin = () => {
+        return this.axiosApp.post(`/api/auth/login`)
     }
-    editClient = () => {
-        return this.axiosApp.put(`/api/clients/CientId`)
+    getVerify = () => {
+        return this.axiosApp.get(`/api/auth/verify`)
     }
-    deleteClient = () => {
-        return this.axiosApp.delete(`/api/clients/CientId`)
-    }
-
 }
 
-export default new ClientServices()
+export default new AuthServices()
