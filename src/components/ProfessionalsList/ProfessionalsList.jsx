@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import ProfessionalCard from '../ProfessionalCard/ProfessionalCard'
-
-const VITE_SERVER_URL = "http://localhost:5005"
-
+import ProfessionalServices from "../../services/professional.services"
 
 const professionalList = () => {
 
@@ -12,9 +10,8 @@ const professionalList = () => {
     useEffect(() => loadProfesional(), [])
 
     const loadProfesional = () => {
-        // TODO
-        axios
-            .get(`${VITE_SERVER_URL}/api/professionals`)
+        ProfessionalServices
+            .getAllProfessionals(professionals)
             .then(({ data }) => setProfessionals(data))
             .catch(err => console.log(err))
     }

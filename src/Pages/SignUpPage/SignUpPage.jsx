@@ -1,5 +1,5 @@
 import SignUpFormClient from './../../components/SignUpFormClient/SignUpFormClient'
-
+import { Container } from "react-bootstrap"
 
 function SignupPage() {
 

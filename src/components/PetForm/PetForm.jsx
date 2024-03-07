@@ -23,6 +23,7 @@ const PetForm = () => {
     })
 
     const navigate = useNavigate()
+    const [loadingImage, setLoadingImage] = useState(false)
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
@@ -41,7 +42,7 @@ const PetForm = () => {
     }
 
     const handleFileUpload = e => {
-
+        setLoadingImage(true)
         const formData = new FormData()
         formData.append('imageData', e.target.files[0])
 
@@ -49,8 +50,12 @@ const PetForm = () => {
             .uploadimage(formData)
             .then(res => {
                 setPetData({ ...petData, image: res.data.cloudinary_url })
+                setLoadingImage(false)
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+                setLoadingImage(false)
+            })
     }
 
 
@@ -169,10 +174,11 @@ const PetForm = () => {
 
                     <Button
                         onClick={handleFormSubmit}
+                        disabled={loadingImage}
                         type="submit"
                         className="mt-2 mb-2"
                         variant="dark">
-                        Guardar mascota
+                        {loadingImage ? 'Cargando imagen...' : 'Guardar mascota'}
                     </Button>
 
                 </Accordion.Body>

@@ -31,6 +31,7 @@ const SignUpFormProfessional = () => {
     })
 
     const navigate = useNavigate()
+    const [loadingImage, setLoadingImage] = useState(false)
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
@@ -50,7 +51,7 @@ const SignUpFormProfessional = () => {
 
 
     const handleFileUpload = e => {
-
+        setLoadingImage(true)
         const formData = new FormData()
         formData.append('imageData', e.target.files[0])
 
@@ -58,8 +59,12 @@ const SignUpFormProfessional = () => {
             .uploadimage(formData)
             .then(res => {
                 setProfessionalData({ ...professionalData, image: res.data.cloudinary_url })
+                setLoadingImage(false)
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+                setLoadingImage(false)
+            })
     }
 
     return (
@@ -245,8 +250,8 @@ const SignUpFormProfessional = () => {
                     <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." />
                 </Form.Group>
 
-                <Button variant="dark mb-3" type="submit">
-                    Dar de alta
+                <Button disabled={loadingImage} variant="dark mb-3" type="submit">
+                    {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
                 </Button>
 
             </Form>
