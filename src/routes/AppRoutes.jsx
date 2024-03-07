@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import HomePage from "./../Pages/HomePage/HomePage"
-import SignUpPage from './../Pages/SignUpPage/SignUpPage'
+import SignUpClientPage from '../Pages/SignUpCLientPage/SignUpCLientPage'
 import ProfessionalsListPage from './../Pages/ProfessionalsListPage/ProfessionalsListPage'
 import EmergenciesPage from './../Pages/EmergenciesPage/EmergenciesPage'
 import EuthanasiaPage from './../Pages/EuthanasiaPage/EuthanasiaPage'
@@ -10,13 +10,15 @@ import UserProfilePage from './../Pages/UserProfilePage/UserProfilePage'
 import NotFoundPage from './../Pages/NotFoundPage/NotFoundPage'
 import AboutUsPage from './../Pages/AboutUsPage/AboutUsPage'
 import PrivateRoute from "./PrivateRoute"
+import SignUpProfessionals from "./../Pages/SignUpProfessionalsPage/SignUpProfessionalsPage"
 
 const AppRoutes = () => {
 
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/signupClient" element={<SignUpClientPage />} />
+            <Route path="/signupProfessional" element={<SignUpProfessionals />} />
             <Route path="/professionals" element={<ProfessionalsListPage />} />
             <Route path="/emergencies" element={<EmergenciesPage />} />
             <Route path="/euthanasia" element={<EuthanasiaPage />} />

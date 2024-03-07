@@ -1,4 +1,4 @@
-import { Button, Nav, Navbar, Modal } from 'react-bootstrap'
+import { Button, Nav, Navbar, Modal, Row, Col } from 'react-bootstrap'
 import { NavLink, Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import { useContext, useState } from "react";
@@ -6,11 +6,15 @@ import { AuthContext } from "./../../context/auth.context";
 import LoginForm from "./../../components/LoginForm/LoginForm"
 
 
-function Navigation(handleLoginSubmit) {
+function Navigation() {
     const { user, isLoggedIn, logout } = useContext(AuthContext)
 
     const [show, setShow] = useState(false);
+    const [modalShow, setModalShow] = useState(false)
+    // const navigate = useNavigate()
 
+    const handleModalShow = () => setModalShow(true)
+    const handleModalClose = () => setModalShow(false)
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -45,9 +49,6 @@ function Navigation(handleLoginSubmit) {
                             isLoggedIn && (
                                 <>
 
-
-                                    <Button onClick={logout} className='nav-link' to={"/"}>Salir</Button>
-
                                     <p>¡Hola, {user.name}!</p>
 
                                     <Dropdown>
@@ -57,10 +58,10 @@ function Navigation(handleLoginSubmit) {
 
                                         <Dropdown.Menu>
                                             <Link to={`/userprofile`}>
-                                                <Dropdown.Item href="#/action-1">Mi perfil</Dropdown.Item>
+                                                <Dropdown.Item >Mi perfil</Dropdown.Item>
                                             </Link>
                                             <Link to={`/`}>
-                                                <Dropdown.Item href="#/action-2">Cerrar sesión</Dropdown.Item>
+                                                <Dropdown.Item onClick={logout}>Cerrar sesión</Dropdown.Item>
                                             </Link>
                                         </Dropdown.Menu>
                                     </Dropdown>
@@ -73,8 +74,8 @@ function Navigation(handleLoginSubmit) {
                             !isLoggedIn && (
                                 <>
 
-                                    <Link to={`/signup`}>
-                                        <Button variant="dark" className='btn-signup' >Crear Cuenta</Button>
+                                    <Link>
+                                        <Button variant="dark" className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
                                     </Link>
 
                                     <Link to={`/login`}>
@@ -97,6 +98,36 @@ function Navigation(handleLoginSubmit) {
                     <LoginForm handleClose={() => setShow(false)} />
                 </Modal.Body>
             </Modal>
+
+
+            <Modal show={modalShow}>
+                <Modal.Header>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                        Darte de alta como:
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="grid-example">
+                    <Container>
+                        <Row>
+                            <Col xs={9} md={6}>
+                                <Link to={"/signupClient"} onClick={handleModalClose}>
+                                    <img src="https://rsc.lavanguardia.com/img/APP-v1001193.png" alt="imagen cliente" />
+                                </Link>
+                            </Col>
+                            <Col xs={9} md={6} onClick={handleModalClose}>
+                                <Link to={"/signupProfessional"}>
+                                    <img src="https://rsc.lavanguardia.com/img/PAPEL-v1001193.png" alt="imagen profesional" />
+                                </Link>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button onClick={handleModalClose}>Close</Button>
+                </Modal.Footer>
+            </Modal>
+
+
 
         </Navbar >
     )
