@@ -4,16 +4,14 @@ import { AuthContext } from "../../context/auth.context"
 import { Form, Button } from "react-bootstrap"
 import authServices from "../../services/auth.services"
 
-const VITE_BASE_URL = "http://localhost:5005"
+function LoginForm({ handleClose }) {
 
-function LoginPage() {
     const [clientData, setClientData] = useState({
         email: "",
         password: ""
     })
 
-
-    const { storeToken, setStoreToken } = useContext(AuthContext)
+    const { storeToken, authenticateUser } = useContext(AuthContext)
 
     const navigate = useNavigate
 
@@ -24,9 +22,9 @@ function LoginPage() {
             .login(clientData)
             .then((response) => {
                 storeToken(response.data.authToken)
-                autenticateUser()
-                handleClose()
+                authenticateUser()
                 navigate('/')
+                handleClose()
             })
             .catch(err => console.log(err))
     }
@@ -60,10 +58,9 @@ function LoginPage() {
 
                 <Button type="submit" variant="primary" onSubmit={handleClose}>Iniciar sesión</Button>
 
-
             </Form.Group>
         </Form>
     )
 
 }
-export default LoginPage(handleLoginSubmit)
+export default LoginForm

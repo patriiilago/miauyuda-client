@@ -1,7 +1,6 @@
 import { Button, Card } from 'react-bootstrap'
 
 const ProfessionalCard = ({
-
     firstName,
     lastName,
     membershipNumber,
@@ -37,29 +36,27 @@ const ProfessionalCard = ({
                 </Card.Title>
 
                 <Card.Text>
-                    <>
-                        <strong>Especialidad:</strong> {schedule}
-                        <br />
-                        <strong>Urgencias?:</strong> {emergencies ? "Yes" : "No"}
-                        <br />
-                        <strong>Clínica:</strong> {name}
-                        <br />
-                        <strong>Dónde encontrarme:</strong>
-                        {street}
-                        {zipCode}
-                        {city}
-                        {country}
-                        <br />
-                        <strong>Contacto:</strong>
-                        {phone}
-                        <br />
-                        {email}
-                        <br />
+                    <strong>Especialidad:</strong> {schedule}
+                    <br />
+                    <strong>Urgencias?:</strong> {emergencies ? "Yes" : "No"}
+                    <br />
+                    <strong>Clínica:</strong> {name}
+                    <br />
+                    <strong>Dónde encontrarme:</strong>
+                    {street}
+                    {zipCode}
+                    {city}
+                    {country}
+                    <br />
+                    <strong>Contacto:</strong>
+                    {phone}
+                    <br />
+                    {email}
+                    <br />
 
-                        <strong>Valoración:</strong>{rate}
-                        <br />
-                        <strong>Comentarios:</strong>{reviews}
-                    </>
+                    <strong>Valoración:</strong>{rate}
+                    <br />
+                    <strong>Comentarios:</strong>{reviews}
                 </Card.Text>
 
                 <Button variant="dark"><strong>Consultar</strong> </Button>

@@ -12,6 +12,7 @@ const professionalList = () => {
     useEffect(() => loadProfesional(), [])
 
     const loadProfesional = () => {
+        // TODO
         axios
             .get(`${VITE_SERVER_URL}/api/professionals`)
             .then(({ data }) => setProfessionals(data))
@@ -19,13 +20,12 @@ const professionalList = () => {
     }
 
     return (
-        professionals.map((professional, index) => {
+        professionals.map(professional => {
             return (
-                <ProfessionalCard  {...professional} key={index} />
+                <ProfessionalCard  {...professional} key={professional._id} />
             )
         })
     )
-
-
 }
+
 export default professionalList

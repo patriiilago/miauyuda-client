@@ -9,18 +9,14 @@ import NewRequestPage from './../Pages/NewRequestPage/NewRequestPage'
 import UserProfilePage from './../Pages/UserProfilePage/UserProfilePage'
 import NotFoundPage from './../Pages/NotFoundPage/NotFoundPage'
 import AboutUsPage from './../Pages/AboutUsPage/AboutUsPage'
-import LoginPage from './../Pages/LoginPage/LoginPage'
 import PrivateRoute from "./PrivateRoute"
 
 const AppRoutes = () => {
-
-
 
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/signup" element={<SignUpPage />} />
-            <Route path="/login" element={<LoginPage />} />
             <Route path="/professionals" element={<ProfessionalsListPage />} />
             <Route path="/emergencies" element={<EmergenciesPage />} />
             <Route path="/euthanasia" element={<EuthanasiaPage />} />
@@ -31,8 +27,8 @@ const AppRoutes = () => {
                 <Route path="/userprofile" element={<UserProfilePage />} />
             </Route>
 
-            <Route path="/*" element={<NotFoundPage />} />
             <Route path="/about" element={<AboutUsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
 
         </Routes>
     )
