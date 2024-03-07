@@ -17,14 +17,7 @@ function Navigation(handleLoginSubmit) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
-
-
-
     return (
-
-
-
 
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" >
             <Container>
@@ -76,8 +69,6 @@ function Navigation(handleLoginSubmit) {
                                     </Dropdown>
 
                                 </>
-
-
                             )
                         }
 
@@ -92,8 +83,6 @@ function Navigation(handleLoginSubmit) {
                                     <Link to={`/login`}>
                                         <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
                                     </Link>
-
-
 
                                     <Modal show={show} onHide={handleClose}>
                                         <Modal.Header closeButton>
