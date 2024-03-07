@@ -1,11 +1,7 @@
 import { Container } from "react-bootstrap"
 import ProfessionalList from "../../components/ProfessionalsList/ProfessionalsList"
 
-
-
 const ProfessionalsListPage = () => {
-
-
 
     return (
         <Container>
@@ -14,7 +10,7 @@ const ProfessionalsListPage = () => {
 
                 <ProfessionalList />
 
-            </div >
+            </div>
 
         </Container>
     )

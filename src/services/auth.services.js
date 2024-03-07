@@ -26,7 +26,7 @@ class AuthServices {
     login(clientData) {
         return this.axiosApp.post(`/api/auth/login`, clientData)
     }
-    getVerify = () => {
+    verify = () => {
         return this.axiosApp.get(`/api/auth/verify`)
     }
 }

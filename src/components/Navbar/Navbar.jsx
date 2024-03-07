@@ -1,12 +1,10 @@
-import { Button, Nav, Navbar, Modal, Form } from 'react-bootstrap'
-import { NavLink, Link, useNavigate } from "react-router-dom"
+import { Button, Nav, Navbar, Modal } from 'react-bootstrap'
+import { NavLink, Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import { useContext, useState } from "react";
 import { AuthContext } from "./../../context/auth.context";
 import LoginForm from "./../../components/LoginForm/LoginForm"
 
-
-const VITE_BASE_URL = 'http://localhost:5005'
 
 function Navigation(handleLoginSubmit) {
     const { user, isLoggedIn, logout } = useContext(AuthContext)
@@ -84,17 +82,6 @@ function Navigation(handleLoginSubmit) {
                                         <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
                                     </Link>
 
-                                    <Modal show={show} onHide={handleClose}>
-                                        <Modal.Header closeButton>
-                                            <Modal.Title>Inicia Sesión</Modal.Title>
-                                        </Modal.Header>
-                                        <Modal.Body>
-                                            <LoginForm />
-                                        </Modal.Body>
-
-
-                                    </Modal>
-
                                 </>
                             )
                         }
@@ -102,6 +89,16 @@ function Navigation(handleLoginSubmit) {
                     </Nav>
                 </Navbar.Collapse>
             </Container >
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Inicia Sesión</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <LoginForm handleClose={() => setShow(false)} />
+                </Modal.Body>
+            </Modal>
+
         </Navbar >
     )
 
