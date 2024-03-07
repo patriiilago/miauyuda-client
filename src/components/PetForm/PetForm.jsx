@@ -48,7 +48,7 @@ const PetForm = () => {
         uploadServices
             .uploadimage(formData)
             .then(res => {
-                setPetData({ ...petData, imageUrl: res.data.cloudinary_url })
+                setPetData({ ...petData, image: res.data.cloudinary_url })
             })
             .catch(err => console.log(err))
     }

@@ -49,7 +49,7 @@ const SignUpFormClient = () => {
         uploadServices
             .uploadimage(formData)
             .then(res => {
-                setClientData({ ...clientData, imageUrl: res.data.cloudinary_url })
+                setClientData({ ...clientData, image: res.data.cloudinary_url })
             })
             .catch(err => console.log(err))
     }

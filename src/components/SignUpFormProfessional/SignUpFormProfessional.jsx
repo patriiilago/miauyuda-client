@@ -57,7 +57,7 @@ const SignUpFormProfessional = () => {
         uploadServices
             .uploadimage(formData)
             .then(res => {
-                setProfessionalData({ ...professionalData, imageUrl: res.data.cloudinary_url })
+                setProfessionalData({ ...professionalData, image: res.data.cloudinary_url })
             })
             .catch(err => console.log(err))
     }
