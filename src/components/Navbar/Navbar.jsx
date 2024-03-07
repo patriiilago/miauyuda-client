@@ -1,5 +1,5 @@
-import { Button, Nav, Navbar, Modal, Form } from 'react-bootstrap'
-import { NavLink, Link, useNavigate } from "react-router-dom"
+import { Button, Nav, Navbar, Modal } from 'react-bootstrap'
+import { NavLink, Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import { useContext, useState } from "react";
 import { AuthContext } from "./../../context/auth.context";
@@ -84,17 +84,18 @@ function Navigation(handleLoginSubmit) {
                                         <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
                                     </Link>
 
+
                                     <Modal show={show} onHide={handleClose}>
                                         <Modal.Header closeButton>
                                             <Modal.Title>Inicia Sesión</Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body>
-                                            <LoginForm />
-                                        </Modal.Body>
-
-
+                                        <Modal.Body><LoginForm /></Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="primary" onClick={handleClose} onSubmit={handleLoginSubmit}>
+                                                Save Changes
+                                            </Button>
+                                        </Modal.Footer>
                                     </Modal>
-
                                 </>
                             )
                         }

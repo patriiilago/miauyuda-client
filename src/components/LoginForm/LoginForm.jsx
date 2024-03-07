@@ -1,19 +1,18 @@
 import { useContext, useState } from "react"
-import { Link, useNavigate, } from "react-router-dom"
+import { useNavigate, } from "react-router-dom"
 import { AuthContext } from "../../context/auth.context"
 import { Form, Button } from "react-bootstrap"
-import axios from "axios"
 import authServices from "../../services/auth.services"
 
 const VITE_BASE_URL = "http://localhost:5005"
 
-function LoginPage({ handleClose }) {
+function LoginPage() {
     const [clientData, setClientData] = useState({
         email: "",
         password: ""
     })
 
-    const { errorMessage, setErrorMessage } = useState(undefined)
+
     const { storeToken, setStoreToken } = useContext(AuthContext)
 
     const navigate = useNavigate
@@ -59,7 +58,7 @@ function LoginPage({ handleClose }) {
                     onChange={handleImputChange}
                 />
 
-                <Button type="submit" variant="primary">Iniciar sesión</Button>
+                <Button type="submit" variant="primary" onSubmit={handleClose}>Iniciar sesión</Button>
 
 
             </Form.Group>
@@ -67,4 +66,4 @@ function LoginPage({ handleClose }) {
     )
 
 }
-export default LoginPage
+export default LoginPage(handleLoginSubmit)
