@@ -2,6 +2,7 @@ import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const ProfessionalCard = ({
+    _id,
     firstName,
     lastName,
     membershipNumber,
@@ -59,7 +60,7 @@ const ProfessionalCard = ({
                     <br />
                     <strong>Comentarios:</strong>{reviews}
                 </Card.Text>
-                <Link to={`/newrequest`}>
+                <Link to={`/newrequest/proffesional/${_id}`}>
                     <Button variant="dark"><strong>Consultar</strong> </Button>
                 </Link>
             </Card.Body>

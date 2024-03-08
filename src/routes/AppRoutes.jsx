@@ -21,9 +21,9 @@ const AppRoutes = () => {
             <Route path="/signupprofessional" element={<SignUpProfessionals />} />
             <Route path="/euthanasia" element={<EuthanasiaPage />} />
             <Route path="/editform" element={<EditFormPage />} />
-            <Route path="/newrequest" element={<NewRequestPage />} />
 
             <Route element={<PrivateRoute />}>
+                <Route path="/newrequest/proffesional/:proffesionalId" element={<NewRequestPage />} />
                 <Route path="/userprofile" element={<UserProfilePage />} />
                 <Route path="/professionals" element={<ProfessionalsListPage />} />
                 <Route path="/emergencies" element={<EmergenciesPage />} />

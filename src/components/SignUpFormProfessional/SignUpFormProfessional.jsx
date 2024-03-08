@@ -219,7 +219,7 @@ const SignUpFormProfessional = () => {
                         <Form.Select
                             type="text"
                             placeholder="Especialidad"
-                            onchange={handleInputChange}
+                            onChange={handleInputChange}
                             value={professionalData.specialty}
                             name={"specialty"}
 

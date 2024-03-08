@@ -1,19 +1,25 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import { Container, Button, Form, Col, Row } from "react-bootstrap"
 import requestServices from "../../services/request.services"
+import uploadServices from "../../services/upload.services"
+import { AuthContext } from "../../context/auth.context"
 
 const NewRequestForm = () => {
 
+    const { proffesionalId } = useParams()
+
+    const { user } = useContext(AuthContext)
+
     const [requestData, setRequestData] = useState({
-        clients: "",
-        professionals: "",
-        pets: "",
-        status: "",
+        client: user._id,
+        professional: proffesionalId,
+        status: false,
         question: "",
-        answer: "",
         image: "",
     })
 
+    const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)
 
     const handleFormSubmit = (event) => {
@@ -21,7 +27,7 @@ const NewRequestForm = () => {
 
         requestServices
             .saveNewRequest(requestData)
-            .then(() => navigate('/request-list'))
+            .then(() => navigate('/'))
             .catch(err => console.log(err))
 
     }
@@ -60,19 +66,6 @@ const NewRequestForm = () => {
                 </Form.Group>
 
                 <Row className="mb-3 mt-3">
-                    <Form.Group as={Col} controlId="formGridStatus">
-                        <Form.Label>Estado:</Form.Label>
-                        <Form.Select
-                            type="text"
-                            placeholder="Cual es su estado"
-                            onChange={handleInputChange}
-                            value={requestData.status}
-                            name={"status"}
-                        >
-                            <option>Pendiente</option>
-                            <option>Resuelta</option>
-                        </Form.Select>
-                    </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridQuestion">
                         <Form.Label>Cuestión a tratar:</Form.Label>
@@ -86,22 +79,10 @@ const NewRequestForm = () => {
                     </Form.Group>
                 </Row>
 
-                <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridFirstName">
-                        <Form.Label>Respuesta:</Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder="Respuesta"
-                            onChange={handleInputChange}
-                            value={requestData.firstName}
-                            name={"Answers"}
-                        />
-                    </Form.Group>
-                </Row>
-
                 <Button disabled={loadingImage} variant="dark mb-3" type="submit">
                     {loadingImage ? 'Cargando imagen...' : 'Enviar'}
                 </Button>
+
 
             </Form>
         </Container >
