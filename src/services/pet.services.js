@@ -23,7 +23,7 @@ class PetServices {
     getAllPets = () => {
         return this.axiosApp.get(`/api/pets`)
     }
-    savetNewPet = () => {
+    saveNewPet = () => {
         return this.axiosApp.post(`/api/pets/newPet`)
     }
     getPet = () => {

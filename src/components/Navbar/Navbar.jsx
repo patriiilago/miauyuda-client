@@ -59,12 +59,14 @@ function Navigation() {
                                         <Dropdown.Menu>
                                             <p>¡Hola, {user?.name}!</p>
                                             <Link to={`/userprofile`}>
-                                                <Dropdown.Item >Mi perfil</Dropdown.Item>
+                                                <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
                                             </Link>
                                             <Link to={`/`}>
-                                                <Dropdown.Item onClick={logout}>Cerrar sesión</Dropdown.Item>
+                                                <Dropdown.Item onClick={logout} as={'span'}>Cerrar sesión</Dropdown.Item>
                                             </Link>
-
+                                            <Link to={`/petform`}>
+                                                <Dropdown.Item as={'span'}>Añadir mascota</Dropdown.Item>
+                                            </Link>
 
 
                                         </Dropdown.Menu>

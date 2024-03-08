@@ -3,7 +3,7 @@ import '../../components/PetForm/PetForm.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import uploadServices from "../../services/upload.services"
-import petServices from "../../services/pet.services"
+import PetServices from "../../services/pet.services"
 
 const VTE_SERVER_URL = "http://localhost:5005"
 
@@ -19,6 +19,7 @@ const PetForm = () => {
         birth: "",
         sex: "",
         chipNumber: "",
+        image: ""
     })
 
     const navigate = useNavigate()
@@ -28,7 +29,7 @@ const PetForm = () => {
         event.preventDefault()
 
         PetServices
-            .savetNewPet(petData)
+            .saveNewPet(petData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 
@@ -178,6 +179,7 @@ const PetForm = () => {
                         className="mt-2 mb-2"
                         variant="dark">
                         {loadingImage ? 'Cargando imagen...' : 'Guardar mascota'}
+
                     </Button>
 
                 </Accordion.Body>
