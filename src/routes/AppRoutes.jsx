@@ -17,16 +17,16 @@ const AppRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/signupClient" element={<SignUpClientPage />} />
-            <Route path="/signupProfessional" element={<SignUpProfessionals />} />
-            <Route path="/professionals" element={<ProfessionalsListPage />} />
-            <Route path="/emergencies" element={<EmergenciesPage />} />
+            <Route path="/signupclient" element={<SignUpClientPage />} />
+            <Route path="/signupprofessional" element={<SignUpProfessionals />} />
             <Route path="/euthanasia" element={<EuthanasiaPage />} />
             <Route path="/editform" element={<EditFormPage />} />
             <Route path="/newrequest" element={<NewRequestPage />} />
 
             <Route element={<PrivateRoute />}>
                 <Route path="/userprofile" element={<UserProfilePage />} />
+                <Route path="/professionals" element={<ProfessionalsListPage />} />
+                <Route path="/emergencies" element={<EmergenciesPage />} />
             </Route>
 
             <Route path="/about" element={<AboutUsPage />} />
