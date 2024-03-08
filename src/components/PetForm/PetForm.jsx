@@ -2,9 +2,8 @@ import { Accordion, Button, Form, Col, Row } from "react-bootstrap"
 import '../../components/PetForm/PetForm.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
 import uploadServices from "../../services/upload.services"
-
+import petServices from "../../services/pet.services"
 
 const VTE_SERVER_URL = "http://localhost:5005"
 
@@ -28,8 +27,8 @@ const PetForm = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault()
 
-        axios
-            .post(`${VTE_SERVER_URL}/api/auth/signup`, petData)
+        PetServices
+            .savetNewPet(petData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 

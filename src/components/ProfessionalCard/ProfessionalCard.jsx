@@ -58,10 +58,11 @@ const ProfessionalCard = ({
                     <br />
                     <strong>Comentarios:</strong>{reviews}
                 </Card.Text>
-
-                <Button variant="dark"><strong>Consultar</strong> </Button>
+                <Link to={`/newrequest`}>
+                    <Button variant="dark"><strong>Consultar</strong> </Button>
+                </Link>
             </Card.Body>
-        </Card>
+        </Card >
 
     )
 }

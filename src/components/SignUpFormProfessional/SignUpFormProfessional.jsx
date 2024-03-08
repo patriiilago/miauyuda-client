@@ -4,6 +4,7 @@ import authServices from "../../services/auth.services"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { COUNTRIES_LIST } from "../../consts/client.consts"
+
 const SignUpFormProfessional = () => {
 
     const [professionalData, setProfessionalData] = useState({
@@ -22,6 +23,7 @@ const SignUpFormProfessional = () => {
         type: "",
         coordinates: [Number],
         schedule: "",
+        specialty: "",
         emergencies: false,
 
 
@@ -66,7 +68,7 @@ const SignUpFormProfessional = () => {
 
     return (
         <Container>
-            <Form onSubmit={handleFormSubmit}>
+            <Form onSubmit={handleFormSubmit} enctype="multipart/form-data">
                 <Form.Group className="mb-3" controlId="image">
                     <Form.Label>Imagen (URL)</Form.Label>
                     <Form.Control
@@ -201,7 +203,7 @@ const SignUpFormProfessional = () => {
                             type="text"
                             placeholder="País"
                             value={professionalData.country}
-                            name={"city"}
+                            name={"country"}
                         >
                             {
                                 COUNTRIES_LIST.map(elm => <option>{elm}</option>)
@@ -212,15 +214,20 @@ const SignUpFormProfessional = () => {
 
 
                 <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridSchedule">
+                    <Form.Group as={Col} controlId="formGridSpecialty">
                         <Form.Label>Especialidad:</Form.Label>
-                        <Form.Control
+                        <Form.Select
                             type="text"
                             placeholder="Especialidad"
                             onchange={handleInputChange}
-                            value={professionalData.schedule}
-                            name={"schedule"}
-                        />
+                            value={professionalData.specialty}
+                            name={"specialty"}
+
+                        >
+                            <option>Domésticos</option>
+                            <option>Exóticos</option>
+                            <option>Ambos</option>
+                        </Form.Select>
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridUrgencies">
