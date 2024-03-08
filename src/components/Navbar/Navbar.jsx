@@ -18,6 +18,9 @@ function Navigation() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const iconProfessionals = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829817/r0wwh8hxcfop9m9k2yw4.png"
+    const iconClients = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829750/mbcmxqgxtjratuufzf6g.png"
+
     return (
 
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" >
@@ -111,12 +114,19 @@ function Navigation() {
                         <Row>
                             <Col xs={9} md={6}>
                                 <Link to={"/signupClient"} onClick={handleModalClose}>
-                                    <img src="https://rsc.lavanguardia.com/img/APP-v1001193.png" alt="imagen cliente" />
+                                    <img
+                                        src={iconClients}
+                                        alt="imagen cliente"
+                                        style={{ maxWidth: '100%', height: 'auto' }}
+                                    />
                                 </Link>
                             </Col>
                             <Col xs={9} md={6} onClick={handleModalClose}>
                                 <Link to={"/signupProfessional"}>
-                                    <img src="https://rsc.lavanguardia.com/img/PAPEL-v1001193.png" alt="imagen profesional" />
+                                    <img
+                                        src={iconProfessionals}
+                                        alt="imagen profesional"
+                                        style={{ maxWidth: '100%', height: 'auto' }} />
                                 </Link>
                             </Col>
                         </Row>
