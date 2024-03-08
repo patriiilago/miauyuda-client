@@ -1,11 +1,11 @@
 import { Button, Form, Col, Row } from "react-bootstrap"
-import PetForm from "../PetForm/PetForm";
+import PetForm from "../PetForm/PetForm"
 import '../../components/SignUpFormClient/SignUpFormClient.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
-import uploadServices from "../../services/upload.services";
-import { COUNTRIES_LIST } from "../../consts/client.consts";
-import authServices from "../../services/auth.services";
+import uploadServices from "../../services/upload.services"
+import { COUNTRIES_LIST } from "../../consts/client.consts"
+import authServices from '../../services/auth.services'
 
 const SignUpFormClient = () => {
 
@@ -29,7 +29,7 @@ const SignUpFormClient = () => {
         event.preventDefault()
 
         authServices
-        postSignup(clientData)
+            .postSignUpClient(clientData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 
@@ -182,10 +182,6 @@ const SignUpFormClient = () => {
                         name={"zipCode"}
                     />
                 </Form.Group>
-            </Row>
-
-            <Row className="mb-3">
-                <PetForm />
             </Row>
 
             <Form.Group className="mb-3" id="formGridCheckbox">
