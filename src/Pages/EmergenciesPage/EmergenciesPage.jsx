@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap"
+import ProfessionalList from "../../components/ProfessionalsList/ProfessionalsList"
 
 const EmergenciesPage = () => {
 

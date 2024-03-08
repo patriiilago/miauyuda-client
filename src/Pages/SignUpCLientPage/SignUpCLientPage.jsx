@@ -1,20 +1,21 @@
-import SignUpFormClient from '../../components/SignUpFormClient/SignUpFormClient'
 import { Container } from "react-bootstrap"
+import SignUpFormClient from '../../components/SignUpFormClient/SignUpFormClient'
+
+
 
 function SignupClientPage() {
 
+
+
     return (
-        <div className="SignupClientPage">
 
-            <Container>
+        <Container className="SignupClientPage">
+            <h1>Registrarse como cliente</h1>
 
-                <h1>Signup</h1>
+            <SignUpFormClient />
 
-                <SignUpFormClient />
+        </Container>
 
-            </Container>
-
-        </div>
     )
 }
 

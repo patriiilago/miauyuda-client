@@ -1,4 +1,4 @@
-import { Button, Nav, Navbar, Modal, Row, Col } from 'react-bootstrap'
+import { Button, Nav, Navbar, Modal, Row, Col, Dropdown } from 'react-bootstrap'
 import { NavLink, Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import { useContext, useState } from "react";
@@ -11,7 +11,7 @@ function Navigation() {
 
     const [show, setShow] = useState(false);
     const [modalShow, setModalShow] = useState(false)
-    // const navigate = useNavigate()
+
 
     const handleModalShow = () => setModalShow(true)
     const handleModalClose = () => setModalShow(false)
@@ -51,24 +51,24 @@ function Navigation() {
                         {
                             isLoggedIn && (
                                 <>
-
-                                    <p>¡Hola, {user.name}!</p>
-
                                     <Dropdown>
                                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                                             Mi perfil
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
+                                            <p>¡Hola, {user?.name}!</p>
                                             <Link to={`/userprofile`}>
                                                 <Dropdown.Item >Mi perfil</Dropdown.Item>
                                             </Link>
                                             <Link to={`/`}>
                                                 <Dropdown.Item onClick={logout}>Cerrar sesión</Dropdown.Item>
                                             </Link>
+
+
+
                                         </Dropdown.Menu>
                                     </Dropdown>
-
                                 </>
                             )
                         }
@@ -81,7 +81,7 @@ function Navigation() {
                                         <Button variant="dark" className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
                                     </Link>
 
-                                    <Link to={`/login`}>
+                                    <Link>
                                         <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
                                     </Link>
 
