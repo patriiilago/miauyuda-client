@@ -68,7 +68,7 @@ const SignUpFormProfessional = () => {
 
     return (
         <Container>
-            <Form onSubmit={handleFormSubmit} enctype="multipart/form-data">
+            <Form onSubmit={handleFormSubmit}>
                 <Form.Group className="mb-3" controlId="image">
                     <Form.Label>Imagen (URL)</Form.Label>
                     <Form.Control

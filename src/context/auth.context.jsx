@@ -9,7 +9,7 @@ function AuthProviderWrapper(props) {
     useEffect(() => authenticateUser(), [])
 
     const [user, setUser] = useState(null)
-    const [isLoggedIn, setisLoggedIn] = useState(true)
+    const [isLoggedIn, setisLoggedIn] = useState(false)
 
     const storeToken = tokenValue => {
         localStorage.setItem('authToken', tokenValue)
