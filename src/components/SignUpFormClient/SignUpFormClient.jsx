@@ -3,7 +3,6 @@ import PetForm from "../PetForm/PetForm";
 import '../../components/SignUpFormClient/SignUpFormClient.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
 import uploadServices from "../../services/upload.services";
 import { COUNTRIES_LIST } from "../../consts/client.consts";
 import authServices from "../../services/auth.services";
@@ -62,7 +61,7 @@ const SignUpFormClient = () => {
 
 
     return (
-        <Form onSubmit={handleFormSubmit}>
+        <Form onSubmit={handleFormSubmit} enctype="multipart/form-data">
 
             <Form.Group className="mb-3" controlId="image">
                 <Form.Label>Imagen (URL)</Form.Label>
@@ -195,7 +194,7 @@ const SignUpFormClient = () => {
                     label="He leído y acepto los términos y condiciones." />
             </Form.Group>
 
-            <Button onClick={handleFormSubmit} disabled={loadingImage} variant="dark mb-3" type="submit">
+            <Button disabled={loadingImage} variant="dark mb-3" type="submit">
                 {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
             </Button>
 
