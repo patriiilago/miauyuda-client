@@ -14,7 +14,7 @@ const SignUpFormProfessional = () => {
         image: "",
         firstName: "",
         lastName: "",
-        membershipNumber: 0,
+        membershipNumber: "",
         phone: "",
         street: "",
         zipCode: "",
@@ -28,7 +28,9 @@ const SignUpFormProfessional = () => {
 
 
     })
-
+    const noReload = ((evt) => {
+        evt.preventDefault()
+    })
     const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)
 
@@ -219,7 +221,7 @@ const SignUpFormProfessional = () => {
                         <Form.Select
                             type="text"
                             placeholder="Especialidad"
-                            onchange={handleInputChange}
+                            onChange={handleInputChange}
                             value={professionalData.specialty}
                             name={"specialty"}
 
@@ -250,7 +252,7 @@ const SignUpFormProfessional = () => {
                     <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." />
                 </Form.Group>
 
-                <Button disabled={loadingImage} variant="dark mb-3" type="submit">
+                <Button disabled={loadingImage} variant="dark mb-3" type="submit" noReload>
                     {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
                 </Button>
 
