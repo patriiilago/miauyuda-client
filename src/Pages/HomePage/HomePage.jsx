@@ -7,7 +7,10 @@ import clientCentered from './../../../public/centrado-cliente.png'
 import fiability from './../../../public/fiabilidad.png'
 import innovation from './../../../public/innovacion.png'
 import service from './../../../public/servicio.png'
-
+import faqCat from './../../../public/faq-gato.png'
+import faqDog from './../../../public/faq-perro.png'
+import faqExotic from './../../../public/faq-exotico.png'
+import { Link } from "react-router-dom"
 import './HomePage.css'
 
 const HomePage = () => {
@@ -81,6 +84,67 @@ const HomePage = () => {
                         </div>
                     </Col>
                 </Row>
+                <Row className="faq-row">
+                    <h2>Compartimos nuestro conocimiento por ellos</h2>
+                    <Col>
+                        <div className="faqs">
+                            <div className="container-dog">
+                                <div>
+                                    <img src={faqDog} alt="Dog-photo" className="itemsOfFaq" />
+                                </div>
+
+                                <article><strong>Perros</strong><br />
+                                    <ul>
+                                        <li>¿Cuántos gramos de comida tengo que dar de comer a mi perro?</li>
+                                        <li>¿Cómo saber si está malito?</li>
+                                        <li>¿Cómo le enseño a mi perro lo que quiero que haga?</li>
+                                    </ul>
+                                    <Link to="/questions" className="button-faqs">Leer mas</Link>
+                                </article>
+                            </div>
+                        </div>
+                    </Col>
+
+                    <Col>
+                        <div className="faqs">
+                            <div className="container-cat">
+                                <div>
+                                    <img src={faqCat} alt="Cat-photo" className="itemsOfFaq" />
+                                </div>
+
+                                <article><strong>Gatos</strong><br />
+                                    <ul>
+                                        <li>¿Qué significa el ronroneo de un gato?</li>
+                                        <li>¿Qué juguetes son los más adecuados?</li>
+                                        <li>¿Se pueden adiestrar?</li>
+                                    </ul>
+                                    <Link to="/questions" className="button-faqs">Leer mas</Link>
+                                </article>
+                            </div>
+                        </div>
+                    </Col>
+
+                    <Col>
+                        <div className="faqs">
+                            <div className="container-exotic">
+                                <div>
+                                    <img src={faqExotic} alt="exotic-photo" className="itemsOfFaq" />
+                                </div>
+
+                                <article><strong>Exóticos</strong><br />
+                                    <ul>
+                                        <li>¿Cuál es el lugar más adecuado para tener a mi ave?</li>
+                                        <li>¿Cuándo llevar a mi ave al veterinario?</li>
+                                        <li>¿Qué tamaño del acuario es el adecuado para mi pez?</li>
+                                    </ul>
+                                    <Link to="/questions" className="button-faqs">Leer mas</Link>
+                                </article>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+
+
                 <Row className="tips">
                     <h2>Tips para cuidar mejor de tus peluditos</h2>
                     <Col md={4}>

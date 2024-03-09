@@ -54,3 +54,53 @@
 .Card.Text {
     color: #74B07A;
 }
+
+
+
+.container-dog,
+.container-cat,
+.container-exotic {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+    justify-content: left;
+
+}
+
+.container-dog,
+.container-cat,
+.container-exotic article {
+    max-width: 70%;
+}
+
+.itemsOfFaq {
+    margin-right: 50px;
+}
+
+h2 {
+    color: #74B07A;
+}
+
+.faqs {
+    font-size: 1.6em;
+    color: #74B07A;
+}
+
+.button-faqs {
+    border-color: #74B07A;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #74B07A;
+    margin-left: 364px;
+}
+
+.button-faqs:hover {
+    background-color: #74B07A;
+    color: white;
+}
+
+.faq-row {
+    align-items: center;
+}
