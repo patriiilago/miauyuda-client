@@ -25,7 +25,6 @@ const ProfessionalCard = ({
 
 }) => {
 
-
     return (
 
         <>
@@ -50,8 +49,6 @@ const ProfessionalCard = ({
                             <strong>Dónde encontrarme:</strong> {street} {zipCode} {city} {country}
                             <br />
                             <strong>Contacto:</strong> {phone}
-                            <br />
-                            {email}
                             <br />
                             <strong>Valoración:</strong> {rate}
                             <br />

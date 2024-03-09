@@ -29,7 +29,7 @@ class AuthServices {
     verify = () => {
         return this.axiosApp.get(`/api/auth/verify`)
     }
-    postSignup = (professionalData) => {
+    postSignUpProfessional = (professionalData) => {
         return this.axiosApp.post(`/api/auth/signupprofessional`, professionalData)
     }
 }

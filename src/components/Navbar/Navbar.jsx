@@ -21,6 +21,7 @@ function Navigation() {
     const iconProfessionals = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829817/r0wwh8hxcfop9m9k2yw4.png"
     const iconClients = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829750/mbcmxqgxtjratuufzf6g.png"
 
+    console.log(user)
     return (
 
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" >
@@ -57,7 +58,7 @@ function Navigation() {
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
-                                            <p>¡Hola, {user?.name}!</p>
+                                            <p>¡Hola, {user?.firstName}!</p>
                                             <Link to={`/userprofile/:userprofileId`}>
                                                 <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
                                             </Link>

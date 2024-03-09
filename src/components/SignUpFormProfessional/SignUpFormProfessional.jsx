@@ -29,9 +29,7 @@ const SignUpFormProfessional = () => {
 
 
     })
-    const noReload = ((evt) => {
-        evt.preventDefault()
-    })
+
     const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)
 
@@ -39,7 +37,7 @@ const SignUpFormProfessional = () => {
         event.preventDefault()
 
         authServices
-            .postSignup(professionalData)
+            .postSignUpProfessional(professionalData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 
@@ -253,7 +251,7 @@ const SignUpFormProfessional = () => {
                     <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." required />
                 </Form.Group>
 
-                <Button disabled={loadingImage} variant="dark mb-3" type="submit" noReload>
+                <Button disabled={loadingImage} variant="dark mb-3" type="submit">
                     {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
                 </Button>
 
