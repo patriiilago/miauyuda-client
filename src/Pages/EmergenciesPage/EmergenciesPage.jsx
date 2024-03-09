@@ -1,5 +1,7 @@
 import { Container } from "react-bootstrap"
 import ProfessionalList from "../../components/ProfessionalsList/ProfessionalsList"
+import EmergenciesList from "../../components/EmergenciesList/EmergenciesList"
+import './../../Pages/EmergenciesPage/EmergenciesPage.css'
 
 const EmergenciesPage = () => {
 
@@ -10,9 +12,9 @@ const EmergenciesPage = () => {
         <Container>
             <div className="EmergenciesPage">
 
-                <h1>Veterinarios de Urgencias</h1>
+                <h1>Veterinarios de Urgencias:</h1>
 
-                <ProfessionalList />
+                <EmergenciesList />
 
             </div>
         </Container>
