@@ -1,0 +1,14 @@
+.carouselImg {
+    object-fit: cover;
+    margin: 0;
+}
+
+.hola {
+    align-items: center;
+}
+
+.carousel-caption h3 {
+    color: black;
+    text-align: center;
+
+}

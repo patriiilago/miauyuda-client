@@ -30,7 +30,7 @@ const ProfessionalCard = ({
 
         <>
 
-            <Col md={4}>
+            <Col className="mb-6" md={6}>
 
                 <Card className="ProfessionalCard" style={{ width: '100%' }}>
                     <Card.Img variant="top" src={image} />
