@@ -7,13 +7,13 @@ import { AuthContext } from "../../context/auth.context"
 
 const NewRequestForm = () => {
 
-    const { proffesionalId } = useParams()
+    const { profesionalId } = useParams()
 
     const { user } = useContext(AuthContext)
 
     const [requestData, setRequestData] = useState({
         client: user._id,
-        professional: proffesionalId,
+        professional: profesionalId,
         status: false,
         question: "",
         image: "",
@@ -78,11 +78,11 @@ const NewRequestForm = () => {
                         />
                     </Form.Group>
                 </Row>
-
-                <Button disabled={loadingImage} variant="dark mb-3" type="submit">
-                    {loadingImage ? 'Cargando imagen...' : 'Enviar'}
-                </Button>
-
+                <Link to={`/professionals`}>
+                    <Button disabled={loadingImage} variant="dark mb-3" type="submit">
+                        {loadingImage ? 'Cargando imagen...' : 'Enviar'}
+                    </Button>
+                </Link>
 
             </Form>
         </Container >

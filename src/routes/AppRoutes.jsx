@@ -26,7 +26,7 @@ const AppRoutes = () => {
             <Route path="/petform" element={<PetFormPage />} />
 
             <Route element={<PrivateRoute />}>
-                <Route path="/newrequest/proffesional/:proffesionalId" element={<NewRequestPage />} />
+                <Route path="/newrequest/profesional/:profesionalId" element={<NewRequestPage />} />
                 <Route path="/userprofile" element={<UserProfilePage />} />
                 <Route path="/professionals" element={<ProfessionalsListPage />} />
                 <Route path="/emergencies" element={<EmergenciesPage />} />
