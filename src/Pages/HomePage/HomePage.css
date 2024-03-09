@@ -3,6 +3,11 @@
     display: inline block;
 }
 
+.picHomePage {
+    width: 100vw;
+    aspect-ratio: auto;
+}
+
 .introParagraph {
     position: absolute;
     top: 200px;
