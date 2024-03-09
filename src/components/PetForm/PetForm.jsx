@@ -172,7 +172,7 @@ const PetForm = () => {
 
 
             <Button
-                onClick={handleFormSubmit}
+                // onClick={handleFormSubmit}
                 disabled={loadingImage}
                 type="submit"
                 className="mt-2 mb-2"
