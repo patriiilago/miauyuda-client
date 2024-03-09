@@ -21,7 +21,7 @@ const ClientCard = ({
 }) => {
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" alt={`${firstName} ${lastName}`} />
             <Card.Body>
 
                 <Card.Title>
@@ -34,7 +34,9 @@ const ClientCard = ({
                     <strong>Datos de contacto:</strong>
                     <br />
                     <strong>Teléfono: </strong>{phone}
+                    <br />
                     <strong>Email: </strong>{email}
+                    <br />
                     <strong>Dirección: </strong>{street} {zipCode} {city} {country}
 
                 </Card.Text>
