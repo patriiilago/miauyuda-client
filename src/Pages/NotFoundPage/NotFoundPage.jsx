@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 import Button from 'react-bootstrap/Button'
 import './../NotFoundPage/NotFoundPage.css'
+import error404Photo from './../../images/error404.jpg'
 
-const img = 'https://ih1.redbubble.net/image.492975046.7150/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg'
 
 const NotFoundPage = () => {
 
@@ -11,15 +11,8 @@ const NotFoundPage = () => {
         <>
 
             <div className="NotFoundPage">
-                <img className="notfoundimage" src={img} alt="Gato llorando" />
-                <Link to={"/"}>
-                    <Button
-                        className="btn btn-dark"
-                        size="sg"
-                    >
-                        Volver a Inicio
-                    </Button>
-                </Link>
+                <img className="notfoundimage" src={error404Photo} alt="Gato llorando" />
+
             </div>
         </>
     )

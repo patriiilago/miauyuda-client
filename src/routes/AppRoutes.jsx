@@ -12,6 +12,7 @@ import AboutUsPage from './../Pages/AboutUsPage/AboutUsPage'
 import PrivateRoute from "./PrivateRoute"
 import SignUpProfessionals from "./../Pages/SignUpProfessionalsPage/SignUpProfessionalsPage"
 import PetFormPage from "../Pages/PetFormPage/PetFormPage"
+import QuestionsPage from "../Pages/QuestionsPage/QuestionsPage"
 
 const AppRoutes = () => {
 
@@ -23,6 +24,7 @@ const AppRoutes = () => {
             <Route path="/euthanasia" element={<EuthanasiaPage />} />
             <Route path="/editform" element={<EditFormPage />} />
             <Route path="/newrequest" element={<NewRequestPage />} />
+            <Route path="/questions" element={<QuestionsPage />} />
             <Route path="/petform" element={<PetFormPage />} />
 
             <Route element={<PrivateRoute />}>

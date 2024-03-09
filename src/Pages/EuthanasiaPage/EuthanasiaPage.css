@@ -1,0 +1,32 @@
+.EuthanasiaPage {
+    position: relative;
+    background-image: url('./../../../src/images/despedida2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    font-family: 'Roboto Regular', Arial, sans-serif;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.EuthanasiaPage h1 {
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+
+.EuthanasiaPage a {
+    color: black;
+    text-decoration: none;
+}
+
+.EuthanasiaPage a:hover {
+    color: #333;
+}
