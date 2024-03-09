@@ -6,6 +6,7 @@
 .picHomePage {
     width: 100vw;
     aspect-ratio: auto;
+    margin-bottom: 40px;
 }
 
 .introParagraph {
@@ -16,4 +17,40 @@
     color: white;
     width: 30%;
 
+}
+
+.rowOfLove {
+    color: #74B07A;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rowOfLove h2 {
+    margin-bottom: 30px;
+}
+
+
+.tags {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
+.itemsOfLove {
+
+    width: 80px;
+    margin-right: 20px;
+}
+
+.tips {
+    text-align: center;
+    margin-top: 600px;
+}
+
+.tips h2 {
+    margin-bottom: 60px;
+}
+
+.Card.Text {
+    color: #74B07A;
 }

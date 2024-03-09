@@ -1,6 +1,13 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import Footer from "../../components/Footer/Footer"
 import homeImage from './../../../public/image-copyright-35.jpg'
+import positiveActitude from './../../../public/actitud-positiva.png'
+import inconditionalLove from './../../../public/amor-incondicional.png'
+import clientCentered from './../../../public/centrado-cliente.png'
+import fiability from './../../../public/fiabilidad.png'
+import innovation from './../../../public/innovacion.png'
+import service from './../../../public/servicio.png'
+
 import './HomePage.css'
 
 const HomePage = () => {
@@ -17,43 +24,67 @@ const HomePage = () => {
                     ¡Bienvenido a PONER NOMBRE, nos dedicamos a conectar a veterinarios expertos en atención de emergencia con dueños de mascotas preocupados. Entendemos que las emergencias con tus queridas mascotas pueden surgir en cualquier momento, y es por eso que estamos aquí para ofrecerte acceso rápido y confiable a atención veterinaria de calidad, las 24 horas del día, los 7 días de la semana. Nuestra misión es proporcionar tranquilidad y alivio en momentos de crisis, asegurando que tus compañeros peludos reciban la atención que merecen cuando más la necesitan. ¡Confía en nosotros para estar ahí cuando más nos necesites!</p>
             </div>
             <Container>
-                <h2>Compartimos tu amor por ellos</h2>
-                <Row className="tags">
+                <Row className="rowOfLove">
+                    <h2>Compartimos tu amor por ellos</h2>
                     <Col md={4}>
-                        <div>
-                            <h6>Servicio</h6>
-                            <p>Cada usuario que confía en nosotros forma parte de nuestra familia. Servicio personalizado y de confianza para vosotros y vuestros peques.</p>
+                        <div className="tags">
+                            <div>
+                                <img src={service} alt="icon service" className="itemsOfLove" />
+                            </div>
+
+                            <p><strong>Servicio</strong><br />
+                                Intentamos siempre dar un servicio personalizado y de confianza para vosotros y vuestros peques.</p>
                         </div>
-                        <div>
-                            <h6>Innovación</h6>
-                            <p>Siempre en búsqueda de veterinarios y voluntarios que puedan dar el mejor trato a tus peluditos.</p>
+                        <div className="tags">
+                            <div>
+                                <img src={innovation} alt="icon innovation" className="itemsOfLove" />
+                            </div>
+
+                            <p><strong>Innovación</strong><br />
+                                Siempre en búsqueda de veterinarios y voluntarios que puedan dar el mejor trato a tus peluditos.</p>
                         </div>
                     </Col>
                     <Col md={4}>
-                        <div>
-                            <h6>Amor incondicional</h6>
-                            <p>El amor para los animales es lo que une a todos nosotros en la comunidad de NOMBRE NUESTRO. </p>
+                        <div className="tags">
+                            <div>
+                                <img src={inconditionalLove} alt="icon love" className="itemsOfLove" />
+                            </div>
+
+                            <p><strong>Amor incondicional</strong><br />
+                                El amor para los animales es lo que une a todos nosotros en la comunidad de NOMBRE NUESTRO. </p>
                         </div>
-                        <div>
-                            <h6>Fiabilidad</h6>
-                            <p>Para cualquier duda, consejo o necesidad, nos rodeamos siempre de los mejores veterinarios.</p>
+                        <div className="tags">
+                            <div>
+                                <img src={fiability} alt="icon fiability" className="itemsOfLove" />
+                            </div>
+
+                            <p><strong>Fiabilidad</strong><br />
+                                Para cualquier duda, consejo o necesidad, nos rodeamos siempre de los mejores veterinarios.</p>
                         </div>
                     </Col>
                     <Col md={4}>
-                        <div>
-                            <h6>Centrado en el cliente</h6>
-                            <p>Para que vosotros y vuestras mascotas os sintáis en vuestra segunda casa. Siempre estamos detrás de todo lo que pasa y hacemos de mediadores para cualquier problema que surja. </p>
+                        <div className="tags">
+                            <div>
+                                <img src={clientCentered} alt="icon client" className="itemsOfLove" />
+                            </div>
+
+                            <p><strong>Centrado en el cliente</strong><br />
+                                Pendientes de cualquier problema, para que vosotros y vuestras mascotas os sintáis en vuestra segunda casa.</p>
                         </div>
-                        <div>
-                            <h6>Actitud positiva</h6>
-                            <p>Para cualquier duda, consejo o necesidad, nos rodeamos siempre de los mejores veterinarios.</p>
+                        <div className="tags">
+                            <div>
+                                <img src={positiveActitude} alt="icon actitude" className="itemsOfLove" />
+                            </div>
+
+                            <p><strong>Actitud positiva</strong><br />
+                                Para cualquier duda, consejo o necesidad, nos rodeamos siempre de los mejores veterinarios.</p>
                         </div>
                     </Col>
                 </Row>
-                <h2>Tips para cuidar mejor de tus peluditos</h2>
-                <Row>
+                <Row className="tips">
+                    <h2>Tips para cuidar mejor de tus peluditos</h2>
                     <Col md={4}>
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '18rem' }} className="">
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>Perros</Card.Title>
@@ -95,7 +126,7 @@ const HomePage = () => {
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>Exóticos</Card.Title>
-                                <Card.Text>
+                                <Card.Text >
                                     Entra para ver los problemas y preguntas más frecuentes con respecto a los animales exóticos:
                                     <>
                                         <ul>
