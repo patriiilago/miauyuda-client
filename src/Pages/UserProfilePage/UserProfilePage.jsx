@@ -11,19 +11,21 @@ const UserProfilePage = () => {
     const [clients, setClients] = useState([])
     const [pets, setPets] = useState([])
 
-    useEffect(() => loadClient(), [])
-    useEffect(() => loadPet(), [])
+    useEffect(() => {
+        loadClients()
+        loadPets()
+    }, [])
 
-    const loadClient = () => {
+    const loadClients = () => {
         clientServices
-            .getClient(clients._id)
+            .getClients()
             .then(({ data }) => setClients(data))
             .catch(err => console.log(err))
 
     }
-    const loadPet = () => {
+    const loadPets = () => {
         PetServices
-            .getPet(pets._id)
+            .getPets()
             .then(({ data }) => setPets(data))
             .catch(err => console.log(err))
     }

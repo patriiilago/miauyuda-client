@@ -1,8 +1,10 @@
-import { Button, Card } from 'react-bootstrap'
+import { Button, Card, Row, Col, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import './../ProfessionalCard/ProfessionalCard.css'
 
 const ProfessionalCard = ({
     _id,
+    image,
     firstName,
     lastName,
     membershipNumber,
@@ -26,45 +28,42 @@ const ProfessionalCard = ({
 
     return (
 
-        <Card style={{ width: '18rem' }}>
+        <>
 
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
+            <Col md={4}>
 
-                <Card.Title>
-                    <h1>{firstName}</h1>
-                    <br />
-                    <h2>{lastName}</h2>
-                </Card.Title>
-
-                <Card.Text>
-                    <strong>Especialidad:</strong> {schedule}
-                    <br />
-                    <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
-                    <br />
-                    <strong>Clínica:</strong> {name}
-                    <br />
-                    <strong>Dónde encontrarme:</strong>
-                    {street}
-                    {zipCode}
-                    {city}
-                    {country}
-                    <br />
-                    <strong>Contacto:</strong>
-                    {phone}
-                    <br />
-                    {email}
-                    <br />
-
-                    <strong>Valoración:</strong>{rate}
-                    <br />
-                    <strong>Comentarios:</strong>{reviews}
-                </Card.Text>
-                <Link to={`/newrequest/proffesional/${_id}`}>
-                    <Button variant="dark"><strong>Consultar</strong> </Button>
-                </Link>
-            </Card.Body>
-        </Card >
+                <Card className="ProfessionalCard" style={{ width: '100%' }}>
+                    <Card.Img variant="top" src={image} />
+                    <Card.Body>
+                        <Card.Title>
+                            <h1>{firstName}</h1>
+                            <br />
+                            <h2>{lastName}</h2>
+                        </Card.Title>
+                        <Card.Text>
+                            <strong>Especialidad:</strong> {schedule}
+                            <br />
+                            <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
+                            <br />
+                            <strong>Clínica:</strong> {name}
+                            <br />
+                            <strong>Dónde encontrarme:</strong> {street} {zipCode} {city} {country}
+                            <br />
+                            <strong>Contacto:</strong> {phone}
+                            <br />
+                            {email}
+                            <br />
+                            <strong>Valoración:</strong> {rate}
+                            <br />
+                            <strong>Comentarios:</strong> {reviews}
+                        </Card.Text>
+                        <Link to={`/newrequest/proffesional/${_id}`}>
+                            <Button variant="dark"><strong>Consultar</strong> </Button>
+                        </Link>
+                    </Card.Body>
+                </Card >
+            </Col>
+        </>
 
     )
 }
