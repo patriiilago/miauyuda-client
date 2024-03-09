@@ -25,6 +25,7 @@ const SignUpFormProfessional = () => {
         schedule: "",
         specialty: "",
         emergencies: false,
+        role: "professional"
 
 
     })
@@ -242,14 +243,14 @@ const SignUpFormProfessional = () => {
                             value={professionalData.urgencies}
                             name={"urgencies"}
                         >
-                            <option>Sí</option>
-                            <option>No</option>
+                            <option value={true}>Sí</option>
+                            <option value={false}>No</option>
                         </Form.Select>
                     </Form.Group>
                 </Row>
 
                 <Form.Group className="mb-3" id="formGridCheckbox">
-                    <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." />
+                    <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." required />
                 </Form.Group>
 
                 <Button disabled={loadingImage} variant="dark mb-3" type="submit" noReload>

@@ -13,7 +13,7 @@ function LoginForm({ handleClose }) {
 
 
 
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
 
 

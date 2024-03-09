@@ -20,6 +20,7 @@ const SignUpFormClient = () => {
         city: "",
         country: "",
         zipCode: "",
+        role: "client"
     })
 
     const navigate = useNavigate()
@@ -166,6 +167,7 @@ const SignUpFormClient = () => {
                         value={clientData.country}
                         name={"country"}
                     >
+                        <option value="" disabled>Selecciona tu país</option>
                         {
                             COUNTRIES_LIST.map(elm => <option>{elm}</option>)
                         }

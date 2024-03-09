@@ -27,7 +27,7 @@ const AppRoutes = () => {
 
             <Route element={<PrivateRoute />}>
                 <Route path="/newrequest/profesional/:profesionalId" element={<NewRequestPage />} />
-                <Route path="/userprofile" element={<UserProfilePage />} />
+                <Route path="/userprofile/:userprofileId" element={<UserProfilePage />} />
                 <Route path="/professionals" element={<ProfessionalsListPage />} />
                 <Route path="/emergencies" element={<EmergenciesPage />} />
 

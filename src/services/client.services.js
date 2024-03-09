@@ -24,7 +24,7 @@ class ClientServices {
         return this.axiosApp.post(`/api/clients/newClient`)
     }
     getClients = () => {
-        return this.axiosApp.get(`/api/clients/CientId`)
+        return this.axiosApp.get(`/api/clients/:clientId`)
     }
     editClient = () => {
         return this.axiosApp.put(`/api/clients/CientId`)
