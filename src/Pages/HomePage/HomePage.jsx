@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import Footer from "../../components/Footer/Footer"
 import homeImage from './../../../public/image-copyright-35.jpg'
 import './HomePage.css'
@@ -50,7 +50,66 @@ const HomePage = () => {
                         </div>
                     </Col>
                 </Row>
-
+                <h2>Tips para cuidar mejor de tus peluditos</h2>
+                <Row>
+                    <Col md={4}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Body>
+                                <Card.Title>Perros</Card.Title>
+                                <Card.Text>
+                                    Entra para ver los problemas y preguntas más frecuentes con respecto a los perros:
+                                    <>
+                                        <ul>
+                                            <li>¿Cuántos gramos de comida tengo que dar de comer a mi perro?</li>
+                                            <li>¿Cómo saber si está malito?</li>
+                                            <li>¿Cómo le enseño a mi perro lo que quiero que haga?</li>
+                                        </ul>
+                                    </>
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={4}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Body>
+                                <Card.Title>Gatos</Card.Title>
+                                <Card.Text>
+                                    Entra para ver los problemas y preguntas más frecuentes con respecto a los gatos:
+                                    <>
+                                        <ul>
+                                            <li>¿Qué significa el ronroneo de un gato?</li>
+                                            <li>¿Qué juguetes son los más adecuados?</li>
+                                            <li>¿Se pueden adiestrar?</li>
+                                        </ul>
+                                    </>
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={4}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Body>
+                                <Card.Title>Exóticos</Card.Title>
+                                <Card.Text>
+                                    Entra para ver los problemas y preguntas más frecuentes con respecto a los animales exóticos:
+                                    <>
+                                        <ul>
+                                            <li>¿Cuál es el lugar más adecuado para tener a mi ave?</li>
+                                            <li>¿Cuándo llevar a mi ave al veterinario?</li>
+                                            <li>¿Qué tamaño del acuario es el adecuado para mi pez?</li>
+                                        </ul>
+                                    </>
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
 
             </Container>
             <Footer />

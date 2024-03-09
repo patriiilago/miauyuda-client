@@ -39,6 +39,7 @@ const UserProfilePage = () => {
             {pets.map(pet => (
                 <PetCard {...pet} key={pet._id} />
             ))}
+
         </>
     )
 }
