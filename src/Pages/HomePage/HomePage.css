@@ -1,0 +1,14 @@
+.imgContainer {
+    position: relative;
+    display: inline block;
+}
+
+.introParagraph {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    font-size: 1.7em;
+    color: white;
+    width: 30%;
+
+}
