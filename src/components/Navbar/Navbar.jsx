@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "./../../context/auth.context";
 import LoginForm from "./../../components/LoginForm/LoginForm"
 import './Navbar.css'
-
+import logo from './../../../src/images/logo.png'
 
 function Navigation() {
     const { user, isLoggedIn, logout } = useContext(AuthContext)
@@ -25,15 +25,10 @@ function Navigation() {
     console.log(user)
     return (
 
-        <Navbar bg="dark" data-bs-theme="dark" expand="lg" className='navbar'>
-            <Navbar.Brand >
+        <Navbar className='navbarStyle'>
+            <Navbar.Brand className='navbarStyle' >
                 <NavLink to={"/"}>
-                    <img
-                        src="https://static.vecteezy.com/system/resources/previews/005/893/586/non_2x/stethoscope-and-animal-footprint-veterinary-concept-silhouette-icon-veterinarian-medicine-equipment-glyph-pictogram-pet-dog-cat-health-care-service-icon-isolated-illustration-vector.jpg"
-                        width="50"
-                        height="50"
-                        alt="LOGO"
-                    />
+                    <img src={logo} className="logo" alt="LOGO" />
                 </NavLink>
             </Navbar.Brand >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -83,11 +78,12 @@ function Navigation() {
                             <>
 
                                 <Link>
-                                    <Button variant="dark" className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
+                                    <Button className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
+
                                 </Link>
 
                                 <Link>
-                                    <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
+                                    <Button className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
                                 </Link>
 
                             </>
@@ -97,23 +93,23 @@ function Navigation() {
                 </Nav>
             </Navbar.Collapse>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} className="modal-container">
                 <Modal.Header closeButton>
-                    <Modal.Title>Inicia Sesión</Modal.Title>
+                    <Modal.Title className="modal-title">Inicia Sesión</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className="modal-body">
                     <LoginForm handleClose={() => setShow(false)} />
                 </Modal.Body>
             </Modal>
 
 
-            <Modal show={modalShow}>
-                <Modal.Header>
-                    <Modal.Title id="contained-modal-title-vcenter">
+            <Modal show={modalShow} onHide={handleModalClose} className="modal-container">
+                <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter" className="modal-title">
                         Darte de alta como:
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="grid-example">
+                <Modal.Body className="modal-body">
                     <Container>
                         <Row>
                             <Col xs={9} md={6}>
@@ -124,6 +120,7 @@ function Navigation() {
                                         style={{ maxWidth: '100%', height: 'auto' }}
                                     />
                                 </Link>
+                                <p className='userType'>Cliente</p>
                             </Col>
                             <Col xs={9} md={6} onClick={handleModalClose}>
                                 <Link to={"/signupprofessional"}>
@@ -132,12 +129,13 @@ function Navigation() {
                                         alt="imagen profesional"
                                         style={{ maxWidth: '100%', height: 'auto' }} />
                                 </Link>
+                                <p className='userType'>Veterinario</p>
                             </Col>
                         </Row>
                     </Container>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button onClick={handleModalClose}>Close</Button>
+                <Modal.Footer className="modal-footer">
+                    <Button onClick={handleModalClose}>Cerrar</Button>
                 </Modal.Footer>
             </Modal>
 
