@@ -72,7 +72,7 @@ const SignUpFormProfessional = () => {
         <Container>
             <Form onSubmit={handleFormSubmit}>
                 <Form.Group className="mb-3" controlId="image">
-                    <Form.Label className="signUpFormLabel">Imagen (URL)</Form.Label>
+                    <Form.Label className="signUpFormLabel">Imagen:</Form.Label>
                     <Form.Control
                         className="signUpFormInput"
                         type="file"

@@ -4,6 +4,7 @@ import { Container, Button, Form, Col, Row } from "react-bootstrap"
 import requestServices from "../../services/request.services"
 import uploadServices from "../../services/upload.services"
 import { AuthContext } from "../../context/auth.context"
+import './../../components/NewRequestForm/NewRequestForm.css'
 
 const NewRequestForm = () => {
 
@@ -56,36 +57,44 @@ const NewRequestForm = () => {
     }
 
     return (
-        <Container>
-            <Form onSubmit={handleFormSubmit}>
-                <Form.Group className="mb-3" controlId="image">
-                    <Form.Label>Imagen (URL)</Form.Label>
-                    <Form.Control
-                        type="file"
-                        onChange={handleFileUpload} />
-                </Form.Group>
-
-                <Row className="mb-3 mt-3">
-
-                    <Form.Group as={Col} controlId="formGridQuestion">
-                        <Form.Label>Cuestión a tratar:</Form.Label>
+        <div className="containerForm">
+            <h1>
+                Realiza tu consulta al especialista:
+            </h1>
+            <Container className="NewRequestForm">
+                <Form onSubmit={handleFormSubmit}>
+                    <Form.Group className="mb-3" controlId="image">
+                        <Form.Label className="NewRequestFormLabel">Imagen:</Form.Label>
                         <Form.Control
-                            type="text"
-                            placeholder="Descripción"
-                            onChange={handleInputChange}
-                            value={requestData.question}
-                            name={"question"}
-                        />
+                            className="NewRequestFormSelect"
+                            type="file"
+                            onChange={handleFileUpload} />
                     </Form.Group>
-                </Row>
-                <Link to={`/professionals`}>
-                    <Button disabled={loadingImage} variant="dark mb-3" type="submit">
-                        {loadingImage ? 'Cargando imagen...' : 'Enviar'}
-                    </Button>
-                </Link>
 
-            </Form>
-        </Container >
+                    <Row className="mb-3 mt-3">
+
+                        <Form.Group as={Col} controlId="formGridQuestion">
+                            <Form.Label className="NewRequestFormLabel">Consulta:</Form.Label>
+                            <Form.Control
+                                as="textarea"
+                                className="NewRequestFormSelect"
+                                type="text"
+                                placeholder="Escribe aquí tu consulta..."
+                                onChange={handleInputChange}
+                                value={requestData.question}
+                                name={"question"}
+                            />
+                        </Form.Group>
+                    </Row>
+                    <Link to={`/professionals`}>
+                        <Button disabled={loadingImage} className="NewRequestFormButton" type="submit">
+                            {loadingImage ? 'Cargando imagen...' : 'Enviar'}
+                        </Button>
+                    </Link>
+
+                </Form>
+            </Container >
+        </div>
     )
 
 }

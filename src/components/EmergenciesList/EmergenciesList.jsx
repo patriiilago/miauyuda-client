@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import ProfessionalCard from '../ProfessionalCard/ProfessionalCard'
 import ProfessionalServices from "../../services/professional.services"
+import { Container, Col, Row } from "react-bootstrap"
 
 const EmergenciesList = () => {
     const [professionals, setProfessionals] = useState([])
@@ -19,11 +20,15 @@ const EmergenciesList = () => {
     }
 
     return (
-        <>
-            {professionals.map(professional => (
-                <ProfessionalCard {...professional} key={professional._id} />
-            ))}
-        </>
+        <Container>
+            <Row>
+                {professionals.map((professional, index) => (
+                    <Col md={4} key={index}>
+                        <ProfessionalCard {...professional} />
+                    </Col>
+                ))}
+            </Row>
+        </Container>
     )
 }
 
