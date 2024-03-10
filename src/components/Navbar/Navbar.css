@@ -1,0 +1,13 @@
+.navbar {
+    padding: 0 90px 0 40px;
+    background-color: #74B07A !important;
+    color: black !important;
+    font-size: 1.2em;
+}
+
+.btn-signup,
+.btn-login {
+    background-color: #74B07A;
+    border: none;
+    font-size: 1.2em;
+}

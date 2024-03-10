@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import { useContext, useState } from "react";
 import { AuthContext } from "./../../context/auth.context";
 import LoginForm from "./../../components/LoginForm/LoginForm"
+import './Navbar.css'
 
 
 function Navigation() {
@@ -24,79 +25,77 @@ function Navigation() {
     console.log(user)
     return (
 
-        <Navbar bg="dark" data-bs-theme="dark" expand="lg" >
-            <Container>
-                <Navbar.Brand >
-                    <NavLink to={"/"}>
-                        <img
-                            src="https://static.vecteezy.com/system/resources/previews/005/893/586/non_2x/stethoscope-and-animal-footprint-veterinary-concept-silhouette-icon-veterinarian-medicine-equipment-glyph-pictogram-pet-dog-cat-health-care-service-icon-isolated-illustration-vector.jpg"
-                            width="50"
-                            height="50"
-                            alt="LOGO"
-                        />
-                    </NavLink>
-                </Navbar.Brand >
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse className="justify-content-left" id="basic-navbar-nav">
-                    <Nav>
-                        <Link className='nav-link' to={"/"}>INICIO</Link>
-                        <Link className='nav-link' to={"/professionals"}>VETERINARIOS</Link>
-                        <Link className='nav-link' to={"/emergencies"}>URGENCIAS</Link>
-                        <Link className='nav-link' to={"/euthanasia"}>EUTANASIA A DOMICILIO</Link>
-                        <Link className='nav-link' to={"/emergencies"}>PREGUNTAS FRECUENTES</Link>
-                        <Link className='nav-link' to={"/about"}>SOBRE NOSOTR@S</Link>
-                    </Nav>
-                </Navbar.Collapse>
+        <Navbar bg="dark" data-bs-theme="dark" expand="lg" className='navbar'>
+            <Navbar.Brand >
+                <NavLink to={"/"}>
+                    <img
+                        src="https://static.vecteezy.com/system/resources/previews/005/893/586/non_2x/stethoscope-and-animal-footprint-veterinary-concept-silhouette-icon-veterinarian-medicine-equipment-glyph-pictogram-pet-dog-cat-health-care-service-icon-isolated-illustration-vector.jpg"
+                        width="50"
+                        height="50"
+                        alt="LOGO"
+                    />
+                </NavLink>
+            </Navbar.Brand >
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse className="justify-content-left" id="basic-navbar-nav">
+                <Nav>
+                    <Link className='nav-link' to={"/"}>INICIO</Link>
+                    <Link className='nav-link' to={"/professionals"}>VETERINARIOS</Link>
+                    <Link className='nav-link' to={"/emergencies"}>URGENCIAS</Link>
+                    <Link className='nav-link' to={"/euthanasia"}>EUTANASIA A DOMICILIO</Link>
+                    <Link className='nav-link' to={"/emergencies"}>PREGUNTAS FRECUENTES</Link>
+                    <Link className='nav-link' to={"/about"}>SOBRE NOSOTR@S</Link>
+                </Nav>
+            </Navbar.Collapse>
 
-                <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-                    <Nav>
+            <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+                <Nav>
 
-                        {
-                            isLoggedIn && (
-                                <>
-                                    <Dropdown>
-                                        <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                            Mi perfil
-                                        </Dropdown.Toggle>
+                    {
+                        isLoggedIn && (
+                            <>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                        Mi perfil
+                                    </Dropdown.Toggle>
 
-                                        <Dropdown.Menu>
-                                            <p>¡Hola, {user?.firstName}!</p>
-                                            <Link to={`/userprofile/:userprofileId`}>
-                                                <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
-                                            </Link>
-                                            <Link to={`/`}>
-                                                <Dropdown.Item onClick={logout} as={'span'}>Cerrar sesión</Dropdown.Item>
-                                            </Link>
-                                            <Link to={`/petform`}>
-                                                <Dropdown.Item as={'span'}>Añadir mascota</Dropdown.Item>
-                                            </Link>
+                                    <Dropdown.Menu>
+                                        <p>¡Hola, {user?.firstName}!</p>
+                                        <Link to={`/userprofile/:userprofileId`}>
+                                            <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                        </Link>
+                                        <Link to={`/`}>
+                                            <Dropdown.Item onClick={logout} as={'span'}>Cerrar sesión</Dropdown.Item>
+                                        </Link>
+                                        <Link to={`/petform`}>
+                                            <Dropdown.Item as={'span'}>Añadir mascota</Dropdown.Item>
+                                        </Link>
 
 
-                                        </Dropdown.Menu>
-                                    </Dropdown>
-                                </>
-                            )
-                        }
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </>
+                        )
+                    }
 
-                        {
-                            !isLoggedIn && (
-                                <>
+                    {
+                        !isLoggedIn && (
+                            <>
 
-                                    <Link>
-                                        <Button variant="dark" className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
-                                    </Link>
+                                <Link>
+                                    <Button variant="dark" className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
+                                </Link>
 
-                                    <Link>
-                                        <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
-                                    </Link>
+                                <Link>
+                                    <Button variant="dark" className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
+                                </Link>
 
-                                </>
-                            )
-                        }
+                            </>
+                        )
+                    }
 
-                    </Nav>
-                </Navbar.Collapse>
-            </Container >
+                </Nav>
+            </Navbar.Collapse>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
