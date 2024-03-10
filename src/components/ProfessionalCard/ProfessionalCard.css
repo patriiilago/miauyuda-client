@@ -3,7 +3,7 @@
     margin-bottom: 20px !important;
     background-color: white !important;
     color: #609f69 !important;
-    border: 2px solid #74B07A !important;
+    border: 2px solid #74B07A
 }
 
 .professionalCard .card-img-top {
@@ -25,7 +25,7 @@
 
 .professionalCard .buttonContainer {
     margin-top: 20px;
-    text-align: center;
+    text-align: center
 }
 
 .professionalCard .professionalCardButton {

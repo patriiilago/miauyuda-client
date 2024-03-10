@@ -13,24 +13,24 @@ const UserProfilePage = () => {
     const [client, setClient] = useState([])
     const [pet, setPet] = useState([])
 
-    useEffect(() => {
-        loadClients()
-        loadPets()
-    }, [])
+    // useEffect(() => {
+    //     loadClients()
+    //     loadPets()
+    // }, [])
 
-    const loadClients = () => {
-        clientServices
-            .getClients()
-            .then(({ data }) => setClient(data))
-            .catch(err => console.log(err))
+    // const loadClients = () => {
+    //     clientServices
+    //         .getClients()
+    //         .then(({ data }) => setClient(data))
+    //         .catch(err => console.log(err))
 
-    }
-    const loadPets = () => {
-        PetServices
-            .getPets()
-            .then(({ data }) => setPet(data))
-            .catch(err => console.log(err))
-    }
+    // }
+    // const loadPets = () => {
+    //     PetServices
+    //         .getPets()
+    //         .then(({ data }) => setPet(data))
+    //         .catch(err => console.log(err))
+    // }
 
     return (
 

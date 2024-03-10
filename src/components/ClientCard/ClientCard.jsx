@@ -2,6 +2,7 @@ import { Button, Card, Container, CardGroup, Row, Col } from 'react-bootstrap'
 import { useContext } from "react"
 import './../../components/ClientCard/ClientCard.css'
 import { AuthContext } from "../../context/auth.context"
+import { useParams } from 'react-router-dom'
 
 
 
@@ -26,6 +27,7 @@ const ClientCard = ({
 }) => {
 
     const { user } = useContext(AuthContext)
+
 
     return (
 
