@@ -61,7 +61,7 @@ function Navigation() {
 
                                     <Dropdown.Menu>
                                         <p>¡Hola, {user?.firstName}!</p>
-                                        <Link to={`/userprofile/:userprofileId`}>
+                                        <Link to={`/userprofile`}>
                                             <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
                                         </Link>
                                         <Link to={`/`}>
