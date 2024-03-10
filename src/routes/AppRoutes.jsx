@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute"
 import SignUpProfessionals from "./../Pages/SignUpProfessionalsPage/SignUpProfessionalsPage"
 import PetFormPage from "../Pages/PetFormPage/PetFormPage"
 import QuestionsPage from "../Pages/QuestionsPage/QuestionsPage"
+import ProfessionalProfilePage from "./../Pages/ProfessionalProfilePage/ProfessionalProfilePage"
 
 const AppRoutes = () => {
 
@@ -29,7 +30,8 @@ const AppRoutes = () => {
 
             <Route element={<PrivateRoute />}>
                 <Route path="/newrequest/profesional/:profesionalId" element={<NewRequestPage />} />
-                <Route path="/userprofile/:userprofileId" element={<UserProfilePage />} />
+                <Route path="/userprofile" element={<UserProfilePage />} />
+                <Route path="/professionalprofile/:professionalprofileId" element={<ProfessionalProfilePage />} />
                 <Route path="/professionals" element={<ProfessionalsListPage />} />
                 <Route path="/emergencies" element={<EmergenciesPage />} />
 

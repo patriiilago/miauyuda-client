@@ -1,4 +1,4 @@
-import { Button, Card, Row, Col, Container, CardGroup } from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './../ProfessionalCard/ProfessionalCard.css'
 

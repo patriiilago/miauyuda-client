@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import { Container } from "react-bootstrap"
+
 import ClientCard from "../../components/ClientCard/ClientCard"
 import clientServices from "../../services/client.services"
 import PetCard from "../../components/PetCard/PetCard"
@@ -8,8 +10,8 @@ import PetServices from "../../services/pet.services"
 const UserProfilePage = () => {
 
 
-    const [clients, setClients] = useState([])
-    const [pets, setPets] = useState([])
+    const [client, setClient] = useState([])
+    const [pet, setPet] = useState([])
 
     useEffect(() => {
         loadClients()
@@ -19,28 +21,24 @@ const UserProfilePage = () => {
     const loadClients = () => {
         clientServices
             .getClients()
-            .then(({ data }) => setClients(data))
+            .then(({ data }) => setClient(data))
             .catch(err => console.log(err))
 
     }
     const loadPets = () => {
         PetServices
             .getPets()
-            .then(({ data }) => setPets(data))
+            .then(({ data }) => setPet(data))
             .catch(err => console.log(err))
     }
 
     return (
 
-        <>
-            {clients.map(client => (
-                <ClientCard {...client} key={client._id} />
-            ))}
-            {pets.map(pet => (
-                <PetCard {...pet} key={pet._id} />
-            ))}
+        <Container>
+            <ClientCard {...client} key={client._id} />
+            <PetCard {...pet} key={pet._id} />
+        </Container>
 
-        </>
     )
 }
 
