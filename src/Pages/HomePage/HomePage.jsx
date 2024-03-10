@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import Footer from "../../components/Footer/Footer"
 import homeImage from './../../../public/image-copyright-35.jpg'
 import positiveActitude from './../../../public/actitud-positiva.png'
@@ -10,7 +11,10 @@ import service from './../../../public/servicio.png'
 import faqCat from './../../../public/faq-gato.png'
 import faqDog from './../../../public/faq-perro.png'
 import faqExotic from './../../../public/faq-exotico.png'
-import { Link } from "react-router-dom"
+import puppie from './../../../public/cachorro.png'
+import adult from './../../../public/adulto.png'
+import senior from './../../../public/senior.webp'
+
 import './HomePage.css'
 
 const HomePage = () => {
@@ -22,7 +26,11 @@ const HomePage = () => {
             <div className="imgContainer">
                 <img className="picHomePage" src={homeImage} alt="homePage pic" />
             </div>
-            <div className="introParagraph">
+            <div className="introParagraph1">
+                <p>
+                    ¡Bienvenido a PONER NOMBRE, nos dedicamos a conectar a veterinarios expertos en atención de emergencia con dueños de mascotas preocupados. Entendemos que las emergencias con tus queridas mascotas pueden surgir en cualquier momento, y es por eso que estamos aquí para ofrecerte acceso rápido y confiable a atención veterinaria de calidad, las 24 horas del día, los 7 días de la semana. Nuestra misión es proporcionar tranquilidad y alivio en momentos de crisis, asegurando que tus compañeros peludos reciban la atención que merecen cuando más la necesitan. ¡Confía en nosotros para estar ahí cuando más nos necesites!</p>
+            </div>
+            <div className="introParagraph2" >
                 <p>
                     ¡Bienvenido a PONER NOMBRE, nos dedicamos a conectar a veterinarios expertos en atención de emergencia con dueños de mascotas preocupados. Entendemos que las emergencias con tus queridas mascotas pueden surgir en cualquier momento, y es por eso que estamos aquí para ofrecerte acceso rápido y confiable a atención veterinaria de calidad, las 24 horas del día, los 7 días de la semana. Nuestra misión es proporcionar tranquilidad y alivio en momentos de crisis, asegurando que tus compañeros peludos reciban la atención que merecen cuando más la necesitan. ¡Confía en nosotros para estar ahí cuando más nos necesites!</p>
             </div>
@@ -84,131 +92,110 @@ const HomePage = () => {
                         </div>
                     </Col>
                 </Row>
+
                 <Row className="faq-row">
                     <h2>Compartimos nuestro conocimiento por ellos</h2>
-                    <Col>
-                        <div className="faqs">
-                            <div className="container-dog">
-                                <div>
-                                    <img src={faqDog} alt="Dog-photo" className="itemsOfFaq" />
-                                </div>
-
-                                <article><strong>Perros</strong><br />
-                                    <ul>
-                                        <li>¿Cuántos gramos de comida tengo que dar de comer a mi perro?</li>
-                                        <li>¿Cómo saber si está malito?</li>
-                                        <li>¿Cómo le enseño a mi perro lo que quiero que haga?</li>
-                                    </ul>
-                                    <Link to="/questions" className="button-faqs">Leer mas</Link>
-                                </article>
-                            </div>
-                        </div>
-                    </Col>
 
                     <Col>
                         <div className="faqs">
-                            <div className="container-cat">
+                            <div className="container-exotic">
                                 <div>
-                                    <img src={faqCat} alt="Cat-photo" className="itemsOfFaq" />
+                                    <img src={faqDog} alt="dog-photo" className="itemsOfFaq" />
                                 </div>
-
-                                <article><strong>Gatos</strong><br />
-                                    <ul>
-                                        <li>¿Qué significa el ronroneo de un gato?</li>
-                                        <li>¿Qué juguetes son los más adecuados?</li>
-                                        <li>¿Se pueden adiestrar?</li>
-                                    </ul>
-                                    <Link to="/questions" className="button-faqs">Leer mas</Link>
-                                </article>
+                                <Col md='6'>
+                                    <article><strong>Perros</strong><br />
+                                        <ul>
+                                            <li>¿Cuántos gramos de comida tengo que dara mi perro?</li>
+                                            <li>¿Cómo saber si está malito?</li>
+                                            <li>¿Cómo le enseño a mi perro lo que quiero que haga?</li>
+                                        </ul>
+                                    </article>
+                                </Col>
+                                <Link to="/questions" className="button-faqs">Leer mas</Link>
                             </div>
                         </div>
                     </Col>
-
+                    <Col>
+                        <div className="faqs">
+                            <div className="container-exotic">
+                                <div>
+                                    <img src={faqCat} alt="cat-photo" className="itemsOfFaq" />
+                                </div>
+                                <Col md='6'>
+                                    <article><strong>Gatos</strong><br />
+                                        <ul>
+                                            <li>¿Qué significa el ronroneo de un gato?</li>
+                                            <li>¿Qué juguetes son los más adecuados?</li>
+                                            <li>¿Se pueden adiestrar?</li>
+                                        </ul>
+                                    </article>
+                                </Col>
+                                <Link to="/questions" className="button-faqs">Leer mas</Link>
+                            </div>
+                        </div>
+                    </Col>
                     <Col>
                         <div className="faqs">
                             <div className="container-exotic">
                                 <div>
                                     <img src={faqExotic} alt="exotic-photo" className="itemsOfFaq" />
                                 </div>
-
-                                <article><strong>Exóticos</strong><br />
-                                    <ul>
-                                        <li>¿Cuál es el lugar más adecuado para tener a mi ave?</li>
-                                        <li>¿Cuándo llevar a mi ave al veterinario?</li>
-                                        <li>¿Qué tamaño del acuario es el adecuado para mi pez?</li>
-                                    </ul>
-                                    <Link to="/questions" className="button-faqs">Leer mas</Link>
-                                </article>
+                                <Col md='6'>
+                                    <article><strong>Exóticos</strong><br />
+                                        <ul>
+                                            <li>¿Cuál es el lugar más adecuado para tener a mi ave?</li>
+                                            <li>¿Cuándo llevar a mi ave al veterinario?</li>
+                                            <li>¿Qué tamaño del acuario es el adecuado para mi pez?</li>
+                                        </ul>
+                                    </article>
+                                </Col>
+                                <Link to="/questions" className="button-faqs">Leer mas</Link>
                             </div>
                         </div>
                     </Col>
                 </Row>
 
 
-                <Row className="tips">
-                    <h2>Tips para cuidar mejor de tus peluditos</h2>
-                    <Col md={4}>
-                        <Card style={{ width: '18rem' }} className="">
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Perros</Card.Title>
+                <Row className="plans">
+                    <h2>Nuestros planes para los peluditos</h2>
+                    <Col md={4} className="puppies-col">
+                        <Card style={{ width: '25rem' }} className="puppiesCard">
+                            <Card.Img variant="top" src={puppie} />
+                            <Card.Body className="cardBody">
+                                <h2>Cachorros</h2>
                                 <Card.Text>
-                                    Entra para ver los problemas y preguntas más frecuentes con respecto a los perros:
-                                    <>
-                                        <ul>
-                                            <li>¿Cuántos gramos de comida tengo que dar de comer a mi perro?</li>
-                                            <li>¿Cómo saber si está malito?</li>
-                                            <li>¿Cómo le enseño a mi perro lo que quiero que haga?</li>
-                                        </ul>
-                                    </>
+                                    <h3>199 € / 329 €</h3>
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/questions" className="button-plans">Leer mas</Link>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={4}>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Gatos</Card.Title>
+                    <Col md={4} className="adults-col">
+                        <Card style={{ width: '25rem' }} className="adultsCard">
+                            <Card.Img variant="top" src={adult} />
+                            <Card.Body className="cardBody">
+                                <h2>Adultos</h2>
                                 <Card.Text>
-                                    Entra para ver los problemas y preguntas más frecuentes con respecto a los gatos:
-                                    <>
-                                        <ul>
-                                            <li>¿Qué significa el ronroneo de un gato?</li>
-                                            <li>¿Qué juguetes son los más adecuados?</li>
-                                            <li>¿Se pueden adiestrar?</li>
-                                        </ul>
-                                    </>
+                                    <h3>179 € / 290 €</h3>
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/questions" className="button-plans">Leer mas</Link>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={4}>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Exóticos</Card.Title>
+                    <Col md={4} className="senior-col">
+                        <Card style={{ width: '25rem' }} className="seniorCard">
+                            <Card.Img variant="top" src={senior} />
+                            <Card.Body className="cardBody">
+                                <h2>Senior</h2>
                                 <Card.Text >
-                                    Entra para ver los problemas y preguntas más frecuentes con respecto a los animales exóticos:
-                                    <>
-                                        <ul>
-                                            <li>¿Cuál es el lugar más adecuado para tener a mi ave?</li>
-                                            <li>¿Cuándo llevar a mi ave al veterinario?</li>
-                                            <li>¿Qué tamaño del acuario es el adecuado para mi pez?</li>
-                                        </ul>
-                                    </>
+                                    <h3>219 € / 319 €</h3>
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/questions" className="button-plans">Leer mas</Link>
                             </Card.Body>
                         </Card>
                     </Col>
                 </Row>
-
             </Container>
-            <Footer />
-
         </div >
     )
 }
