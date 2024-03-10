@@ -95,7 +95,6 @@ const HomePage = () => {
 
                 <Row className="faq-row">
                     <h2>Compartimos nuestro conocimiento por ellos</h2>
-
                     <Col>
                         <div className="faqs">
                             <div className="container-exotic">
