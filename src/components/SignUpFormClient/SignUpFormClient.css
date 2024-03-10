@@ -1,0 +1,34 @@
+.signUpFormClientLabel {
+    color: #74B07A;
+}
+
+.signUpFormClientInput,
+.signUpFormClientSelect,
+#formGridCheckbox .form-check-input {
+    border: 2px solid #609f69 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+#formGridName,
+#formGridState,
+#formGridZip,
+#image {
+    border-color: #609f69 !important;
+}
+
+.signUpFormClientButton {
+    background-color: #609f69 !important;
+    border: 2px solid #609f69 !important;
+    border-radius: 10px;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.signUpFormClientButton:hover {
+    background-color: #74B07A;
+    border-color: #74B07A;
+}

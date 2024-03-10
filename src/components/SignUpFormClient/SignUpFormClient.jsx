@@ -65,7 +65,7 @@ const SignUpFormClient = () => {
         <Form onSubmit={handleFormSubmit}>
 
             <Form.Group className="mb-3" controlId="image">
-                <Form.Label>Imagen (URL)</Form.Label>
+                <Form.Label className="signUpFormClientLabel">Imagen:</Form.Label>
                 <Form.Control
                     type="file"
                     onChange={handleFileUpload}
@@ -74,8 +74,9 @@ const SignUpFormClient = () => {
 
             <Row className="mb-3 mt-3">
                 <Form.Group as={Col} controlId="formGridEmail">
-                    <Form.Label>Email:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Email:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="email"
                         placeholder="Introduce tu email"
@@ -85,8 +86,9 @@ const SignUpFormClient = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridPassword">
-                    <Form.Label>Contraseña:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Contraseña:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="password"
                         placeholder="Contraseña"
@@ -98,8 +100,9 @@ const SignUpFormClient = () => {
 
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridName">
-                    <Form.Label>Nombre:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Nombre:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="text"
                         placeholder="Introduce tu nombre"
@@ -109,8 +112,9 @@ const SignUpFormClient = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridLastName">
-                    <Form.Label>Apellidos:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Apellidos:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="text"
                         placeholder="Introduce tus apellidos"
@@ -123,8 +127,9 @@ const SignUpFormClient = () => {
 
             <Row className="mb-3">
                 <Form.Group as={Col} className="mb-3" controlId="formGridAddress1">
-                    <Form.Label>Dirección:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Dirección:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="text"
                         placeholder="Introduce tu dirección"
@@ -134,8 +139,9 @@ const SignUpFormClient = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} className="mb-3" controlId="formGridPhone">
-                    <Form.Label>Teléfono de contacto:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Teléfono de contacto:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="text"
                         placeholder="Teléfono 1"
@@ -148,8 +154,9 @@ const SignUpFormClient = () => {
 
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>Ciudad:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Ciudad:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="text"
                         placeholder="Ciudad"
@@ -159,8 +166,9 @@ const SignUpFormClient = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label>País:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">País:</Form.Label>
                     <Form.Select
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         type="text"
                         placeholder="País"
@@ -175,8 +183,9 @@ const SignUpFormClient = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridZip">
-                    <Form.Label>C.P.:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">C.P.:</Form.Label>
                     <Form.Control
+                        className="signUpFormClientInput"
                         onChange={handleInputChange}
                         text="text"
                         placeholder="Código Postal"
@@ -192,7 +201,7 @@ const SignUpFormClient = () => {
                     label="He leído y acepto los términos y condiciones." />
             </Form.Group>
 
-            <Button disabled={loadingImage} variant="dark mb-3" type="submit">
+            <Button disabled={loadingImage} className="signUpFormClientButton" type="submit">
                 {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
             </Button>
 

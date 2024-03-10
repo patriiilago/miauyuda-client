@@ -43,7 +43,7 @@ function Navigation() {
                     <Link className='nav-link' to={"/professionals"}>VETERINARIOS</Link>
                     <Link className='nav-link' to={"/emergencies"}>URGENCIAS</Link>
                     <Link className='nav-link' to={"/euthanasia"}>EUTANASIA A DOMICILIO</Link>
-                    <Link className='nav-link' to={"/emergencies"}>PREGUNTAS FRECUENTES</Link>
+                    <Link className='nav-link' to={"/questions"}>PREGUNTAS FRECUENTES</Link>
                     <Link className='nav-link' to={"/about"}>SOBRE NOSOTR@S</Link>
                 </Nav>
             </Navbar.Collapse>

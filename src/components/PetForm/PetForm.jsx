@@ -61,19 +61,24 @@ const PetForm = () => {
 
 
 
-        <Form onSubmit={handleFormSubmit} className="petForm">
+        <Form onSubmit={handleFormSubmit} className="PetForm">
 
-            <h1 className="h1Petform">Registra tu mascota</h1>
+            <h1 className="h1Petform">Registra tu mascota:</h1>
 
             <Form.Group className="mb-3 m-t3" controlId="image">
-                <Form.Label>Imagen (URL)</Form.Label>
-                <Form.Control type="file" onChange={handleFileUpload} />
+                <Form.Label className="PetFormLabel">Imagen (URL)</Form.Label>
+                <Form.Control
+                    type="file"
+                    onChange={handleFileUpload}
+                    className="PetFormInput"
+                />
             </Form.Group>
 
             <Row className="mb-3">
                 <Form.Group as={Col} variant="dark" className="mb-3" controlId="formGridPetName">
-                    <Form.Label>Nombre:</Form.Label>
+                    <Form.Label className="PetFormLabel">Nombre:</Form.Label>
                     <Form.Control
+                        className="PetFormInput"
                         type="text"
                         placeholder="Nombre de tu mascota"
                         onChange={handleInputChange}
@@ -83,8 +88,9 @@ const PetForm = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} variant="dark" className="mb-3" controlId="formGridPetOwner">
-                    <Form.Label>Nombre propietari@:</Form.Label>
+                    <Form.Label className="PetFormLabel">Nombre propietari@:</Form.Label>
                     <Form.Control
+                        className="PetFormInput"
                         type="text"
                         placeholder="Titutar de la mascota"
                         onChange={handleInputChange}
@@ -96,8 +102,9 @@ const PetForm = () => {
 
             <Row className="mb-3">
                 <Form.Group as={Col} variant="dark" controlId="formGridStateAnimals">
-                    <Form.Label>Tipo de mascota:</Form.Label>
+                    <Form.Label className="PetFormLabel">Tipo de mascota:</Form.Label>
                     <Form.Select
+                        className="PetFormInput"
                         type="text"
                         placeholder="Tipo de mascota"
                         onChange={handleInputChange}
@@ -115,8 +122,9 @@ const PetForm = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridWeight">
-                    <Form.Label>Peso en Kg:</Form.Label>
+                    <Form.Label className="PetFormLabel">Peso en Kg:</Form.Label>
                     <Form.Control
+                        className="PetFormInput"
                         type="number"
                         placeholder="Peso de la mascota"
                         onChange={handleInputChange}
@@ -128,8 +136,9 @@ const PetForm = () => {
 
             <Row className="mb-3">
                 <Form.Group as={Col} variant="dark" controlId="formGridStatebreed ">
-                    <Form.Label>Raza:</Form.Label>
+                    <Form.Label className="PetFormLabel">Raza:</Form.Label>
                     <Form.Control
+                        className="PetFormInput"
                         type="text"
                         placeholder="Raza de la mascota"
                         onChange={handleInputChange}
@@ -139,8 +148,9 @@ const PetForm = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridBirth">
-                    <Form.Label>Fecha de nacimiento:</Form.Label>
+                    <Form.Label className="PetFormLabel">Fecha de nacimiento:</Form.Label>
                     <Form.Control
+                        className="PetFormInput"
                         type="date"
                         placeholder="Fecha de nacimiento"
                         onChange={handleInputChange}
@@ -152,8 +162,9 @@ const PetForm = () => {
 
             <Row className="mb-3">
                 <Form.Group as={Col} variant="dark" controlId="formGridStatePetSex">
-                    <Form.Label>Sexo:</Form.Label>
+                    <Form.Label className="PetFormLabel">Sexo:</Form.Label>
                     <Form.Select
+                        className="PetFormInput"
                         type="text"
                         placeholder="Sexo de la mascota"
                         onChange={handleInputChange}
@@ -166,8 +177,9 @@ const PetForm = () => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridChip">
-                    <Form.Label>Número de Chip:</Form.Label>
+                    <Form.Label className="PetFormLabel">Número de Chip:</Form.Label>
                     <Form.Control
+                        className="PetFormInput"
                         type="number"
                         placeholder="Número de chip"
                         onChange={handleInputChange}
@@ -178,7 +190,7 @@ const PetForm = () => {
             </Row>
 
 
-            <Button disabled={loadingImage} variant="dark mb-3" type="submit" className="mt-2 mb-2">
+            <Button disabled={loadingImage} className="PetFormButton" type="submit" >
                 {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
             </Button>
         </Form>
