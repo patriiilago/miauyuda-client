@@ -4,6 +4,7 @@ import authServices from "../../services/auth.services"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { COUNTRIES_LIST } from "../../consts/client.consts"
+import './../../components/SignUpFormProfessional/SignUpFormProfessional.css'
 
 const SignUpFormProfessional = () => {
 
@@ -71,16 +72,18 @@ const SignUpFormProfessional = () => {
         <Container>
             <Form onSubmit={handleFormSubmit}>
                 <Form.Group className="mb-3" controlId="image">
-                    <Form.Label>Imagen (URL)</Form.Label>
+                    <Form.Label className="signUpFormLabel">Imagen (URL)</Form.Label>
                     <Form.Control
+                        className="signUpFormInput"
                         type="file"
                         onChange={handleFileUpload} />
                 </Form.Group>
 
                 <Row className="mb-3 mt-3">
                     <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Label>Email:</Form.Label>
+                        <Form.Label className="signUpFormLabel"> Email:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="email"
                             placeholder="Introduce tu email"
                             onChange={handleInputChange}
@@ -90,8 +93,9 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPassword">
-                        <Form.Label>Contraseña:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Contraseña:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="password"
                             placeholder="Contraseña"
                             onChange={handleInputChange}
@@ -103,8 +107,9 @@ const SignUpFormProfessional = () => {
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridFirstName">
-                        <Form.Label>Nombre:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Nombre:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="text"
                             placeholder="Nombre"
                             onChange={handleInputChange}
@@ -114,8 +119,9 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridLastName">
-                        <Form.Label>Apellidos:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Apellidos:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="text"
                             placeholder="Apellidos"
                             onChange={handleInputChange}
@@ -129,8 +135,9 @@ const SignUpFormProfessional = () => {
                 <Row className="mb-3">
 
                     <Form.Group as={Col} className="mb-3" controlId="formGrid1MembershipNumber">
-                        <Form.Label>Número de colegiado:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Número de colegiado:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="text"
                             placeholder="Número de colegiado"
                             onChange={handleInputChange}
@@ -140,8 +147,9 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} className="mb-3" controlId="formGridPhone">
-                        <Form.Label>Teléfono de contacto:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Teléfono de contacto:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="text"
                             placeholder="Teléfono"
                             onChange={handleInputChange}
@@ -154,7 +162,7 @@ const SignUpFormProfessional = () => {
 
                 <Row className="mb-3">
                     <Form.Group as={Col} className="mb-3" controlId="formGridNameclinic">
-                        <Form.Label>Nombre de la clínica:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Nombre de la clínica:</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Nombre de la clínica"
@@ -165,8 +173,9 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} className="mb-3" controlId="formGridStreet">
-                        <Form.Label>Dirección de la clínica:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Dirección de la clínica:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="text"
                             placeholder="Calle"
                             onChange={handleInputChange}
@@ -176,8 +185,9 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label>C.P.:</Form.Label>
+                        <Form.Label className="signUpFormLabel">C.P.:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="text"
                             placeholder="Código Postal"
                             onChange={handleInputChange}
@@ -187,8 +197,9 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label>Ciudad:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Ciudad:</Form.Label>
                         <Form.Control
+                            className="signUpFormInput"
                             type="text"
                             placeholder="Ciudad"
                             onChange={handleInputChange}
@@ -198,7 +209,7 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label>País:</Form.Label>
+                        <Form.Label className="signUpFormLabel">País:</Form.Label>
                         <Form.Select
                             onChange={handleInputChange}
                             type="text"
@@ -216,7 +227,7 @@ const SignUpFormProfessional = () => {
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridSpecialty">
-                        <Form.Label>Especialidad:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Especialidad:</Form.Label>
                         <Form.Select
                             type="text"
                             placeholder="Especialidad"
@@ -232,7 +243,7 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridUrgencies">
-                        <Form.Label>Urgencias:</Form.Label>
+                        <Form.Label className="signUpFormLabel">Urgencias:</Form.Label>
                         <Form.Select
                             defaultValue="Choose..."
                             onChange={handleInputChange}
@@ -251,7 +262,7 @@ const SignUpFormProfessional = () => {
                     <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." required />
                 </Form.Group>
 
-                <Button disabled={loadingImage} variant="dark mb-3" type="submit">
+                <Button className="signUpFormButton" disabled={loadingImage} type="submit">
                     {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
                 </Button>
 

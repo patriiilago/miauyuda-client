@@ -1,10 +1,45 @@
-.ProfessionalCard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 45px;
+.professionalCard {
+    border-radius: 30px !important;
+    margin-bottom: 20px !important;
+    background-color: white !important;
+    color: #609f69 !important;
+    border: 2px solid #74B07A !important;
 }
 
-/* .ProfessionalCard {
-    margin: 10px;
-} */
+.professionalCard .card-img-top {
+    border-radius: 30px 30px 0 0;
+}
+
+.professionalCard .ProfessionalCardBody {
+    padding: 20px;
+}
+
+.professionalCard h3 {
+    color: #74B07A;
+    margin-top: 0;
+}
+
+.professionalCard strong {
+    color: #609f69 !important;
+}
+
+.professionalCard .buttonContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.professionalCard .professionalCardButton {
+    border: 2px solid #609f69;
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-color: #74B07A;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.professionalCard .professionalCardButton:hover {
+    background-color: #609f69;
+    border-color: #609f69;
+    color: white !important;
+}

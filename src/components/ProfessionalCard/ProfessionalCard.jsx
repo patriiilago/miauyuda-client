@@ -1,10 +1,9 @@
-import { Button, Card, Row, Col, Container } from 'react-bootstrap'
+import { Button, Card, Row, Col, Container, CardGroup } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './../ProfessionalCard/ProfessionalCard.css'
 
 const ProfessionalCard = ({
     _id,
-    image,
     firstName,
     lastName,
     membershipNumber,
@@ -21,46 +20,41 @@ const ProfessionalCard = ({
     city,
     country,
     longitude,
-    latitude
+    latitude,
+    image
 
 }) => {
 
     return (
 
-        <>
+        <Card className="professionalCard" border="secondary" style={{ marginBottom: '20px' }}>
+            <Card.Img variant="top" src={image} />
+            <Card.Body className="ProfessionalCardBody">
 
-            <Col className="mb-6" md={6}>
+                <h3>{firstName} {lastName}</h3>
+                <br />
 
-                <Card className="ProfessionalCard" style={{ width: '100%' }}>
-                    <Card.Img variant="top" src={image} />
-                    <Card.Body>
-                        <Card.Title>
-                            <h1>{firstName}</h1>
-                            <br />
-                            <h2>{lastName}</h2>
-                        </Card.Title>
-                        <Card.Text>
-                            <strong>Especialidad:</strong> {schedule}
-                            <br />
-                            <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
-                            <br />
-                            <strong>Clínica:</strong> {name}
-                            <br />
-                            <strong>Dónde encontrarme:</strong> {street} {zipCode} {city} {country}
-                            <br />
-                            <strong>Contacto:</strong> {phone}
-                            <br />
-                            <strong>Valoración:</strong> {rate}
-                            <br />
-                            <strong>Comentarios:</strong> {reviews}
-                        </Card.Text>
-                        <Link to={`/newrequest/profesional/${_id}`}>
-                            <Button variant="dark"><strong>Consultar</strong> </Button>
-                        </Link>
-                    </Card.Body>
-                </Card >
-            </Col>
-        </>
+                <strong>Especialidad:</strong> {schedule}
+                <br />
+                <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
+                <br />
+                <strong>Clínica:</strong> {name}
+                <br />
+                <strong>Dónde encontrarme:</strong> {street} {zipCode} {city} {country}
+                <br />
+                <strong>Contacto:</strong> {phone}
+                <br />
+                <strong>Valoración:</strong> {rate}
+                <br />
+                <strong>Comentarios:</strong> {reviews}
+
+                <div className="buttonContainer">
+                    <Link to={`/newrequest/profesional/${_id}`}>
+                        <Button className="professionalCardButton" ><strong>Consultar</strong> </Button>
+                    </Link>
+                </div>
+            </Card.Body>
+        </Card >
 
     )
 }

@@ -1,0 +1,8 @@
+.ClientCard {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.ClientCard img {
+    height: 160px;
+    object-fit: cover;
+}

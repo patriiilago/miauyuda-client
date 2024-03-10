@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import axios from 'axios'
 import ProfessionalCard from '../ProfessionalCard/ProfessionalCard'
 import ProfessionalServices from "../../services/professional.services"
+import './../../components/ProfessionalsList/ProfessionalsList'
+import { Col, Container, Row } from "react-bootstrap"
 
 const professionalList = () => {
 
@@ -16,13 +17,18 @@ const professionalList = () => {
             .catch(err => console.log(err))
     }
 
-    return (
-        <>
-            {professionals.map(professional => (
-                <ProfessionalCard  {...professional} key={professional._id} />
 
-            ))}
-        </>
+
+    return (
+        <Container>
+            <Row>
+                {professionals.map((professional, index) => (
+                    <Col md={4} key={index}>
+                        <ProfessionalCard {...professional} />
+                    </Col>
+                ))}
+            </Row>
+        </Container>
     )
 }
 

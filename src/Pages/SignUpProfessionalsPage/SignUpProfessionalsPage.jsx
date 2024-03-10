@@ -1,5 +1,6 @@
 import SignUpFormProfessional from '../../components/SignUpFormProfessional/SignUpFormProfessional'
 import { Container } from "react-bootstrap"
+import './../../Pages/SignUpProfessionalsPage/SignupProfessoinalsPage.css'
 
 function SignUpFormProfessionalPage() {
 
@@ -8,7 +9,7 @@ function SignUpFormProfessionalPage() {
 
             <Container>
 
-                <h1>Signup</h1>
+                <h1 className="titleSignupProfessinalsPage">Regístrate como veterinario:</h1>
 
                 <SignUpFormProfessional />
 
@@ -18,4 +19,4 @@ function SignUpFormProfessionalPage() {
     )
 }
 
-export default SignUpFormProfessionalPage;
+export default SignUpFormProfessionalPage
