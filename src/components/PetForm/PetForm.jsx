@@ -1,11 +1,9 @@
-import { Accordion, Button, Form, Col, Row } from "react-bootstrap"
+import { Button, Form, Col, Row } from "react-bootstrap"
 import '../../components/PetForm/PetForm.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import uploadServices from "../../services/upload.services"
 import PetServices from "../../services/pet.services"
-
-const VTE_SERVER_URL = "http://localhost:5005"
 
 
 const PetForm = () => {
@@ -63,8 +61,10 @@ const PetForm = () => {
 
 
 
-        <Form className="petForm" onSubmit={handleFormSubmit}>
+        <Form onSubmit={handleFormSubmit} className="petForm">
+
             <h1 className="h1Petform">Registra tu mascota</h1>
+
             <Form.Group className="mb-3 m-t3" controlId="image">
                 <Form.Label>Imagen (URL)</Form.Label>
                 <Form.Control type="file" onChange={handleFileUpload} />
@@ -74,6 +74,7 @@ const PetForm = () => {
                 <Form.Group as={Col} variant="dark" className="mb-3" controlId="formGridPetName">
                     <Form.Label>Nombre:</Form.Label>
                     <Form.Control
+                        type="text"
                         placeholder="Nombre de tu mascota"
                         onChange={handleInputChange}
                         value={petData.name}
@@ -84,6 +85,7 @@ const PetForm = () => {
                 <Form.Group as={Col} variant="dark" className="mb-3" controlId="formGridPetOwner">
                     <Form.Label>Nombre propietari@:</Form.Label>
                     <Form.Control
+                        type="text"
                         placeholder="Titutar de la mascota"
                         onChange={handleInputChange}
                         value={petData.chipOwner}
@@ -96,6 +98,8 @@ const PetForm = () => {
                 <Form.Group as={Col} variant="dark" controlId="formGridStateAnimals">
                     <Form.Label>Tipo de mascota:</Form.Label>
                     <Form.Select
+                        type="text"
+                        placeholder="Tipo de mascota"
                         onChange={handleInputChange}
                         value={petData.type}
                         name={"type"}
@@ -137,7 +141,8 @@ const PetForm = () => {
                 <Form.Group as={Col} controlId="formGridBirth">
                     <Form.Label>Fecha de nacimiento:</Form.Label>
                     <Form.Control
-                        type="date" placeholder="Fecha de nacimiento"
+                        type="date"
+                        placeholder="Fecha de nacimiento"
                         onChange={handleInputChange}
                         value={petData.birth}
                         name={"birth"}
@@ -149,6 +154,8 @@ const PetForm = () => {
                 <Form.Group as={Col} variant="dark" controlId="formGridStatePetSex">
                     <Form.Label>Sexo:</Form.Label>
                     <Form.Select
+                        type="text"
+                        placeholder="Sexo de la mascota"
                         onChange={handleInputChange}
                         value={petData.sex}
                         name={"sex"}
@@ -162,7 +169,7 @@ const PetForm = () => {
                     <Form.Label>Número de Chip:</Form.Label>
                     <Form.Control
                         type="number"
-                        placeholder="Peso de la mascota"
+                        placeholder="Número de chip"
                         onChange={handleInputChange}
                         value={petData.chipNumber}
                         name={"chipNumber"}
@@ -171,14 +178,8 @@ const PetForm = () => {
             </Row>
 
 
-            <Button
-                // onClick={handleFormSubmit}
-                disabled={loadingImage}
-                type="submit"
-                className="mt-2 mb-2"
-                variant="dark">
-                {loadingImage ? 'Cargando imagen...' : 'Guardar mascota'}
-
+            <Button disabled={loadingImage} variant="dark mb-3" type="submit" className="mt-2 mb-2">
+                {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
             </Button>
         </Form>
 
