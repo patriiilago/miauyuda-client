@@ -12,7 +12,7 @@
     margin-bottom: 40px;
 }
 
-.EuthanasiaPage h1 {
+.intro1 {
     position: absolute;
     top: 200px;
     left: 100px;
@@ -27,26 +27,78 @@
     text-decoration: none;
 }
 
-.EuthanasiaPage a {
-    font-size: 2em;
-    color: #74B07A;
-    text-decoration: none;
-}
-
-.EuthanasiaPage a:hover {
-    color: #333;
-}
-
-.mentalia-button {
-    text-align: center;
-    border: 2px solid #74B07A;
-    border-radius: 20px;
-    padding: 10px 100px 10px 100px;
-}
-
+.mentalia-button,
 .info-button {
+    color: #74B07A;
+    font-size: 1.5em;
+    text-decoration: none;
     text-align: center;
     border: 2px solid #74B07A;
     border-radius: 20px;
     padding: 10px 100px 10px 100px;
+    margin: 20px 0px;
+
+}
+
+.mentalia-button:hover,
+.info-button:hover {
+    text-decoration: none;
+    text-align: center;
+    background-color: #74B07A;
+    color: white !important;
+    border-radius: 20px;
+    padding: 10px 100px 10px 100px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .intro1 {
+        display: none;
+    }
+
+    .intro2 {
+        position: absolute;
+        top: 100px;
+        left: 250px;
+        font-size: 1em;
+        color: white;
+        width: 30%;
+        color: black;
+    }
+
+    .info-button,
+    .mentalia-button {
+        text-align: center;
+        border: 2px solid #74B07A;
+        border-radius: 20px;
+        width: 350px !important;
+        margin: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .intro1 {
+        display: none;
+    }
+
+    .intro2 {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        font-size: 1.8em;
+        color: white;
+        width: 30%;
+        color: black;
+    }
+
+    .info-button,
+    .mentalia-button {
+        text-align: center;
+        border: 2px solid #74B07A;
+        border-radius: 20px;
+        width: 600px !important;
+        margin: 20px 30px 20px 30px;
+    }
 }

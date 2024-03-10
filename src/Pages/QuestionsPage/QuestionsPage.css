@@ -1,0 +1,45 @@
+.QuestionsPage {
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+h1,
+h2,
+p,
+ul,
+li,
+.accordion-body {
+    color: #74B07A !important;
+    margin: 30px;
+}
+
+.accordion-button {
+    color: #74b07a !important;
+}
+
+.accordion-header {
+    background-color: #74b07a3d !important;
+    color: white !important;
+}
+
+/* .accordion-button::after */
+.faqsimg {
+    position: relative;
+    display: inline block;
+    height: 50%;
+    margin-bottom: 40px;
+}
+
+.QestionsPage {
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+.faqsRow {
+    text-align: justify;
+    color: #74B07A !important
+}
+
+.accordion-item {
+    border-color: #74B07A !important;
+}
