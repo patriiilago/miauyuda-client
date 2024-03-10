@@ -1,7 +1,12 @@
-.navbar {
-    padding: 0 90px 0 40px;
-    background-color: #74B07A !important;
-    color: black !important;
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.navbarStyle {
+    padding: 0 20px 0 20px;
+    background-color: #82AE7F;
+    color: black;
     font-size: 1.2em;
 }
 
@@ -10,4 +15,75 @@
     background-color: #74B07A;
     border: none;
     font-size: 1.2em;
+    color: white;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+    background-color: #609f69;
+}
+
+.modal-title {
+    color: #74B07A;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.modal-dialog {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+    display: flex;
+    align-items: center;
+}
+
+.modal-footer .btn {
+    background-color: #609f69;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.modal-footer .btn:hover {
+    background-color: #74B07A;
+}
+
+.userType {
+    text-align: center;
+    color: #74B07A;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+
+.btn {
+    background-color: #609f69 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    margin-right: 10px !important;
+}
+
+.btn:hover {
+    background-color: #74B07A !important;
 }

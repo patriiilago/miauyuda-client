@@ -51,7 +51,8 @@ const ProfessionalCard = ({
 
                 <div className="buttonContainer">
                     <Link to={`/newrequest/profesional/${_id}`}>
-                        <Button className="professionalCardButton" ><strong>Consultar</strong> </Button>
+
+                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
                     </Link>
                 </div>
             </Card.Body>

@@ -1,0 +1,24 @@
+.login-form-container {
+    padding: 20px;
+}
+
+.green-border {
+    border: 2px solid #609f69 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+}
+
+.login-button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.signupLink {
+
+    color: #609f69;
+}
+
+.textLabel {
+    color: #609f69;
+    font-weight: bold;
+}

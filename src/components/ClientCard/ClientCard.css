@@ -1,8 +1,31 @@
-.ClientCard {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+.card {
+    background-color: #609f69;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.ClientCard img {
-    height: 160px;
-    object-fit: cover;
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #74b07a;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #4e7c52;
+
 }
