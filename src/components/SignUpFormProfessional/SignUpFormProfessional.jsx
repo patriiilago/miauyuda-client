@@ -25,7 +25,7 @@ const SignUpFormProfessional = () => {
         coordinates: [Number],
         schedule: "",
         specialty: "",
-        emergencies: false,
+        emergencies: "",
         role: "professional"
 
 
@@ -249,8 +249,8 @@ const SignUpFormProfessional = () => {
                             onChange={handleInputChange}
                             type="text"
                             placeholder="urgencias"
-                            value={professionalData.urgencies}
-                            name={"urgencies"}
+                            value={professionalData.emergencies}
+                            name={"emergencies"}
                         >
                             <option value={true}>Sí</option>
                             <option value={false}>No</option>
