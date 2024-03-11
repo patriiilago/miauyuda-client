@@ -1,2 +1,2 @@
-export const COUNTRIES_LIST = ['España', 'Alemania', 'Portugal', 'Francia', 'Italia', 'Grecia', 'Brasil', 'México', 'Colombia']
+export const COUNTRIES_LIST = ['España', 'Alemania', 'Portugal', 'Francia', 'Italia', 'Grecia', 'Brasil', 'México', 'Colombia', 'Perú', 'Argentina', 'Reino Unido', 'Polonia', 'Canadá', 'Líbano', 'Marruecos', 'Chile', 'Rusia', 'Noruega', 'Islandia', 'Países Bajos', 'Malta', 'Chipre', 'Turquía', 'Egipto', 'EEUU', 'Ecuador', 'Bolivia', 'Vietnam', 'Malasia', 'Japón', 'Irán', 'Bulgaria', 'Rumanía', 'Ucrania', 'Serbia']
 
