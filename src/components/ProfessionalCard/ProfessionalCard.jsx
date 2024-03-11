@@ -10,6 +10,7 @@ const ProfessionalCard = ({
     phone,
     email,
     password,
+    specialty,
     schedule,
     emergencies,
     rate,
@@ -35,15 +36,21 @@ const ProfessionalCard = ({
                 <h3>{firstName} {lastName}</h3>
                 <br />
 
-                <strong>Especialidad:</strong> {schedule}
+                <strong>Especialidad:</strong> {specialty}
                 <br />
                 <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
                 <br />
                 <strong>Clínica:</strong> {name}
                 <br />
-                <strong>Dónde encontrarme:</strong> {street} {zipCode} {city} {country}
+                <strong>Dónde encontrarme:</strong>
+                {street}
+                {zipCode}
+                {city}
+                {country}
                 <br />
                 <strong>Contacto:</strong> {phone}
+                <br />
+                {email}
                 <br />
                 <strong>Valoración:</strong> {rate}
                 <br />

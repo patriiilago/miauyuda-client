@@ -139,7 +139,7 @@ function Navigation() {
                                 <p className='userType'>Cliente</p>
                             </Col>
                             <Col xs={9} md={6} onClick={handleModalClose}>
-                                <Link to={"/signupprofessional"}>
+                                <Link to={"/newProfessional"}>
                                     <img
                                         src={iconProfessionals}
                                         alt="imagen profesional"
