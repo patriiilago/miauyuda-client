@@ -55,58 +55,44 @@ function Navigation() {
                                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                                         Mi perfil
                                     </Dropdown.Toggle>
-
                                     <Dropdown.Menu>
-                                        <p>¡Hola, {user?.firstName}!</p>
-
+                                        <p>¡Hola, {user.firstName}!</p>
                                         <Link to={`/userprofile`}>
                                             <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
                                         </Link>
-
-
                                         <Link to={`/`}>
                                             <Dropdown.Item onClick={logout} as={'span'}>Cerrar sesión</Dropdown.Item>
                                         </Link>
-                                        <Link to={`/petform`}>
-                                            <Dropdown.Item as={'span'}>Añadir mascota</Dropdown.Item>
-                                        </Link>
-
-
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </>
                         )
                     }
-
                     {
                         !isLoggedIn && (
                             <>
-
                                 <Link>
                                     <Button className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
-
                                 </Link>
-
                                 <Link>
                                     <Button className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
                                 </Link>
-
                             </>
                         )
                     }
 
                 </Nav>
             </Navbar.Collapse>
-
             <Modal show={show} onHide={handleClose} className="modal-container">
                 <Modal.Header closeButton>
                     <Modal.Title className="modal-title">Inicia Sesión</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modal-body">
-                    <Tabs activeKey={activeTab} onSelect={handleTabChange}
-                        id="uncontrolled-tab-example"
-                        className="mb-3"
-                    >
+                    <Tabs
+                        className="tab-style"
+                        id="justify-tab-example"
+                        justify
+                        activeKey={activeTab} onSelect={handleTabChange}>
                         <Tab eventKey="client" title="Cliente">
                             <LoginForm userType="client" handleClose={() => setShow(false)} />
                         </Tab>

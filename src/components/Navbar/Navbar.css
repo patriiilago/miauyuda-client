@@ -87,3 +87,11 @@
 .btn:hover {
     background-color: #74B07A !important;
 }
+
+.tab-style {
+    margin: 0px !important;
+    flex-direction: row;
+
+
+
+}
