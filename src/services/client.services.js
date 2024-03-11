@@ -20,7 +20,7 @@ class ClientServices {
         })
     }
 
-    saveNewClient = (clientData) => {
+    newClient = (clientData) => {
         return this.axiosApp.post(`/api/clients/newClient`, clientData)
     }
     getClients = (clientData) => {

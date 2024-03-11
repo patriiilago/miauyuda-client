@@ -30,8 +30,8 @@ const SignUpFormClient = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault()
 
-        clientServices
-            .saveNewClient(clientData)
+        authServices
+            .newClient(clientData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 
