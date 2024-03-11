@@ -71,7 +71,7 @@ const SignUpFormProfessional = () => {
     return (
         <Container>
             <Form onSubmit={handleFormSubmit}>
-                <Form.Group className="mb-3" controlId="image">
+                <Form.Group as={Col} className="mb-3" controlId="image">
                     <Form.Label className="signUpFormLabel">Imagen:</Form.Label>
                     <Form.Control
                         className="signUpFormInput"
@@ -218,7 +218,9 @@ const SignUpFormProfessional = () => {
                             name={"country"}
                         >
                             {
-                                COUNTRIES_LIST.map(elm => <option>{elm}</option>)
+                                COUNTRIES_LIST.map((elm, index) => (
+                                    <option key={index}>{elm}</option>
+                                ))
                             }
                         </Form.Select>
                     </Form.Group>
@@ -245,12 +247,11 @@ const SignUpFormProfessional = () => {
                     <Form.Group as={Col} controlId="formGridUrgencies">
                         <Form.Label className="signUpFormLabel">Urgencias:</Form.Label>
                         <Form.Select
-                            defaultValue="Choose..."
                             onChange={handleInputChange}
                             type="text"
                             placeholder="urgencias"
-                            value={professionalData.urgencies}
-                            name={"urgencies"}
+                            value={professionalData.emergencies}
+                            name={"emergencies"}
                         >
                             <option value={true}>Sí</option>
                             <option value={false}>No</option>
