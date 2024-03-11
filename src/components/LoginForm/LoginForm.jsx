@@ -30,7 +30,7 @@ function LoginForm({ handleClose, userType }) {
         e.preventDefault()
         if (userType === 'client') {
             AuthServices
-                .login(formData)
+                .loginClient(formData)
                 .then((response) => {
                     storeToken(response.data.authToken)
                     authenticateUser()
@@ -41,7 +41,7 @@ function LoginForm({ handleClose, userType }) {
         }
         else if (userType === 'professional') {
             AuthServices
-                .login(formData)
+                .loginProfessional(formData)
                 .then((response) => {
                     storeToken(response.data.authToken)
                     authenticateUser()

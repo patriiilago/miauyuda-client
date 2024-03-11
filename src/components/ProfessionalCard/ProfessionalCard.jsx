@@ -27,7 +27,6 @@ const ProfessionalCard = ({
 
 }) => {
 
-
     return (
 
         <Card className="professionalCard" border="secondary" style={{ marginBottom: '20px' }}>
