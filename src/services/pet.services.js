@@ -20,20 +20,20 @@ class PetServices {
         })
     }
 
-    getAllPets = () => {
-        return this.axiosApp.get(`/api/pets`)
+    getAllPets = (petData) => {
+        return this.axiosApp.get(`/api/pets`, petData)
     }
-    saveNewPet = () => {
-        return this.axiosApp.post(`/api/pets/newPet`)
+    saveNewPet = (petData) => {
+        return this.axiosApp.post(`/api/pets/newPet`, petData)
     }
-    getPets = () => {
-        return this.axiosApp.get(`/api/pets/petId`)
+    getPets = (petData) => {
+        return this.axiosApp.get(`/api/pets/petId`, petData)
     }
-    editPet = () => {
-        return this.axiosApp.put(`/api/pets/petId`)
+    editPet = (petData) => {
+        return this.axiosApp.put(`/api/pets/petId`, petData)
     }
-    deletePet = () => {
-        return this.axiosApp.delete(`/api/pets/petId`)
+    deletePet = (petData) => {
+        return this.axiosApp.delete(`/api/pets/petId`, petData)
     }
 
 }

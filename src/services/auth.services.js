@@ -23,10 +23,10 @@ class AuthServices {
     postSignUpClient = (clientData) => {
         return this.axiosApp.post(`/api/auth/signupclient`, clientData)
     }
-    login(clientData) {
+    loginClient(clientData) {
         return this.axiosApp.post(`/api/auth/login/client`, clientData)
     }
-    login(professionalData) {
+    loginProfessional(professionalData) {
         return this.axiosApp.post(`/api/auth/login/professional`, professionalData)
     }
     verify = () => {

@@ -18,7 +18,7 @@ const professionalList = () => {
     }
 
 
-
+    console.log({ professionals })
     return (
         <Container>
             <Row>

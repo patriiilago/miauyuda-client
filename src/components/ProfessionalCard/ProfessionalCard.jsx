@@ -21,9 +21,7 @@ const ProfessionalCard = ({
     country,
     longitude,
     latitude,
-    image,
-    specialty,
-    clinic
+    image
 
 }) => {
 
@@ -31,30 +29,30 @@ const ProfessionalCard = ({
     return (
 
         <Card className="professionalCard" border="secondary" style={{ marginBottom: '20px' }}>
-            <Card.Img variant="top" className="professionalCardImage" src="holder.js/100px180?text=Image cap" alt={`Foto de: ${firstName} ${lastName}`} />
+            <Card.Img variant="top" className="professionalCardImage" type="file" src={image} alt={`Foto de: ${firstName} ${lastName}`} />
             <Card.Body className="ProfessionalCardBody">
 
                 <h3>{firstName} {lastName}</h3>
                 <br />
 
-                <strong> 📘 Especialidad:</strong> {specialty}
+                <strong>Especialidad:</strong> {schedule}
                 <br />
-                <strong> 🚑 Urgencias?:</strong> {emergencies ? "Si" : "No"}
+                <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
                 <br />
-                <strong> 🏥 Clínica:</strong> {name}
+                <strong>Clínica:</strong> {name}
                 <br />
-                <strong> 📍 Dónde encontrarme:</strong> {street} {zipCode} {city} {country}
+                <strong>Dónde encontrarme:</strong> {street} {zipCode} {city} {country}
                 <br />
-                <strong> 📞 Contacto:</strong> {phone}
+                <strong>Contacto:</strong> {phone}
                 <br />
-                <strong> ⭐ Valoración:</strong> {rate}
+                <strong>Valoración:</strong> {rate}
                 <br />
-                <strong> 🗣️ Comentarios:</strong> {reviews}
+                <strong>Comentarios:</strong> {reviews}
 
                 <div className="buttonContainer">
                     <Link to={`/newrequest/profesional/${_id}`}>
 
-                        <Button className="professionalCardButton"><strong>Consultar</strong> </Button>
+                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
                     </Link>
                 </div>
             </Card.Body>
