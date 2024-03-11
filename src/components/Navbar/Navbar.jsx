@@ -115,7 +115,7 @@ function Navigation() {
                     <Container>
                         <Row>
                             <Col xs={9} md={6}>
-                                <Link to={"/signupclient"} onClick={handleModalClose}>
+                                <Link to={"/newClient"} onClick={handleModalClose}>
                                     <img
                                         src={iconClients}
                                         alt="imagen cliente"

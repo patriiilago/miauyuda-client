@@ -31,7 +31,7 @@ const SignUpFormClient = () => {
         event.preventDefault()
 
         authServices
-            .postSignUpClient(clientData)
+            .newClient(clientData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 

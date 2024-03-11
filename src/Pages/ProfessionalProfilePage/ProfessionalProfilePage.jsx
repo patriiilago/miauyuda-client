@@ -10,7 +10,7 @@ const ProfessionalProfilePage = () => {
 
 
     useEffect(() => {
-        loadProfesional()
+        loadProfessional()
     }, [])
 
     const loadProfessional = () => {

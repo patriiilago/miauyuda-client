@@ -23,7 +23,7 @@ class ProfessionalServices {
     getAllProfessionals = (professionalData) => {
         return this.axiosApp.get(`/api/professionals`, professionalData)
     }
-    saveNewProfessional = (professionalData) => {
+    newProfessional = (professionalData) => {
         return this.axiosApp.post(`/api/professionals/newProfessional`, professionalData)
     }
     getProfessional = (professionalData) => {
