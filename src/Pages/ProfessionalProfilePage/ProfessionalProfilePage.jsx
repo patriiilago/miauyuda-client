@@ -1,42 +1,32 @@
 import { useState, useEffect } from "react"
-import ClientCard from "../../components/ClientCard/ClientCard"
-import clientServices from "../../services/client.services"
-
+import ProfessionalCard from "../../components/ProfessionalCard/ProfessionalCard"
+import professionalServices from "../../services/professional.services"
 
 
 const ProfessionalProfilePage = () => {
 
 
-    const [clients, setClients] = useState([])
-    const [pets, setPets] = useState([])
+    const [professional, setProfesional] = useState([])
+
 
     useEffect(() => {
-        loadClients()
-        loadPets()
+        loadProfesional()
     }, [])
 
-    const loadClients = () => {
-        clientServices
-            .getClients()
-            .then(({ data }) => setClients(data))
+    const loadProfessional = () => {
+        professionalServices
+            .getProfesional()
+            .then(({ data }) => setProfesional(data))
             .catch(err => console.log(err))
 
     }
-    const loadPets = () => {
-        PetServices
-            .getPets()
-            .then(({ data }) => setPets(data))
-            .catch(err => console.log(err))
-    }
+
 
     return (
 
         <>
             {clients.map(client => (
-                <ClientCard {...client} key={client._id} />
-            ))}
-            {pets.map(pet => (
-                <PetCard {...pet} key={pet._id} />
+                <ProfessionalCard {...professional} key={professional._id} />
             ))}
 
         </>

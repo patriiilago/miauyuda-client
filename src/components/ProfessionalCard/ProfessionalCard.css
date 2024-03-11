@@ -3,43 +3,38 @@
     margin-bottom: 20px !important;
     background-color: white !important;
     color: #609f69 !important;
-    border: 2px solid #74B07A
+    border: 2px solid #74B07A;
 }
 
 .professionalCard .card-img-top {
     border-radius: 30px 30px 0 0;
 }
 
-.professionalCard .ProfessionalCardBody {
-    padding: 20px;
+.professionalCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.professionalCard h3 {
-    color: #74B07A;
-    margin-top: 0;
+.professionalCardDetails {
+    margin-bottom: 20px;
 }
 
-.professionalCard strong {
-    color: #609f69 !important;
+.buttonContainer {
+    display: flex;
+    justify-content: center;
 }
 
-.professionalCard .buttonContainer {
-    margin-top: 20px;
-    text-align: center
+.professionalCardImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.professionalCard .professionalCardButton {
-    border: 2px solid #609f69;
-    border-radius: 10px;
-    padding: 10px 40px;
-    background-color: #74B07A;
-    color: white !important;
-    font-weight: bold;
-    text-decoration: none;
+.professionalCardDetails p {
+    margin: 0;
 }
 
-.professionalCard .professionalCardButton:hover {
-    background-color: #609f69;
-    border-color: #609f69;
-    color: white !important;
+.ProfessionalCardBody {
+    text-align: left;
 }

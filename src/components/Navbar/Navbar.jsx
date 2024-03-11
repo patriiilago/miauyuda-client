@@ -58,9 +58,12 @@ function Navigation() {
 
                                     <Dropdown.Menu>
                                         <p>¡Hola, {user?.firstName}!</p>
+
                                         <Link to={`/userprofile`}>
                                             <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
                                         </Link>
+
+
                                         <Link to={`/`}>
                                             <Dropdown.Item onClick={logout} as={'span'}>Cerrar sesión</Dropdown.Item>
                                         </Link>
