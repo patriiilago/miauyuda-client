@@ -111,6 +111,7 @@ const PetForm = () => {
                         value={petData.type}
                         name={"type"}
                     >
+                        <option>Seleccionar</option>
                         <option>Perro</option>
                         <option>Gato</option>
                         <option>Conejo</option>
@@ -171,6 +172,7 @@ const PetForm = () => {
                         value={petData.sex}
                         name={"sex"}
                     >
+                        <option>Seleccionar</option>
                         <option>Macho</option>
                         <option>Hembra</option>
                     </Form.Select>
