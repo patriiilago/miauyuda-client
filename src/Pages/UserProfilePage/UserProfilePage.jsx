@@ -36,11 +36,11 @@ const UserProfilePage = () => {
 
         <div className="UserProfilePage">
             <div className="Section">
-                <h1 className="profileTitle">Datos de tu perfil</h1>
+                <h1 className="profileTitle">Datos de tu perfil:</h1>
                 <ClientCard {...client} key={client._id} />
             </div>
             <div className="Section">
-                <h1 className="profileTitle">Datos de tu mascota</h1>
+                <h1 className="profileTitle">Datos de tu mascota:</h1>
                 <PetCard {...pet} key={pet._id} />
             </div>
         </div>

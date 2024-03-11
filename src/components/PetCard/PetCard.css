@@ -1,23 +1,40 @@
-.UserProfilePage {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
+.PetCard {
+    border-radius: 30px !important;
+    margin-bottom: 20px !important;
+    background-color: white !important;
+    color: #609f69 !important;
+    border: 2px solid #74B07A;
+    margin-bottom: 20px !important;
+
 }
 
-.Section {
-    width: 48%;
+.PetCard .card-img-top {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+.PetCardContent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 20px;
 }
 
-.Section h1 {
-    text-align: center;
-    margin-bottom: 10px;
+.PetCardDetails {
+    margin-bottom: 20px;
 }
 
-.ClientCard,
-.PetCard {
-    width: 100%;
+.PetCardButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.PetCardDetails p {
+    margin: 0;
+}
+
+.PetCardBody {
+    text-align: left;
 }

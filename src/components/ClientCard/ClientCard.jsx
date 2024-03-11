@@ -62,7 +62,10 @@ const ClientCard = ({
                 </Col>
             </Row>
 
+
         </CardGroup>
+
+
 
     )
 }
