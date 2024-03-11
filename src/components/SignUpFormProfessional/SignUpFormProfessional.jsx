@@ -38,7 +38,7 @@ const SignUpFormProfessional = () => {
         event.preventDefault()
 
         authServices
-            .postSignUpProfessional(professionalData)
+            .newProfessional(professionalData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 
