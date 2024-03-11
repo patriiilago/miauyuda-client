@@ -1,11 +1,12 @@
 import { Button, Form, Col, Row } from "react-bootstrap"
-import PetForm from "../PetForm/PetForm"
 import '../../components/SignUpFormClient/SignUpFormClient.css'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import uploadServices from "../../services/upload.services"
 import { COUNTRIES_LIST } from "../../consts/client.consts"
 import authServices from '../../services/auth.services'
+// import NewItemFormClient from "../NewItemFormClient/NewItemFormClient"
+
 
 const SignUpFormClient = () => {
 
@@ -123,6 +124,11 @@ const SignUpFormClient = () => {
                     />
                 </Form.Group>
             </Row>
+
+
+
+            {/* <NewItemFormClient /> */}
+
 
 
             <Row className="mb-3">

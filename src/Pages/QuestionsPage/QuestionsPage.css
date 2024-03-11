@@ -22,7 +22,6 @@ li,
     color: white !important;
 }
 
-/* .accordion-button::after */
 .faqsimg {
     position: relative;
     display: inline block;
@@ -42,4 +41,19 @@ li,
 
 .accordion-item {
     border-color: #74B07A !important;
+}
+
+.faqsCol .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.faqsCol .accordion-button:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.faqsCol .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
 }

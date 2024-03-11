@@ -14,6 +14,7 @@ function SignupClientPage() {
             <h1>Registrarse como cliente:</h1>
 
             <SignUpFormClient />
+            {/* <NewItemFormClient /> */}
 
         </Container>
 
