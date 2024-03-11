@@ -1,4 +1,4 @@
-import { Button, Nav, Navbar, Modal, Row, Col, Dropdown } from 'react-bootstrap'
+import { Button, Nav, Navbar, Modal, Row, Col, Dropdown, Tab, Tabs } from 'react-bootstrap'
 import { NavLink, Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import { useContext, useState } from "react";
@@ -12,12 +12,14 @@ function Navigation() {
 
     const [show, setShow] = useState(false);
     const [modalShow, setModalShow] = useState(false)
+    const [activeTab, setActiveTab] = useState('client')
 
 
     const handleModalShow = () => setModalShow(true)
     const handleModalClose = () => setModalShow(false)
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const handleTabChange = (tab) => { setActiveTab(tab) }
 
     const iconProfessionals = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829817/r0wwh8hxcfop9m9k2yw4.png"
     const iconClients = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829750/mbcmxqgxtjratuufzf6g.png"
@@ -98,7 +100,18 @@ function Navigation() {
                     <Modal.Title className="modal-title">Inicia Sesión</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modal-body">
-                    <LoginForm handleClose={() => setShow(false)} />
+                    <Tabs activeKey={activeTab} onSelect={handleTabChange}
+                        id="uncontrolled-tab-example"
+                        className="mb-3"
+                    >
+                        <Tab eventKey="client" title="Cliente">
+                            <LoginForm userType="client" handleClose={() => setShow(false)} />
+                        </Tab>
+                        <Tab eventKey="professional" title="Veterinario">
+                            <LoginForm userType="professional" handleClose={() => setShow(false)} />
+                        </Tab>
+                    </Tabs>
+
                 </Modal.Body>
             </Modal>
 

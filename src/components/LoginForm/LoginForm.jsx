@@ -5,9 +5,9 @@ import { Form, Button } from "react-bootstrap"
 import AuthServices from "../../services/auth.services"
 import './../../components/LoginForm/LoginForm.css'
 
-function LoginForm({ handleClose }) {
+function LoginForm({ handleClose, userType }) {
 
-    const [clientData, setClientData] = useState({
+    const [formData, setFormData] = useState({
         email: "",
         password: ""
     })
@@ -20,7 +20,7 @@ function LoginForm({ handleClose }) {
 
     const handleImputChange = (event) => {
         const { value, name } = event.target
-        setClientData({ ...clientData, [name]: value })
+        setFormData({ ...formData, [name]: value })
     }
 
 
@@ -28,16 +28,29 @@ function LoginForm({ handleClose }) {
 
     const handleLoginSubmit = (e) => {
         e.preventDefault()
+        if (userType === 'client') {
+            AuthServices
+                .login(formData)
+                .then((response) => {
+                    storeToken(response.data.authToken)
+                    authenticateUser()
+                    navigate('/')
+                    handleClose()
+                })
+                .catch(err => console.log(err))
+        }
+        else if (userType === 'professional') {
+            AuthServices
+                .login(formData)
+                .then((response) => {
+                    storeToken(response.data.authToken)
+                    authenticateUser()
+                    navigate('/')
+                    handleClose()
+                })
+                .catch(err => console.log(err))
+        }
 
-        AuthServices
-            .login(clientData)
-            .then((response) => {
-                storeToken(response.data.authToken)
-                authenticateUser()
-                navigate('/')
-                handleClose()
-            })
-            .catch(err => console.log(err))
     }
 
     return (
@@ -50,7 +63,7 @@ function LoginForm({ handleClose }) {
                         type="email"
                         placeholder="Introduce tu email"
                         name="email"
-                        value={clientData.email}
+                        value={formData.email}
                         onChange={handleImputChange}
                     />
                 </Form.Group>
@@ -60,7 +73,7 @@ function LoginForm({ handleClose }) {
                         className="green-border"
                         type="password"
                         placeholder="Contraseña"
-                        value={clientData.password}
+                        value={formData.password}
                         name='password'
                         onChange={handleImputChange}
                     />
