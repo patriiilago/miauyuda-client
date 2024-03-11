@@ -20,20 +20,20 @@ class ProfessionalServices {
         })
     }
 
-    getAllProfessionals = () => {
-        return this.axiosApp.get(`/api/professionals`)
+    getAllProfessionals = (professionalData) => {
+        return this.axiosApp.get(`/api/professionals`, professionalData)
     }
-    saveNewProfessional = () => {
-        return this.axiosApp.post(`/api/professionals/newProfessional`)
+    saveNewProfessional = (professionalData) => {
+        return this.axiosApp.post(`/api/professionals/newProfessional`, professionalData)
     }
-    getProfessional = () => {
-        return this.axiosApp.get(`/api/professionals/professionalId`)
+    getProfessional = (professionalData) => {
+        return this.axiosApp.get(`/api/professionals/professionalId`, professionalData)
     }
-    editProfessional = () => {
-        return this.axiosApp.put(`/api/professionals/professionalId`)
+    editProfessional = (professionalData) => {
+        return this.axiosApp.put(`/api/professionals/professionalId`, professionalData)
     }
-    deleteProfessional = () => {
-        return this.axiosApp.delete(`/api/professionals/professionalId`)
+    deleteProfessional = (professionalData) => {
+        return this.axiosApp.delete(`/api/professionals/professionalId`, professionalData)
     }
 }
 

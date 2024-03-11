@@ -29,7 +29,7 @@ const ProfessionalCard = ({
     return (
 
         <Card className="professionalCard" border="secondary" style={{ marginBottom: '20px' }}>
-            <Card.Img variant="top" src={image} />
+            <Card.Img variant="top" className="professionalCardImage" type="file" src={image} alt={`Foto de: ${firstName} ${lastName}`} />
             <Card.Body className="ProfessionalCardBody">
 
                 <h3>{firstName} {lastName}</h3>
