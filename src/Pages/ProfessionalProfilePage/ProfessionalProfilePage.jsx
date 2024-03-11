@@ -15,7 +15,7 @@ const ProfessionalProfilePage = () => {
 
     const loadProfessional = () => {
         professionalServices
-            .getProfesional()
+            .getProfessional()
             .then(({ data }) => setProfesional(data))
             .catch(err => console.log(err))
 
@@ -24,12 +24,15 @@ const ProfessionalProfilePage = () => {
 
     return (
 
-        <>
-            {clients.map(client => (
-                <ProfessionalCard {...professional} key={professional._id} />
-            ))}
 
-        </>
+        <div className="ProfessionalProfilePage">
+            <div className="Section">
+                <h1 className="profileTitle">Datos de tu perfil:</h1>
+                <ProfessionalCard {...professional} key={professional._id} />
+            </div>
+        </div>
+
+
     )
 }
 

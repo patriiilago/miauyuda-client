@@ -26,7 +26,7 @@ const SignUpFormProfessional = () => {
         schedule: "",
         specialty: "",
         emergencies: false,
-        role: "professional"
+        role: ""
 
 
     })

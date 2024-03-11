@@ -1,5 +1,5 @@
 import { Button, Nav, Navbar, Modal, Row, Col, Dropdown, Tab, Tabs } from 'react-bootstrap'
-import { NavLink, Link } from "react-router-dom"
+import { NavLink, Link, Navigate, useNavigate, useParams } from "react-router-dom"
 import Container from 'react-bootstrap/Container'
 import { useContext, useState } from "react"
 import { AuthContext } from "./../../context/auth.context"
@@ -13,7 +13,7 @@ function Navigation() {
     const [show, setShow] = useState(false);
     const [modalShow, setModalShow] = useState(false)
     const [activeTab, setActiveTab] = useState('client')
-
+    const { firstName } = useParams()
 
     const handleModalShow = () => setModalShow(true)
     const handleModalClose = () => setModalShow(false)
@@ -48,38 +48,42 @@ function Navigation() {
 
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                 <Nav>
-                    {
-                        isLoggedIn && (
-                            <>
-                                <Dropdown>
-                                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                        Mi perfil
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu>
-                                        <p>¡Hola, {user.firstName}!</p>
-                                        <Link to={`/userprofile`}>
-                                            <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
-                                        </Link>
-                                        <Link to={`/`}>
-                                            <Dropdown.Item onClick={logout} as={'span'}>Cerrar sesión</Dropdown.Item>
-                                        </Link>
-                                    </Dropdown.Menu>
-                                </Dropdown>
-                            </>
-                        )
-                    }
-                    {
-                        !isLoggedIn && (
-                            <>
-                                <Link>
-                                    <Button className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
+
+                    {isLoggedIn && (
+                        <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                Mi perfil
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <p>¡Hola, {firstName}!</p>
+                                {user.role === 'Client' ? (
+                                    <Link to={`/userprofile`}>
+                                        <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                    </Link>
+                                ) : user.role === 'Professional' ? (
+                                    <Link to={`/professionalprofile`}>
+                                        <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                    </Link>
+                                ) : null}
+                                <Link to={`/`}>
+                                    <Dropdown.Item onClick={logout} as={'span'}>
+                                        Cerrar sesión
+                                    </Dropdown.Item>
                                 </Link>
-                                <Link>
-                                    <Button className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
-                                </Link>
-                            </>
-                        )
-                    }
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    )}
+
+                    {!isLoggedIn && (
+                        <>
+                            <Link>
+                                <Button className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
+                            </Link>
+                            <Link>
+                                <Button className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
+                            </Link>
+                        </>
+                    )}
 
                 </Nav>
             </Navbar.Collapse>

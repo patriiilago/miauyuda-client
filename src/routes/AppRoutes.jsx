@@ -31,7 +31,8 @@ const AppRoutes = () => {
             <Route element={<PrivateRoute />}>
                 <Route path="/newrequest/profesional/:profesionalId" element={<NewRequestPage />} />
                 <Route path="/userprofile" element={<UserProfilePage />} />
-                <Route path="/professionalprofile/:professionalprofileId" element={<ProfessionalProfilePage />} />
+                <Route path="/professionalprofile" element={<ProfessionalProfilePage />} />
+                {/* <Route path="/professionalprofile/:professionalprofileId" element={<ProfessionalProfilePage />} /> */}
                 <Route path="/professionals" element={<ProfessionalsListPage />} />
                 <Route path="/emergencies" element={<EmergenciesPage />} />
 
