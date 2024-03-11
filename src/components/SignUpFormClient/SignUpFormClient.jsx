@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import uploadServices from "../../services/upload.services"
 import { COUNTRIES_LIST } from "../../consts/client.consts"
 import authServices from '../../services/auth.services'
-// import NewItemFormClient from "../NewItemFormClient/NewItemFormClient"
+import clientServices from "../../services/client.services"
 
 
 const SignUpFormClient = () => {
@@ -30,8 +30,8 @@ const SignUpFormClient = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault()
 
-        authServices
-            .postSignUpClient(clientData)
+        clientServices
+            .saveNewClient(clientData)
             .then(() => navigate('/'))
             .catch(err => console.log(err))
 

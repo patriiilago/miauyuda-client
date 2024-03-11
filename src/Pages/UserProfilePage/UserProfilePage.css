@@ -1,0 +1,28 @@
+.UserProfilePage {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+    /* Centra el contenido horizontalmente */
+}
+
+.Section {
+    width: 48%;
+    /* Ancho de cada sección */
+}
+
+.Section h1 {
+    text-align: center;
+}
+
+.ClientCard,
+.PetCard {
+    width: 100%;
+    /* Ocupa todo el ancho de la sección */
+}
+
+.profileTitle {
+    color: #609f69;
+    margin-top: 20px;
+}
