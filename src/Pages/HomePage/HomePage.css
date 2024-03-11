@@ -14,7 +14,7 @@
     top: 200px;
     left: 80px;
     font-size: 1.7em;
-    color: white;
+    color: white !important;
     width: 30%;
 }
 

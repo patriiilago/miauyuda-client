@@ -8,8 +8,7 @@ const QuestionsPage = () => {
         <div className="QestionsPage">
             <img className="faqsimg" src={imgfaqs} alt="image fo a dog and a cat" />
             <Container>
-                <h1>Preguntas Frecuentes</h1>
-                <h2>Preguntas Generales</h2>
+                <h2 className="questionsH2">Preguntas Generales</h2>
                 <Row className="faqsRow">
                     <Col className="faqsCol" md='6'>
                         <Accordion >
@@ -92,7 +91,7 @@ const QuestionsPage = () => {
                         </Accordion>
                     </Col>
                 </Row>
-                <h2>Perros</h2>
+                <h2 className="questionsH2">Perros</h2>
                 <Row className="faqsRow">
                     <Col className="faqsCol" md='6'>
                         <Accordion >
@@ -183,7 +182,7 @@ const QuestionsPage = () => {
                         </Accordion>
                     </Col>
                 </Row>
-                <h2>Gatos</h2>
+                <h2 className="questionsH2">Gatos</h2>
                 <Row className="faqsRow">
                     <Col className="faqsCol" md='6'>
                         <Accordion >
@@ -298,7 +297,7 @@ const QuestionsPage = () => {
                         </Accordion>
                     </Col>
                 </Row>
-                <h2>Exóticos</h2>
+                <h2 className="questionsH2">Exóticos</h2>
                 <Row className="faqsRow">
                     <Col className="faqsCol" md='6'>
                         <Accordion >

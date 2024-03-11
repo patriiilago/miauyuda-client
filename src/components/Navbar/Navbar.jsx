@@ -1,8 +1,8 @@
 import { Button, Nav, Navbar, Modal, Row, Col, Dropdown, Tab, Tabs } from 'react-bootstrap'
 import { NavLink, Link } from "react-router-dom"
-import Container from 'react-bootstrap/Container';
-import { useContext, useState } from "react";
-import { AuthContext } from "./../../context/auth.context";
+import Container from 'react-bootstrap/Container'
+import { useContext, useState } from "react"
+import { AuthContext } from "./../../context/auth.context"
 import LoginForm from "./../../components/LoginForm/LoginForm"
 import './Navbar.css'
 import logo from './../../../src/images/logo.png'
@@ -28,6 +28,7 @@ function Navigation() {
     return (
 
         <Navbar className='navbarStyle'>
+
             <Navbar.Brand className='navbarStyle' >
                 <NavLink to={"/"}>
                     <img src={logo} className="logo" alt="LOGO" />
@@ -47,7 +48,6 @@ function Navigation() {
 
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                 <Nav>
-
                     {
                         isLoggedIn && (
                             <>

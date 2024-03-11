@@ -3,18 +3,19 @@
     align-items: center;
 }
 
-h1,
+
+.accordion-body h1,
 h2,
-p,
 ul,
-li,
-.accordion-body {
+li {
     color: #74B07A !important;
     margin: 30px;
 }
 
 .accordion-button {
     color: #74b07a !important;
+    width: 100%;
+    text-align: left;
 }
 
 .accordion-header {
@@ -29,9 +30,10 @@ li,
     margin-bottom: 40px;
 }
 
-.QestionsPage {
-    margin-bottom: 200px;
-    text-align: center;
+.QuestionsPage {
+    margin-bottom: 100px;
+    align-items: center;
+    padding-bottom: 200px;
 }
 
 .faqsRow {
@@ -41,6 +43,13 @@ li,
 
 .accordion-item {
     border-color: #74B07A !important;
+    width: 100%;
+}
+
+.accordion-collapse {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .faqsCol .accordion-button:not(.collapsed) {
@@ -56,4 +65,8 @@ li,
 .faqsCol .accordion-button:not(.collapsed) {
     background-color: transparent;
     box-shadow: none;
+}
+
+.questionsH2 {
+    margin: 20px 0 20px 0;
 }
