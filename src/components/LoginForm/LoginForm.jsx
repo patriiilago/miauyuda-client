@@ -86,7 +86,7 @@ function LoginForm({ handleClose, userType }) {
 
 
             <p>¿No tienes una cuenta?</p>
-            <Link className="signupLink" to={"/signupclient"}> Regístrate como cliente <br /></Link>
+            <Link className="signupLink" to={"/newClient"}> Regístrate como cliente <br /></Link>
             <Link className="signupLink" to={"/newProfessional"}> Regístrate como veterinario </Link>
         </div>
     )

@@ -1,0 +1,23 @@
+.UserProfilePage {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Section {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Section h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ClientCard,
+.PetCard {
+    width: 100%;
+}
