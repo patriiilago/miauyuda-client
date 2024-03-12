@@ -1,6 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import Footer from "../../components/Footer/Footer"
 import homeImage from './../../../public/image-copyright-35.jpg'
 import positiveActitude from './../../../public/actitud-positiva.png'
 import inconditionalLove from './../../../public/amor-incondicional.png'
