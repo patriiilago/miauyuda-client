@@ -1,0 +1,54 @@
+.NewRequestForm {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.NewRequestFormLabel {
+    color: #74B07A;
+}
+
+.NewRequestFormInput,
+.NewRequestFormSelect,
+#image {
+    border: 2px solid #609f69 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.NewRequestFormTextarea {
+    border: 2px solid #609f69 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+    height: 300px;
+}
+
+.NewRequestFormButton {
+    background-color: #609f69 !important;
+    border: 2px solid #609f69 !important;
+    border-radius: 10px;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.NewRequestFormButton:hover {
+    background-color: #74B07A;
+    border-color: #74B07A;
+}
+
+.containerForm {
+    max-width: 700px;
+    margin: 80px auto;
+}
+
+.containerForm h1 {
+    color: #74B07A;
+    text-align: center;
+    margin-bottom: 20px;
+}

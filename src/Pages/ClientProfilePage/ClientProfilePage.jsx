@@ -5,20 +5,30 @@ import PetCard from "../../components/PetCard/PetCard"
 import './../../Pages/ClientProfilePage/ClientProfilePage.css'
 import RequestsList from "../../components/RequestsList/RequestsList.jsx"
 import { AuthContext } from "../../context/auth.context.jsx"
+import requestServices from "../../services/request.services.js"
 
 const ClientProfilePage = () => {
 
     const [client, setClient] = useState([])
+    const [requests, setRequests] = useState([])
     const { user } = useContext(AuthContext)
 
     useEffect(() => {
         loadClient()
+        loadRequests()
     }, [])
 
     const loadClient = () => {
         clientServices
             .getClient(user._id)
             .then(({ data }) => setClient(data))
+            .catch(err => console.log(err))
+    }
+
+    const loadRequests = () => {
+        requestServices
+            .getAllClientRequests(user._id)
+            .then(({ data }) => setRequests(data))
             .catch(err => console.log(err))
     }
 
@@ -35,7 +45,7 @@ const ClientProfilePage = () => {
             </div>
             <div>
                 <h1>Tus consultas</h1>
-                <RequestsList clientId={user._id} />
+                <RequestsList requests={requests} loadRequests={loadRequests} />
             </div>
         </div>
 

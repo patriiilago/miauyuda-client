@@ -2,8 +2,9 @@ import { Card, ListGroup } from 'react-bootstrap'
 import './RequestCard.css'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/auth.context'
+import ResponseForm from '../ResponseForm/ResponseForm'
 
-const RequestCard = ({ question, response }) => {
+const RequestCard = ({ question, response, _id, loadRequests }) => {
 
     const { user } = useContext(AuthContext)
 
@@ -19,10 +20,19 @@ const RequestCard = ({ question, response }) => {
                     </Card.Text>
                     <ListGroup className="list-group-flush">
                         {
-                            user.role === 'Professional' &&
+                            user.role === 'Professional' && response === '' &&
                             <>
                                 {/* TODO: METER FORMULARIO PARA RESPUESTA */}
                                 <h1>Formulario para responder</h1>
+                                <ResponseForm requestId={_id} loadRequests={loadRequests} />
+                            </>
+                        }
+
+                        {
+                            user.role === 'Professional' && response != '' &&
+                            <>
+                                {/* TODO: METER FORMULARIO PARA RESPUESTA */}
+                                <h1>Respuesta del experto: {response}</h1>
                             </>
                         }
 

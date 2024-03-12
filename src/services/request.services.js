@@ -30,11 +30,14 @@ class RequestServices {
     getRequest = (requestData) => {
         return this.axiosApp.get(`/api/requests/requestId`, requestData)
     }
-    getAllClientRequests = clienId => {
-        return this.axiosApp.get(`/api/requests/client/${clienId}`)
+    getAllClientRequests = clientId => {
+        return this.axiosApp.get(`/api/requests/client/${clientId}`)
     }
-    editRequest = (requestData) => {
-        return this.axiosApp.put(`/api/requests/requestId`, requestData)
+    getAllProfessionalRequests = professionalId => {
+        return this.axiosApp.get(`/api/requests/professional/${professionalId}`)
+    }
+    editRequest = (requestId, requestData) => {
+        return this.axiosApp.put(`/api/requests/${requestId}`, requestData)
     }
     deleteRequest = (requestData) => {
         return this.axiosApp.delete(`/api/requests/requestId`, requestData)
