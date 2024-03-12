@@ -4,7 +4,6 @@ import SignUpClientPage from '../Pages/SignUpCLientPage/SignUpCLientPage'
 import ProfessionalsListPage from './../Pages/ProfessionalsListPage/ProfessionalsListPage'
 import EmergenciesPage from './../Pages/EmergenciesPage/EmergenciesPage'
 import EuthanasiaPage from './../Pages/EuthanasiaPage/EuthanasiaPage'
-import EditFormPage from './../Pages/EditFormPage/EditFormPage'
 import NewRequestPage from './../Pages/NewRequestPage/NewRequestPage'
 import ClientProfilePage from './../Pages/ClientProfilePage/ClientProfilePage'
 import NotFoundPage from './../Pages/NotFoundPage/NotFoundPage'
@@ -14,6 +13,7 @@ import SignUpProfessionals from "./../Pages/SignUpProfessionalsPage/SignUpProfes
 import PetFormPage from "../Pages/PetFormPage/PetFormPage"
 import QuestionsPage from "../Pages/QuestionsPage/QuestionsPage"
 import ProfessionalProfilePage from "./../Pages/ProfessionalProfilePage/ProfessionalProfilePage"
+import EditPetFormPage from "../Pages/EditPetFormPage/EditPetFormPage"
 
 const AppRoutes = () => {
 
@@ -23,11 +23,12 @@ const AppRoutes = () => {
             <Route path="/newClient" element={<SignUpClientPage />} />
             <Route path="/newProfessional" element={<SignUpProfessionals />} />
             <Route path="/euthanasia" element={<EuthanasiaPage />} />
-            <Route path="/editform" element={<EditFormPage />} />
             <Route path="/questions" element={<QuestionsPage />} />
-            <Route path="/petform" element={<PetFormPage />} />
+
 
             <Route element={<PrivateRoute />}>
+                <Route path="/petform" element={<PetFormPage />} />
+                <Route path="/editpetform" element={<EditPetFormPage />} />
                 <Route path="/newrequest" element={<NewRequestPage />} />
                 <Route path="/newrequest/profesional/:profesionalId" element={<NewRequestPage />} />
                 <Route path="/clientprofile" element={<ClientProfilePage />} />

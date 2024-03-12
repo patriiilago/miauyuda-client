@@ -1,7 +1,10 @@
-import { Card } from 'react-bootstrap';
+import { Card, Button, } from 'react-bootstrap';
 import './../../components/PetCard/PetCard.css'
+import petServices from '../../services/pet.services';
+import { Navigate, useNavigate, Link } from 'react-router-dom';
 
 const PetCard = ({
+    _id: petId,
     owner,
     name,
     type,
@@ -10,11 +13,31 @@ const PetCard = ({
     sex,
     weight,
     chipNumber,
-    chipOwner
+    chipOwner,
+    image
 }) => {
+
+    const navigate = useNavigate()
+
+    const deletePet = () => {
+
+        petServices
+            .deletePet(petId)
+            .then(() => navigate('/clientprofile'))
+            .catch(err => console.log(err))
+    }
+
+    const editPet = () => {
+        petServices
+            .editPet(petId)
+            .then(() => navigate('/clientprofile'))
+            .catch(err => console.log(err))
+    }
+
+
     return (
         <Card className="PetCard">
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" className="card-img-top" />
+            <Card.Img variant="top" src={image} className="card-img-top" />
             <Card.Body className="PetCardContent">
 
                 <Card.Title>
@@ -34,8 +57,16 @@ const PetCard = ({
                     <br />
                     <strong>❤️ Titular del chip: </strong>{chipOwner}
                 </Card.Text>
+                <Button onClick={deletePet} className="deletePetButton">Eliminar Mascota</Button>
+                {" "}
+                <Link to={`/editpetform`}>
+                    <Button className='EditPetButton'>Editar Datos</Button>
+                </Link>
             </Card.Body>
+
+
         </Card>
+
     );
 }
 
