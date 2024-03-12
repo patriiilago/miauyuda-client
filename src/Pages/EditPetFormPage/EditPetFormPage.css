@@ -1,0 +1,44 @@
+.EditPetForm {
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.h1EditPetform,
+.EditPetFormLabel {
+    color: #74B07A;
+    text-align: center;
+}
+
+.EditPetFormInput,
+.EditPetFormSelect,
+#image {
+    border: 2px solid #609f69 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+    background-color: #ffffff;
+}
+
+.EditPetFormTextarea {
+    border: 2px solid #609f69 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+    height: 300px;
+    background-color: #ffffff;
+}
+
+.EditPetFormButton {
+    background-color: #609f69 !important;
+    border: none !important;
+    border-radius: 10px;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.EditPetFormButton:hover {
+    background-color: #74B07A;
+}
