@@ -1,4 +1,6 @@
+import { Row, Col } from "react-bootstrap"
 import RequestCard from "../RequestCard/RequestCard"
+
 
 const RequestsList = ({ requests, loadRequests }) => {
 

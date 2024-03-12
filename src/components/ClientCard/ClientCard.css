@@ -37,3 +37,7 @@
 .PetCardBody {
     text-align: left;
 }
+
+.profilepic {
+    width: 50% !important;
+}
