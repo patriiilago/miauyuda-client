@@ -57,7 +57,7 @@ function Navigation() {
                             <Dropdown.Menu>
                                 <p>¡Hola, {firstName}!</p>
                                 {user.role === 'Client' ? (
-                                    <Link to={`/userprofile`}>
+                                    <Link to={`/clientprofile`}>
                                         <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
                                     </Link>
                                 ) : user.role === 'Professional' ? (

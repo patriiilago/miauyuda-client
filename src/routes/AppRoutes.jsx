@@ -6,7 +6,7 @@ import EmergenciesPage from './../Pages/EmergenciesPage/EmergenciesPage'
 import EuthanasiaPage from './../Pages/EuthanasiaPage/EuthanasiaPage'
 import EditFormPage from './../Pages/EditFormPage/EditFormPage'
 import NewRequestPage from './../Pages/NewRequestPage/NewRequestPage'
-import UserProfilePage from './../Pages/UserProfilePage/UserProfilePage'
+import ClientProfilePage from './../Pages/ClientProfilePage/ClientProfilePage'
 import NotFoundPage from './../Pages/NotFoundPage/NotFoundPage'
 import AboutUsPage from './../Pages/AboutUsPage/AboutUsPage'
 import PrivateRoute from "./PrivateRoute"
@@ -24,13 +24,13 @@ const AppRoutes = () => {
             <Route path="/newProfessional" element={<SignUpProfessionals />} />
             <Route path="/euthanasia" element={<EuthanasiaPage />} />
             <Route path="/editform" element={<EditFormPage />} />
-            <Route path="/newrequest" element={<NewRequestPage />} />
             <Route path="/questions" element={<QuestionsPage />} />
             <Route path="/petform" element={<PetFormPage />} />
 
             <Route element={<PrivateRoute />}>
+                <Route path="/newrequest" element={<NewRequestPage />} />
                 <Route path="/newrequest/profesional/:profesionalId" element={<NewRequestPage />} />
-                <Route path="/userprofile" element={<UserProfilePage />} />
+                <Route path="/clientprofile" element={<ClientProfilePage />} />
                 <Route path="/professionalprofile" element={<ProfessionalProfilePage />} />
                 {/* <Route path="/professionalprofile/:professionalprofileId" element={<ProfessionalProfilePage />} /> */}
                 <Route path="/professionals" element={<ProfessionalsListPage />} />

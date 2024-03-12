@@ -11,7 +11,6 @@ const ProfessionalCard = ({
     email,
     password,
     specialty,
-    schedule,
     emergencies,
     rate,
     reviews,
@@ -20,8 +19,6 @@ const ProfessionalCard = ({
     zipCode,
     city,
     country,
-    longitude,
-    latitude,
     image
 
 }) => {

@@ -21,20 +21,20 @@ class RequestServices {
         })
     }
 
-    getAllRequests = () => {
-        return this.axiosApp.get(`/api/Requests`)
+    getAllRequests = (requestData) => {
+        return this.axiosApp.get(`/api/Requests`, requestData)
     }
-    saveNewRequest = () => {
-        return this.axiosApp.post(`/api/pets/newRequest`)
+    newRequest = (requestData) => {
+        return this.axiosApp.post(`/api/pets/newRequest`, requestData)
     }
-    getRequest = () => {
-        return this.axiosApp.get(`/api/pets/requestId`)
+    getRequest = (requestData) => {
+        return this.axiosApp.get(`/api/pets/requestId`, requestData)
     }
-    editRequest = () => {
-        return this.axiosApp.put(`/api/pets/requestId`)
+    editRequest = (requestData) => {
+        return this.axiosApp.put(`/api/pets/requestId`, requestData)
     }
-    deleteRequest = () => {
-        return this.axiosApp.delete(`/api/pets/requestId`)
+    deleteRequest = (requestData) => {
+        return this.axiosApp.delete(`/api/pets/requestId`, requestData)
     }
 }
 

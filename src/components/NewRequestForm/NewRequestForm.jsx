@@ -18,6 +18,7 @@ const NewRequestForm = () => {
         status: false,
         question: "",
         image: "",
+        response: ""  //verificar , array
     })
 
     const navigate = useNavigate()
@@ -27,8 +28,8 @@ const NewRequestForm = () => {
         event.preventDefault()
 
         requestServices
-            .saveNewRequest(requestData)
-            .then(() => navigate('/'))
+            .newRequest(requestData)
+            .then(() => navigate('/clientprofile'))
             .catch(err => console.log(err))
 
     }
