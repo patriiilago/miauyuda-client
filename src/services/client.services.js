@@ -20,17 +20,17 @@ class ClientServices {
         })
     }
 
-    newClient = (clientData) => {
-        return this.axiosApp.post(`/api/clients/newClient`, clientData)
-    }
+    // newClient = (clientData) => {
+    //     return this.axiosApp.post(`/api/clients/newClient`, clientData)
+    // }
     getClients = (clientData) => {
         return this.axiosApp.get(`/api/clients/:clientId`, clientData)
     }
     editClient = (clientData) => {
-        return this.axiosApp.put(`/api/clients/CientId`, clientData)
+        return this.axiosApp.put(`/api/clients/clientId`, clientData)
     }
     deleteClient = (clientData) => {
-        return this.axiosApp.delete(`/api/clients/CientId`, clientData)
+        return this.axiosApp.delete(`/api/clients/clientId`, clientData)
     }
 
 }

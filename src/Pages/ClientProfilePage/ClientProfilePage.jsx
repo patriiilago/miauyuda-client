@@ -4,10 +4,10 @@ import ClientCard from "../../components/ClientCard/ClientCard"
 import clientServices from "../../services/client.services"
 import PetCard from "../../components/PetCard/PetCard"
 import PetServices from "../../services/pet.services"
-import './../../Pages/UserProfilePage/UserProfilePage.css'
+import './../../Pages/ClientProfilePage/ClientProfilePage.css'
 
 
-const UserProfilePage = () => {
+const ClientProfilePage = () => {
 
 
     const [client, setClient] = useState([])
@@ -48,4 +48,4 @@ const UserProfilePage = () => {
     )
 }
 
-export default UserProfilePage
+export default ClientProfilePage
