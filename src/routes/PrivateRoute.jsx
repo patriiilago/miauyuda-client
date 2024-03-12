@@ -7,13 +7,11 @@ const PrivateRoute = () => {
     const { user, isLoading } = useContext(AuthContext)
 
     if (isLoading) {
-        return <Loader />
+        return <h1>CARGANDO</h1>
     }
 
-
-
     if (!user) {
-        return <Navigate to="/" />
+        return <Navigate to="/?modalpopup=signup" />
     }
 
     return <Outlet />

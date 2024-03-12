@@ -32,7 +32,7 @@ const SignUpFormClient = () => {
 
         authServices
             .newClient(clientData)
-            .then(() => navigate('/'))
+            .then(() => navigate('/?modalpopup=login'))
             .catch(err => console.log(err))
 
     }

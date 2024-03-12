@@ -1,7 +1,11 @@
 import { Card, ListGroup } from 'react-bootstrap'
 import './RequestCard.css'
+import { useContext } from 'react'
+import { AuthContext } from '../../context/auth.context'
 
-const RequestCard = ({ question }) => {
+const RequestCard = ({ question, response }) => {
+
+    const { user } = useContext(AuthContext)
 
     return (
         <div>
@@ -13,16 +17,36 @@ const RequestCard = ({ question }) => {
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
+                    <ListGroup className="list-group-flush">
+                        {
+                            user.role === 'Professional' &&
+                            <>
+                                {/* TODO: METER FORMULARIO PARA RESPUESTA */}
+                                <h1>Formulario para responder</h1>
+                            </>
+                        }
+
+                        {
+                            user.role === 'Client' && response === '' &&
+                            <>
+                                {/* TODO: PONER ESTO DIGNO */}
+                                <h1>Aún sin respuesta</h1>
+                            </>
+                        }
+
+                        {
+                            user.role === 'Client' && response != '' &&
+                            <>
+                                {/* TODO: PONER ESTO DIGNO */}
+                                <h1>Respuesta del experto: {response}</h1>
+                            </>
+                        }
+                    </ListGroup>
+
+
                 </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
+
+
             </Card>
         </div>
     )

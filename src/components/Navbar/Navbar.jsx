@@ -1,30 +1,32 @@
 import { Button, Nav, Navbar, Modal, Row, Col, Dropdown, Tab, Tabs } from 'react-bootstrap'
-import { NavLink, Link, Navigate, useNavigate, useParams } from "react-router-dom"
+import { NavLink, Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router-dom"
 import Container from 'react-bootstrap/Container'
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "./../../context/auth.context"
 import LoginForm from "./../../components/LoginForm/LoginForm"
 import './Navbar.css'
 import logo from './../../../src/images/logo.png'
 
 function Navigation() {
+
     const { user, isLoggedIn, logout } = useContext(AuthContext)
 
-    const [show, setShow] = useState(false);
-    const [modalShow, setModalShow] = useState(false)
+    const [modalLogin, setModalLogin] = useState(false);
+    const [modalSignup, setModalSignup] = useState(false)
     const [activeTab, setActiveTab] = useState('client')
-    const { firstName } = useParams()
+    const [searchParams, setSearchParams] = useSearchParams()
 
-    const handleModalShow = () => setModalShow(true)
-    const handleModalClose = () => setModalShow(false)
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const handleTabChange = (tab) => { setActiveTab(tab) }
+    const handleTabChange = tab => setActiveTab(tab)
 
     const iconProfessionals = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829817/r0wwh8hxcfop9m9k2yw4.png"
     const iconClients = "https://res.cloudinary.com/dxfey6stw/image/upload/v1709829750/mbcmxqgxtjratuufzf6g.png"
 
-    console.log(user)
+    useEffect(() => {
+        const shouldOpenModal = searchParams.get("modalpopup")
+        shouldOpenModal === 'login' && setModalLogin(true)
+        shouldOpenModal === 'signup' && setModalSignup(true)
+    }, [searchParams])
+
     return (
 
         <Navbar className='navbarStyle'>
@@ -49,45 +51,47 @@ function Navigation() {
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                 <Nav>
 
-                    {isLoggedIn && (
-                        <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Mi perfil
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <p>¡Hola, {firstName}!</p>
-                                {user.role === 'Client' ? (
-                                    <Link to={`/clientprofile`}>
-                                        <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                    {
+                        isLoggedIn && (
+                            <Dropdown>
+                                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                    Mi perfil
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <p>¡Hola, {user.firstName}!</p>
+                                    {user.role === 'Client' ? (
+                                        <Link to={`/clientprofile`}>
+                                            <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                        </Link>
+                                    ) : user.role === 'Professional' ? (
+                                        <Link to={`/professionalprofile`}>
+                                            <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                        </Link>
+                                    ) : null}
+                                    <Link to={`/`}>
+                                        <Dropdown.Item onClick={logout} as={'span'}>
+                                            Cerrar sesión
+                                        </Dropdown.Item>
                                     </Link>
-                                ) : user.role === 'Professional' ? (
-                                    <Link to={`/professionalprofile`}>
-                                        <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
-                                    </Link>
-                                ) : null}
-                                <Link to={`/`}>
-                                    <Dropdown.Item onClick={logout} as={'span'}>
-                                        Cerrar sesión
-                                    </Dropdown.Item>
-                                </Link>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    )}
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        )}
 
                     {!isLoggedIn && (
                         <>
                             <Link>
-                                <Button className='btn-signup' onClick={handleModalShow}>Crear Cuenta</Button>
+                                <Button className='btn-signup' onClick={() => setModalSignup(true)}>Crear Cuenta</Button>
                             </Link>
                             <Link>
-                                <Button className='btn-login' onClick={handleShow}>Iniciar Sesión</Button>
+                                <Button className='btn-login' onClick={() => setModalLogin(true)}>Iniciar Sesión</Button>
                             </Link>
                         </>
                     )}
 
                 </Nav>
             </Navbar.Collapse>
-            <Modal show={show} onHide={handleClose} className="modal-container">
+
+            <Modal show={modalLogin} onHide={() => setModalLogin(false)} className="modal-container">
                 <Modal.Header closeButton>
                     <Modal.Title className="modal-title">Inicia Sesión</Modal.Title>
                 </Modal.Header>
@@ -98,10 +102,10 @@ function Navigation() {
                         justify
                         activeKey={activeTab} onSelect={handleTabChange}>
                         <Tab eventKey="client" title="Cliente">
-                            <LoginForm userType="client" handleClose={() => setShow(false)} />
+                            <LoginForm userType="client" handleClose={() => setModalLogin(false)} />
                         </Tab>
                         <Tab eventKey="professional" title="Veterinario">
-                            <LoginForm userType="professional" handleClose={() => setShow(false)} />
+                            <LoginForm userType="professional" handleClose={() => setModalLogin(false)} />
                         </Tab>
                     </Tabs>
 
@@ -109,7 +113,7 @@ function Navigation() {
             </Modal>
 
 
-            <Modal show={modalShow} onHide={handleModalClose} className="modal-container">
+            <Modal show={modalSignup} onHide={() => setModalSignup(false)} className="modal-container">
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter" className="modal-title">
                         Darte de alta como:
@@ -119,7 +123,7 @@ function Navigation() {
                     <Container>
                         <Row>
                             <Col xs={9} md={6}>
-                                <Link to={"/newClient"} onClick={handleModalClose}>
+                                <Link to={"/newClient"} onClick={() => setModalSignup(false)}>
                                     <img
                                         src={iconClients}
                                         alt="imagen cliente"
@@ -128,7 +132,7 @@ function Navigation() {
                                 </Link>
                                 <p className='userType'>Cliente</p>
                             </Col>
-                            <Col xs={9} md={6} onClick={handleModalClose}>
+                            <Col xs={9} md={6} onClick={() => setModalSignup(false)}>
                                 <Link to={"/newProfessional"}>
                                     <img
                                         src={iconProfessionals}
@@ -141,7 +145,7 @@ function Navigation() {
                     </Container>
                 </Modal.Body>
                 <Modal.Footer className="modal-footer">
-                    <Button onClick={handleModalClose}>Cerrar</Button>
+                    <Button onClick={() => setModalSignup(false)}>Cerrar</Button>
                 </Modal.Footer>
             </Modal>
 

@@ -9,20 +9,16 @@ const ProfessionalCard = ({
     membershipNumber,
     phone,
     email,
-    password,
     specialty,
     emergencies,
     rate,
-    reviews,
     name,
     street,
     zipCode,
     city,
     country,
     image
-
 }) => {
-
 
     return (
 
@@ -51,11 +47,8 @@ const ProfessionalCard = ({
                 <br />
                 <strong>Valoración:</strong> {rate}
                 <br />
-                <strong>Comentarios:</strong> {reviews}
-
                 <div className="buttonContainer">
                     <Link to={`/newrequest/profesional/${_id}`}>
-
                         <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
                     </Link>
                 </div>
