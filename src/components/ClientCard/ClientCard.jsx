@@ -1,7 +1,5 @@
 import { Button, Card, Container, CardGroup, Row, Col } from 'react-bootstrap'
-import { useContext } from "react"
 import './../../components/ClientCard/ClientCard.css'
-import { AuthContext } from "../../context/auth.context"
 import { Link } from 'react-router-dom'
 
 const ClientCard = ({
@@ -23,16 +21,14 @@ const ClientCard = ({
 
 }) => {
 
-    const { user } = useContext(AuthContext)
-
 
     return (
         <CardGroup>
             <Row>
                 <Col mb={4}>
                     <Card
-                        className='ClientCard h-100' style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" alt={`${firstName} ${lastName}`} />
+                        className='ClientCard h-100' >
+                        <Card.Img variant="top" src={image} alt={`${firstName} ${lastName}`} />
                         <Card.Body>
                             <Card.Title>
                                 <h1>{firstName}</h1>

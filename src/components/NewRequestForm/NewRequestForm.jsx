@@ -87,11 +87,9 @@ const NewRequestForm = () => {
                             />
                         </Form.Group>
                     </Row>
-                    <Link to={`/professionals`}>
-                        <Button disabled={loadingImage} className="NewRequestFormButton" type="submit">
-                            {loadingImage ? 'Cargando imagen...' : 'Enviar'}
-                        </Button>
-                    </Link>
+                    <Button disabled={loadingImage} className="NewRequestFormButton" type="submit">
+                        {loadingImage ? 'Cargando imagen...' : 'Enviar'}
+                    </Button>
 
                 </Form>
             </Container >

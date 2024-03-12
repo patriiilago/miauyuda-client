@@ -1,12 +1,15 @@
 import { Button, Form, Col, Row } from "react-bootstrap"
 import '../../components/PetForm/PetForm.css'
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import uploadServices from "../../services/upload.services"
 import PetServices from "../../services/pet.services"
+import { AuthContext } from "../../context/auth.context"
 
 
 const PetForm = () => {
+
+    const { user } = useContext(AuthContext)
 
     const [petData, setPetData] = useState({
         name: "",
@@ -17,8 +20,10 @@ const PetForm = () => {
         birth: "",
         sex: "",
         chipNumber: "",
-        image: ""
+        image: "",
+        owner: user._id
     })
+
 
     const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)

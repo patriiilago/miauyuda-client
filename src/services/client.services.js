@@ -23,8 +23,8 @@ class ClientServices {
     // newClient = (clientData) => {
     //     return this.axiosApp.post(`/api/clients/newClient`, clientData)
     // }
-    getClients = (clientData) => {
-        return this.axiosApp.get(`/api/clients/:clientId`, clientData)
+    getClient = (clientId) => {
+        return this.axiosApp.get(`/api/clients/${clientId}`)
     }
     editClient = (clientData) => {
         return this.axiosApp.put(`/api/clients/clientId`, clientData)
