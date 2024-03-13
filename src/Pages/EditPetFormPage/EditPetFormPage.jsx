@@ -5,6 +5,7 @@ import './../EditPetFormPage/EditPetFormPage.css'
 import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "../../context/auth.context"
 import UploadServices from './../../services/upload.services'
+import { format } from 'date-fns'
 
 const EditPetFormPage = () => {
 
@@ -172,7 +173,7 @@ const EditPetFormPage = () => {
                         type="date"
                         placeholder="Fecha de nacimiento"
                         onChange={handleInputChange}
-                        value={petData.birth}
+                        value={petData.birth ? format(new Date(petData.birth), 'yyyy-MM-dd') : ''}
                         name={"birth"}
                     />
                 </Form.Group>

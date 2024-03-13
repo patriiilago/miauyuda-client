@@ -1,15 +1,16 @@
 import { Container, Button, Form, FloatingLabel, Col, Row } from "react-bootstrap"
 import uploadServices from "../../services/upload.services"
 import authServices from "../../services/auth.services"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { COUNTRIES_LIST } from "../../consts/client.consts"
 import './../../components/SignUpFormProfessional/SignUpFormProfessional.css'
+import GooglePlacesAutocomplete from "react-google-places-autocomplete"
+import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
 
 const SignUpFormProfessional = () => {
 
     const [professionalData, setProfessionalData] = useState({
-
         email: "",
         password: "",
         image: "",
@@ -27,16 +28,20 @@ const SignUpFormProfessional = () => {
         specialty: "",
         emergencies: false,
         role: ""
-
-
     })
 
     const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)
+    const [addressValue, setAddressValue] = useState({
+        address: undefined,
+        latitude: 0,
+        longitude: 0
+    })
+
+    useEffect(() => handleAutocomplete(), [addressValue])
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
-
         authServices
             .newProfessional(professionalData)
             .then(() => navigate('/'))
@@ -48,6 +53,16 @@ const SignUpFormProfessional = () => {
         const { value, name } = event.target
         setProfessionalData({ ...professionalData, [name]: value })
 
+    }
+
+    const handleAutocomplete = () => {
+
+        addressValue.label && geocodeByAddress(addressValue?.label)
+            .then(([addressDetails]) => getLatLng(addressDetails))
+            .then(({ lat, lng }) => {
+                setProfessionalData({ ...professionalData, coordinates: [lng, lat] })
+            })
+            .catch(error => console.error(error))
     }
 
 
@@ -172,6 +187,19 @@ const SignUpFormProfessional = () => {
                         />
                     </Form.Group>
 
+                    <Form.Group>
+                        <h1>DIRECCIÓN</h1>
+                        <GooglePlacesAutocomplete
+                            selectProps={{
+                                addressValue,
+                                onChange: setAddressValue,
+                            }}
+                            apiKey="AIzaSyCgCmgUkBCrmjkztK0yqNkzvNNtJjd7mbI"
+                        />
+
+                    </Form.Group>
+
+
                     <Form.Group as={Col} className="mb-3" controlId="formGridStreet">
                         <Form.Label className="signUpFormLabel">Dirección de la clínica:</Form.Label>
                         <Form.Control
@@ -217,6 +245,7 @@ const SignUpFormProfessional = () => {
                             value={professionalData.country}
                             name={"country"}
                         >
+                            <option>Selecciona</option>
                             {
                                 COUNTRIES_LIST.map((elm, index) => (
                                     <option key={index}>{elm}</option>
@@ -238,6 +267,7 @@ const SignUpFormProfessional = () => {
                             name={"specialty"}
 
                         >
+                            <option>Selecciona</option>
                             <option>Domésticos</option>
                             <option>Exóticos</option>
                             <option>Ambos</option>
