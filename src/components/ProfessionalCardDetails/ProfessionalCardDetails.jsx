@@ -1,9 +1,8 @@
 import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import './ProfessionalCard.css'
 
 
-const ProfessionalCard = ({
+const ProfessionalCardDetails = ({
     _id,
     firstName,
     lastName,
@@ -40,9 +39,7 @@ const ProfessionalCard = ({
                 <br />
                 <strong>​🏥​ Clínica:</strong> {clinic?.name}
                 <br />
-                <strong>🌍​ Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}
-                <br />
-                <strong>📍​ Ciudad:</strong> {clinic?.address?.city}  {clinic?.address?.country}
+                <strong>📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
                 <br />
                 <strong>​📞​ Teléfono:</strong> {phone}
                 <br />
@@ -50,8 +47,9 @@ const ProfessionalCard = ({
                 <br />
 
                 <div className="buttonContainer">
-                    <Link to={`/professionals/${_id}`}>
-                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Ver detalles</strong> </Button>
+
+                    <Link to={`/newrequest/profesional/${_id}`}>
+                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
                     </Link>
                     <Link to={`/newrequest/profesional/${_id}`}>
                         <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
@@ -63,4 +61,4 @@ const ProfessionalCard = ({
     )
 }
 
-export default ProfessionalCard
+export default ProfessionalCardDetails

@@ -26,8 +26,8 @@ class ProfessionalServices {
     // newProfessional = (professionalData) => {
     //     return this.axiosApp.post(`/api/professionals/newProfessional`, professionalData)
     // }
-    getProfessional = (professionalId) => {
-        return this.axiosApp.get(`/api/professionals/${professionalId}`)
+    getProfessional = (professional_id) => {
+        return this.axiosApp.get(`/api/professionals/${professional_id}`)
     }
     editProfessional = (professionalData) => {
         return this.axiosApp.put(`/api/professionals/professionalId`, professionalData)
