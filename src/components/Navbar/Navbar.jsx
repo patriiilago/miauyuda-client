@@ -29,7 +29,7 @@ function Navigation() {
 
     return (
 
-        <Navbar className='navbarStyle'>
+        <Navbar bg="dark" expand="lg" className='drop-navbar'>
 
             <Navbar.Brand >
                 <NavLink to={"/"}>
@@ -61,7 +61,7 @@ function Navigation() {
                                     <p>¡Hola, {user.firstName}!</p>
                                     {user.role === 'Client' ? (
                                         <Link to={`/clientprofile`}>
-                                            <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                            <Dropdown.Item className='profileButton' as={'span'}>Mi perfil</Dropdown.Item>
                                         </Link>
                                     ) : user.role === 'Professional' ? (
                                         <Link to={`/professionalprofile`}>
