@@ -32,7 +32,7 @@ const ClientCard = ({
                     <br />
                     <strong>💻 Email: </strong>{email}
                     <br />
-                    <strong>📍 Dirección: </strong>{street}
+                    <strong>📍 Dirección: </strong> {`${address?.street}, ${address?.zipCode}, ${address?.city}, ${address?.country}`}
                 </Card.Text>
                 <Link to={`/petform`}>
                     <Button as={'span'}>Añadir mascota</Button>
