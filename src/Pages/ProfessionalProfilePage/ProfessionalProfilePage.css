@@ -1,15 +1,9 @@
-.ClientProfilePage {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
 .Section h1 {
     text-align: center;
 }
 
 
-.profileTitle {
+.professionalTitle {
     color: #609f69;
     margin-top: 20px;
     font-size: 30px;

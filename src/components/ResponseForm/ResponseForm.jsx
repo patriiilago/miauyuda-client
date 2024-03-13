@@ -30,7 +30,7 @@ const ResponseForm = ({ requestId, loadRequests }) => {
     return (
         <div className="containerForm">
             <h1>
-                Realiza tu consulta al especialista:
+                Responder a la consulta:
             </h1>
             <Container className="NewRequestForm">
                 <Row className="mb-3 mt-3">

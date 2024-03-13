@@ -29,12 +29,12 @@ const PetCard = ({
     }
 
     return (
-        <Card className="PetCard">
-            <Card.Img variant="top" src={image} className="card-img-top" />
+        <Card className="PetCard h-55">
+            <Card.Img variant="top" src={image} className="petImage" />
             <Card.Body className="PetCardContent">
 
-                <Card.Title>
-                    <p>Me llamo {name}</p>
+                <Card.Title className='PetTitle'>
+                    <h1>Me llamo {name}</h1>
                 </Card.Title>
 
                 <Card.Text>
@@ -50,11 +50,12 @@ const PetCard = ({
                     <br />
                     <strong>❤️ Titular del chip: </strong>{chipOwner}
                 </Card.Text>
-                <Button onClick={deletePet} className="deletePetButton">Eliminar Mascota</Button>
-                {" "}
-                <Link to={`/editpetform/${petId}`}>
-                    <Button className='EditPetButton'>Editar Datos</Button>
-                </Link>
+                <div className="PetCardButtonContainer">
+                    <Button as={'span'} onClick={deletePet} className="deletePetButton">Eliminar Mascota</Button>{" "}
+                    <Link to={`/editpetform/${petId}`}>
+                        <Button as={'span'} className='EditPetButton'>Editar Datos</Button>
+                    </Link>
+                </div>
             </Card.Body>
 
 

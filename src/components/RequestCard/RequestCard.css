@@ -1,0 +1,52 @@
+.RequestCard {
+    border-radius: 30px !important;
+    margin-bottom: 20px !important;
+    background-color: white !important;
+    color: #609f69 !important;
+    border: 2px solid #74B07A;
+    margin-bottom: 20px !important;
+}
+
+.RequestCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.RequestCardDetails {
+    margin-bottom: 20px;
+}
+
+.RequestCardButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.RequestCardDetails p {
+    margin: 0;
+}
+
+.CardBody {
+    text-align: left;
+}
+
+.RequestImage {
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.RequestTitle h1 {
+    font-size: 1.5em;
+}
+
+.RequestCardButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.RequestCardButtonContainer button {
+    font-size: 1em;
+    margin: 5px;
+    height: 30px;
+}
