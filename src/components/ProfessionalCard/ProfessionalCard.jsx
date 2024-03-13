@@ -12,6 +12,8 @@ const ProfessionalCard = ({
     specialty,
     emergencies,
     rate,
+    clinic,
+    address,
     name,
     street,
     zipCode,
@@ -28,25 +30,19 @@ const ProfessionalCard = ({
 
                 <h3>{firstName} {lastName}</h3>
                 <br />
+                <strong>​​​📝​ Especialidad:</strong> {specialty}
+                <br />
+                <strong>​​🚑​ Urgencias?:</strong> {emergencies ? "Si" : "No"}
+                <br />
+                <strong>​🏥​ Clínica:</strong> {clinic?.name}
+                <br />
+                <strong>📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
+                <br />
+                <strong>​📞​ Teléfono:</strong> {phone}
+                <br />
+                <strong>💻​ Email:</strong> {email}
+                <br />
 
-                <strong>Especialidad:</strong> {specialty}
-                <br />
-                <strong>Urgencias?:</strong> {emergencies ? "Si" : "No"}
-                <br />
-                <strong>Clínica:</strong> {name}
-                <br />
-                <strong>Dónde encontrarme:</strong>
-                {street}
-                {zipCode}
-                {city}
-                {country}
-                <br />
-                <strong>Contacto:</strong> {phone}
-                <br />
-                {email}
-                <br />
-                <strong>Valoración:</strong> {rate}
-                <br />
                 <div className="buttonContainer">
                     <Link to={`/newrequest/profesional/${_id}`}>
                         <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
