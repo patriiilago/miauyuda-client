@@ -10,6 +10,10 @@
     font-size: 1.2em;
 }
 
+a {
+    color: white !important;
+}
+
 .btn-signup,
 .btn-login {
     background-color: #74B07A;
@@ -29,7 +33,7 @@
 }
 
 .modal-title {
-    color: #74B07A;
+    color: white !important;
 }
 
 .modal-body {
@@ -88,10 +92,16 @@
     background-color: #74B07A !important;
 }
 
-.tab-style {
-    margin: 0px !important;
-    flex-direction: row;
+.Tabs-login {
+    display: flex !important;
+}
 
+.Tabs-login>.nav-item {
+    flex: 2;
+    text-align: center;
+    /* Alinea el texto en el centro */
+}
 
-
+.profile-Drop {
+    background-color: #74B07A !important;
 }
