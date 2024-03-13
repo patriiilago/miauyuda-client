@@ -14,6 +14,401 @@
     top: 200px;
     left: 80px;
     font-size: 1.7em;
+    color: white;
+    width: 30%;
+}
+
+.introParagraph2 {
+    display: none;
+}
+
+.rowOfLove {
+    color: #74B07A;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rowOfLove h2 {
+    margin-bottom: 30px;
+}
+
+
+.tags {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
+.itemsOfLove {
+
+    width: 80px;
+    margin-right: 20px;
+}
+
+.tips {
+    text-align: center;
+    margin-top: 600px;
+}
+
+.tips h2 {
+    margin-bottom: 60px;
+}
+
+.Card.Text {
+    color: #74B07A;
+}
+
+.card-img-top {
+    background-color: #fdffead0 !important;
+}
+
+
+.container-dog,
+.container-cat,
+.container-exotic {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+    justify-content: left;
+
+}
+
+.container-dog,
+.container-cat,
+.container-exotic article {
+    max-width: 100%;
+    text-align: justify;
+}
+
+h2 {
+    color: #74B07A;
+}
+
+.faqs {
+    font-size: 1.3em;
+    color: #74B07A;
+    border: 2px solid #74B07A;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    background-color: #74b07a2e;
+}
+
+.itemsOfFaq {
+    margin-right: 50px;
+    height: 300px;
+}
+
+.button-faqs {
+    border-color: #74B07A;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #74B07A;
+    margin-left: 50px;
+}
+
+.button-faqs:hover {
+    background-color: #74B07A;
+    color: white;
+}
+
+.faq-row {
+    color: #74B07A;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-row h2 {
+    margin-bottom: 40px;
+}
+
+.plans {
+    margin-bottom: 200px;
+    color: #74B07A;
+    text-align: center;
+}
+
+.puppiesCard,
+.adultsCard,
+.seniorCard {
+    border: 4px solid #74B07A !important;
+    border-radius: 30px !important;
+    background-color: #74b07a76 !important;
+}
+
+.puppies-col,
+.adults-col,
+.senior-col {
+    width: 200px;
+    border-radius: 30px;
+}
+
+
+.plans h2 {
+    color: #74B07A;
+    margin: 30px;
+}
+
+.plans h3 {
+    color: #74B07A;
+    font-size: 1.4em;
+    opacity: 60%;
+    margin-bottom: 30px;
+}
+
+.plans img {
+    border-radius: 30px 30px 0px 0px;
+}
+
+.button-plans {
+    border-color: #74B07A;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #74B07A;
+    font-size: 1.3em;
+}
+
+.cardBody {
+    height: 250px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .introParagraph1 {
+        display: none;
+    }
+
+    .introParagraph2 {
+        display: block !important;
+        margin: 0px 20px;
+        text-align: justify;
+        color: #74B07A;
+    }
+
+    .tags {
+        align-items: center;
+        text-align: justify;
+    }
+
+    .container-dog,
+    .container-cat,
+    .container-exotic {
+        align-items: center;
+        justify-content: left;
+        display: block !important;
+
+    }
+
+    .container-dog,
+    .container-cat,
+    .container-exotic article {
+        max-width: 100%;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .faqs {
+        font-size: 1em;
+        color: #74B07A;
+        border: 2px solid #74B07A;
+        border-radius: 50px;
+        margin-bottom: 30px;
+        background-color: #74b07a2e;
+    }
+
+    .accordion-body h1,
+    h2,
+    ul,
+    li {
+        color: #74B07A !important;
+        margin: 10px !important;
+        font-size: 1.4rem;
+    }
+
+    .itemsOfFaq {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .button-faqs {
+        border-color: #74B07A;
+        border: 3px solid;
+        border-radius: 10px;
+        padding: 10px;
+        text-decoration: none;
+        color: #74B07A;
+        margin-left: 20px !important;
+    }
+
+    .button-faqs:hover {
+        background-color: #74B07A;
+        color: white;
+    }
+
+    .faq-row {
+        color: #74B07A;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .faq-row h2 {
+        margin-bottom: 40px;
+    }
+
+    .plans {
+        margin-bottom: 200px;
+    }
+
+    .plans h2 {
+        color: #74B07A;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .puppiesCard,
+    .adultsCard,
+    .seniorCard {
+        width: 23rem !important;
+        margin-bottom: 20px;
+        color: #74B07A;
+        text-align: center;
+        margin-left: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .introParagraph1 {
+        display: none;
+    }
+
+    .introParagraph2 {
+        display: block !important;
+        margin: 0px 20px;
+        text-align: justify;
+        color: #74B07A;
+    }
+
+    .tags {
+        display: block !important;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .container-dog,
+    .container-cat,
+    .container-exotic {
+        align-items: center;
+        justify-content: left;
+        display: block !important;
+
+    }
+
+    .container-dog,
+    .container-cat,
+    .container-exotic article {
+        max-width: 100%;
+        text-align: left;
+        margin-bottom: 40px;
+        text-align: left;
+        font-size: 1.7em;
+    }
+
+    .faqs {
+        font-size: 1em;
+        color: #74B07A;
+        border: 2px solid #74B07A;
+        border-radius: 50px;
+        margin-bottom: 30px;
+        background-color: #74b07a2e;
+    }
+
+    .itemsOfFaq {
+        width: 70%;
+        height: auto;
+    }
+
+    .button-faqs {
+        border-color: #74B07A;
+        border: 3px solid;
+        border-radius: 10px;
+        padding: 10px;
+        text-decoration: none;
+        color: #74B07A;
+        margin-left: 50px;
+    }
+
+
+    .button-faqs:hover {
+        background-color: #74B07A;
+        color: white;
+    }
+
+    .faq-row {
+        color: #74B07A;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .faq-row h2 {
+        font-size: 1.7em;
+    }
+
+    .col {
+        display: 0;
+    }
+
+    .col-md-6 {
+        font-size: 1.5;
+    }
+
+    .faq-row h2 {
+        margin-bottom: 40px;
+    }
+
+    .plans {
+        margin-bottom: 200px;
+    }
+
+    .puppiesCard,
+    .adultsCard,
+    .seniorCard {
+        width: 13rem !important;
+        margin-bottom: 20px;
+        color: #74B07A;
+        text-align: center;
+
+    }
+
+    .plansCategories {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+
+
+/* .imgContainer {
+    position: relative;
+    display: inline block;
+}
+
+.picHomePage {
+    width: 100vw;
+    aspect-ratio: auto;
+    margin-bottom: 40px;
+}
+
+.introParagraph1 {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    font-size: 1.7em;
     color: white !important;
     width: 30%;
 }
@@ -67,7 +462,18 @@
     align-items: center;
     margin: 50px;
     justify-content: left;
+    height: 225px;
 
+
+}
+
+.accordion-body h1,
+h2,
+ul,
+li {
+    color: #74B07A !important;
+    margin: 10px !important;
+    font-size: 1.4rem;
 }
 
 .container-dog,
@@ -87,6 +493,7 @@ h2 {
     border: 2px solid #74B07A;
     border-radius: 50px;
     margin-bottom: 30px;
+    background-color: #74b07a2e;
 }
 
 .itemsOfFaq {
@@ -102,9 +509,11 @@ h2 {
     text-decoration: none;
     color: #74B07A;
     margin-left: 50px;
+
 }
 
-.button-faqs:hover {
+.button-faqs:hover,
+.button-plans:hover {
     background-color: #74B07A;
     color: white;
 }
@@ -128,8 +537,9 @@ h2 {
 .puppiesCard,
 .adultsCard,
 .seniorCard {
-    border: 2px solid #74B07A !important;
+    border: 4px solid #74B07A !important;
     border-radius: 30px !important;
+    background-color: #74b07a76 !important;
 }
 
 .puppies-col,
@@ -139,16 +549,20 @@ h2 {
     border-radius: 30px;
 }
 
+.plansCategories {
+    color: white !important;
+    margin: 30px !important;
+    font-size: 2rem;
+}
 
-.plans h2 {
-    color: #74B07A;
-    margin: 30px;
+.plansTitle {
+    margin-bottom: 60px !important;
+    font-size: 4rem;
 }
 
 .plans h3 {
-    color: #74B07A;
+    color: rgb(255, 255, 255) !important;
     font-size: 1.4em;
-    opacity: 60%;
     margin-bottom: 30px;
 }
 
@@ -157,17 +571,21 @@ h2 {
 }
 
 .button-plans {
-    border-color: #74B07A;
+    border-color: white;
     border: 2px solid;
     border-radius: 10px;
     padding: 10px 40px;
     text-decoration: none;
-    color: #74B07A;
-    font-size: 1.3em;
+    color: white;
+    font-size: 1.5em;
 }
 
 .cardBody {
     height: 250px;
+}
+
+.card-img-top {
+    background-color: #fdffead0 !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -333,4 +751,4 @@ h2 {
         margin-bottom: 200px;
     }
 
-}
+} */

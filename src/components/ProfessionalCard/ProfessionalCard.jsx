@@ -1,6 +1,7 @@
 import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import './../ProfessionalCard/ProfessionalCard.css'
+import './ProfessionalCard.css'
+
 
 const ProfessionalCard = ({
     _id,
@@ -15,11 +16,13 @@ const ProfessionalCard = ({
     clinic,
     address,
     name,
+    coordinates,
     street,
     zipCode,
     city,
     country,
-    image
+    image,
+
 }) => {
 
     return (

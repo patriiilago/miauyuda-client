@@ -155,12 +155,12 @@ const HomePage = () => {
 
 
                 <Row className="plans">
-                    <h2>Nuestros planes para los peluditos</h2>
+                    <h2 className="plansTitle" >Nuestros planes para los peluditos</h2>
                     <Col md={4} className="puppies-col">
                         <Card style={{ width: '25rem' }} className="puppiesCard">
                             <Card.Img variant="top" src={puppie} />
                             <Card.Body className="cardBody">
-                                <h2>Cachorros</h2>
+                                <h2 className="plansCategories">Cachorros</h2>
                                 <Card.Text>
                                     <h3>199 € / 329 €</h3>
                                 </Card.Text>
@@ -172,7 +172,7 @@ const HomePage = () => {
                         <Card style={{ width: '25rem' }} className="adultsCard">
                             <Card.Img variant="top" src={adult} />
                             <Card.Body className="cardBody">
-                                <h2>Adultos</h2>
+                                <h2 className="plansCategories">Adultos</h2>
                                 <Card.Text>
                                     <h3>179 € / 290 €</h3>
                                 </Card.Text>
@@ -184,7 +184,7 @@ const HomePage = () => {
                         <Card style={{ width: '25rem' }} className="seniorCard">
                             <Card.Img variant="top" src={senior} />
                             <Card.Body className="cardBody">
-                                <h2>Senior</h2>
+                                <h2 className="plansCategories">Senior</h2>
                                 <Card.Text >
                                     <h3>219 € / 319 €</h3>
                                 </Card.Text>

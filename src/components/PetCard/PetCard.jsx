@@ -44,7 +44,7 @@ const PetCard = ({
                     <br />
                     <strong>🚹🚺 Sexo: </strong>{sex}
                     <br />
-                    <strong>⚖️ Peso: {weight} Kg</strong>
+                    <strong>⚖️ Peso:</strong> {weight}<strong> Kg</strong>
                     <br />
                     <strong>➡️ Número de chip: </strong>{chipNumber}
                     <br />
