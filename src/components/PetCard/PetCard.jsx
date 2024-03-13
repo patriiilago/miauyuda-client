@@ -28,6 +28,7 @@ const PetCard = ({
     }
 
     const editPet = () => {
+
         petServices
             .editPet(petId)
             .then(() => navigate('/clientprofile'))
@@ -59,7 +60,7 @@ const PetCard = ({
                 </Card.Text>
                 <Button onClick={deletePet} className="deletePetButton">Eliminar Mascota</Button>
                 {" "}
-                <Link to={`/editpetform`}>
+                <Link to={`/editpetform/${petId}`}>
                     <Button className='EditPetButton'>Editar Datos</Button>
                 </Link>
             </Card.Body>

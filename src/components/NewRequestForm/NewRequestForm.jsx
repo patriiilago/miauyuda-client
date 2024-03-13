@@ -18,7 +18,7 @@ const NewRequestForm = () => {
         status: false,
         question: "",
         image: "",
-        response: ""  //verificar , array
+        response: ""
     })
 
     const navigate = useNavigate()

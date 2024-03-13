@@ -26,11 +26,11 @@ class PetServices {
     saveNewPet = (petData) => {
         return this.axiosApp.post(`/api/pets/newPet`, petData)
     }
-    getPets = (petData) => {
-        return this.axiosApp.get(`/api/pets/petId`, petData)
+    getPet = (petId) => {
+        return this.axiosApp.get(`/api/pets/${petId}`)
     }
-    editPet = (petId) => {
-        return this.axiosApp.put(`/api/pets/${petId}`)
+    editPet = (petId, petData) => {
+        return this.axiosApp.put(`/api/pets/${petId}`, petData)
     }
     deletePet = (petId) => {
         return this.axiosApp.delete(`/api/pets/${petId}`)
