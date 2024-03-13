@@ -10,17 +10,18 @@ const RequestCard = ({ question, response, _id, loadRequests, image }) => {
 
     return (
         <Card className='RequestCard'>
-            <Card.Img variant="top" type="file" src={image} />
+
             <Card.Body className="RequestCardBody">
                 <Card.Title>
-                    <h1>Tu consulta:</h1>
+                    <h3>🗣️Tu consulta:</h3>
                 </Card.Title>
                 <Card.Text>{question}</Card.Text>
+                <Card.Img variant="bottom" type="file" src={image} />
                 <ListGroup className="list-group-flush">
                     {
                         user.role === 'Professional' && response === '' &&
                         <>
-                            <h1>Responder al cliente: </h1>
+
                             <ResponseForm requestId={_id} loadRequests={loadRequests} />
                         </>
                     }
@@ -28,7 +29,7 @@ const RequestCard = ({ question, response, _id, loadRequests, image }) => {
                     {
                         user.role === 'Professional' && response != '' &&
                         <>
-                            <h1>🗣️​ Respuesta del experto: {response}</h1>
+                            <h3>✅​ Respuesta del experto: </h3>{response}
                         </>
                     }
 
@@ -42,7 +43,7 @@ const RequestCard = ({ question, response, _id, loadRequests, image }) => {
                     {
                         user.role === 'Client' && response != '' &&
                         <>
-                            <h1>✅​Respuesta del experto: {response}</h1>
+                            <h3>✅​Respuesta del experto: </h3>{response}
                         </>
                     }
                 </ListGroup>
