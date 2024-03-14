@@ -34,7 +34,7 @@ const ClientDetailsPage = () => {
                 </Col>
                 <Col md={4}>
                     <h1 className="profileTitle">Datos de tu mascota:</h1>
-                    <PetCard {...client.pet} />
+                    <PetCard {...client.pet} showButtons={false} />
                 </Col>
 
             </Row>

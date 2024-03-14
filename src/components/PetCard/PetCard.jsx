@@ -3,6 +3,8 @@ import './../../components/PetCard/PetCard.css'
 import petServices from '../../services/pet.services';
 import { Navigate, useNavigate, Link } from 'react-router-dom';
 import { format } from '@formkit/tempo'
+import { useContext } from "react"
+import { AuthContext } from "./../../context/auth.context"
 
 const PetCard = ({
     _id: petId,
@@ -15,10 +17,12 @@ const PetCard = ({
     weight,
     chipNumber,
     chipOwner,
-    image
+    image,
+    showButtons
 }) => {
 
     const navigate = useNavigate()
+    const { user } = useContext(AuthContext)
 
     const deletePet = () => {
 
@@ -50,12 +54,14 @@ const PetCard = ({
                     <br />
                     <strong>❤️ Titular del chip: </strong>{chipOwner}
                 </Card.Text>
-                <div className="PetCardButtonContainer">
-                    <Button as={'span'} onClick={deletePet} className="deletePetButton">Eliminar Mascota</Button>{" "}
-                    <Link to={`/editpetform/${petId}`}>
-                        <Button as={'span'} className='EditPetButton'>Editar Datos</Button>
-                    </Link>
-                </div>
+                {user.role === 'Professional' && showButtons && (
+                    <div className="PetCardButtonContainer">
+                        <Button as={'span'} onClick={deletePet} className="deletePetButton">Eliminar</Button>{" "}
+                        <Link to={`/editpetform/${petId}`}>
+                            <Button as={'span'} className='EditPetButton'>Editar</Button>
+                        </Link>
+                    </div>
+                )}
             </Card.Body>
 
 
