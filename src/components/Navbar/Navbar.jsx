@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "./../../context/auth.context"
 import LoginForm from "./../../components/LoginForm/LoginForm"
 import './Navbar.css'
-import logo from './../../../src/images/logo.png'
+
 
 function Navigation() {
 
@@ -29,10 +29,10 @@ function Navigation() {
 
     return (
 
-        <Navbar bg="dark" expand="lg" className='drop-navbar'>
+        <Navbar expand="lg" className='drop-navbar'>
             <Navbar.Brand >
                 <NavLink to={"/"}>
-                    <img src={logo} className="logo" alt="LOGO" />
+                    <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710414988/pkspogs15mcnglljvlfh.png' className="logo" alt="LOGO" />
                 </NavLink>
             </Navbar.Brand >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -84,27 +84,32 @@ function Navigation() {
                             </Link>
                         </>
                     )}
-
                 </Nav>
             </Navbar.Collapse>
 
             <Modal show={modalLogin} onHide={() => setModalLogin(false)} className="modal-container">
+
                 <Modal.Header closeButton>
                     <Modal.Title className="modal-title">Inicia Sesión</Modal.Title>
                 </Modal.Header>
+
                 <Modal.Body className="modal-body">
+
                     <Tabs
-                        variant='tabs'
                         transition={true}
+                        className='modalMenu'
                         id="noanim-tab-example"
-                        className="Tabs-login"
-                        activeKey={activeTab} onSelect={handleTabChange}>
+                        activeKey={activeTab} onSelect={handleTabChange}
+                        style={{ flexDirection: 'row' }}>
+
                         <Tab eventKey="client" title="Cliente">
                             <LoginForm userType="client" handleClose={() => setModalLogin(false)} />
                         </Tab>
+
                         <Tab eventKey="professional" title="Veterinario">
                             <LoginForm userType="professional" handleClose={() => setModalLogin(false)} />
                         </Tab>
+
                     </Tabs>
 
                 </Modal.Body>
@@ -123,7 +128,7 @@ function Navigation() {
                             <Col xs={9} md={6}>
                                 <Link to={"/newClient"} onClick={() => setModalSignup(false)}>
                                     <img
-                                        src={iconClients}
+                                        src="https://res.cloudinary.com/dxfey6stw/image/upload/v1710418642/bhrmhsztqk3zppb33xil.png"
                                         alt="imagen cliente"
                                         style={{ maxWidth: '100%', height: 'auto' }}
                                     />
@@ -133,7 +138,7 @@ function Navigation() {
                             <Col xs={9} md={6} onClick={() => setModalSignup(false)}>
                                 <Link to={"/newProfessional"}>
                                     <img
-                                        src={iconProfessionals}
+                                        src="https://res.cloudinary.com/dxfey6stw/image/upload/v1710418642/n0bzgosi1pupdmfgidph.png"
                                         alt="imagen profesional"
                                         style={{ maxWidth: '100%', height: 'auto' }} />
                                 </Link>
@@ -146,11 +151,7 @@ function Navigation() {
                     <Button onClick={() => setModalSignup(false)}>Cerrar</Button>
                 </Modal.Footer>
             </Modal>
-
-
-
         </Navbar >
     )
-
 }
 export default Navigation

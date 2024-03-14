@@ -1,18 +1,6 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import homeImage from './../../../public/image-copyright-35.jpg'
-import positiveActitude from './../../../public/actitud-positiva.png'
-import inconditionalLove from './../../../public/amor-incondicional.png'
-import clientCentered from './../../../public/centrado-cliente.png'
-import fiability from './../../../public/fiabilidad.png'
-import innovation from './../../../public/innovacion.png'
-import service from './../../../public/servicio.png'
-import faqCat from './../../../public/faq-gato.png'
-import faqDog from './../../../public/faq-perro.png'
-import faqExotic from './../../../public/faq-exotico.png'
-import puppie from './../../../public/cachorro.png'
-import adult from './../../../public/adulto.png'
-import senior from './../../../public/senior.webp'
+
 
 import './HomePage.css'
 
@@ -23,7 +11,7 @@ const HomePage = () => {
     return (
         <div className="HomePage">
             <div className="imgContainer">
-                <img className="picHomePage" src={homeImage} alt="homePage pic" />
+                <img className="picHomePage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418806/p9u1rz5wu0n7bbx1awfb.jpg' alt="homePage pic" />
             </div>
             <div className="introParagraph1">
                 <p>
@@ -39,7 +27,7 @@ const HomePage = () => {
                     <Col md={4}>
                         <div className="tags">
                             <div>
-                                <img src={service} alt="icon service" className="itemsOfLove" />
+                                <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418806/lwndcp6ae0rnsfthj3cp.png' alt="icon service" className="itemsOfLove" />
                             </div>
 
                             <p><strong>Servicio</strong><br />
@@ -47,7 +35,7 @@ const HomePage = () => {
                         </div>
                         <div className="tags">
                             <div>
-                                <img src={innovation} alt="icon innovation" className="itemsOfLove" />
+                                <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418806/eeiu2n50l2tvwhwzu4ef.png' alt="icon innovation" className="itemsOfLove" />
                             </div>
 
                             <p><strong>Innovación</strong><br />
@@ -57,7 +45,7 @@ const HomePage = () => {
                     <Col md={4}>
                         <div className="tags">
                             <div>
-                                <img src={inconditionalLove} alt="icon love" className="itemsOfLove" />
+                                <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/hxd7k2ev2hrsfw4f6vtt.png' alt="icon love" className="itemsOfLove" />
                             </div>
 
                             <p><strong>Amor incondicional</strong><br />
@@ -65,7 +53,7 @@ const HomePage = () => {
                         </div>
                         <div className="tags">
                             <div>
-                                <img src={fiability} alt="icon fiability" className="itemsOfLove" />
+                                <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/i6ogi9w3ch2alpvikxuw.png' alt="icon fiability" className="itemsOfLove" />
                             </div>
 
                             <p><strong>Fiabilidad</strong><br />
@@ -75,7 +63,7 @@ const HomePage = () => {
                     <Col md={4}>
                         <div className="tags">
                             <div>
-                                <img src={clientCentered} alt="icon client" className="itemsOfLove" />
+                                <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/ys5xblhm7aptyrbcah2j.png' alt="icon client" className="itemsOfLove" />
                             </div>
 
                             <p><strong>Centrado en el cliente</strong><br />
@@ -83,7 +71,7 @@ const HomePage = () => {
                         </div>
                         <div className="tags">
                             <div>
-                                <img src={positiveActitude} alt="icon actitude" className="itemsOfLove" />
+                                <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418804/fhkkk0pxibyxct88dufc.png' alt="icon actitude" className="itemsOfLove" />
                             </div>
 
                             <p><strong>Actitud positiva</strong><br />
@@ -98,7 +86,7 @@ const HomePage = () => {
                         <div className="faqs">
                             <div className="container-exotic">
                                 <div>
-                                    <img src={faqDog} alt="dog-photo" className="itemsOfFaq" />
+                                    <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/i0uc9z8s9fmc2pmfcbt5.png' alt="dog-photo" className="itemsOfFaq" />
                                 </div>
                                 <Col md='6'>
                                     <article><strong>Perros</strong><br />
@@ -117,7 +105,7 @@ const HomePage = () => {
                         <div className="faqs">
                             <div className="container-exotic">
                                 <div>
-                                    <img src={faqCat} alt="cat-photo" className="itemsOfFaq" />
+                                    <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/rzsni6e72gt403ditcgu.png' alt="cat-photo" className="itemsOfFaq" />
                                 </div>
                                 <Col md='6'>
                                     <article><strong>Gatos</strong><br />
@@ -136,7 +124,7 @@ const HomePage = () => {
                         <div className="faqs">
                             <div className="container-exotic">
                                 <div>
-                                    <img src={faqExotic} alt="exotic-photo" className="itemsOfFaq" />
+                                    <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/ucl6qcx9utc8jhdjp34d.png' alt="exotic-photo" className="itemsOfFaq" />
                                 </div>
                                 <Col md='6'>
                                     <article><strong>Exóticos</strong><br />
@@ -158,7 +146,7 @@ const HomePage = () => {
                     <h2 className="plansTitle" >Nuestros planes para los peluditos</h2>
                     <Col md={4} className="puppies-col">
                         <Card style={{ width: '25rem' }} className="puppiesCard">
-                            <Card.Img variant="top" src={puppie} />
+                            <Card.Img variant="top" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/k9ctts8n0ay5we3fkrip.png' />
                             <Card.Body className="cardBody">
                                 <h2 className="plansCategories">Cachorros</h2>
                                 <Card.Text>
@@ -170,7 +158,7 @@ const HomePage = () => {
                     </Col>
                     <Col md={4} className="adults-col">
                         <Card style={{ width: '25rem' }} className="adultsCard">
-                            <Card.Img variant="top" src={adult} />
+                            <Card.Img variant="top" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418805/mf67lnkmzqgud0wr0wvl.png' />
                             <Card.Body className="cardBody">
                                 <h2 className="plansCategories">Adultos</h2>
                                 <Card.Text>
@@ -182,7 +170,7 @@ const HomePage = () => {
                     </Col>
                     <Col md={4} className="senior-col">
                         <Card style={{ width: '25rem' }} className="seniorCard">
-                            <Card.Img variant="top" src={senior} />
+                            <Card.Img variant="top" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418806/querkbhsr4um8cvy1t9a.webp' />
                             <Card.Body className="cardBody">
                                 <h2 className="plansCategories">Senior</h2>
                                 <Card.Text >
