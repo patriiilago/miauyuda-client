@@ -1,5 +1,4 @@
 .QuestionsPage {
-    margin-bottom: 200px;
     align-items: center;
 }
 
@@ -41,6 +40,10 @@ li {
 .exoticQuestions {
     text-align: left;
     color: #74B07A !important
+}
+
+.exoticQuestions {
+    margin-bottom: 100px !important;
 }
 
 .accordion-item {

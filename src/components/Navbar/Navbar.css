@@ -3,9 +3,9 @@
     height: auto;
 }
 
-.bg-dark {
-    padding: 0 20px 0 20px;
-    background-color: none;
+.drop-navbar {
+    padding-right: 40px !important;
+    padding-left: 50px !important;
     background-color: #74B07A !important;
     color: #f5ffe2;
     font-size: 1.2em;
@@ -103,6 +103,23 @@ a {
     /* Alinea el texto en el centro */
 }
 
-.profile-Drop {
+/* DROPDOWN */
+.dropdown-menu {
     background-color: #74B07A !important;
+    color: #fdffea !important;
+    text-align: center !important;
+}
+
+.dropdown-menu span {
+    color: #fdffea !important;
+}
+
+.profileButton:hover,
+.dropdown-item:hover {
+    color: #74B07A !important;
+}
+
+.modalMenu .nav-item button {
+    padding-left: 20px;
+    padding-right: 20px;
 }
