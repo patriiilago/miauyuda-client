@@ -1,5 +1,4 @@
 import SignUpFormProfessional from '../../components/SignUpFormProfessional/SignUpFormProfessional'
-import { Container } from "react-bootstrap"
 import './../../Pages/SignUpProfessionalsPage/SignupProfessoinalsPage.css'
 
 function SignUpFormProfessionalPage() {

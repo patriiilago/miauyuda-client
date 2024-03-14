@@ -1,6 +1,6 @@
 import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
+import "./professionalCardDetails.css"
 
 const ProfessionalCardDetails = ({
     _id,
@@ -26,25 +26,27 @@ const ProfessionalCardDetails = ({
 
     return (
 
-
         <Card className="professionalCard h-80" border="secondary" style={{ marginBottom: '20px' }}>
             <Card.Img variant="top" className="professionalCardImage" type="file" src={image} alt={`Foto de: ${firstName} ${lastName}`} />
             <Card.Body className="ProfessionalCardBody">
-
-                <h3>{firstName} {lastName}</h3>
-                <br />
-                <strong>​​​📝​ Especialidad:</strong> {specialty}
-                <br />
-                <strong>​​🚑​ Urgencias?:</strong> {emergencies ? "Si" : "No"}
-                <br />
-                <strong>​🏥​ Clínica:</strong> {clinic?.name}
-                <br />
-                <strong>📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
-                <br />
-                <strong>​📞​ Teléfono:</strong> {phone}
-                <br />
-                <strong>💻​ Email:</strong> {email}
-                <br />
+                <p className='professionalData'>
+                    <strong >​​​📝​ Especialidad:</strong> {specialty}
+                </p>
+                <p className='professionalData'>
+                    <strong >​​🚑​ Urgencias?:</strong> {emergencies ? "Si" : "No"}
+                </p>
+                <p className='professionalData'>
+                    <strong >​🏥​ Clínica:</strong> {clinic?.name}
+                </p>
+                <p className='professionalData'>
+                    <strong >📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
+                </p >
+                <p className='professionalData'>
+                    <strong >​📞​ Teléfono:</strong> {phone}
+                </p >
+                <p className='professionalData'>
+                    <strong >💻​ Email:</strong> {email}
+                </p >
 
                 <div className="buttonContainer">
 

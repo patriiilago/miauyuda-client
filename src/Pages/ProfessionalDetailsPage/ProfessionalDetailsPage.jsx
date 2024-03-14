@@ -5,10 +5,11 @@ import ProfessionalCardDetails from '../../components/ProfessionalCardDetails/Pr
 import ProfessionalCard from '../../components/ProfessionalCard/ProfessionalCard'
 import { Col, Row, Container } from "react-bootstrap"
 import ClinicMap from '../../components/ClinicMap/ClinicMap'
+import './ProfessionalDetailsPage.css'
 
-const ProfessionalDetails = (professional_id) => {
+const ProfessionalDetails = () => {
 
-    const [professional, setProfessionals] = useState([])
+    const [professional, setProfessional] = useState([])
 
     useEffect(() => loadProfesional(), [])
 
@@ -17,20 +18,23 @@ const ProfessionalDetails = (professional_id) => {
     const loadProfesional = () => {
         professionalServices
             .getProfessional(professionalId)
-            .then(({ data }) => setProfessionals(data))
+            .then(({ data }) => setProfessional(data))
             .catch(err => console.log(err))
     }
 
 
     return (
         <Container>
-            <Col md={{ span: 6 }}>
-                <ProfessionalCardDetails />
-            </Col>
+            <h1 className="ProfessionalName">{professional.firstName}</h1>
 
-            <Col md={{ span: 6 }}>
-                {professional.location && <ClinicMap coordinates={professional.location.coordinates} />}
-            </Col>
+            <Row className='ProfessionalDetailsPage'>
+                <Col md={{ span: 6 }}>
+                    <ProfessionalCardDetails {...professional} />
+                </Col>
+                <Col md={{ span: 6 }}>
+                    {professional.location && <ClinicMap coordinates={professional.location.coordinates} />}
+                </Col>
+            </Row>
 
         </Container>
 
