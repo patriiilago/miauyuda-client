@@ -114,6 +114,12 @@ a {
     color: #fdffea !important;
 }
 
+.profileButton,
+.dropdown-item a {
+    color: #74B07A !important;
+    text-decoration: none !important;
+}
+
 .profileButton:hover,
 .dropdown-item:hover {
     color: #74B07A !important;
