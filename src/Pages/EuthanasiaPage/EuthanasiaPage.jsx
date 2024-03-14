@@ -12,6 +12,8 @@ const EuthanasiaPage = () => {
                 <Row>
                     <Col md='6'>
                         <h1 className='intro1'>Sentimos mucho que hayas tenido que llegar a esta página...</h1>
+                        <h1 className='intro2'>Sentimos mucho que hayas tenido que llegar a esta página...</h1>
+
 
                         <p> Entendemos que el momento de despedirse de tu fiel compañero peludo es uno de los más difíciles que enfrentarás.
                             <br />En momentos como estos, la compasión y la empatía son fundamentales, y estamos aquí para acompañarte en este viaje emocional.</p>

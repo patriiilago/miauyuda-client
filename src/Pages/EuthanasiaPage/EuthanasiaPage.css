@@ -21,6 +21,10 @@
     width: 30%;
 }
 
+.intro2 {
+    display: none;
+}
+
 .EuthanasiaPage p {
     font-size: 1.5em;
     color: #74B07A;
