@@ -13,8 +13,9 @@ const RequestCard = ({ client, question, response, _id, loadRequests, image }) =
         <Card className='RequestCard'>
 
             <Card.Body className="RequestCardBody">
+                <h1>{client.firstName}</h1>
                 <Card.Img variant="bottom" type="file" src={client.image} />
-                <Card.Text>{client.firstName} {client._id}</Card.Text>
+
                 <div className="buttonContainer">
                     <Link to={`/clients/${client._id}`}>
                         <Button style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Ver perfil</strong> </Button>
