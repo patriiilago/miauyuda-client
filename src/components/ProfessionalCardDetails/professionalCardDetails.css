@@ -1,0 +1,9 @@
+.professionalData {
+    margin-bottom: 10px;
+}
+
+.buttonContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: right;
+}
