@@ -1,5 +1,5 @@
 .QuestionsPage {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     align-items: center;
 }
 
@@ -9,12 +9,10 @@ h2,
 ul,
 li {
     color: #74B07A !important;
-    margin: 30px;
 }
 
 .accordion-button {
     color: #74b07a !important;
-    width: 100%;
     text-align: left;
 }
 
@@ -24,10 +22,11 @@ li {
 }
 
 .faqsimg {
-    position: relative;
-    display: inline block;
-    height: 50%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
     margin-bottom: 40px;
+    margin-left: 100px;
 }
 
 .QuestionsPage {
@@ -36,14 +35,17 @@ li {
     padding-bottom: 200px;
 }
 
-.faqsRow {
-    text-align: justify;
+.generalQuestions,
+.dogQuestions,
+.catQuestions,
+.exoticQuestions {
+    text-align: left;
     color: #74B07A !important
 }
 
 .accordion-item {
     border-color: #74B07A !important;
-    width: 100%;
+    color: #74B07A !important;
 }
 
 .accordion-collapse {
@@ -68,5 +70,7 @@ li {
 }
 
 .questionsH2 {
-    margin: 20px 0 20px 0;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
 }

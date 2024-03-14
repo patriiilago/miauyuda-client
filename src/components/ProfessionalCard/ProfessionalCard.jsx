@@ -40,7 +40,9 @@ const ProfessionalCard = ({
                 <br />
                 <strong>​🏥​ Clínica:</strong> {clinic?.name}
                 <br />
-                <strong>📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
+                <strong>🌍​ Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}
+                <br />
+                <strong>📍​ Ciudad:</strong> {clinic?.address?.city}  {clinic?.address?.country}
                 <br />
                 <strong>​📞​ Teléfono:</strong> {phone}
                 <br />

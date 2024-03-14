@@ -25,9 +25,10 @@
     margin-bottom: 20px;
 }
 
-.professionalCardButtonContainer {
+.professionalCardButton {
     display: flex;
     justify-content: center;
+
 }
 
 .professionalCardDetails p {

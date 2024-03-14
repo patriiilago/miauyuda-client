@@ -9,90 +9,92 @@ const QuestionsPage = () => {
             <img className="faqsimg" src={imgfaqs} alt="image fo a dog and a cat" />
             <Container>
                 <h2 className="questionsH2">Preguntas Generales</h2>
-                <Row className="faqsRow">
-                    <Col className="faqsCol" md='6'>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>¿Cuanta cantidad de pienso al día debe comer?</Accordion.Header>
-                                <Accordion.Body>
-                                    Al igual que las cantidades de comida varían de persona a persona, también lo hacen de mascota a mascota. La mayoría del alimento seco ó húmedo, indicado para mascotas, presentan una guía de alimentación en el paquete para ayudarte a calcular la cantidad  más adecuada. Sin embargo, éstas guías, son sólo un punto de partida. Es fundamental para tú mascota un control de peso y de condición física en su veterinario habitual y de esta manera ir ajustando la cantidad, según sea necesario.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>¿Cuando es recomendable la visita al veterinario?</Accordion.Header>
-                                <Accordion.Body>
-                                    Está muy claro que cuando observamos que nuestra mascota esta enferma o le ocurre algo nos planteamos la visita al veterinario, pero a veces consideramos que lo que le ocurre se le pasará y pueden pasar varios días y el problema se puede complicar,  por tanto es importante considerar que la información que los profesionales nos brindan en las situaciones de salud a veces no se deben hacer esperar.
+                <div className="generalQuestions">
+                    <Row >
+                        <Col className="faqsCol" md='6'>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>¿Cuanta cantidad de pienso al día debe comer?</Accordion.Header>
+                                    <Accordion.Body>
+                                        Al igual que las cantidades de comida varían de persona a persona, también lo hacen de mascota a mascota. La mayoría del alimento seco ó húmedo, indicado para mascotas, presentan una guía de alimentación en el paquete para ayudarte a calcular la cantidad  más adecuada. Sin embargo, éstas guías, son sólo un punto de partida. Es fundamental para tú mascota un control de peso y de condición física en su veterinario habitual y de esta manera ir ajustando la cantidad, según sea necesario.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>¿Cuando es recomendable la visita al veterinario?</Accordion.Header>
+                                    <Accordion.Body>
+                                        Está muy claro que cuando observamos que nuestra mascota esta enferma o le ocurre algo nos planteamos la visita al veterinario, pero a veces consideramos que lo que le ocurre se le pasará y pueden pasar varios días y el problema se puede complicar,  por tanto es importante considerar que la información que los profesionales nos brindan en las situaciones de salud a veces no se deben hacer esperar.
 
 
-                                    Las visitas programadas de prevención y reconocimiento de salud, vacunas, desparasitación y chequeos supone anticiparnos a potenciales enfermedades o problemas, por lo que no deben retrasarse. Son los momentos en los que debemos informar de situaciones anormales, cambios y dudas a nuestro veterinario para que se puedan realizar valoraciones preventivas o recomendaciones al  respecto.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>¿Qué producto antiparasitario externo es mejor?</Accordion.Header>
-                                <Accordion.Body>
-                                    No existe un método único para evitar pulgas, garrapatas, mosquitos y otro parásitos. Nuestra recomendación es utilizar el producto que mejor se adapte a la situación o necesidad particular de su mascota. Dependiendo del lugar donde viva (en el exterior o el interior), si convive con otros animales y los hábitos del animal influyen considerablemente en la elección.
+                                        Las visitas programadas de prevención y reconocimiento de salud, vacunas, desparasitación y chequeos supone anticiparnos a potenciales enfermedades o problemas, por lo que no deben retrasarse. Son los momentos en los que debemos informar de situaciones anormales, cambios y dudas a nuestro veterinario para que se puedan realizar valoraciones preventivas o recomendaciones al  respecto.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>¿Qué producto antiparasitario externo es mejor?</Accordion.Header>
+                                    <Accordion.Body>
+                                        No existe un método único para evitar pulgas, garrapatas, mosquitos y otro parásitos. Nuestra recomendación es utilizar el producto que mejor se adapte a la situación o necesidad particular de su mascota. Dependiendo del lugar donde viva (en el exterior o el interior), si convive con otros animales y los hábitos del animal influyen considerablemente en la elección.
 
 
-                                    En el mercado hay una extensa gama de estos productos, muy eficaces y seguros. Siempre se recomienda el uso de uno o la combinación de varios para que la protección sea más efectiva.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>¿Es necesario vacunar a mi perro o gato?</Accordion.Header>
-                                <Accordion.Body>
-                                    No solo es necesario y recomendable vacunar a nuestras mascotas, también es obligatorio por ley vacunar de la rabia. Pero sobre todo es fundamental con el objetivo de asegurar la prevención de enfermedades graves y a veces mortales que puedan padecer a lo largo de sus vidas.
+                                        En el mercado hay una extensa gama de estos productos, muy eficaces y seguros. Siempre se recomienda el uso de uno o la combinación de varios para que la protección sea más efectiva.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>¿Es necesario vacunar a mi perro o gato?</Accordion.Header>
+                                    <Accordion.Body>
+                                        No solo es necesario y recomendable vacunar a nuestras mascotas, también es obligatorio por ley vacunar de la rabia. Pero sobre todo es fundamental con el objetivo de asegurar la prevención de enfermedades graves y a veces mortales que puedan padecer a lo largo de sus vidas.
 
 
-                                    Los programas de vacunación son variados pero hay que instaurarlos de forma individualizada de acuerdo a la edad, estados sanitarios, situaciones ambientales, factores de riesgo, enfermedades endémicas etc… De esta manera conseguiremos una inmunidad adecuada en cada etapa de vida del animal. El comienzo de la vacunación está entre las seis semanas y los seis meses. Posteriormente es recomendable revacunar periódicamente de forma annual, bianual etc.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </Col>
-                    <Col className="faqsCol" md='6'>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>¿Es normal que mi mascota se rasque tanto?</Accordion.Header>
-                                <Accordion.Body>
-                                    La pérdida excesiva de pelo o que tu mascota se rasque compulsivamente son situaciones que generan molestia a los propietarios: el suelo sucio, el sonido del rascado en la noche, la inquietud y lesiones en la piel de la mascota etc. Si tu perro o gato se rasca con más frecuencia de lo normal, de manera compulsiva y aparecen lesiones en la piel, debemos conocer la causa que puede estar detrás de picor porque puede tener un origen anormal: parásitos, alergias, infecciones y otras enfermedades de distinta naturaleza.
+                                        Los programas de vacunación son variados pero hay que instaurarlos de forma individualizada de acuerdo a la edad, estados sanitarios, situaciones ambientales, factores de riesgo, enfermedades endémicas etc… De esta manera conseguiremos una inmunidad adecuada en cada etapa de vida del animal. El comienzo de la vacunación está entre las seis semanas y los seis meses. Posteriormente es recomendable revacunar periódicamente de forma annual, bianual etc.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </Col>
+                        <Col className="faqsCol" md='6'>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>¿Es normal que mi mascota se rasque tanto?</Accordion.Header>
+                                    <Accordion.Body>
+                                        La pérdida excesiva de pelo o que tu mascota se rasque compulsivamente son situaciones que generan molestia a los propietarios: el suelo sucio, el sonido del rascado en la noche, la inquietud y lesiones en la piel de la mascota etc. Si tu perro o gato se rasca con más frecuencia de lo normal, de manera compulsiva y aparecen lesiones en la piel, debemos conocer la causa que puede estar detrás de picor porque puede tener un origen anormal: parásitos, alergias, infecciones y otras enfermedades de distinta naturaleza.
 
 
-                                    Nuestra mascotas mudan su pelo dos veces al año, en primavera y otoño normalmente. Es recomendable el cepillado con la mayor frecuencia posible en la época de cambio, con los utensilios adecuados dependiendo de si tiene capas largas o cortas. La salud y el aspecto del pelo esta íntimamente relacionado con la calidad de la alimentación que le proporcionamos a nuestras mascota.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>¿Qué vacunas debo darle?</Accordion.Header>
-                                <Accordion.Body>
-                                    El profesional te indicará el calendario de vacunación para tu peludo de acuerdo a su edad y a la región donde viva. Las vacunas que más comúnmente se aplican son las que previenen moquillo, parvovirus parainfluenza, hepatitis y leptospirosis, en el caso de los perros. Y panleucopenia, rinotraqueitis, calicivirosis y leucemia, en el caso de los gatos. La vacuna antirrábica es tanto para canes como para mininos.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>¿Como es un botiquín de primeros auxilios para mascotas?</Accordion.Header>
-                                <Accordion.Body>
-                                    Los animales pueden sufrir distintos tipos de accidentes ya sea dentro de la casa o en el exterior, o resultar heridos tras una pelea. Por eso en un botiquín no deberían faltar desinfectantes, gasas, vendas, inductores del vómito, medicamentos para la diarrea, analgésicos y antiinflamatorios. Ten muy en cuenta que todos estos productos deben estar aprobados para uso veterinario.Describa el artículo o responda a la pregunta para que los visitantes que estén interesados obtengan más información. Puede resaltar este texto con viñetas, cursiva, negrita o añadiendo enlaces.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion >
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Mis mascotas no salen de casa. ¿Necesitan desparasitación?</Accordion.Header>
-                                <Accordion.Body>
-                                    La respuesta es sí, siempre existe el riesgo de exposición a pulgas y garrapatas, incluso con animales domésticos. Tú mismo puedes ser portador de pulgas ó garrapatas en tú ropa, ó en accesorios tales como: mantas, toallas, bolsas de la compra, etc…
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </Col>
-                </Row>
+                                        Nuestra mascotas mudan su pelo dos veces al año, en primavera y otoño normalmente. Es recomendable el cepillado con la mayor frecuencia posible en la época de cambio, con los utensilios adecuados dependiendo de si tiene capas largas o cortas. La salud y el aspecto del pelo esta íntimamente relacionado con la calidad de la alimentación que le proporcionamos a nuestras mascota.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>¿Qué vacunas debo darle?</Accordion.Header>
+                                    <Accordion.Body>
+                                        El profesional te indicará el calendario de vacunación para tu peludo de acuerdo a su edad y a la región donde viva. Las vacunas que más comúnmente se aplican son las que previenen moquillo, parvovirus parainfluenza, hepatitis y leptospirosis, en el caso de los perros. Y panleucopenia, rinotraqueitis, calicivirosis y leucemia, en el caso de los gatos. La vacuna antirrábica es tanto para canes como para mininos.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>¿Como es un botiquín de primeros auxilios para mascotas?</Accordion.Header>
+                                    <Accordion.Body>
+                                        Los animales pueden sufrir distintos tipos de accidentes ya sea dentro de la casa o en el exterior, o resultar heridos tras una pelea. Por eso en un botiquín no deberían faltar desinfectantes, gasas, vendas, inductores del vómito, medicamentos para la diarrea, analgésicos y antiinflamatorios. Ten muy en cuenta que todos estos productos deben estar aprobados para uso veterinario.Describa el artículo o responda a la pregunta para que los visitantes que estén interesados obtengan más información. Puede resaltar este texto con viñetas, cursiva, negrita o añadiendo enlaces.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                            <Accordion >
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>Mis mascotas no salen de casa. ¿Necesitan desparasitación?</Accordion.Header>
+                                    <Accordion.Body>
+                                        La respuesta es sí, siempre existe el riesgo de exposición a pulgas y garrapatas, incluso con animales domésticos. Tú mismo puedes ser portador de pulgas ó garrapatas en tú ropa, ó en accesorios tales como: mantas, toallas, bolsas de la compra, etc…
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </Col>
+                    </Row>
+                </div>
                 <h2 className="questionsH2">Perros</h2>
-                <Row className="faqsRow">
+                <Row className="dogQuestions">
                     <Col className="faqsCol" md='6'>
                         <Accordion >
                             <Accordion.Item eventKey="0">
@@ -183,11 +185,11 @@ const QuestionsPage = () => {
                     </Col>
                 </Row>
                 <h2 className="questionsH2">Gatos</h2>
-                <Row className="faqsRow">
+                <Row className="catQuestions">
                     <Col className="faqsCol" md='6'>
                         <Accordion >
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>Tengo un gatito por primera vez. ¿Cómo le puedo enseñar a usar la caja de arena?</Accordion.Header>
+                                <Accordion.Header>Tengo un gatito por primera vez. ¿Cómo le puedo enseñar a usar la arena?</Accordion.Header>
                                 <Accordion.Body>
                                     Puedes mostrarle la caja primero para que se acostumbre a su presencia. Después prueba a colocarlo allí al despertar y después de comer y beber. La caja de arena debe estar siempre alejada del lugar donde come y en un lugar silencioso y tranquilo, a veces incluso cubierta total ó parcialmente.
 
@@ -208,7 +210,7 @@ const QuestionsPage = () => {
                         </Accordion>
                         <Accordion >
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>Me he encontrado un gato y me lo quiero quedar, ¿tengo que llevarlo al veterinario?</Accordion.Header>
+                                <Accordion.Header>He encontrado un gato y quiero quedarmelo, ¿tengo que llevarlo al veterinario?</Accordion.Header>
                                 <Accordion.Body>
                                     Si. Cuando recogemos de la calle o nos dan un gato es imprescindible independientemente de su origen acudir a la clínica a la mayor brevedad posible.
 
@@ -298,7 +300,7 @@ const QuestionsPage = () => {
                     </Col>
                 </Row>
                 <h2 className="questionsH2">Exóticos</h2>
-                <Row className="faqsRow">
+                <Row className="exoticQuestions">
                     <Col className="faqsCol" md='6'>
                         <Accordion >
                             <Accordion.Item eventKey="0">

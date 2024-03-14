@@ -29,12 +29,12 @@ const ResponseForm = ({ requestId, loadRequests }) => {
 
     return (
         <div className="containerForm">
-            <h1>
+            <h3>
                 Responder a la consulta:
-            </h1>
+            </h3>
             <Container className="NewRequestForm">
                 <Row className="mb-3 mt-3">
-                    <Form onSubmit={handleFormSubmit}>
+                    <Form onSubmit={handleFormSubmit} className="RequestForm">
                         <Form.Group as={Col} controlId="formGridQuestion">
                             <Form.Label className="ResponseFormLabel">Respuesta:</Form.Label>
                             <Form.Control

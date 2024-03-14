@@ -36,12 +36,12 @@ const ProfessionalProfilePage = () => {
     return (
         <Container>
             <Row className="ProfessionalProfilePage">
-                <Col md={7}>
+                <Col md={6}>
                     <h1 className="professionalTitle">Datos de tu perfil:</h1>
                     <ProfessionalCard {...professional} />
                 </Col>
 
-                <Col md={{ span: 4, offset: 1 }}>
+                <Col md={{ span: 5, offset: 1 }}>
                     <h1 className="professionalTitle">Consultas recibidas:</h1>
                     <RequestList requests={requests} />
                 </Col>

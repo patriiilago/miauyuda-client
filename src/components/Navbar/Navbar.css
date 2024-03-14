@@ -3,10 +3,10 @@
     height: auto;
 }
 
-.navbarStyle {
+.bg-dark {
     padding: 0 20px 0 20px;
-    background-color: #82AE7F;
-    color: black;
+    background-color: #74B07A;
+    color: white;
     font-size: 1.2em;
 }
 
