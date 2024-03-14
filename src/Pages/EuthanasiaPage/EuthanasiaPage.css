@@ -29,7 +29,7 @@
 
 .mentalia-button,
 .info-button {
-    color: #74B07A;
+    color: #74B07A !important;
     font-size: 1.5em;
     text-decoration: none;
     text-align: center;

@@ -5,8 +5,9 @@
 
 .bg-dark {
     padding: 0 20px 0 20px;
-    background-color: #74B07A;
-    color: white;
+    background-color: none;
+    background-color: #74B07A !important;
+    color: #f5ffe2;
     font-size: 1.2em;
 }
 

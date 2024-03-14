@@ -30,7 +30,6 @@ function Navigation() {
     return (
 
         <Navbar bg="dark" expand="lg" className='drop-navbar'>
-
             <Navbar.Brand >
                 <NavLink to={"/"}>
                     <img src={logo} className="logo" alt="LOGO" />
@@ -47,35 +46,33 @@ function Navigation() {
                     <Link className='nav-link' to={"/about"}>SOBRE NOSOTR@S</Link>
                 </Nav>
             </Navbar.Collapse>
-
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                 <Nav>
 
-                    {
-                        isLoggedIn && (
-                            <Dropdown className='profile-Drop'>
-                                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                    Mi perfil
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu>
-                                    <p>¡Hola, {user.firstName}!</p>
-                                    {user.role === 'Client' ? (
-                                        <Link to={`/clientprofile`}>
-                                            <Dropdown.Item className='profileButton' as={'span'}>Mi perfil</Dropdown.Item>
-                                        </Link>
-                                    ) : user.role === 'Professional' ? (
-                                        <Link to={`/professionalprofile`}>
-                                            <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
-                                        </Link>
-                                    ) : null}
-                                    <Link to={`/`}>
-                                        <Dropdown.Item onClick={logout} as={'span'}>
-                                            Cerrar sesión
-                                        </Dropdown.Item>
+                    {isLoggedIn && (
+                        <Dropdown className='profile-Drop'>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                Mi perfil
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <p>¡Hola, {user.firstName}!</p>
+                                {user.role === 'Client' ? (
+                                    <Link to={`/clientprofile`}>
+                                        <Dropdown.Item className='profileButton' as={'span'}>Mi perfil</Dropdown.Item>
                                     </Link>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        )}
+                                ) : user.role === 'Professional' ? (
+                                    <Link to={`/professionalprofile`}>
+                                        <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                    </Link>
+                                ) : null}
+                                <Link to={`/`}>
+                                    <Dropdown.Item onClick={logout} as={'span'}>
+                                        Cerrar sesión
+                                    </Dropdown.Item>
+                                </Link>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    )}
 
                     {!isLoggedIn && (
                         <>
