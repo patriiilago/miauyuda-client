@@ -1,8 +1,8 @@
-import { Button, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import './../../components/ClientCard/ClientCard.css'
-import { Link } from 'react-router-dom'
 
-const ClientCard = ({
+
+const ClientCardDetails = ({
     firstName,
     lastName,
     phone,
@@ -15,7 +15,6 @@ const ClientCard = ({
     country,
 
 }) => {
-
 
     return (
         <Card className='ClientCard h-80' >
@@ -33,11 +32,9 @@ const ClientCard = ({
                     <br />
                     <strong>📍 Dirección: </strong> {`${address?.street}, ${address?.zipCode}, ${address?.city}, ${address?.country}`}
                 </Card.Text>
-                <Link to={`/petform`}>
-                    <Button as={'span'}>Añadir mascota</Button>
-                </Link>
+
             </Card.Body>
         </Card>
     )
 }
-export default ClientCard
+export default ClientCardDetails

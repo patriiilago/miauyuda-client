@@ -1,6 +1,8 @@
 import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import "./professionalCardDetails.css"
+import { useContext } from "react"
+import { AuthContext } from "./../../context/auth.context"
 
 const ProfessionalCardDetails = ({
     _id,
@@ -24,7 +26,12 @@ const ProfessionalCardDetails = ({
 
 }) => {
 
+    const { user } = useContext(AuthContext)
+
+
     return (
+
+
 
         <Card className="professionalCard h-80" border="secondary" style={{ marginBottom: '20px' }}>
             <Card.Img variant="top" className="professionalCardImage" type="file" src={image} alt={`Foto de: ${firstName} ${lastName}`} />
@@ -48,17 +55,18 @@ const ProfessionalCardDetails = ({
                     <strong >💻​ Email:</strong> {email}
                 </p >
 
-                <div className="buttonContainer">
 
-                    <Link to={`/newrequest/profesional/${_id}`}>
-                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
-                    </Link>
+                {user.role === 'Client' && (
+                    <div className="buttonContainer">
+                        <Link to={`/newrequest/profesional/${_id}`}>
+                            <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
+                        </Link>
+                    </div>
+                )}
 
-                </div>
             </Card.Body>
-        </Card >
-
-    )
-}
+        </Card>
+    );
+};
 
 export default ProfessionalCardDetails
