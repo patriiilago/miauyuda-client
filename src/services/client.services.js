@@ -26,9 +26,11 @@ class ClientServices {
     getClient = (clientId) => {
         return this.axiosApp.get(`/api/clients/${clientId}`)
     }
+
     editClient = (clientData) => {
         return this.axiosApp.put(`/api/clients/clientId`, clientData)
     }
+
     deleteClient = (clientData) => {
         return this.axiosApp.delete(`/api/clients/clientId`, clientData)
     }
