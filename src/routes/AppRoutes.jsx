@@ -15,6 +15,7 @@ import QuestionsPage from "../Pages/QuestionsPage/QuestionsPage"
 import ProfessionalProfilePage from "./../Pages/ProfessionalProfilePage/ProfessionalProfilePage"
 import EditPetFormPage from "../Pages/EditPetFormPage/EditPetFormPage"
 import ProfessionalDetailsPage from '../Pages/ProfessionalDetailsPage/ProfessionalDetailsPage'
+import ClientDetailsPage from "../Pages/ClientDetailsPage/ClientDetailsPage"
 
 const AppRoutes = () => {
 
@@ -34,9 +35,9 @@ const AppRoutes = () => {
                 <Route path="/newrequest/profesional/:profesionalId" element={<NewRequestPage />} />
                 <Route path="/clientprofile" element={<ClientProfilePage />} />
                 <Route path="/professionalprofile" element={<ProfessionalProfilePage />} />
-                {/* <Route path="/professionalprofile/:professionalprofileId" element={<ProfessionalProfilePage />} /> */}
                 <Route path="/professionals" element={<ProfessionalsListPage />} />
                 <Route path="/professionals/:professionalId" element={<ProfessionalDetailsPage />} />
+                <Route path="/clients/:clientId" element={<ClientDetailsPage />} />
                 <Route path="/emergencies" element={<EmergenciesPage />} />
 
             </Route>

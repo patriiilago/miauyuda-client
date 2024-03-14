@@ -29,6 +29,8 @@ function AuthProviderWrapper(props) {
                     setisLoggedIn(true)
                 })
                 .catch(err => logout())
+        } else {
+            logout()
         }
     }
 

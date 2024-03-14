@@ -1,10 +1,11 @@
-import { Card, ListGroup, Row, Col } from 'react-bootstrap'
+import { Card, ListGroup, Row, Col, Button } from 'react-bootstrap'
 import './RequestCard.css'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/auth.context'
 import ResponseForm from '../ResponseForm/ResponseForm'
+import { Link } from 'react-router-dom'
 
-const RequestCard = ({ question, response, _id, loadRequests, image }) => {
+const RequestCard = ({ client, question, response, _id, loadRequests, image }) => {
 
     const { user } = useContext(AuthContext)
 
@@ -12,11 +13,22 @@ const RequestCard = ({ question, response, _id, loadRequests, image }) => {
         <Card className='RequestCard'>
 
             <Card.Body className="RequestCardBody">
+                <Card.Img variant="bottom" type="file" src={client.image} />
+                <Card.Text>{client.firstName} {client._id}</Card.Text>
+                <div className="buttonContainer">
+                    <Link to={`/clients/${client._id}`}>
+                        <Button style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Ver perfil</strong> </Button>
+                    </Link>
+                </div>
                 <Card.Title>
                     <h3>🗣️Tu consulta:</h3>
                 </Card.Title>
                 <Card.Text>{question}</Card.Text>
                 <Card.Img variant="bottom" type="file" src={image} />
+
+
+
+
                 <ListGroup className="list-group-flush">
                     {
                         user.role === 'Professional' && response === '' &&

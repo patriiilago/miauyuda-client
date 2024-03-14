@@ -58,7 +58,10 @@ const SignUpFormProfessional = () => {
     const handleAutocomplete = () => {
 
         addressValue.label && geocodeByAddress(addressValue?.label)
-            .then(([addressDetails]) => getLatLng(addressDetails))
+            .then(([addressDetails]) => {
+                console.log(addressDetails)
+                return getLatLng(addressDetails)
+            })
             .then(({ lat, lng }) => {
                 setProfessionalData({ ...professionalData, coordinates: [lng, lat] })
             })
