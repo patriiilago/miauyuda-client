@@ -15,6 +15,6 @@
     font-size: 30px;
 }
 
-.UserProfilePage img {
-    height: 250px;
+.requestImage {
+    height: 150px !important;
 }

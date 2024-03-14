@@ -25,15 +25,15 @@ const ClientDetailsPage = () => {
     return (
 
         <Container>
-            <h1> {client.firstName}</h1>
 
             <Row >
 
-                <Col md={{ span: 6 }}>
+                <Col md={6}>
+                    <h1 className='profileTitle'> Cliente:</h1>
                     <ClientCardDetails {...client} />
                 </Col>
-                <Col md={4}>
-                    <h1 className="profileTitle">Datos de tu mascota:</h1>
+                <Col md={6}>
+                    <h1 className="profileTitle">Mascota:</h1>
                     <PetCard {...client.pet} />
                 </Col>
 

@@ -38,17 +38,12 @@ const PetCard = ({
                 </Card.Title>
 
                 <Card.Text>
-                    <strong>📝 Detalles:</strong> Soy un {type} de raza {breed}
-                    <br />
-                    <strong>🐣 Fecha de nacimiento: </strong> nací el {format(birth, "long")}
-                    <br />
-                    <strong>🚹🚺 Sexo: </strong>{sex}
-                    <br />
-                    <strong>⚖️ Peso:</strong> {weight}<strong> Kg</strong>
-                    <br />
-                    <strong>➡️ Número de chip: </strong>{chipNumber}
-                    <br />
-                    <strong>❤️ Titular del chip: </strong>{chipOwner}
+                    <p className='petData'><strong>📝 Detalles:</strong> Soy un {type} de raza {breed}</p>
+                    <p className='petData'><strong>🐣 Fecha de nacimiento: </strong> nací el {format(birth, "long")}</p>
+                    <p className='petData'><strong>🚹🚺 Sexo: </strong>{sex}</p>
+                    <p className='petData'><strong>⚖️ Peso:</strong> {weight} Kg</p>
+                    <p className='petData'><strong>➡️ Número de chip: </strong>{chipNumber}</p>
+                    <p className='petData'><strong>❤️ Titular del chip: </strong>{chipOwner}</p>
                 </Card.Text>
                 <div className="PetCardButtonContainer">
                     <Button as={'span'} onClick={deletePet} className="deletePetButton">Eliminar Mascota</Button>{" "}

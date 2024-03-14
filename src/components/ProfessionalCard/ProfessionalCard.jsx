@@ -34,20 +34,24 @@ const ProfessionalCard = ({
 
                 <h3>{firstName} {lastName}</h3>
                 <br />
-                <strong>​​​📝​ Especialidad:</strong> {specialty}
-                <br />
-                <strong>​​🚑​ Urgencias?:</strong> {emergencies ? "Si" : "No"}
-                <br />
-                <strong>​🏥​ Clínica:</strong> {clinic?.name}
-                <br />
-                <strong>🌍​ Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}
-                <br />
-                <strong>📍​ Ciudad:</strong> {clinic?.address?.city}  {clinic?.address?.country}
-                <br />
-                <strong>​📞​ Teléfono:</strong> {phone}
-                <br />
-                <strong>💻​ Email:</strong> {email}
-                <br />
+                <p className='professionalData'>
+                    <strong >​​​📝​ Especialidad:</strong> {specialty}
+                </p>
+                <p className='professionalData'>
+                    <strong >​​🚑​ Urgencias?:</strong> {emergencies ? "Si" : "No"}
+                </p>
+                <p className='professionalData'>
+                    <strong >​🏥​ Clínica:</strong> {clinic?.name}
+                </p>
+                <p className='professionalData'>
+                    <strong >📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
+                </p >
+                <p className='professionalData'>
+                    <strong >​📞​ Teléfono:</strong> {phone}
+                </p >
+                <p className='professionalData'>
+                    <strong >💻​ Email:</strong> {email}
+                </p >
 
                 <div className="buttonContainer">
                     <Link to={`/professionals/${_id}`}>

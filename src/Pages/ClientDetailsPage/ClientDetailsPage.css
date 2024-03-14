@@ -1,0 +1,17 @@
+.Section h1 {
+    text-align: center;
+}
+
+.profileTitle {
+    color: #609f69;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.UserProfilePage img {
+    height: 250px;
+}
+
+.clientData {
+    margin-bottom: 2px;
+}

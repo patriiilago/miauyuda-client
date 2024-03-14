@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Container, Button, Form, Col, Row } from "react-bootstrap"
 import requestServices from "../../services/request.services"
-import './../../components/NewRequestForm/NewRequestForm.css'
+import './../../components/ResponseForm/ResponseForm.css'
 import { useNavigate } from "react-router-dom"
 
 const ResponseForm = ({ requestId, loadRequests }) => {
@@ -28,30 +28,28 @@ const ResponseForm = ({ requestId, loadRequests }) => {
     }
 
     return (
-        <div className="containerForm">
+        <Container className="NewResponseForm">
             <h3>
                 Responder a la consulta:
             </h3>
-            <Container className="NewRequestForm">
-                <Row className="mb-3 mt-3">
-                    <Form onSubmit={handleFormSubmit} className="RequestForm">
-                        <Form.Group as={Col} controlId="formGridQuestion">
-                            <Form.Label className="ResponseFormLabel">Respuesta:</Form.Label>
-                            <Form.Control
-                                as="textarea"
-                                className="ResponseFormSelect"
-                                type="text"
-                                placeholder="Escribe aquí tu respuesta..."
-                                onChange={handleInputChange}
-                                value={responseData.response}
-                                name={"response"}
-                            />
-                        </Form.Group>
-                        <Button className="ResponseFormButton" type="submit">Enviar respuesta</Button>
-                    </Form>
-                </Row>
-            </Container >
-        </div>
+            <Row className="response-form">
+                <Form onSubmit={handleFormSubmit}>
+                    <Form.Group as={Col} controlId="formGridQuestion">
+                        <Form.Label className="ResponseFormLabel">Respuesta:</Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            className="ResponseFormSelect"
+                            type="text"
+                            placeholder="Escribe aquí tu respuesta..."
+                            onChange={handleInputChange}
+                            value={responseData.response}
+                            name={"response"}
+                        />
+                    </Form.Group>
+                    <Button className="ResponseFormButton" type="submit">Enviar respuesta</Button>
+                </Form>
+            </Row>
+        </Container >
     )
 
 }

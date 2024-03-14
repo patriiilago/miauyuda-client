@@ -4,7 +4,7 @@
     background-color: white !important;
     color: #609f69 !important;
     border: 2px solid #74B07A;
-    margin-bottom: 20px !important;
+    margin-bottom: 100px !important;
 }
 
 .RequestCardContent {
@@ -32,9 +32,9 @@
 }
 
 .card-img-bottom {
-    width: 50% !important;
     object-fit: cover !important;
     margin-top: 30px !important;
+    width: 200px !important;
 }
 
 .RequestTitle h1 {
@@ -50,4 +50,27 @@
     font-size: 1em;
     margin: 5px;
     height: 30px;
+}
+
+.requestImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profileimage-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.buttonProfile {
+    margin-right: 50px !important;
+    width: 150px;
+}
+
+.card-text {
+    font-size: 1.3em;
+    text-align: left;
 }
