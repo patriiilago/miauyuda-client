@@ -51,9 +51,7 @@ const ProfessionalCardDetails = ({
                     <Link to={`/newrequest/profesional/${_id}`}>
                         <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
                     </Link>
-                    <Link to={`/newrequest/profesional/${_id}`}>
-                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
-                    </Link>
+
                 </div>
             </Card.Body>
         </Card >
