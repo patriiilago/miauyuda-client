@@ -1,12 +1,11 @@
 import { Container, Accordion, Row, Col } from "react-bootstrap"
-import imgfaqs from './../../../public/faqs.webp'
 import './QuestionsPage.css'
 
 const QuestionsPage = () => {
 
     return (
         <div className="QestionsPage">
-            <img className="faqsimg" src={imgfaqs} alt="image fo a dog and a cat" />
+            <img className="faqsimg" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710425874/xuowfhlgulgfxmmgue0t.webp' alt="image fo a dog and a cat" />
             <Container>
                 <h2 className="questionsH2">Preguntas Generales</h2>
                 <div className="generalQuestions">

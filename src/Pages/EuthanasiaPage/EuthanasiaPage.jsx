@@ -1,17 +1,17 @@
 import './../../Pages/EuthanasiaPage/EuthanasiaPage.css'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
-import EuthImage from './../../images/despedida2.jpg'
 
 const EuthanasiaPage = () => {
 
     return (
         <div className="EuthanasiaPage">
-            <img className='ehthimage' src={EuthImage} alt="image of a cat in a landscape" />
+            <img className='ehthimage' src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710425737/jdjaoyfrjwrrfoizdinq.jpg' alt="image of a cat in a landscape" />
             <Container>
                 <Row>
                     <Col md='6'>
                         <h1 className='intro1'>Sentimos mucho que hayas tenido que llegar a esta página...</h1>
+                        <h2 className='intro2'>Sentimos mucho que hayas tenido que llegar a esta página...</h2>
 
                         <p> Entendemos que el momento de despedirse de tu fiel compañero peludo es uno de los más difíciles que enfrentarás.
                             <br />En momentos como estos, la compasión y la empatía son fundamentales, y estamos aquí para acompañarte en este viaje emocional.</p>
