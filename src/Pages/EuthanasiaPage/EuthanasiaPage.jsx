@@ -28,11 +28,11 @@ const EuthanasiaPage = () => {
                             Estamos aquí para responder a tus preguntas, escuchar tus preocupaciones y brindarte el consuelo que necesitas en este momento tan difícil.</p>
                         <p>  Permítenos acompañarte en este último acto de amor hacia tu mascota. <br /> En nuestra práctica, no solo ofrecemos un servicio, sino un hombro en el que apoyarte y un corazón que entiende tu dolor. <br /> Juntos, podemos honrar la vida de tu amigo peludo y despedirnos con dignidad y amor.</p>
                     </Col>
-                    <Link className='info-button' to={"#"}>Pide Información</Link>
+                    <Link className='info-button' to="https://mentalia.netlify.app" >Pide Información</Link>
                     <p>Además, si sientes que necesitas más apoyo emocional durante este proceso de despedida, te recomendamos visitar la página web de nuestros compañeros, Lara Aguerre y Fran Pazos, quienes han creado <strong>MENTALIA</strong>. </p>
                     <p> <strong>MENTALIA</strong> es una red que conecta psicólogos con pacientes de manera online, brindando un espacio seguro y confidencial para explorar tus emociones <br /> y recibir el apoyo necesario durante este momento tan delicado. Puedes encontrar más información en su página web:</p>
                     <p> Nunca estás solo en tu camino hacia la sanación emocional.✨</p>
-                    <Link className='mentalia-button' to={"#"}>👉🏽Mentalia</Link>
+                    <Link className='mentalia-button' to="https://mentalia.netlify.app">👉🏽Mentalia</Link>
                     <br />
                 </Row>
             </Container>

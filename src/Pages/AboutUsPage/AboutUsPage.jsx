@@ -5,6 +5,7 @@ import teresaPhoto from './../../images/teresa.jpg'
 import patriPhoto from './../../images/patri.jpg'
 import oscarPhoto from './../../images/oscar.jpg'
 import turkaPhoto from './../../images/turka.jpg'
+import QRphoto from './../../images/QRacordeon.jpg'
 
 function AboutUsPage() {
     return (
@@ -28,7 +29,7 @@ function AboutUsPage() {
             <Carousel.Item>
                 <img
                     className="carouselImg"
-                    text="First slide"
+                    text="slide 1"
                     src={patriPhoto}
                 />
             </Carousel.Item>
@@ -36,7 +37,7 @@ function AboutUsPage() {
             <Carousel.Item>
                 <img
                     className="carouselImg"
-                    text="First slide"
+                    text="slide 2"
                     src={oscarPhoto}
                 />
             </Carousel.Item>
@@ -44,8 +45,15 @@ function AboutUsPage() {
             <Carousel.Item>
                 <img
                     className="carouselImg"
-                    text="First slide"
+                    text="slide 3"
                     src={turkaPhoto}
+                />
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="carouselImg"
+                    text="slide 4"
+                    src={QRphoto}
                 />
             </Carousel.Item>
         </Carousel>
