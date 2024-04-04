@@ -6,7 +6,7 @@ import { AuthContext } from "./../../context/auth.context"
 import LoginForm from "./../../components/LoginForm/LoginForm"
 import './Navbar.css'
 
-
+//testing
 function Navigation() {
 
     const { user, isLoggedIn, logout } = useContext(AuthContext)
