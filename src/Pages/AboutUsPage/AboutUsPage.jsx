@@ -6,6 +6,7 @@ import patriPhoto from './../../images/patri.jpg'
 import oscarPhoto from './../../images/oscar.jpg'
 import turkaPhoto from './../../images/turka.jpg'
 import QRphoto from './../../images/QRacordeon.jpg'
+// TODO: GENERAR NUEVO QR Y AÑADIR A LA ULTIMA DIAPOSITIVA
 
 function AboutUsPage() {
     return (
