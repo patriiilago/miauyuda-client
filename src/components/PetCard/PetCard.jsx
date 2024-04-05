@@ -1,7 +1,7 @@
 import { Card, Button, } from 'react-bootstrap';
 import './../../components/PetCard/PetCard.css'
 import petServices from '../../services/pet.services';
-import { Navigate, useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { format } from '@formkit/tempo'
 import { useContext } from "react"
 import { AuthContext } from "./../../context/auth.context"
@@ -16,8 +16,7 @@ const PetCard = ({
     weight,
     chipNumber,
     chipOwner,
-    image,
-    showButtons
+    image
 }) => {
 
     const navigate = useNavigate()

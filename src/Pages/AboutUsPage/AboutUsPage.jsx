@@ -19,27 +19,33 @@ function AboutUsPage() {
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="carouselImg"
-                    text="First slide"
-                    src={teresaPhoto}
-                />
+                <a href="https://www.linkedin.com/in/teresa-arranz-carrasco/">
+                    <img
+                        className="carouselImg"
+                        text="First slide"
+                        src={teresaPhoto}
+                    />
+                </a>
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="carouselImg"
-                    text="slide 1"
-                    src={patriPhoto}
-                />
+                <a href="https://www.linkedin.com/in/patri-lago/">
+                    <img
+                        className="carouselImg"
+                        text="slide 1"
+                        src={patriPhoto}
+                    />
+                </a>
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="carouselImg"
-                    text="slide 2"
-                    src={oscarPhoto}
-                />
+                <a href="https://www.linkedin.com/in/oscar-gomez-diez/">
+                    <img
+                        className="carouselImg"
+                        text="slide 2"
+                        src={oscarPhoto}
+                    />
+                </a>
             </Carousel.Item>
 
             <Carousel.Item>
