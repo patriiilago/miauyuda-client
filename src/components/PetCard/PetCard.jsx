@@ -8,7 +8,6 @@ import { AuthContext } from "./../../context/auth.context"
 
 const PetCard = ({
     _id: petId,
-    owner,
     name,
     type,
     breed,
@@ -41,7 +40,7 @@ const PetCard = ({
                     <h1>Me llamo {name}</h1>
                 </Card.Title>
 
-                <Card.Text>
+                <Card.Text as={'span'} >
                     <p className='petData'><strong>📝 Detalles:</strong> Soy un {type} de raza {breed}</p>
                     <p className='petData'><strong>🐣 Fecha de nacimiento: </strong> nací el {format(birth, "long")}</p>
                     <p className='petData'><strong>🚹🚺 Sexo: </strong>{sex}</p>
@@ -49,7 +48,8 @@ const PetCard = ({
                     <p className='petData'><strong>➡️ Número de chip: </strong>{chipNumber}</p>
                     <p className='petData'><strong>❤️ Titular del chip: </strong>{chipOwner}</p>
                 </Card.Text>
-                {user.role === 'Professional' && showButtons && (
+
+                {user.role === 'Client' && (
                     <div className="PetCardButtonContainer">
                         <Button as={'span'} onClick={deletePet} className="deletePetButton">Eliminar</Button>{" "}
                         <Link to={`/editpetform/${petId}`}>

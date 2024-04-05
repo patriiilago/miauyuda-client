@@ -5,7 +5,7 @@ const QuestionsPage = () => {
 
     return (
         <div className="QestionsPage">
-            <img className="faqsimg" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710425874/xuowfhlgulgfxmmgue0t.webp' alt="image fo a dog and a cat" />
+            {/* <img className="faqsimg" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710425874/xuowfhlgulgfxmmgue0t.webp' alt="image fo a dog and a cat" /> */}
             <Container>
                 <h2 className="questionsH2">Preguntas Generales</h2>
                 <div className="generalQuestions">
@@ -52,8 +52,8 @@ const QuestionsPage = () => {
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
-                        </Col>
-                        <Col className="faqsCol" md='6'>
+
+
                             <Accordion >
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>¿Es normal que mi mascota se rasque tanto?</Accordion.Header>
@@ -141,8 +141,8 @@ const QuestionsPage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                    </Col>
-                    <Col className="faqsCol" md='6'>
+
+
                         <Accordion >
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>¿Por qué mi perro come hierba?</Accordion.Header>
@@ -238,8 +238,8 @@ const QuestionsPage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                    </Col>
-                    <Col className="faqsCol" md='6'>
+
+
                         <Accordion >
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Mi gato araña el mobiliario ¿cómo puedo evitarlo?</Accordion.Header>
@@ -361,8 +361,7 @@ const QuestionsPage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                    </Col>
-                    <Col className="faqsCol" md='6'>
+
                         <Accordion >
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>¿Que pájaros exóticos puedes tener en casa?</Accordion.Header>
