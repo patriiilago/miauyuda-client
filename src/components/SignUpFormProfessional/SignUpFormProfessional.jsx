@@ -20,6 +20,9 @@ const SignUpFormProfessional = () => {
         lastName: "",
         membershipNumber: "",
         phone: "",
+        address: "",
+        latitude: 0,
+        longitude: 0,
         street: "",
         zipCode: "",
         city: "",
@@ -32,18 +35,17 @@ const SignUpFormProfessional = () => {
         role: ""
     })
 
-    const navigate = useNavigate()
+
     const [loadingImage, setLoadingImage] = useState(false)
-    const [addressValue, setAddressValue] = useState({
-        address: undefined,
-        latitude: 0,
-        longitude: 0
-    })
+    const [addressValue, setAddressValue] = useState()
+    const navigate = useNavigate()
+
 
     useEffect(() => handleAutocomplete(), [addressValue])
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
+        console.log(professionalData)
         authServices
             .newProfessional(professionalData)
             .then(() => navigate('/'))
@@ -58,9 +60,10 @@ const SignUpFormProfessional = () => {
     }
 
     const handleAutocomplete = () => {
-
-        addressValue.label && geocodeByAddress(addressValue?.label)
+        console.log(professionalData)
+        addressValue && geocodeByAddress(addressValue?.label)
             .then(([addressDetails]) => {
+                setProfessionalData({ ...setProfessionalData, address: addressValue.label })
                 console.log(addressDetails)
                 return getLatLng(addressDetails)
             })
@@ -195,6 +198,8 @@ const SignUpFormProfessional = () => {
                     <Form.Group>
                         <h1>DIRECCIÓN</h1>
                         <GooglePlacesAutocomplete
+                            onChange={(value) => setAddressValue(value)}
+                            value={addressValue}
                             selectProps={{
                                 addressValue,
                                 onChange: setAddressValue,
@@ -205,7 +210,7 @@ const SignUpFormProfessional = () => {
                     </Form.Group>
 
 
-                    <Form.Group as={Col} className="mb-3" controlId="formGridStreet">
+                    {/* <Form.Group as={Col} className="mb-3" controlId="formGridStreet">
                         <Form.Label className="signUpFormLabel">Dirección de la clínica:</Form.Label>
                         <Form.Control
                             className="signUpFormInput"
@@ -257,7 +262,7 @@ const SignUpFormProfessional = () => {
                                 ))
                             }
                         </Form.Select>
-                    </Form.Group>
+                    </Form.Group>*/}
                 </Row>
 
 
