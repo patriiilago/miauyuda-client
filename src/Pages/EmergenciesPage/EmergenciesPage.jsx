@@ -1,5 +1,4 @@
 import { Container } from "react-bootstrap"
-import ProfessionalList from "../../components/ProfessionalsList/ProfessionalsList"
 import EmergenciesList from "../../components/EmergenciesList/EmergenciesList"
 import './../../Pages/EmergenciesPage/EmergenciesPage.css'
 

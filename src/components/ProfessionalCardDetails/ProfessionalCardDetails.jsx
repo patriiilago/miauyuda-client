@@ -8,20 +8,12 @@ const ProfessionalCardDetails = ({
     _id,
     firstName,
     lastName,
-    membershipNumber,
     phone,
     email,
     specialty,
     emergencies,
     rate,
     clinic,
-    address,
-    name,
-    coordinates,
-    street,
-    zipCode,
-    city,
-    country,
     image,
 
 }) => {
@@ -46,7 +38,7 @@ const ProfessionalCardDetails = ({
                     <strong >​🏥​ Clínica:</strong> {clinic?.name}
                 </p>
                 <p className='professionalData'>
-                    <strong >📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
+                    <strong >📍 Dónde encontrarme:</strong>  {clinic?.address}
                 </p >
                 <p className='professionalData'>
                     <strong >​📞​ Teléfono:</strong> {phone}

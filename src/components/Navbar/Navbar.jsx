@@ -6,8 +6,8 @@ import { AuthContext } from "./../../context/auth.context"
 import LoginForm from "./../../components/LoginForm/LoginForm"
 import './Navbar.css'
 
-//testing
 function Navigation() {
+
 
     const { user, isLoggedIn, logout } = useContext(AuthContext)
 
@@ -15,6 +15,10 @@ function Navigation() {
     const [modalSignup, setModalSignup] = useState(false)
     const [activeTab, setActiveTab] = useState('client')
     const [searchParams, setSearchParams] = useSearchParams()
+
+    const [selectedButton, setSelectedButton] = useState(null);
+
+
 
     const handleTabChange = tab => setActiveTab(tab)
 
@@ -38,12 +42,12 @@ function Navigation() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-left" id="basic-navbar-nav">
                 <Nav>
-                    <Link className='nav-link' to={"/"}>INICIO</Link>
-                    <Link className='nav-link' to={"/professionals"}>VETERINARIOS</Link>
-                    <Link className='nav-link' to={"/emergencies"}>URGENCIAS</Link>
-                    <Link className='nav-link' to={"/euthanasia"}>EUTANASIA A DOMICILIO</Link>
-                    <Link className='nav-link' to={"/questions"}>PREGUNTAS FRECUENTES</Link>
-                    <Link className='nav-link' to={"/about"}>SOBRE NOSOTR@S</Link>
+                    <Link className='nav-link' to={"/"}>Inicio</Link>
+                    <Link className='nav-link' to={"/professionals"}>Veterinarios</Link>
+                    <Link className='nav-link' to={"/emergencies"}>Urgencias</Link>
+                    <Link className='nav-link' to={"/euthanasia"}>Eutanasia a domicilio</Link>
+                    <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
+                    <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
                 </Nav>
             </Navbar.Collapse>
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
@@ -90,7 +94,7 @@ function Navigation() {
             <Modal show={modalLogin} onHide={() => setModalLogin(false)} className="modal-container">
 
                 <Modal.Header closeButton>
-                    <Modal.Title className="modal-title">Inicia Sesión</Modal.Title>
+                    <Modal.Title className="modal-title">Inicia Sesión:</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body className="modal-body">
@@ -102,11 +106,11 @@ function Navigation() {
                         activeKey={activeTab} onSelect={handleTabChange}
                         style={{ flexDirection: 'row' }}>
 
-                        <Tab eventKey="client" title="Cliente">
+                        <Tab eventKey="client" title="Soy cliente">
                             <LoginForm userType="client" handleClose={() => setModalLogin(false)} />
                         </Tab>
 
-                        <Tab eventKey="professional" title="Veterinario">
+                        <Tab eventKey="professional" title="Soy veterinario">
                             <LoginForm userType="professional" handleClose={() => setModalLogin(false)} />
                         </Tab>
 
@@ -116,41 +120,43 @@ function Navigation() {
             </Modal>
 
 
-            <Modal show={modalSignup} onHide={() => setModalSignup(false)} className="modal-container">
+            <Modal
+                show={modalSignup}
+                onHide={() => setModalSignup(false)}
+                className="modal-container"
+                centered
+            >
                 <Modal.Header closeButton>
-                    <Modal.Title id="contained-modal-title-vcenter" className="modal-title">
-                        Darte de alta como:
+                    <Modal.Title className="d-flex justify-content-between align-items-center w-100">
+                        <span>Crear cuenta:</span>
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modal-body">
                     <Container>
-                        <Row>
-                            <Col xs={9} md={6}>
+                        <Row className="button-container">
+                            <Col xs={9} md={6} className='colNewClient'>
                                 <Link to={"/newClient"} onClick={() => setModalSignup(false)}>
-                                    <img
-                                        src="https://res.cloudinary.com/dxfey6stw/image/upload/v1710418642/bhrmhsztqk3zppb33xil.png"
-                                        alt="imagen cliente"
-                                        style={{ maxWidth: '100%', height: 'auto' }}
-                                    />
+                                    <Button variant="success" className="custom-button">
+                                        <span className="button-text">Cliente</span>
+                                    </Button>
                                 </Link>
-                                <p className='userType'>Cliente</p>
                             </Col>
-                            <Col xs={9} md={6} onClick={() => setModalSignup(false)}>
+                            <Col xs={9} md={6} className='colNewClient' onClick={() => setModalSignup(false)}>
                                 <Link to={"/newProfessional"}>
-                                    <img
-                                        src="https://res.cloudinary.com/dxfey6stw/image/upload/v1710418642/n0bzgosi1pupdmfgidph.png"
-                                        alt="imagen profesional"
-                                        style={{ maxWidth: '100%', height: 'auto' }} />
+                                    <Button variant="success" className="custom-button">
+                                        <span className="button-text">Veterinario</span>
+                                    </Button>
                                 </Link>
-                                <p className='userType'>Veterinario</p>
                             </Col>
                         </Row>
                     </Container>
                 </Modal.Body>
                 <Modal.Footer className="modal-footer">
-                    <Button onClick={() => setModalSignup(false)}>Cerrar</Button>
+                    <p className='footerText'>Miauyuda necesita la información de contacto que nos proporcionas para ponernos en contacto contigo acerca de nuestros productos y servicios. Puedes darte de baja de estas comunicaciones en cualquier momento. </p>
                 </Modal.Footer>
             </Modal>
+
+
         </Navbar >
     )
 }

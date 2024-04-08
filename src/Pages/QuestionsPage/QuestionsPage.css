@@ -1,78 +1,170 @@
-.QuestionsPage {
-    align-items: center;
+.faq {
+    color: var(----clr-accent, #45A443);
+    text-align: center;
+    padding-top: 64px;
+
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
 }
 
-
-.accordion-body h1,
-h2,
-ul,
-li {
-    color: #74B07A !important;
+.faqTitle {
+    color: var(----txt-primary, #0D260D) !important;
 }
 
-.accordion-button {
-    color: #74b07a !important;
-    text-align: left;
+.presentation {
+    align-self: stretch;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    padding-bottom: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-.accordion-header {
-    background-color: #74b07a3d !important;
-    color: white !important;
+.faqButtons {
+    padding: 16px 20px;
+    border-radius: 1000px;
+    border: 1px solid var(----clr-accent, #45A443);
+    background: transparent;
+    color: var(----txt-primary, #0D260D) !important;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 136%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-.faqsimg {
+.faqButtons:hover {
+    background: var(----clr-accent, #45A443);
+    color: var(----clr-white, #FFF);
+}
+
+.faqButtonsContainer {
     display: flex;
-    justify-content: center;
-    width: 80%;
-    margin-bottom: 40px;
-    margin-left: 100px;
-}
-
-.QuestionsPage {
-    margin-bottom: 100px;
+    gap: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
     align-items: center;
-    padding-bottom: 200px;
-}
-
-.generalQuestions,
-.dogQuestions,
-.catQuestions,
-.exoticQuestions {
-    text-align: left;
-    color: #74B07A !important
-}
-
-.exoticQuestions {
-    margin-bottom: 100px !important;
-}
-
-.accordion-item {
-    border-color: #74B07A !important;
-    color: #74B07A !important;
-}
-
-.accordion-collapse {
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-.faqsCol .accordion-button:not(.collapsed) {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-.faqsCol .accordion-button:focus {
-    box-shadow: none;
-    outline: none;
-}
-
-.faqsCol .accordion-button:not(.collapsed) {
-    background-color: transparent;
-    box-shadow: none;
 }
 
 .questionsH2 {
-    margin: 20px 20px;
+    align-self: stretch;
+    color: var(----clr-accent, #45A443);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.animalsTypes {
+    color: var(----txt-primary, #0D260D);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+
+}
+
+.accordionFaq {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+}
+
+.textHeaderAccordion {
+    flex: 1 0 0;
+    color: var(----txt-primary, #0D260D) !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 100%;
+    height: auto;
+}
+
+.faq {
+    color: var(----clr-accent, #45A443);
+    text-align: center;
+    padding-top: 64px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.presentation {
+    align-self: stretch;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    padding-bottom: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.questionsH2 {
+    align-self: stretch;
+    color: var(----clr-accent, #45A443);
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.animalsTypes {
+    color: var(----txt-primary, #0D260D);
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+
+}
+
+.accordionFaq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+}
+
+.textHeaderAccordion {
+    flex: 1 0 0;
+    color: var(----txt-primary, #0D260D) !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 100%;
+    height: auto;
+}
+
+.accordion-button {
+    background: white !important;
+    color: var(----txt-primary, #0D260D) !important;
+    box-shadow: none !important;
+}
+
+
+.accordion,
+.accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
 }
