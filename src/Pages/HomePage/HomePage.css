@@ -12,10 +12,10 @@
 .introParagraph1 {
     color: var(----clr-accent, #45A443);
     position: absolute;
-    top: 290px;
-    left: 120px;
+    top: 400px;
+    left: 160px;
     align-self: stretch;
-    font-size: 60px;
+    font-size: 80px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
@@ -35,49 +35,215 @@
 
 }
 
-
-.rowOfLove {
-    color: #74B07A;
+.textOfLove {
+    margin-bottom: 20px;
     text-align: center;
-    margin-bottom: 40px;
 }
 
-.rowOfLove h2 {
-    margin-bottom: 30px;
+.sharedlovetxt1 {
+    color: var(----clr-accent, #45A443);
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
 }
 
+.sharedlovetxt2 {
+    color: var(----txt-primary, #0D260D);
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+    margin-bottom: 1px;
+}
 
-.tags {
+.sharedlovetxt3 {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    text-align: center;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.RowOfLove {
     display: flex;
+    padding: 56px 80px 0px;
+    justify-content: center;
     align-items: center;
-    text-align: justify;
+    align-content: center;
+    align-self: stretch;
+    flex-wrap: wrap;
 }
 
 .itemsOfLove {
-
-    width: 80px;
-    margin-right: 20px;
+    width: 57px;
 }
 
-.tips {
-    text-align: center;
-    margin-top: 600px;
+.tags {
+    height: 250px;
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    text-align: left;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+
 }
 
-.tips h2 {
+.headertag {
+    color: var(----txt-primary, #0D260D);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.tags p {
+    align-self: baseline;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.accordion-button {
+    font-size: 1.3rem !important;
+    height: 60px;
+    background: white !important;
+    color: var(----txt-primary, #0D260D) !important;
+    box-shadow: none !important;
+}
+
+.pug-img,
+.exotic-img {
+    margin-left: 170px;
+    align-content: end;
+}
+
+.pug-row,
+.exotic-row {
+    padding: 80px 100px;
+}
+
+.cat-row {
+    padding: 40px 100px;
+    background: var(----clr-weak, #E4F5E3);
+}
+
+.cat-img {
+    width: 550px;
+    margin-right: 85px;
+    align-content: end;
+}
+
+.catAccordion .accordion-item {
+    background: var(----clr-weak, #E4F5E3) !important;
+}
+
+.catAccordion .accordion-button {
+    background: var(----clr-weak, #E4F5E3) !important;
+}
+
+
+.button-faqs {
+    color: var(----clr-accent, #45A443);
+    border-radius: 12px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.plansText {
     margin-bottom: 60px;
+    text-align: center;
 }
 
-.Card.Text {
-    color: #74B07A;
+.plans {
+    padding: 0px 112px;
+    color: var(----txt-primary, #0D260D);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    list-style-type: none;
+    /* 30px */
 }
 
-.card-img-top {
-    background-color: #fdffead0 !important;
+.plans-card {
+    padding: 0px 20px;
+}
+
+.plans-card h3 {
+    color: var(----txt-primary, #0D260D);
+}
+
+.plans-card li {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50)) !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: left;
+
+}
+
+.plans-card ul {
+    padding-left: 0px;
+    text-align: center;
+    list-style-type: none !important;
 }
 
 
-.container-dog,
+.cardText {
+    text-align: center !important;
+}
+
+.cardBody {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.checkImg {
+    width: 16px;
+}
+
+.button-plans {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(----clr-accent, #45A443);
+}
+
+/* ---------- */
+
+
+
+
+
+
+
+/* .container-dog,
 .container-cat,
 .container-exotic {
     display: flex;
@@ -98,40 +264,15 @@ h2 {
     color: #74B07A;
 }
 
-.faqs {
-    font-size: 1.3em;
-    color: #74B07A;
-    border: 2px solid #74B07A;
-    border-radius: 50px;
-    margin-bottom: 30px;
-    background-color: #74b07a2e;
-}
+
 
 .itemsOfFaq {
     margin-right: 50px;
     height: 300px;
 }
 
-.button-faqs {
-    border-color: #74B07A;
-    border: 3px solid;
-    border-radius: 10px;
-    padding: 10px;
-    text-decoration: none;
-    color: #74B07A;
-    margin-left: 50px;
-}
 
-.button-faqs:hover {
-    background-color: #74B07A;
-    color: white;
-}
 
-.faq-row {
-    color: #74B07A;
-    text-align: center;
-    margin-bottom: 40px;
-}
 
 .faq-row h2 {
     margin-bottom: 40px;
@@ -403,4 +544,4 @@ h2 {
         font-size: 1.4rem;
     }
 
-}
+} */
