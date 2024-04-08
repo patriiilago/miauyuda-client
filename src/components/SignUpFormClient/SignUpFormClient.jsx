@@ -8,6 +8,9 @@ import authServices from '../../services/auth.services'
 import clientServices from "../../services/client.services"
 
 
+// TODO ARREGLAR FORM DEL MAPS
+// DAR MAS ESPACIO DEL BOTON DE DAR DE ALTA HASTA ABAJO
+
 const SignUpFormClient = () => {
 
     const [clientData, setClientData] = useState({

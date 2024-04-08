@@ -8,6 +8,8 @@ import './../../components/SignUpFormProfessional/SignUpFormProfessional.css'
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
 
+
+
 const SignUpFormProfessional = () => {
 
     const [professionalData, setProfessionalData] = useState({
