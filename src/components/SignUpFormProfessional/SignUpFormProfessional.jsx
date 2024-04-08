@@ -21,12 +21,6 @@ const SignUpFormProfessional = () => {
         membershipNumber: "",
         phone: "",
         address: "",
-        latitude: 0,
-        longitude: 0,
-        street: "",
-        zipCode: "",
-        city: "",
-        country: "",
         type: "",
         coordinates: [Number],
         schedule: "",
@@ -35,17 +29,14 @@ const SignUpFormProfessional = () => {
         role: ""
     })
 
-
+    const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)
     const [addressValue, setAddressValue] = useState()
-    const navigate = useNavigate()
-
 
     useEffect(() => handleAutocomplete(), [addressValue])
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
-        console.log(professionalData)
         authServices
             .newProfessional(professionalData)
             .then(() => navigate('/'))
@@ -60,17 +51,20 @@ const SignUpFormProfessional = () => {
     }
 
     const handleAutocomplete = () => {
-        console.log(professionalData)
-        addressValue && geocodeByAddress(addressValue?.label)
+        if (!addressValue) return;
+
+        geocodeByAddress(addressValue.label)
             .then(([addressDetails]) => {
-                setProfessionalData({ ...setProfessionalData, address: addressValue.label })
-                console.log(addressDetails)
-                return getLatLng(addressDetails)
+                return getLatLng(addressDetails);
             })
             .then(({ lat, lng }) => {
-                setProfessionalData({ ...professionalData, coordinates: [lng, lat] })
+                setProfessionalData(prevData => ({
+                    ...prevData,
+                    address: addressValue.label,
+                    coordinates: [lng, lat]
+                }));
             })
-            .catch(error => console.error(error))
+            .catch(error => console.error(error));
     }
 
 
@@ -195,74 +189,19 @@ const SignUpFormProfessional = () => {
                         />
                     </Form.Group>
 
-                    <Form.Group>
-                        <h1>DIRECCIÓN</h1>
+                    <Form.Group controlId="formGridAddressclinic">
+                        <Form.Label className="signUpFormLabel">Dirección de la clínica:</Form.Label>
                         <GooglePlacesAutocomplete
-                            onChange={(value) => setAddressValue(value)}
-                            value={addressValue}
+                            type="text"
                             selectProps={{
                                 addressValue,
-                                onChange: setAddressValue,
+                                placeholder: "Dirección de la clínica",
+                                onChange: setAddressValue
                             }}
                             apiKey="AIzaSyCgCmgUkBCrmjkztK0yqNkzvNNtJjd7mbI"
                         />
 
                     </Form.Group>
-
-
-                    {/* <Form.Group as={Col} className="mb-3" controlId="formGridStreet">
-                        <Form.Label className="signUpFormLabel">Dirección de la clínica:</Form.Label>
-                        <Form.Control
-                            className="signUpFormInput"
-                            type="text"
-                            placeholder="Calle"
-                            onChange={handleInputChange}
-                            value={professionalData.street}
-                            name={"street"}
-                        />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label className="signUpFormLabel">C.P.:</Form.Label>
-                        <Form.Control
-                            className="signUpFormInput"
-                            type="text"
-                            placeholder="Código Postal"
-                            onChange={handleInputChange}
-                            value={professionalData.zipCode}
-                            name={"zipCode"}
-                        />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label className="signUpFormLabel">Ciudad:</Form.Label>
-                        <Form.Control
-                            className="signUpFormInput"
-                            type="text"
-                            placeholder="Ciudad"
-                            onChange={handleInputChange}
-                            value={professionalData.city}
-                            name={"city"}
-                        />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label className="signUpFormLabel">País:</Form.Label>
-                        <Form.Select
-                            onChange={handleInputChange}
-                            type="text"
-                            placeholder="País"
-                            value={professionalData.country}
-                            name={"country"}
-                        >
-                            <option>Selecciona</option>
-                            {
-                                COUNTRIES_LIST.map((elm, index) => (
-                                    <option key={index}>{elm}</option>
-                                ))
-                            }
-                        </Form.Select>
-                    </Form.Group>*/}
                 </Row>
 
 
@@ -275,7 +214,6 @@ const SignUpFormProfessional = () => {
                             onChange={handleInputChange}
                             value={professionalData.specialty}
                             name={"specialty"}
-
                         >
                             <option>Selecciona</option>
                             <option>Domésticos</option>

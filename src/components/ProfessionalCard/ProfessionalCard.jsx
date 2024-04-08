@@ -7,20 +7,13 @@ const ProfessionalCard = ({
     _id,
     firstName,
     lastName,
-    membershipNumber,
     phone,
     email,
     specialty,
     emergencies,
     rate,
     clinic,
-    address,
-    name,
     coordinates,
-    street,
-    zipCode,
-    city,
-    country,
     image,
 
 }) => {
@@ -44,8 +37,8 @@ const ProfessionalCard = ({
                     <strong >​🏥​ Clínica:</strong> {clinic?.name}
                 </p>
                 <p className='professionalData'>
-                    <strong >📍 Dónde encontrarme:</strong>  {clinic?.address?.street}, {clinic?.address?.zipCode}, {clinic?.address?.city}  {clinic?.address?.country}
-                </p >
+                    <strong >📍 Dónde encontrarme:</strong>  {clinic?.address}
+                </p>
                 <p className='professionalData'>
                     <strong >​📞​ Teléfono:</strong> {phone}
                 </p >
@@ -57,9 +50,6 @@ const ProfessionalCard = ({
                     <Link to={`/professionals/${_id}`}>
                         <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Ver detalles</strong> </Button>
                     </Link>
-                    {/* <Link to={`/newrequest/profesional/${_id}`}>
-                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Consultar</strong> </Button>
-                    </Link> */}
                 </div>
             </Card.Body>
         </Card >

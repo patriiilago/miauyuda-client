@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom'
 import professionalServices from '../../services/professional.services'
 import { useState, useEffect } from "react"
 import ProfessionalCardDetails from '../../components/ProfessionalCardDetails/ProfessionalCardDetails'
-import ProfessionalCard from '../../components/ProfessionalCard/ProfessionalCard'
 import { Col, Row, Container } from "react-bootstrap"
 import ClinicMap from '../../components/ClinicMap/ClinicMap'
 import './ProfessionalDetailsPage.css'
