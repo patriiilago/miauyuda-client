@@ -9,16 +9,13 @@ const HomePage = () => {
     return (
         <div className="HomePage">
             <div className="imgContainer">
-                <img className="picHomePage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710418806/p9u1rz5wu0n7bbx1awfb.jpg' alt="homePage pic" />
+                <img className="picHomePage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712570812/vwtgpy48uckirvhzkhnc.png' alt="homePage pic" />
             </div>
             <div className="introParagraph1">
-                <p>
-                    ¡Bienvenido a Miauyuda, nos dedicamos a conectar a veterinarios expertos en atención de emergencia con dueños de mascotas preocupados. Entendemos que las emergencias con tus queridas mascotas pueden surgir en cualquier momento, y es por eso que estamos aquí para ofrecerte acceso rápido y confiable a atención veterinaria de calidad, las 24 horas del día, los 7 días de la semana. Nuestra misión es proporcionar tranquilidad y alivio en momentos de crisis, asegurando que tus compañeros peludos reciban la atención que merecen cuando más la necesitan. ¡Confía en nosotros para estar ahí cuando más nos necesites!</p>
+                <p><span>Atención <br /> Veterinaria <span className="introParagraphstrong">de</span> </span><br /> <span className="introParagraphstrong" >Emergencia 24/7</span> </p>
+                <p className="introParagraph2">Conectamos dueños de mascotas con veterinarios expertos en <br /> emergencias para brindarte tranquilidad cuando más la necesitas.</p>
             </div>
-            <div className="introParagraph2" >
-                <p>
-                    ¡Bienvenido a Miauyuda, nos dedicamos a conectar a veterinarios expertos en atención de emergencia con dueños de mascotas preocupados. Entendemos que las emergencias con tus queridas mascotas pueden surgir en cualquier momento, y es por eso que estamos aquí para ofrecerte acceso rápido y confiable a atención veterinaria de calidad, las 24 horas del día, los 7 días de la semana. Nuestra misión es proporcionar tranquilidad y alivio en momentos de crisis, asegurando que tus compañeros peludos reciban la atención que merecen cuando más la necesitan. ¡Confía en nosotros para estar ahí cuando más nos necesites!</p>
-            </div>
+
             <Container>
                 <Row className="rowOfLove">
                     <h2>Compartimos tu amor por ellos</h2>

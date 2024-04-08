@@ -10,17 +10,31 @@
 }
 
 .introParagraph1 {
+    color: var(----clr-accent, #45A443);
     position: absolute;
-    top: 200px;
-    left: 80px;
-    font-size: 1.7em;
-    color: white;
-    width: 30%;
+    top: 290px;
+    left: 120px;
+    align-self: stretch;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
 }
 
 .introParagraph2 {
-    display: none;
+    align-self: stretch;
+    color: var(----txt-primary, #0D260D);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
 }
+
+.introParagraphstrong {
+    color: var(----txt-primary, #0D260D);
+
+}
+
 
 .rowOfLove {
     color: #74B07A;
