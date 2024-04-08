@@ -3,10 +3,22 @@
     height: auto;
 }
 
+.nav-link {
+    display: flex !important;
+    align-items: flex-start !important;
+    display: flex;
+    padding: 16px 60px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
 .drop-navbar {
     padding-right: 40px !important;
     padding-left: 50px !important;
-    background-color: #74B07A !important;
+    background-color: #46914E !important;
     color: #f5ffe2;
     font-size: 1.2em;
 }
@@ -17,7 +29,7 @@ a {
 
 .btn-signup,
 .btn-login {
-    background-color: #74B07A;
+    background-color: #46914E;
     border: none;
     font-size: 1.2em;
     color: white;
@@ -30,11 +42,11 @@ a {
 
 .modal-header {
     border-bottom: none;
-    background-color: #609f69;
+    background-color: white;
 }
 
 .modal-title {
-    color: white !important;
+    color: #0D260D !important;
 }
 
 .modal-body {
@@ -60,7 +72,7 @@ a {
 }
 
 .modal-footer .btn {
-    background-color: #609f69;
+    background-color: #46914E;
     border: none;
     color: white;
     border-radius: 10px;
@@ -69,14 +81,17 @@ a {
 }
 
 .modal-footer .btn:hover {
-    background-color: #74B07A;
+    background-color: #46914E;
 }
 
-.userType {
-    text-align: center;
-    color: #74B07A;
-    font-weight: bold;
-    font-size: 1.3em;
+.footerText {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    font-size: 12px;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 136%;
+    /* 16.32px */
 }
 
 
@@ -100,10 +115,8 @@ a {
 .Tabs-login>.nav-item {
     flex: 2;
     text-align: center;
-    /* Alinea el texto en el centro */
 }
 
-/* DROPDOWN */
 .dropdown-menu {
     background-color: #74B07A !important;
     color: #fdffea !important;
@@ -128,4 +141,27 @@ a {
 .modalMenu .nav-item button {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.custom-button {
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+}
+
+.custom-button:hover {
+    background-color: #E4F5E3 !important;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container .colNewClient {
+    flex: 1;
+}
+
+.button-container .colNewClient .custom-button {
+    width: 100%;
 }

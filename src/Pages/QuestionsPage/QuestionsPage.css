@@ -9,6 +9,10 @@
     line-height: 100%;
 }
 
+.faqTitle {
+    color: var(----txt-primary, #0D260D) !important;
+}
+
 .presentation {
     align-self: stretch;
     color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
@@ -22,10 +26,37 @@
     padding-right: 24px;
 }
 
+.faqButtons {
+    padding: 16px 20px;
+    border-radius: 1000px;
+    border: 1px solid var(----clr-accent, #45A443);
+    background: transparent;
+    color: var(----txt-primary, #0D260D) !important;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 136%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.faqButtons:hover {
+    background: var(----clr-accent, #45A443);
+    color: var(----clr-white, #FFF);
+}
+
+.faqButtonsContainer {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
 .questionsH2 {
     align-self: stretch;
     color: var(----clr-accent, #45A443);
-
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
@@ -34,7 +65,6 @@
 
 .animalsTypes {
     color: var(----txt-primary, #0D260D);
-
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
@@ -54,7 +84,6 @@
 .textHeaderAccordion {
     flex: 1 0 0;
     color: var(----txt-primary, #0D260D) !important;
-
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -67,7 +96,6 @@
     color: var(----clr-accent, #45A443);
     text-align: center;
     padding-top: 64px;
-
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
@@ -119,7 +147,6 @@
 .textHeaderAccordion {
     flex: 1 0 0;
     color: var(----txt-primary, #0D260D) !important;
-
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -134,14 +161,10 @@
     box-shadow: none !important;
 }
 
-.itemAccordion accordion-item {
-    background-color: red;
-    display: flex;
-    padding: 4px 0px 20px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    align-self: stretch;
-    border-bottom: 1px solid var(--primary-opacity-primary-60020, rgba(58, 148, 56, 0.20));
-    border-color: rgba(0, 0, 0, .125);
+
+.accordion,
+.accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
 }
