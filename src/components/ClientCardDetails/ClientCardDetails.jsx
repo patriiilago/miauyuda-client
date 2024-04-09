@@ -9,10 +9,6 @@ const ClientCardDetails = ({
     email,
     image,
     address,
-    street,
-    zipCode,
-    city,
-    country,
 
 }) => {
 
@@ -27,7 +23,7 @@ const ClientCardDetails = ({
                     <p className='clientData'><strong>Datos de contacto:</strong></p>
                     <p className='clientData'><strong>📞 Teléfono: </strong>{phone}</p>
                     <p className='clientData'><strong>💻 Email: </strong>{email}</p>
-                    <p className='clientData'><strong>📍 Dirección: </strong> {`${address?.street}, ${address?.zipCode}, ${address?.city}, ${address?.country}`}</p>
+                    <p className='clientData'><strong>📍 Dirección: </strong>{address}</p>
                 </Card.Text>
 
             </Card.Body>

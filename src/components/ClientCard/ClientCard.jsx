@@ -9,11 +9,6 @@ const ClientCard = ({
     email,
     image,
     address,
-    street,
-    zipCode,
-    city,
-    country,
-
 }) => {
 
 
@@ -24,12 +19,12 @@ const ClientCard = ({
                 <Card.Title className='ClientTitle'>
                     <h1>{firstName} {lastName}</h1>
                 </Card.Title>
-                <Card.Text>
+                <Card.Body>
                     <p className='clientData'><strong>Datos de contacto:</strong></p>
                     <p className='clientData'><strong>📞 Teléfono: </strong>{phone}</p>
                     <p className='clientData'><strong>💻 Email: </strong>{email}</p>
-                    <p className='clientData'><strong>📍 Dirección: </strong> {`${address?.street}, ${address?.zipCode}, ${address?.city}, ${address?.country}`}</p>
-                </Card.Text>
+                    <p className='clientData'><strong>📍 Dirección: </strong> {address}</p>
+                </Card.Body>
                 <Link to={`/petform`}>
                     <Button as={'span'}>Añadir mascota</Button>
                 </Link>

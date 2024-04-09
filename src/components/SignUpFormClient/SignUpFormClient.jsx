@@ -1,14 +1,13 @@
 import { Button, Form, Col, Row } from "react-bootstrap"
 import '../../components/SignUpFormClient/SignUpFormClient.css'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
 import uploadServices from "../../services/upload.services"
-import { COUNTRIES_LIST } from "../../consts/client.consts"
 import authServices from '../../services/auth.services'
-import clientServices from "../../services/client.services"
+import GooglePlacesAutocomplete from "react-google-places-autocomplete"
+import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
 
 
-// TODO ARREGLAR FORM DEL MAPS
 // TODO DAR MAS ESPACIO DEL BOTON DE DAR DE ALTA HASTA ABAJO
 
 const SignUpFormClient = () => {
@@ -19,8 +18,10 @@ const SignUpFormClient = () => {
         password: "",
         firstName: "",
         lastName: "",
-        street: "",
         phone: "",
+        address: "",
+        street: "",
+        coordinates: [Number],
         city: "",
         country: "",
         zipCode: "",
@@ -29,6 +30,13 @@ const SignUpFormClient = () => {
 
     const navigate = useNavigate()
     const [loadingImage, setLoadingImage] = useState(false)
+    const [addressValue, setAddressValue] = useState()
+
+    useEffect(() => {
+        if (addressValue && addressValue.label) {
+            handleAutocomplete(addressValue.label)
+        }
+    }, [addressValue])
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
@@ -45,6 +53,20 @@ const SignUpFormClient = () => {
         setClientData({ ...clientData, [name]: value })
 
     }
+
+    const handleAutocomplete = (label) => {
+        geocodeByAddress(label)
+            .then(([addressDetails]) => getLatLng(addressDetails))
+            .then(({ lat, lng }) => {
+                setClientData(prevData => ({
+                    ...prevData,
+                    address: label,
+                    coordinates: [lng, lat]
+                }));
+            })
+            .catch(error => console.error(error));
+    }
+
 
     const handleFileUpload = e => {
         setLoadingImage(true)
@@ -126,25 +148,6 @@ const SignUpFormClient = () => {
                         name={"lastName"}
                     />
                 </Form.Group>
-            </Row>
-
-
-
-
-
-
-            <Row className="mb-3">
-                <Form.Group as={Col} className="mb-3" controlId="formGridAddress1">
-                    <Form.Label className="signUpFormClientLabel">Dirección:</Form.Label>
-                    <Form.Control
-                        className="signUpFormClientInput"
-                        onChange={handleInputChange}
-                        type="text"
-                        placeholder="Introduce tu dirección"
-                        value={clientData.street}
-                        name={"street"}
-                    />
-                </Form.Group>
 
                 <Form.Group as={Col} className="mb-3" controlId="formGridPhone">
                     <Form.Label className="signUpFormClientLabel">Teléfono de contacto:</Form.Label>
@@ -159,54 +162,28 @@ const SignUpFormClient = () => {
                 </Form.Group>
             </Row>
 
+            <Row >
 
-            <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label className="signUpFormClientLabel">Ciudad:</Form.Label>
-                    <Form.Control
-                        className="signUpFormClientInput"
-                        onChange={handleInputChange}
-                        type="text"
-                        placeholder="Ciudad"
-                        value={clientData.city}
-                        name={"city"}
+                <Form.Group controlId="formGridAddress">
+                    <Form.Label className="signUpFormLabel">Dirección del cliente:</Form.Label>
+                    <GooglePlacesAutocomplete
+                        selectProps={{
+                            addressValue,
+                            placeholder: "Dirección del cliente",
+                            onChange: setAddressValue
+                        }}
+                        apiKey="AIzaSyCgCmgUkBCrmjkztK0yqNkzvNNtJjd7mbI"
                     />
+
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label className="signUpFormClientLabel">País:</Form.Label>
-                    <Form.Select
-                        className="signUpFormClientInput"
-                        onChange={handleInputChange}
-                        type="text"
-                        placeholder="País"
-                        value={clientData.country}
-                        name={"country"}
-                    >
-                        <option value="" disabled>Selecciona tu país</option>
-                        {
-                            COUNTRIES_LIST.map(elm => <option>{elm}</option>)
-                        }
-                    </Form.Select>
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridZip">
-                    <Form.Label className="signUpFormClientLabel">C.P.:</Form.Label>
-                    <Form.Control
-                        className="signUpFormClientInput"
-                        onChange={handleInputChange}
-                        text="text"
-                        placeholder="Código Postal"
-                        value={clientData.zipCode}
-                        name={"zipCode"}
-                    />
-                </Form.Group>
             </Row>
 
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check
                     type="checkbox"
-                    label="He leído y acepto los términos y condiciones." />
+                    label="He leído y acepto los términos y condiciones."
+                    required />
             </Form.Group>
 
             <Button disabled={loadingImage} className="signUpFormClientButton" type="submit">
