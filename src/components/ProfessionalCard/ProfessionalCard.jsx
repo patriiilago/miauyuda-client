@@ -17,15 +17,20 @@ const ProfessionalCard = ({
     image,
 
 }) => {
+    const handleOnClick = () => {
+        console.log({ professional: { _id, firstName, lastName } });
+        // Realiza cualquier otra acción necesaria cuando se elija un profesional
+    };
 
     return (
 
 
         <Card className="professionalCard h-80" border="secondary" style={{ marginBottom: '20px' }}>
+
             <Card.Img variant="top" className="professionalCardImage" type="file" src={image} alt={`Foto de: ${firstName} ${lastName}`} />
             <Card.Body className="ProfessionalCardBody">
 
-                <h3>{firstName} {lastName}</h3>
+                <h3>{`${firstName} ${lastName}`}</h3>
                 <br />
                 <p className='professionalData'>
                     <strong >​​​📝​ Especialidad:</strong> {specialty}
@@ -48,7 +53,7 @@ const ProfessionalCard = ({
 
                 <div className="buttonContainer">
                     <Link to={`/professionals/${_id}`}>
-                        <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Ver detalles</strong> </Button>
+                        <Button onClick={handleOnClick} className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Ver detalles</strong> </Button>
                     </Link>
                 </div>
             </Card.Body>

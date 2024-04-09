@@ -17,8 +17,6 @@ const professionalList = () => {
             .catch(err => console.log(err))
     }
 
-
-    console.log({ professionals })
     return (
         <Container>
             <Row>

@@ -3,7 +3,6 @@ import uploadServices from "../../services/upload.services"
 import authServices from "../../services/auth.services"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { COUNTRIES_LIST } from "../../consts/client.consts"
 import './../../components/SignUpFormProfessional/SignUpFormProfessional.css'
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
