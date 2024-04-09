@@ -30,7 +30,7 @@ function Navigation() {
         shouldOpenModal === 'login' && setModalLogin(true)
         shouldOpenModal === 'signup' && setModalSignup(true)
     }, [searchParams])
-
+    console.log({ user })
     return (
 
         <Navbar expand="lg" className='drop-navbar'>
@@ -41,37 +41,56 @@ function Navigation() {
             </Navbar.Brand >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-left" id="basic-navbar-nav">
-                <Nav>
-                    <Link className='nav-link' to={"/"}>Inicio</Link>
-                    <Link className='nav-link' to={"/professionals"}>Veterinarios</Link>
-                    <Link className='nav-link' to={"/emergencies"}>Urgencias</Link>
-                    <Link className='nav-link' to={"/euthanasia"}>Eutanasia a domicilio</Link>
-                    <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
-                    <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
-                </Nav>
+                {isLoggedIn && (
+                    <Nav>
+                        <Link className='nav-link' to={"/"}>Inicio</Link>
+                        <Link className='nav-link' to={"/professionals"}>Veterinarios</Link>
+                        <Link className='nav-link' to={"/emergencies"}>Urgencias</Link>
+                        <Link className='nav-link' to={"/euthanasia"}>Eutanasia a domicilio</Link>
+                        <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
+                        <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
+                    </Nav>
+                )}
+                {!isLoggedIn && (
+                    <Nav>
+                        <Link className='nav-link' to={"/"}>Inicio</Link>
+                        <Link className='nav-link' to={"/euthanasia"}>Eutanasia a domicilio</Link>
+                        <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
+                        <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
+                    </Nav>
+                )}
+
             </Navbar.Collapse>
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                 <Nav>
 
                     {isLoggedIn && (
-                        <Dropdown className='profile-Drop'>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Mi perfil
+                        <Dropdown className='profile-Drop' align="end">
+
+                            <img src={user.image} alt="user image" />
+                            <Dropdown.Toggle>
+
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 <p>¡Hola, {user.firstName}!</p>
+                                {user.role === 'Client' ? ("Cliente") : user.role === 'Professional' ? ("Veterinario") : null}
+                                <hr />
                                 {user.role === 'Client' ? (
                                     <Link to={`/clientprofile`}>
-                                        <Dropdown.Item className='profileButton' as={'span'}>Mi perfil</Dropdown.Item>
+                                        <Dropdown.Item className='profileButton' as={'span'}>
+                                            <img className='profilePic' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712668387/m7mvtxkmzzma0nbpuvj9.png" alt="profile image" />Mi perfil
+                                        </Dropdown.Item>
                                     </Link>
                                 ) : user.role === 'Professional' ? (
                                     <Link to={`/professionalprofile`}>
-                                        <Dropdown.Item as={'span'}>Mi perfil</Dropdown.Item>
+                                        <Dropdown.Item className='profileButton' as={'span'}>
+                                            <img className='profilePic' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712668387/m7mvtxkmzzma0nbpuvj9.png" alt="profile image" />Mi perfil
+                                        </Dropdown.Item>
                                     </Link>
                                 ) : null}
                                 <Link to={`/`}>
-                                    <Dropdown.Item onClick={logout} as={'span'}>
-                                        Cerrar sesión
+                                    <Dropdown.Item className='logoutButton' onClick={logout} as={'span'}>
+                                        <img className='logoutPic' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712668387/wiutu1tke247d0gujc7e.png" alt="logout image" />Cerrar sesión
                                     </Dropdown.Item>
                                 </Link>
                             </Dropdown.Menu>

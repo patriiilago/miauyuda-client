@@ -93,7 +93,7 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link> <p className="button-faqs">Saber mas</p></Link>
+                        <Link to="/questions" className="button-faqs">Saber mas</Link>
                     </div>
                 </Col>
                 <Col md='6'>
@@ -136,7 +136,7 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link> <p className="button-faqs">Saber mas</p></Link>
+                        <Link to="/questions" className="button-faqs">Saber mas</Link>
                     </div>
                 </Col>
             </Row>
@@ -192,7 +192,7 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link> <p className="button-faqs">Saber mas</p></Link>
+                        <Link to="/questions" className="button-faqs">Saber mas</Link>
                     </div>
                 </Col>
                 <Col md='6'>
@@ -235,7 +235,7 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link> <p className="button-faqs">Saber mas</p></Link>
+                        <Link to="/questions" className="button-faqs">Saber mas</Link>
                     </div>
                 </Col>
             </Row>
@@ -273,7 +273,7 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link> <p className="button-faqs">Saber mas</p></Link>
+                        <Link to="/questions" className="button-faqs">Saber mas</Link>
                     </div>
                 </Col>
             </Row>
@@ -332,7 +332,7 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link> <p className="button-faqs">Saber mas</p></Link>
+                        <Link to="/questions" className="button-faqs">Saber mas</Link>
                     </div>
                 </Col>
             </Row>
@@ -361,7 +361,7 @@ const HomePage = () => {
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados especializados</li>
                                 </ul>
                             </Card.Text>
-                            <Link to="/questions" className="button-plans">Leer mas</Link>
+                            <Link className="button-plans">Leer mas</Link>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -384,7 +384,7 @@ const HomePage = () => {
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados preventivos avanzados</li>
                                 </ul>
                             </Card.Text>
-                            <Link to="/questions" className="button-plans">Leer mas</Link>
+                            <Link className="button-plans">Leer mas</Link>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -407,7 +407,7 @@ const HomePage = () => {
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados paliativos y de final de vida</li>
                                 </ul>
                             </Card.Text>
-                            <Link to="/questions" className="button-plans">Leer mas</Link>
+                            <Link className="button-plans">Leer mas</Link>
                         </Card.Body>
                     </Card>
                 </Col>

@@ -202,12 +202,14 @@
 }
 
 .button-faqs {
-    color: var(----clr-accent, #45A443);
+    color: var(----clr-accent, #45A443) !important;
     border-radius: 12px;
     display: flex;
     justify-content: left;
     align-items: center;
     margin-top: 20px;
+    margin-left: 18px;
+    text-decoration: none;
 }
 
 .plansText {
@@ -274,6 +276,7 @@
     align-self: stretch;
     border-radius: 12px;
     background: var(----clr-accent, #45A443);
+    text-decoration: none;
 }
 
 /* ---------- */
