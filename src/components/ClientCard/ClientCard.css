@@ -1,41 +1,71 @@
-.ClientCard {
-    border-radius: 30px !important;
-    margin-bottom: 20px !important;
-    background-color: white !important;
-    color: #609f69 !important;
-    border: 2px solid #74B07A;
-    margin-bottom: 20px !important;
+.headerProfile {
+    color: var(----txt-primary, #0D260D);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    margin-top: 40px !important;
 }
 
-.ClientCardContent {
+.userImage {
+    width: 450px;
+}
+
+.data {
+    color: var(----txt-primary, #0D260D);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 148%;
+    margin-left: 10px;
+}
+
+hr {
+    margin: 0 !important;
+    color: inherit;
+    border: 0;
+    opacity: .25;
+}
+
+.holder {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    padding-left: 10px;
     display: flex;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(----txt-subtle, rgba(13, 38, 13, 0.10));
+    background: var(----clr-disabled, #F4FAF3);
+}
+
+.headerProfile1 {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%;
+}
+
+.personalData {
+    display: flex;
+    padding: 32px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+    background: var(----clr-white, #FFF);
 }
 
-.ClientCardDetails {
-    margin-bottom: 20px;
+.clientCardRow {
+    margin-bottom: 50px;
 }
 
-.ClientCardButtonContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.ClientCardDetails p {
-    margin: 0;
-}
-
-.ClientCardBody {
-    text-align: left;
-}
-
-.profilepic {
-    width: 100% !important;
-    object-fit: cover !important;
-}
-
-.ClientTitle h1 {
-    font-size: 1.5em;
+.contactData {
+    margin-bottom: 100px;
 }

@@ -1,4 +1,59 @@
-.ClientProfilePage {
+.UserProfilePage {
+    background: var(----clr-disabled, #F4FAF3);
+}
+
+.sideBar {
+    margin-top: 40px !important;
+    display: flex;
+    width: 318px;
+    padding: 40px 60px;
+    margin-left: 30px;
+    margin-right: 60px;
+    flex-direction: column;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+    background: var(----clr-white, #FFF);
+}
+
+.sideBarTitle {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin-left: 40px;
+}
+
+hr {
+    margin: 0 !important;
+    color: inherit;
+    border: 0;
+    opacity: .25;
+}
+
+.buttonSideBar {
+    display: flex;
+    height: 59px;
+    padding: 0px 40px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: white !important;
+    color: #0D260D !important;
+}
+
+.buttonSideBar:hover {
+    background: var(----clr-weak, #E4F5E3) !important;
+}
+
+.profileTitle {
+    margin-top: 40px;
+}
+
+/* .ClientProfilePage {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -17,4 +72,4 @@
 
 .requestImage {
     height: 150px !important;
-}
+} */
