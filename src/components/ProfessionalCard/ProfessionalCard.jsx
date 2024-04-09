@@ -18,8 +18,7 @@ const ProfessionalCard = ({
 
 }) => {
     const handleOnClick = () => {
-        console.log({ professional: { _id, firstName, lastName } });
-        // Realiza cualquier otra acción necesaria cuando se elija un profesional
+        console.log({ professional: { _id, firstName, lastName } })
     };
 
     return (

@@ -27,12 +27,39 @@ a {
     color: white !important;
 }
 
-.btn-signup,
-.btn-login {
-    background-color: #46914E;
-    border: none;
-    font-size: 1.2em;
-    color: white;
+
+.btnSignup {
+    color: #0D260D !important;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #ffffffc0;
+    margin-right: 10px;
+
+}
+
+.btnLogin {
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid#E4F5E3;
 }
 
 .modal-content {
@@ -176,4 +203,12 @@ a {
 
 .button-container .colNewClient .custom-button {
     width: 100%;
+}
+
+.imageProfile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
 }

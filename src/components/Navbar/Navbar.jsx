@@ -30,7 +30,6 @@ function Navigation() {
         shouldOpenModal === 'login' && setModalLogin(true)
         shouldOpenModal === 'signup' && setModalSignup(true)
     }, [searchParams])
-    console.log({ user })
     return (
 
         <Navbar expand="lg" className='drop-navbar'>
@@ -67,7 +66,7 @@ function Navigation() {
                     {isLoggedIn && (
                         <Dropdown className='profile-Drop' align="end">
 
-                            <img src={user.image} alt="user image" />
+                            <img className='imageProfile' src={user.image} alt="user image" />
                             <Dropdown.Toggle>
 
                             </Dropdown.Toggle>
@@ -99,11 +98,11 @@ function Navigation() {
 
                     {!isLoggedIn && (
                         <>
-                            <Link>
-                                <Button className='btn-signup' onClick={() => setModalSignup(true)}>Crear Cuenta</Button>
+                            <Link className='btnSignup' onClick={() => setModalSignup(true)}>
+                                Crear Cuenta
                             </Link>
-                            <Link>
-                                <Button className='btn-login' onClick={() => setModalLogin(true)}>Iniciar Sesión</Button>
+                            <Link className='btnLogin' onClick={() => setModalLogin(true)}>
+                                Iniciar Sesión
                             </Link>
                         </>
                     )}
