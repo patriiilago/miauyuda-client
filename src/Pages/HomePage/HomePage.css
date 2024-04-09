@@ -30,6 +30,16 @@
     line-height: 170%;
 }
 
+.introParagraph3 {
+    align-self: stretch;
+    color: var(----txt-primary, #0D260D);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    display: none;
+}
+
 .introParagraphstrong {
     color: var(----txt-primary, #0D260D);
 
@@ -96,7 +106,6 @@
     flex: 1 0 0;
     border-radius: 16px;
     border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
-
 }
 
 .headertag {
@@ -129,6 +138,18 @@
     box-shadow: none !important;
 }
 
+.pug-row-600,
+.cat-row-600,
+.exotic-row-600 {
+    display: none !important;
+}
+
+.pug-row,
+.cat-row,
+.exotic-row {
+    display: block;
+}
+
 .pug-img,
 .exotic-img {
     margin-left: 170px;
@@ -159,6 +180,26 @@
     background: var(----clr-weak, #E4F5E3) !important;
 }
 
+.rowtxt1 {
+    color: var(----clr-accent, #45A443);
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+}
+
+.rowtxt2 {
+    color: var(----txt-primary, #0D260D);
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+    margin-bottom: 1px;
+}
 
 .button-faqs {
     color: var(----clr-accent, #45A443);
@@ -182,7 +223,7 @@
     font-weight: 600;
     line-height: 150%;
     list-style-type: none;
-    /* 30px */
+    margin-bottom: 100px;
 }
 
 .plans-card {
@@ -242,306 +283,207 @@
 
 
 
+@media only screen and (max-width: 768px) {
+    .custom-md-2-cols {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 
-/* .container-dog,
-.container-cat,
-.container-exotic {
-    display: flex;
-    align-items: center;
-    margin: 50px;
-    justify-content: left;
+    .introParagraph1 {
+        color: var(----clr-accent, #45A443);
+        position: absolute;
+        top: 200px;
+        left: 65px;
+        align-self: stretch;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: 0px;
+    }
 
-}
+    .introParagraph2 {
+        display: none;
+    }
 
-.container-dog,
-.container-cat,
-.container-exotic article {
-    max-width: 100%;
-    text-align: justify;
-}
+    .introParagraph3 {
+        display: block;
+        font-size: 15px;
+    }
 
-h2 {
-    color: #74B07A;
-}
+    .tags {
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        border-radius: 16px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+    }
 
-
-
-.itemsOfFaq {
-    margin-right: 50px;
-    height: 300px;
-}
-
-
-
-
-.faq-row h2 {
-    margin-bottom: 40px;
-}
-
-.plans {
-    margin-bottom: 200px;
-    color: #74B07A;
-    text-align: center;
-}
-
-.puppiesCard,
-.adultsCard,
-.seniorCard {
-    border: 4px solid #74B07A !important;
-    border-radius: 30px !important;
-    background-color: #74b07a76 !important;
-}
-
-.puppies-col,
-.adults-col,
-.senior-col {
-    width: 200px;
-    border-radius: 30px;
-}
-
-
-.plans h2 {
-    color: #74B07A;
-    margin: 30px;
-}
-
-.plans h3 {
-    color: #74B07A;
-    font-size: 1.4em;
-    opacity: 60%;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.plans img {
-    border-radius: 30px 30px 0px 0px;
-}
-
-.button-plans {
-    border-color: #74B07A;
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 10px 40px;
-    text-decoration: none;
-    color: #74B07A;
-    font-size: 1.3em;
-}
-
-.cardBody {
-    height: 250px;
 }
 
 @media only screen and (max-width: 600px) {
-
     .introParagraph1 {
-        display: none;
+        color: var(----clr-accent, #45A443);
+        position: absolute;
+        top: 144px;
+        left: 31px;
+        align-self: stretch;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: 0px;
     }
 
     .introParagraph2 {
-        display: block !important;
-        margin: 0px 20px;
-        text-align: justify;
-        color: #74B07A;
-    }
-
-    .tags {
-        align-items: center;
-        text-align: justify;
-    }
-
-    .container-dog,
-    .container-cat,
-    .container-exotic {
-        align-items: center;
-        justify-content: left;
-        display: block !important;
-
-    }
-
-    .container-dog,
-    .container-cat,
-    .container-exotic article {
-        max-width: 100%;
-        text-align: left;
-        margin-bottom: 40px;
-    }
-
-    .faqs {
-        font-size: 1em;
-        color: #74B07A;
-        border: 2px solid #74B07A;
-        border-radius: 50px;
-        margin-bottom: 30px;
-        background-color: #74b07a2e;
-    }
-
-    .accordion-body h1,
-    h2,
-    ul,
-    li {
-        color: #74B07A !important;
-        margin: 10px !important;
-        font-size: 1.4rem;
-    }
-
-    .itemsOfFaq {
-        width: 100%;
-        height: auto;
-        margin-bottom: 40px;
-    }
-
-    .button-faqs {
-        border-color: #74B07A;
-        border: 3px solid;
-        border-radius: 10px;
-        padding: 10px;
-        text-decoration: none;
-        color: #74B07A;
-        margin-left: 20px !important;
-    }
-
-    .button-faqs:hover {
-        background-color: #74B07A;
-        color: white;
-    }
-
-    .faq-row {
-        color: #74B07A;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .faq-row h2 {
-        margin-bottom: 40px;
-    }
-
-    .plans {
-        margin-bottom: 200px;
-    }
-
-    .plans h2 {
-        color: #74B07A;
-        margin: 0px;
-        margin-bottom: 20px;
-    }
-
-    .puppiesCard,
-    .adultsCard,
-    .seniorCard {
-        width: 23rem !important;
-        margin-bottom: 20px;
-        color: #74B07A;
-        text-align: center;
-        margin-left: 80px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-
-    .introParagraph1 {
         display: none;
     }
 
-    .introParagraph2 {
-        display: block !important;
-        margin: 0px 20px;
-        text-align: justify;
-        color: #74B07A;
+    .introParagraph3 {
+        display: block;
+        font-size: 8px;
+    }
+
+    .sharedlovetxt1 {
+        color: var(----clr-accent, #45A443);
+        text-align: center;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+        align-self: stretch;
+    }
+
+    .sharedlovetxt2 {
+        color: var(----txt-primary, #0D260D);
+        text-align: center;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+        align-self: stretch;
+        margin-bottom: 1px;
+    }
+
+    .sharedlovetxt3 {
+        color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 170%;
+        padding: 0px 17px;
     }
 
     .tags {
-        display: block !important;
-        align-items: center;
-        text-align: justify;
-    }
-
-    .container-dog,
-    .container-cat,
-    .container-exotic {
-        align-items: center;
-        justify-content: left;
-        display: block !important;
-
-    }
-
-    .container-dog,
-    .container-cat,
-    .container-exotic article {
-        max-width: 100%;
+        height: 250px;
+        display: flex;
+        padding: 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
         text-align: left;
-        margin-bottom: 40px;
-        text-align: left;
-        font-size: 1.7em;
+        gap: 8px;
+        flex: 1 0 0;
+        border-radius: 16px;
+        border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
     }
 
-    .faqs {
-        font-size: 1em;
-        color: #74B07A;
-        border: 2px solid #74B07A;
-        border-radius: 50px;
-        margin-bottom: 30px;
-        background-color: #74b07a2e;
+    .col-md-3 {
+        margin-bottom: 15px;
     }
 
-    .itemsOfFaq {
-        width: 70%;
-        height: auto;
+    .pug-row,
+    .cat-row,
+    .exotic-row {
+        display: none !important;
+    }
+
+    .pug-row-600,
+    .cat-row-600,
+    .exotic-row-600 {
+        display: block !important;
+    }
+
+    .pug-row-600,
+    .exotic-row-600,
+    .cat-row-600 {
+        padding: 5px;
+    }
+
+    .cat-row-600 {
+        background: var(----clr-weak, #E4F5E3);
+        padding-top: 10px;
+    }
+
+    .pug-img-600,
+    .exotic-img-600,
+    .cat-img-600 {
+        width: 300px;
+        margin-left: 40px;
+        margin-bottom: 20px;
     }
 
     .button-faqs {
-        border-color: #74B07A;
-        border: 3px solid;
-        border-radius: 10px;
-        padding: 10px;
-        text-decoration: none;
-        color: #74B07A;
-        margin-left: 50px;
+        color: var(----clr-accent, #45A443);
+        border-radius: 12px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 20px;
     }
 
-
-    .button-faqs:hover {
-        background-color: #74B07A;
-        color: white;
-    }
-
-    .faq-row {
-        color: #74B07A;
+    .rowtxt1 {
+        color: var(----clr-accent, #45A443);
         text-align: center;
-        margin-bottom: 40px;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+        align-self: stretch;
+        margin-left: 20px;
     }
 
-    .faq-row h2 {
-        font-size: 1.7em;
-    }
-
-    .col {
-        display: 0;
-    }
-
-    .col-md-6 {
-        font-size: 1.5;
-    }
-
-    .faq-row h2 {
-        margin-bottom: 40px;
+    .rowtxt2 {
+        color: var(----txt-primary, #0D260D);
+        text-align: center;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+        align-self: stretch;
+        margin-bottom: 1px;
     }
 
     .plans {
-        margin-bottom: 200px;
+        padding: 0px;
+        color: var(----txt-primary, #0D260D);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        list-style-type: none;
+        margin-bottom: 100px;
     }
 
-    .puppiesCard,
-    .adultsCard,
-    .seniorCard {
-        width: 13rem !important;
+    .plans-card {
+        width: 350px !important;
         margin-bottom: 20px;
-        color: #74B07A;
-        text-align: center;
+        margin-left: 20px;
+    }
 
+    .cardBody {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     .plansCategories {
-        font-size: 1.4rem;
+        margin-left: 30px;
     }
-
-} */
+}
