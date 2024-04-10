@@ -7,6 +7,7 @@
     margin-top: 40px !important;
 }
 
+
 .addPet {
     width: 30% !important;
     display: flex;
@@ -23,6 +24,7 @@
     line-height: 24px;
 }
 
+
 .edit-pet {
     color: var(----clr-accent, #45A443);
     text-align: center;
@@ -32,16 +34,19 @@
     line-height: 24px;
 }
 
+
 .petImage {
     border-radius: 10px;
     width: 100%;
     margin-bottom: 30px;
 }
 
+
 .boxName {
     display: flex;
     align-items: flex-start;
 }
+
 
 .edit-pet {
     margin-left: 480px;
@@ -53,6 +58,7 @@
     line-height: 24px;
 }
 
+
 .petName {
     color: var(----txt-primary, #0D260D);
     font-size: 34px;
@@ -60,6 +66,7 @@
     font-weight: 600;
     line-height: 150%;
 }
+
 
 .petData {
     display: flex;
@@ -73,7 +80,8 @@
     background: var(----clr-white, #FFF);
 }
 
-.iconsData,
+
+/* .iconsData,
 span {
     color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
     font-size: 20px;
@@ -83,4 +91,4 @@ span {
     margin-right: 40px;
 
 
-}
+} */
