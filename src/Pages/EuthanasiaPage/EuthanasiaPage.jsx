@@ -1,7 +1,7 @@
 import './../../Pages/EuthanasiaPage/EuthanasiaPage.css'
 import { Link } from 'react-router-dom'
 import { Row, Col, Card } from 'react-bootstrap'
-
+//testing
 const EuthanasiaPage = () => {
 
     return (
