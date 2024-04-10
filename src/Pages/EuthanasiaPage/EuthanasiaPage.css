@@ -51,20 +51,20 @@
     color: white !important;
     border-radius: 20px;
     padding: 10px 100px 10px 100px;
-} */
+}
+*/
 
 .EuthanasiaPage {
     margin-bottom: 100px;
     margin-left: 0px;
 }
 
-.imgEuthContainer {
+.imgEuthaContainer {
     position: relative;
     padding-left: 0px;
-
 }
 
-.ehthimage {
+.euthaImage {
     width: 100vw;
     aspect-ratio: auto;
     margin-bottom: 40px;
@@ -80,6 +80,15 @@
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
+}
+
+.euthaParagraph2 {
+    align-self: stretch;
+    color: var(----txt-primary, #0D260D);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
 }
 
 .euthaParagraphstrong {
@@ -274,4 +283,4 @@
         margin: 20px;
     }
 
-} */
+}
