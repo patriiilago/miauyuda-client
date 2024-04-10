@@ -169,7 +169,8 @@ color: var(----txt-primary, #0D260D);
 }
 
 .services-col {
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
 }
 
 .crossIcon {
