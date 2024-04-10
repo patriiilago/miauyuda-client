@@ -9,28 +9,29 @@ const EuthanasiaPage = () => {
 
             <Row>
                 <div className="imgEuthaContainer">
-                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712570812/vwtgpy48uckirvhzkhnc.png' alt="homePage pic" />
+                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710425737/jdjaoyfrjwrrfoizdinq.jpg' alt="homePage pic" />
                 </div>
                 <div className="euthaParagraph1">
-                    <p><span>Servicio <br /> Eutanasia <span className="introParagraphstrong"></span> </span><br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
-                    <p className="euthaParagraph2">Ofrecemos un servicio compasivo y respetuoso de eutanasia. Brindándote <br /> apoyo y comprensión en este difícil momento.</p>
+                    <p><span>Servicio <br /> Eutanasia <span className="euthaParagraphstrong"></span> </span><br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
+                    <p className="euthaParagraph2">Ofrecemos un servicio compasivo y respetuoso de eutanasia.<br /> Brindándote apoyo y comprensión en este difícil momento.</p>
 
                 </div>
             </Row>
 
             <div className="servText">
-                <h2><span className="servicetxt1">Servicios especializados </span> <br /> <span className="servicetxt2">de eutanasia compasiva</span></h2>
+                <h2><span className="servicetxt1">Servicios especializados </span> <br /> <span className="servicetxt2">eutanasia compasiva</span></h2>
                 <p className="servicetxt3"> En Miauyuda proporcionamos servicios de eutanasia para mascotas de todas las edades, asegurando atención médica <br /> apropiada y asequible tanto para cachorros, adultos como para mascotas mayores.</p>
             </div>
 
 
             <Row className="services">
-                <Col md={6} className="services-col">
+                <Col md={4} className="services-col">
                     <Card style={{ width: '29rem' }} className="services-card">
                         <Card.Title className="servicesBody">
-                            <div><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712595224/c57p3jotvw8kkrf8ck7m.png" alt="image of an animal pad" /></div>
                             <div>
-                                <h2 className="plansCategories">Eutanasia en clínica</h2>
+                                <img class='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712765428/r5hkofpsaiyl2ca8xyms.png" alt="crossIcon" /></div>
+                            <div>
+                                <h2 className="servicesCategories">Eutanasia en clínica</h2>
                             </div>
                         </Card.Title>
                         <hr />
@@ -45,12 +46,13 @@ const EuthanasiaPage = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={6} className="services-col">
+                <Col md={4} className="services-col">
                     <Card style={{ width: '29rem' }} className="services-card">
-                        <Card.Title className="servicesBody">
-                            <div><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712595224/c57p3jotvw8kkrf8ck7m.png" alt="image of an animal pad" /></div>
+                        <Card.Title className="servicesBody" >
                             <div>
-                                <h2 className="plansCategories">Eutanasia a domicilio</h2>
+                                <img class='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712765428/r5hkofpsaiyl2ca8xyms.png" alt="crossIcon" /></div>
+                            <div>
+                                <h2 className="servicesCategories">Eutanasia a domicilio</h2>
                             </div>
                         </Card.Title>
                         <hr />
@@ -73,26 +75,26 @@ const EuthanasiaPage = () => {
 
             <Row className="psico-row">
 
-                <Col md='6'>
-                    <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712742211/chvjfe0yo3odun7pcojv.png' alt="psico-icon" />
+                <Col md={2} className='containerPsico'>
+                    <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712768311/kv3jm89ap0ff4kwt69yk.png' alt="psico-icon" />
                 </Col>
-                <Col md='6' className='textPsico' >
+                <Col md={9}>
                     <div>
-                        <p><span className="rowTextPsico">Nunca estás solo en tu camino hacia la </span> <span className="rowTextPsico2">sanación emocional.✨</span></p>
-                        <p>Si sientes que necesitas más apoyo emocional durante este proceso de despedida, te recomendamos visitar la página web de nuestros compañeros, Lara Aguerre y Fran Pazos, quienes han creado Mentalia.</p>
+                        <br />
+                        <p>
+                            <span className="rowTextPsico">Nunca estás solo en tu camino hacia la </span> <span className="rowTextPsico2">sanación emocional.✨</span>
+                        </p>
+
+                        <p className='textMentalia'>En momentos difíciles de despedida, contar con un espacio de apoyo puede ser fundamental. Mentalia, fundada por <span className="mentaliaStrong" >Lara Aguerre y Fran Pazos</span>, ofrece recursos y herramientas para ayudarte en tu proceso emocional.
+                            Explora artículos, terapia en línea y grupos de apoyo. Únete a nuestra comunidad en línea y encuentra la luz en la oscuridad.
+                            Visita Mentalia y da el primer paso hacia la sanación emocional.
+                        </p>
                         <div>
-                            <Link className='mentalia-button' to="https://mentalia.netlify.app">Saber mas</Link>
+                            <Link className='mentalia-button' to="https://mentalia.netlify.app">Entra en Mentalia</Link>
                         </div>
                     </div>
                 </Col>
             </Row>
-
-            {/* <p> <strong>MENTALIA</strong> es una red que conecta psicólogos con pacientes de manera online, brindando un espacio seguro y confidencial para explorar tus emociones <br /> y recibir el apoyo necesario durante este momento tan delicado. Puedes encontrar más información en su página web:</p>
-                <p> Nunca estás solo en tu camino hacia la sanación emocional.✨</p>
-
-                <br /> */}
-
-
 
         </div>
     )

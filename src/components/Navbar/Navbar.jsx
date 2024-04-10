@@ -47,7 +47,7 @@ function Navigation() {
                         <Link className='nav-link' to={"/emergencies"}>Urgencias</Link>
                         <Link className='nav-link' to={"/euthanasia"}>Eutanasia</Link>
                         <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
-                        <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
+                        <Link className='nav-link' to={"/about"}>Conócenos</Link>
                     </Nav>
                 )}
                 {!isLoggedIn && (
@@ -55,7 +55,7 @@ function Navigation() {
                         <Link className='nav-link' to={"/"}>Inicio</Link>
                         <Link className='nav-link' to={"/euthanasia"}>Eutanasia</Link>
                         <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
-                        <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
+                        <Link className='nav-link' to={"/about"}>Conócenos</Link>
                     </Nav>
                 )}
 
