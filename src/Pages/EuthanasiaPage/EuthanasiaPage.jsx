@@ -8,17 +8,17 @@ const EuthanasiaPage = () => {
         <div >
 
             <Row>
-                <div className="imgEuthContainer">
-                    <img className="ehthimage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712570812/vwtgpy48uckirvhzkhnc.png' alt="homePage pic" />
+                <div className="imgEuthaContainer">
+                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712570812/vwtgpy48uckirvhzkhnc.png' alt="homePage pic" />
                 </div>
                 <div className="euthaParagraph1">
                     <p><span>Servicio <br /> Eutanasia <span className="introParagraphstrong"></span> </span><br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
-                    <p className="introParagraph2">Ofrecemos un servicio compasivo y respetuoso de eutanasia. Brindándote <br /> apoyo y comprensión en este difícil momento.</p>
+                    <p className="euthaParagraph2">Ofrecemos un servicio compasivo y respetuoso de eutanasia. Brindándote <br /> apoyo y comprensión en este difícil momento.</p>
 
                 </div>
             </Row>
 
-            <div className="plansText">
+            <div className="servText">
                 <h2><span className="servicetxt1">Servicios especializados </span> <br /> <span className="servicetxt2">de eutanasia compasiva</span></h2>
                 <p className="servicetxt3"> En Miauyuda proporcionamos servicios de eutanasia para mascotas de todas las edades, asegurando atención médica <br /> apropiada y asequible tanto para cachorros, adultos como para mascotas mayores.</p>
             </div>
@@ -36,7 +36,6 @@ const EuthanasiaPage = () => {
                         <hr />
                         <Card.Body>
                             <Card.Text className="cardservicesText">
-                                <h3>210 € / 310 €</h3>
                                 <ul>
                                     <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio de despedida personalizado</li>
                                     <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio de cremación o entierro digno</li>
@@ -57,7 +56,6 @@ const EuthanasiaPage = () => {
                         <hr />
                         <Card.Body>
                             <Card.Text className="cardservicesText">
-                                <h3>210 € / 310 €</h3>
                                 <ul>
                                     <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cuidado paliativo previo a la eutanasia</li>
                                     <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Plantación de árboles conmemorativos</li>
@@ -80,7 +78,7 @@ const EuthanasiaPage = () => {
                 </Col>
                 <Col md='6' className='textPsico' >
                     <div>
-                        <p><span className="rowTextPsico">Sobre </span> <span className="rowTextPsico2">ti</span></p>
+                        <p><span className="rowTextPsico">Nunca estás solo en tu camino hacia la </span> <span className="rowTextPsico2">sanación emocional.✨</span></p>
                         <p>Si sientes que necesitas más apoyo emocional durante este proceso de despedida, te recomendamos visitar la página web de nuestros compañeros, Lara Aguerre y Fran Pazos, quienes han creado Mentalia.</p>
                         <div>
                             <Link className='mentalia-button' to="https://mentalia.netlify.app">Saber mas</Link>
