@@ -45,7 +45,7 @@ function Navigation() {
                         <Link className='nav-link' to={"/"}>Inicio</Link>
                         <Link className='nav-link' to={"/professionals"}>Veterinarios</Link>
                         <Link className='nav-link' to={"/emergencies"}>Urgencias</Link>
-                        <Link className='nav-link' to={"/euthanasia"}>Eutanasia a domicilio</Link>
+                        <Link className='nav-link' to={"/euthanasia"}>Eutanasia</Link>
                         <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
                         <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
                     </Nav>
@@ -53,7 +53,7 @@ function Navigation() {
                 {!isLoggedIn && (
                     <Nav>
                         <Link className='nav-link' to={"/"}>Inicio</Link>
-                        <Link className='nav-link' to={"/euthanasia"}>Eutanasia a domicilio</Link>
+                        <Link className='nav-link' to={"/euthanasia"}>Eutanasia</Link>
                         <Link className='nav-link' to={"/questions"}>Consultas frecuentes</Link>
                         <Link className='nav-link' to={"/about"}>Sobre nosotr@s</Link>
                     </Nav>
