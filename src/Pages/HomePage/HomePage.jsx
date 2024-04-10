@@ -1,7 +1,7 @@
-import { Container, Row, Col, Card, Accordion } from "react-bootstrap"
+import { Row, Col, Card, Accordion } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import './HomePage.css'
-// checking
+// testing
 const HomePage = () => {
 
     return (
