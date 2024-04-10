@@ -25,6 +25,7 @@
     text-align: center;
     margin: 80px;
     max-width: 100em;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50))
 }
 
 .h1AboutUs {
@@ -34,7 +35,6 @@
 
 .pAboutUs {
     text-align: center;
-    margin: 30px;
 }
 
 .detailsTitle {
@@ -87,35 +87,46 @@
     text-align: center;
     background-color: #E4F5E3;
     width: 100%;
-
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50))
 }
 
 .patriDetails {
     padding-top: 35px;
     text-align: center;
-    background-color: #7BBBE9;
+    background-color: #E4F5E3;
     width: 100%;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50))
 }
 
 .teresaDetails {
     padding-top: 35px;
     text-align: center;
-    background-color: #CFE44B;
+    background-color: white;
     width: 100%;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50))
 }
 
 
 .turkaDetails {
     padding-top: 35px;
     text-align: center;
-    background-color: #997BBE;
+    background-color: white;
     width: 100%;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50))
 }
 
 .turkaText {
-    margin: 50px;
+    margin: 40px;
 }
 
+.footerAboutUsText {
+    padding: 5px 0px;
+    margin: auto;
+    text-align: center;
+    background-color: #E4F5E3;
+    width: 100%;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50))
+}
 
 .oscarImg {
     height: auto;
@@ -173,7 +184,7 @@
 
 
 .linkClass {
-    color: var(----txt-primary, #0D260D) !important;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50)) !important;
 }
 
 .titlesAbout {
@@ -199,7 +210,7 @@
 
 
 .aboutButton {
-    padding: 20px 26px;
+    padding: 20px 40px;
     border-radius: 1000px;
     border: 1px solid var(----clr-accent, #45A443);
     background: transparent;
@@ -224,4 +235,8 @@
     margin: 0 auto;
     margin-bottom: 20px;
     align-items: center;
+}
+
+.arcoirisPhoto {
+    height: 30px;
 }
