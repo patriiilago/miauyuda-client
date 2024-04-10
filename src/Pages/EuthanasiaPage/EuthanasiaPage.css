@@ -1,15 +1,70 @@
+/* .EuthanasiaPage {
+    margin-bottom: 100px;
+    align-items: center;
+    color: #74B07A;
+}
+
+.ehthimage {
+    position: relative;
+    display: inline block;
+    width: 99vw;
+    aspect-ratio: auto;
+    margin-bottom: 40px;
+}
+
+.intro1 {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    font-size: 3em;
+    color: #fdffea;
+    width: 30%;
+}
+
+.intro2 {
+    display: none;
+}
+
+.EuthanasiaPage p {
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.mentalia-button,
+.info-button {
+    color: #74B07A !important;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid #74B07A;
+    border-radius: 20px;
+    padding: 10px 100px 10px 100px;
+    margin: 20px 0px;
+
+}
+
+.mentalia-button:hover,
+.info-button:hover {
+    text-decoration: none;
+    text-align: center;
+    background-color: #74B07A;
+    color: white !important;
+    border-radius: 20px;
+    padding: 10px 100px 10px 100px;
+}
+*/
+
 .EuthanasiaPage {
     margin-bottom: 100px;
     margin-left: 0px;
 }
 
-.imgEuthContainer {
+.imgEuthaContainer {
     position: relative;
     padding-left: 0px;
-
 }
 
-.ehthimage {
+.euthaImage {
     width: 100vw;
     aspect-ratio: auto;
     margin-bottom: 40px;
@@ -25,6 +80,15 @@
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
+}
+
+.euthaParagraph2 {
+    align-self: stretch;
+    color: var(----txt-primary, #0D260D);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
 }
 
 .euthaParagraphstrong {
@@ -220,4 +284,4 @@
         margin: 20px;
     }
 
-} */
+}
