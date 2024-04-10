@@ -1,41 +1,101 @@
 import './../../Pages/EuthanasiaPage/EuthanasiaPage.css'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col, Card } from 'react-bootstrap'
 
 const EuthanasiaPage = () => {
 
     return (
-        <div className="EuthanasiaPage">
-            <img className='ehthimage' src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710425737/jdjaoyfrjwrrfoizdinq.jpg' alt="image of a cat in a landscape" />
-            <Container>
-                <Row>
-                    <Col md='6'>
-                        <h1 className='intro1'>Sentimos mucho que hayas tenido que llegar a esta página...</h1>
-                        <h2 className='intro2'>Sentimos mucho que hayas tenido que llegar a esta página...</h2>
+        <div >
 
-                        <p> Entendemos que el momento de despedirse de tu fiel compañero peludo es uno de los más difíciles que enfrentarás.
-                            <br />En momentos como estos, la compasión y la empatía son fundamentales, y estamos aquí para acompañarte en este viaje emocional.</p>
+            <Row>
+                <div className="imgEuthContainer">
+                    <img className="ehthimage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712570812/vwtgpy48uckirvhzkhnc.png' alt="homePage pic" />
+                </div>
+                <div className="euthaParagraph1">
+                    <p><span>Servicio <br /> Eutanasia <span className="introParagraphstrong"></span> </span><br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
+                    <p className="introParagraph2">Ofrecemos un servicio compasivo y respetuoso de eutanasia. Brindándote <br /> apoyo y comprensión en este difícil momento.</p>
 
-                        <p> En nuestra práctica, entendemos el amor profundo que tienes por tu mascota. Sabemos que cada peludo amigo es único, con su propia personalidad y huella indeleble en tu corazón. <br />Es por eso que ofrecemos un servicio de eutanasia a domicilio, para que puedas despedirte de tu compañero en la comodidad y privacidad de tu hogar, rodeado de amor y recuerdos compartidos.</p>
+                </div>
+            </Row>
 
-                        <p> Nuestro equipo está compuesto por profesionales dedicados y comprensivos, que están aquí para brindarte apoyo en cada paso del proceso. <br />
-                        </p>
+            <div className="plansText">
+                <h2><span className="servicetxt1">Servicios especializados </span> <br /> <span className="servicetxt2">de eutanasia compasiva</span></h2>
+                <p className="servicetxt3"> En Miauyuda proporcionamos servicios de eutanasia para mascotas de todas las edades, asegurando atención médica <br /> apropiada y asequible tanto para cachorros, adultos como para mascotas mayores.</p>
+            </div>
 
-                    </Col>
-                    <Col md='6'>
-                        <p>Desde la primera llamada hasta el último adiós, nos comprometemos a proporcionarte el respeto, la compasión y la atención que tanto tú como tu mascota merecen.
-                            Somos conscientes de que esta decisión no es fácil, y queremos que sepas que estás tomando la mejor opción para aliviar el sufrimiento de tu amigo peludo.
-                            Estamos aquí para responder a tus preguntas, escuchar tus preocupaciones y brindarte el consuelo que necesitas en este momento tan difícil.</p>
-                        <p>  Permítenos acompañarte en este último acto de amor hacia tu mascota. <br /> En nuestra práctica, no solo ofrecemos un servicio, sino un hombro en el que apoyarte y un corazón que entiende tu dolor. <br /> Juntos, podemos honrar la vida de tu amigo peludo y despedirnos con dignidad y amor.</p>
-                    </Col>
-                    <Link className='info-button' to="https://mentalia.netlify.app" >Pide Información</Link>
-                    <p>Además, si sientes que necesitas más apoyo emocional durante este proceso de despedida, te recomendamos visitar la página web de nuestros compañeros, Lara Aguerre y Fran Pazos, quienes han creado <strong>MENTALIA</strong>. </p>
-                    <p> <strong>MENTALIA</strong> es una red que conecta psicólogos con pacientes de manera online, brindando un espacio seguro y confidencial para explorar tus emociones <br /> y recibir el apoyo necesario durante este momento tan delicado. Puedes encontrar más información en su página web:</p>
-                    <p> Nunca estás solo en tu camino hacia la sanación emocional.✨</p>
-                    <Link className='mentalia-button' to="https://mentalia.netlify.app">👉🏽Mentalia</Link>
-                    <br />
-                </Row>
-            </Container>
+
+            <Row className="services">
+                <Col md={6} className="services-col">
+                    <Card style={{ width: '29rem' }} className="services-card">
+                        <Card.Title className="servicesBody">
+                            <div><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712595224/c57p3jotvw8kkrf8ck7m.png" alt="image of an animal pad" /></div>
+                            <div>
+                                <h2 className="plansCategories">Eutanasia en clínica</h2>
+                            </div>
+                        </Card.Title>
+                        <hr />
+                        <Card.Body>
+                            <Card.Text className="cardservicesText">
+                                <h3>210 € / 310 €</h3>
+                                <ul>
+                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio de despedida personalizado</li>
+                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio de cremación o entierro digno</li>
+                                </ul>
+                            </Card.Text>
+                            <Link className="button-plans" to="/professionals">Leer mas</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col md={6} className="services-col">
+                    <Card style={{ width: '29rem' }} className="services-card">
+                        <Card.Title className="servicesBody">
+                            <div><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712595224/c57p3jotvw8kkrf8ck7m.png" alt="image of an animal pad" /></div>
+                            <div>
+                                <h2 className="plansCategories">Eutanasia a domicilio</h2>
+                            </div>
+                        </Card.Title>
+                        <hr />
+                        <Card.Body>
+                            <Card.Text className="cardservicesText">
+                                <h3>210 € / 310 €</h3>
+                                <ul>
+                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cuidado paliativo previo a la eutanasia</li>
+                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Plantación de árboles conmemorativos</li>
+                                </ul>
+                            </Card.Text>
+                            <Link className="button-services" to="/professionals">Leer mas</Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+
+            </Row>
+
+
+
+
+            <Row className="psico-row">
+
+                <Col md='6'>
+                    <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712742211/chvjfe0yo3odun7pcojv.png' alt="psico-icon" />
+                </Col>
+                <Col md='6' className='textPsico' >
+                    <div>
+                        <p><span className="rowTextPsico">Sobre </span> <span className="rowTextPsico2">ti</span></p>
+                        <p>Si sientes que necesitas más apoyo emocional durante este proceso de despedida, te recomendamos visitar la página web de nuestros compañeros, Lara Aguerre y Fran Pazos, quienes han creado Mentalia.</p>
+                        <div>
+                            <Link className='mentalia-button' to="https://mentalia.netlify.app">Saber mas</Link>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+
+            {/* <p> <strong>MENTALIA</strong> es una red que conecta psicólogos con pacientes de manera online, brindando un espacio seguro y confidencial para explorar tus emociones <br /> y recibir el apoyo necesario durante este momento tan delicado. Puedes encontrar más información en su página web:</p>
+                <p> Nunca estás solo en tu camino hacia la sanación emocional.✨</p>
+
+                <br /> */}
+
+
+
         </div>
     )
 }
