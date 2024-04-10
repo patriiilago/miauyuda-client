@@ -1,6 +1,5 @@
 import './../../Pages/AboutUsPage/AboutUsPage.css'
-import { Container, Row, Col } from "react-bootstrap"
-import { Link } from "react-router-dom"
+import { Row, Col } from "react-bootstrap"
 
 function AboutUsPage() {
     return (
