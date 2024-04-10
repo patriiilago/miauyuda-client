@@ -6,7 +6,7 @@ function AboutUsPage() {
     return (
         <div className='AboutUs'>
             <div className='presentationAboutUs'>
-                <h1 className='h1AboutUs'><span className="rowtxt1">Conoce el </span> <span className="rowtxt2">proyecto</span></h1>
+                <h1 className='h1AboutUs'><span className="titleAboutUs">Conoce el</span> <span className="titleAboutUs2">proyecto</span></h1>
                 <p className='pAboutUs' >
                     El proyecto Miauyuda® surgió de nuestra experiencia personal y nuestra pasión compartida por los animales. Los tres nos conocimos mientras estudiábamos desarrollo web en Ironhack y decidimos unir fuerzas para crear esta plataforma después de la pérdida de Turka, la gatita de Teresa, en diciembre de 2023. </p>
                 <p>Al ver la necesidad en el mercado y comprender la importancia de brindar acceso rápido a la atención veterinaria fuera del horario habitual, nos embarcamos en este proyecto juntos. Nuestro objetivo era ofrecer una solución que ayudara a otras mascotas y a sus dueños en situaciones similares a las que enfrentamos.</p>
@@ -28,7 +28,7 @@ function AboutUsPage() {
             <Row>
                 <Col md='8' className="oscarDetails">
                     <section id="oscar" />
-                    <span className="detailsTitle">Óscar </span> <span className="detailsTitle2">Gómez</span>
+                    <span className="detailsTitle">Óscar</span> <span className="detailsTitle2">Gómez</span>
                     <div>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='oscarText'>Óscar Gómez Díez es un desarrollador Full Stack con una sólida experiencia previa como fotógrafo de comercio electrónico, lo que le proporciona una valiosa perspectiva sobre la estética en el mundo digital.
@@ -73,7 +73,7 @@ function AboutUsPage() {
                         alt="teresa-photo" />
                 </Col>
                 <Col md='6' className="teresaDetails">
-                    <p><span className="detailsTitle">Teresa </span> <span className="detailsTitle2">Arranz</span></p>
+                    <p><span className="detailsTitle">Teresa</span> <span className="detailsTitle2">Arranz</span></p>
                     <div>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='tereText'>Teresa es una desarrolladora Full Stack que recientemente completó un bootcamp intensivo en desarrollo web en Ironhack. Antes de su transición al campo de la tecnología, Teresa tenía más de 10 años de experiencia en recursos humanos, donde gestionó todo el proceso laboral para cientos de trabajadores en diferentes sectores y convenios colectivos.</p>
@@ -106,7 +106,7 @@ function AboutUsPage() {
             <Row>
                 <Col md='8' className="patriDetails">
                     <section id="patri" />
-                    <span className="detailsTitle">Patri </span> <span className="detailsTitle2">Lago</span>
+                    <span className="detailsTitle">Patri</span> <span className="detailsTitle2">Lago</span>
                     <div>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='patriText'>Patri Lago es una desarrolladora Full Stack con un trasfondo en el sector de ventas, lo que le brinda una perspectiva única en el mundo del desarrollo web. <br /> Su experiencia previa en ventas y gestión de inventario le ha permitido perfeccionar habilidades en resolución de problemas, organización de proyectos y toma de decisiones estratégicas.  </p>
@@ -144,7 +144,7 @@ function AboutUsPage() {
                 </Col>
                 <Col md='6' className="turkaDetails">
                     <section id="turka" />
-                    <p><span className="turkaTitle">Turka </span> <span className="turkaTitle2">Arranz</span></p>
+                    <p><span className="turkaTitle">Turka</span> <span className="turkaTitle2">Arranz</span></p>
                     <div>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='turkaText'>Turka es el motivo principal de este proyecto.
