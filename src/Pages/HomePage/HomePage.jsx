@@ -112,27 +112,27 @@ const HomePage = () => {
                     <div>
                         <Accordion className="catAccordion" defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>Tengo un cachorro, ¿Lo puedo sacar a la calle?</Accordion.Header>
+                                <Accordion.Header>Tengo un gatito por primera vez ¿como le puedo enseñar a usar la arena?</Accordion.Header>
                                 <Accordion.Body>
-                                    La razón principal que los propietarios de cachorros deben conocer antes de sacarlos a la calle por primera vez, es que el animal se encuentre correctamente protegido frente a las enfermedades infecciosas más comunes de ésa etapa. Recuerda que su sistema inmunitario aún se está desarrollando y por tanto es fundamental que acuerdes el programa antiparasitario y vacunal más adecuado para él/ella en tú veterinario de confianza.
+                                    Puedes mostrarle la caja primero para que se acostumbre a su presencia. Después prueba a colocarlo allí al despertar y después de comer y beber. La caja de arena debe estar siempre alejada del lugar donde come y en un lugar silencioso y tranquilo, a veces incluso cubierta total ó parcialmente. Recuerda que siempre debes seguir ésta fórmula en casa para prevenir enfermedades frecuentes de tracto urinario: tantas cajas de arena, como gatos que haya en la casa +1 y debes mantenerla limpia diariamente.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header>¿Es la esterilización una buena idea?</Accordion.Header>
+                                <Accordion.Header>¿Cual es la mejor raza de gato para personas alérgicas?</Accordion.Header>
                                 <Accordion.Body>
-                                    La esterilización de nuestras mascotas siempre va suponer un beneficio en el que todos saldremos ganando. Una vez has decidido que no quieres a tu animal como reproductor, debes esterilizarlo. La esterilización es un acto quirúrgico serio, con el que se pueden evitar enfermedades graves tales como tumores mamarios, infecciones uterinas ó estrés por embarazo psicológico en las hembras; tumores testiculares, de próstata ó trastornos graves de comportamiento en el caso de los machos.
+                                    No existe un gato hipoalergénico como tal. Es más, debes estar seguro a qué tienes alergia exactamente. Si el pelo es un problema, evitaría cualquier raza de pelo largo. En este sentido Sphynx, es la única raza de gato sin pelo.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header>¿Necesita mi perro una limpieza de boca?</Accordion.Header>
+                                <Accordion.Header>¿Qué puedo hacer si mi gato orina o defeca fuera de la bandeja?</Accordion.Header>
                                 <Accordion.Body>
-                                    La enfermedad periodontal, es uno de los procesos más comunes en perros y gatos adultos. El mal aliento, es uno de los primeros signos de que puede estar padeciendo enfermedad dental. Sin un tratamiento adecuado, podemos encontrar problemas como abscesos de raíz, caries, e incluso incomodidad al comer. El papel del veterinario es fundamental para detectar el problema a tiempo. Él revisará la cantidad de sarro ó gingivitis presente y planteará una higiene bucal adecuada, siempre bajo anestesia general.
+                                    Es posible que sea por un problema de aversión con la bandeja o el sustrato (arena). Sin embargo puede que no sea un problema con la bandeja/arena y el gato padezca algún tipo de patología. Esto es más probable si vemos que tiene dificultad al orinar, va más veces a la bandeja, pasa más tiempo en ella o detectamos sangre en su orina. En estos casos es altamente recomendable acudir a la clínica para investigar la patología que padece el animal. Así evitamos que entre otras consecuencias el gato acabe obstruyéndose y se complique el problema.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header>¿Cuál es la raza mas adecuada para mí?</Accordion.Header>
+                                <Accordion.Header>¿Qué plantas pueden ser tóxicas para mi gato?</Accordion.Header>
                                 <Accordion.Body>
-                                    Pedigrí, Cruce ó Mestizo. Cachorro ó Adulto. Hembra ó Macho. Son muchas las dudas que se nos plantean. Aunque siempre te vamos a recomendar la adopción por encima de la compra, es cierto que escoger un perro de raza nos aporta un grado de predictibilidad acerca del tamaño, longitud, pelaje incluso algunas dolencias que puede padecer. La raza de perro más adecuada a tu caso, dependerá principalmente de tu estilo de vida. Tú veterinario más cercano será el asesor principal que puedes encontrar antes de tomar la decisión.
+                                    Los gatos tienen por costumbre mordisquear diversos vegetales. El problema es que existen multitud de plantas que son tóxicas para ellos. Unas producen alteraciones gastrointestinales como la Flor de Pascua. Otras como las Lileáceas son altamente tóxicas y pueden causarles la muerte por fallo renal. Si tienes plantas y gatos en casa, asegúrate que éstas no son tóxicas para ellos. Comprueba el listado de plantas tóxicas en internet. Te recomendamos que las busques por su nombre científico. Si sospechas que tu gato ha podido ingerir alguna planta tóxica ponte en contacto con nosotros de forma urgente.
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
@@ -249,27 +249,27 @@ const HomePage = () => {
                     <div>
                         <Accordion className="catAccordion" defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>Tengo un cachorro, ¿Lo puedo sacar a la calle?</Accordion.Header>
+                                <Accordion.Header>Tengo un gatito por primera vez ¿como le puedo enseñar a usar la arena?</Accordion.Header>
                                 <Accordion.Body>
-                                    La razón principal que los propietarios de cachorros deben conocer antes de sacarlos a la calle por primera vez, es que el animal se encuentre correctamente protegido frente a las enfermedades infecciosas más comunes de ésa etapa. Recuerda que su sistema inmunitario aún se está desarrollando y por tanto es fundamental que acuerdes el programa antiparasitario y vacunal más adecuado para él/ella en tú veterinario de confianza.
+                                    Puedes mostrarle la caja primero para que se acostumbre a su presencia. Después prueba a colocarlo allí al despertar y después de comer y beber. La caja de arena debe estar siempre alejada del lugar donde come y en un lugar silencioso y tranquilo, a veces incluso cubierta total ó parcialmente. Recuerda que siempre debes seguir ésta fórmula en casa para prevenir enfermedades frecuentes de tracto urinario: tantas cajas de arena, como gatos que haya en la casa +1 y debes mantenerla limpia diariamente.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header>¿Es la esterilización una buena idea?</Accordion.Header>
+                                <Accordion.Header>¿Cual es la mejor raza de gato para personas alérgicas?</Accordion.Header>
                                 <Accordion.Body>
-                                    La esterilización de nuestras mascotas siempre va suponer un beneficio en el que todos saldremos ganando. Una vez has decidido que no quieres a tu animal como reproductor, debes esterilizarlo. La esterilización es un acto quirúrgico serio, con el que se pueden evitar enfermedades graves tales como tumores mamarios, infecciones uterinas ó estrés por embarazo psicológico en las hembras; tumores testiculares, de próstata ó trastornos graves de comportamiento en el caso de los machos.
+                                    No existe un gato hipoalergénico como tal. Es más, debes estar seguro a qué tienes alergia exactamente. Si el pelo es un problema, evitaría cualquier raza de pelo largo. En este sentido Sphynx, es la única raza de gato sin pelo.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header>¿Necesita mi perro una limpieza de boca?</Accordion.Header>
+                                <Accordion.Header>¿Qué puedo hacer si mi gato orina o defeca fuera de la bandeja?</Accordion.Header>
                                 <Accordion.Body>
-                                    La enfermedad periodontal, es uno de los procesos más comunes en perros y gatos adultos. El mal aliento, es uno de los primeros signos de que puede estar padeciendo enfermedad dental. Sin un tratamiento adecuado, podemos encontrar problemas como abscesos de raíz, caries, e incluso incomodidad al comer. El papel del veterinario es fundamental para detectar el problema a tiempo. Él revisará la cantidad de sarro ó gingivitis presente y planteará una higiene bucal adecuada, siempre bajo anestesia general.
+                                    Es posible que sea por un problema de aversión con la bandeja o el sustrato (arena). Sin embargo puede que no sea un problema con la bandeja/arena y el gato padezca algún tipo de patología. Esto es más probable si vemos que tiene dificultad al orinar, va más veces a la bandeja, pasa más tiempo en ella o detectamos sangre en su orina. En estos casos es altamente recomendable acudir a la clínica para investigar la patología que padece el animal. Así evitamos que entre otras consecuencias el gato acabe obstruyéndose y se complique el problema.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header>¿Cuál es la raza mas adecuada para mí?</Accordion.Header>
+                                <Accordion.Header>¿Qué plantas pueden ser tóxicas para mi gato?</Accordion.Header>
                                 <Accordion.Body>
-                                    Pedigrí, Cruce ó Mestizo. Cachorro ó Adulto. Hembra ó Macho. Son muchas las dudas que se nos plantean. Aunque siempre te vamos a recomendar la adopción por encima de la compra, es cierto que escoger un perro de raza nos aporta un grado de predictibilidad acerca del tamaño, longitud, pelaje incluso algunas dolencias que puede padecer. La raza de perro más adecuada a tu caso, dependerá principalmente de tu estilo de vida. Tú veterinario más cercano será el asesor principal que puedes encontrar antes de tomar la decisión.
+                                    Los gatos tienen por costumbre mordisquear diversos vegetales. El problema es que existen multitud de plantas que son tóxicas para ellos. Unas producen alteraciones gastrointestinales como la Flor de Pascua. Otras como las Lileáceas son altamente tóxicas y pueden causarles la muerte por fallo renal. Si tienes plantas y gatos en casa, asegúrate que éstas no son tóxicas para ellos. Comprueba el listado de plantas tóxicas en internet. Te recomendamos que las busques por su nombre científico. Si sospechas que tu gato ha podido ingerir alguna planta tóxica ponte en contacto con nosotros de forma urgente.
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>

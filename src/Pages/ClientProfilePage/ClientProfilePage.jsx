@@ -42,7 +42,7 @@ const ClientProfilePage = () => {
             <Col className="sideBar" md='3'>
                 <h2 className="sideBarTitle">Mi cuenta</h2>
                 <hr />
-                <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('profile')}><img className="imageProfile" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ziqu6bt6fswnlwvq814c.png" alt="profile image" />Mi perfil</Link>
+                <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('profile')}><img className="profileImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ziqu6bt6fswnlwvq814c.png" alt="profile image" />Mi perfil</Link>
                 <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('pets')}> <img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ugaynodhmypjeifobqxo.svg" alt="pet image" />Mis mascotas</Link>
                 <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('requests')}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/uwyluzpg2cdajvm7ffyo.svg" alt="notification image" />Mis consultas</Link>
             </Col>

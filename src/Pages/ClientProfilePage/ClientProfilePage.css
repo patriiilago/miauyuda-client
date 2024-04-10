@@ -19,7 +19,7 @@
 
 .sideBarTitle {
     color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
-    font-size: 20px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
@@ -34,6 +34,7 @@ hr {
 }
 
 .buttonSideBar {
+    font-size: 20px;
     display: flex;
     height: 59px;
     padding: 0px 40px;
@@ -52,24 +53,3 @@ hr {
 .profileTitle {
     margin-top: 40px;
 }
-
-/* .ClientProfilePage {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-.Section h1 {
-    text-align: center;
-}
-
-
-.profileTitle {
-    color: #609f69;
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-.requestImage {
-    height: 150px !important;
-} */
