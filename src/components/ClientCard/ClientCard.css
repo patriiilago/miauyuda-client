@@ -9,6 +9,7 @@
 
 .userImage {
     width: 450px;
+    margin-bottom: 30px;
 }
 
 .data {
@@ -51,6 +52,7 @@ hr {
 }
 
 .personalData {
+    margin-bottom: 30px;
     display: flex;
     padding: 32px;
     flex-direction: column;

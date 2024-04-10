@@ -67,7 +67,7 @@ function Navigation() {
                         <Dropdown className='profile-Drop' align="end">
 
                             <img className='imageProfile' src={user.image} alt="user image" />
-                            <Dropdown.Toggle>
+                            <Dropdown.Toggle caret-width='1em'>
 
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
