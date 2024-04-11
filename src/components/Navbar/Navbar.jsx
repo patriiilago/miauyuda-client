@@ -72,8 +72,8 @@ function Navigation() {
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 <p>¡Hola, {user.firstName}!</p>
-                                {user.role === 'Client' ? ("Cliente") : user.role === 'Professional' ? ("Veterinario") : null}
-                                <hr />
+                                <span className='roledd'>{user.role === 'Client' ? ("Cliente") : user.role === 'Professional' ? ("Veterinario") : null}</span>
+                                <hr className='hrdrop' />
                                 {user.role === 'Client' ? (
                                     <Link to={`/clientprofile`}>
                                         <Dropdown.Item className='profileButton' as={'span'}>

@@ -1,10 +1,58 @@
 .RequestCard {
-    border-radius: 30px !important;
-    margin-bottom: 20px !important;
-    background-color: white !important;
-    color: #609f69 !important;
-    border: 2px solid #74B07A;
-    margin-bottom: 100px !important;
+    margin-top: 40px !important;
+    display: flex;
+    padding: 20px 20px;
+    margin-left: 30px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+    background: var(----clr-white, #FFF);
+}
+
+.profileClient {
+    display: flex;
+    align-items: flex-start;
+}
+
+.clientImage {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.req-img {
+    width: 300px;
+    transition: width 0.5s;
+}
+
+.image.expanded {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.buttonProfile {
+    display: flex;
+    width: 300px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(----clr-accent, #45A443);
+    color: var(----clr-accent, #45A443) !important;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }
 
 .RequestCardContent {
@@ -52,23 +100,10 @@
     height: 30px;
 }
 
-.requestImage {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
 
-.profileimage-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
-.buttonProfile {
-    margin-right: 50px !important;
-    width: 150px;
-}
+
+
 
 .card-text {
     font-size: 1.3em;

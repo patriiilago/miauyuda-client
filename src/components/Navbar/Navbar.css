@@ -144,6 +144,14 @@ a {
     text-align: center;
 }
 
+.roledd {
+    margin-bottom: 10px;
+}
+
+.hrdrop {
+    margin-top: 10px !important;
+}
+
 .dropdown-menu {
     width: 234px;
     padding: 24px 24px 16px 24px !important;
@@ -151,6 +159,7 @@ a {
     border-radius: 16px;
     border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20)) !important;
     background: var(----clr-white, #FFF) !important;
+    margin-bottom: 10px;
 }
 
 .dropdown-toggle {

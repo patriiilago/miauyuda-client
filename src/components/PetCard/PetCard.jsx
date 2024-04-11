@@ -33,10 +33,14 @@ const PetCard = ({
     return (
 
         <Row>
-            <div className='boxName'>
-                <h2 className='headerPet'>Mis Mascotas</h2>
-                <p className='headerPet1'>Aquí puedes consultar todos los datos de tus peluditos</p>
-                <Link className='addPet'>Añadir Mascota</Link>
+            <div className='nameDiv'>
+                <div className='headerPet'>
+                    <h2 className='peth2'>Mis Mascotas</h2>
+                    <span className='headerPet1'>Aquí puedes consultar todos los datos de tus peluditos</span>
+                </div>
+                <div>
+                    <Link className='addPet' to={`/petform`}>Añadir Mascota</Link>
+                </div>
             </div>
             <Col md='5'>
                 <img className='petImage' src={image} />
@@ -44,19 +48,18 @@ const PetCard = ({
             <Col className='petData' md='7'>
                 <div className='boxName'>
                     <h3 className='petName'>{name}</h3>
-                    <Link className='edit-pet'>Editar</Link>
+                    <Link className='edit-btn' to={`/editpetform/${petId}`}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712776511/uetctelrz4l96jfb7cts.png" alt="edit image" /></Link>
+                    <Link className='delete-btn' to={deletePet}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712776510/cbzj43pheridmqxlibbc.png" alt="delete image" /></Link>
                 </div>
-
-                <span className='breedText'>Soy un {type} de raza {breed}</span>
-                <span><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712744774/kkgx9yqxtzcycwt0fh4h.png" alt="owner image" /> Mi dueñ@ es {chipOwner}</span>
-
+                <span className='spanText'>Soy un {type} de raza {breed}</span>
+                <span className='spanText'><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712744774/kkgx9yqxtzcycwt0fh4h.png" alt="owner image" /> Mi dueñ@ es {chipOwner}</span>
                 <div className='iconsData'>
-                    <span><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743348/ztni2nd0ye9anims1nli.png" alt="weight image" /> {weight} kg</span>
-                    <span><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743347/orj1yyfguogbool049kl.png" alt="sex of pet image" /> {sex}</span>
+                    <span className='spanText'><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743348/ztni2nd0ye9anims1nli.png" alt="weight image" /> {weight} kg</span>
+                    <span className='spanText'><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743347/orj1yyfguogbool049kl.png" alt="sex of pet image" /> {sex}</span>
                 </div>
                 <div className='iconsData'>
-                    <span><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743347/ujgxqpy5fdmey2zqbztc.png" alt="birthdate image" /> {format(birth, "long")}</span>
-                    <span><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743347/qnqqswnyr94mbfbwppqq.png" alt="chip image" /> {chipNumber}</span>
+                    <span className='spanText'><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743347/ujgxqpy5fdmey2zqbztc.png" alt="birthdate image" /> {format(birth, "long")}</span>
+                    <span className='spanText'><img className='icons' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712743347/qnqqswnyr94mbfbwppqq.png" alt="chip image" /> {chipNumber}</span>
                 </div>
             </Col>
         </Row >

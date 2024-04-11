@@ -11,7 +11,8 @@ import { Link } from "react-router-dom"
 
 const ClientProfilePage = () => {
 
-    const [client, setClient] = useState([])
+
+    const [client, setClient] = useState({ pets: [] })
     const [requests, setRequests] = useState([])
     const { user } = useContext(AuthContext)
     const [selectedCard, setSelectedCard] = useState('profile')
@@ -41,7 +42,7 @@ const ClientProfilePage = () => {
         <Row className="UserProfilePage">
             <Col className="sideBar" md='3'>
                 <h2 className="sideBarTitle">Mi cuenta</h2>
-                <hr />
+                <hr className="profileHr" />
                 <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('profile')}><img className="profileImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ziqu6bt6fswnlwvq814c.png" alt="profile image" />Mi perfil</Link>
                 <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('pets')}> <img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ugaynodhmypjeifobqxo.svg" alt="pet image" />Mis mascotas</Link>
                 <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('requests')}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/uwyluzpg2cdajvm7ffyo.svg" alt="notification image" />Mis consultas</Link>
