@@ -6,7 +6,7 @@
 }
 
 .professionalDetailsData {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     display: flex;
     padding: 10px;
     flex-direction: column;
@@ -21,7 +21,15 @@
 
 }
 
+.professionalCardDetailsContainer {
+    margin-top: 50px;
+}
 
 .contactVetData {
     margin-bottom: 100px;
+}
+
+.buttonContainerVet {
+    margin-bottom: 15px;
+    margin-left: 450px;
 }

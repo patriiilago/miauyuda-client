@@ -62,23 +62,22 @@ const ProfessionalCardDetails = ({
 
 
 
-        <Container>
+        <Container className='professionalCardDetailsContainer'>
             <Row>
-                <Col >
+                <Col>
                     <div >
-                        <img className='vetImage' src={image} alt={`${firstName} ${lastName}`} style={{ maxWidth: '100%' }} />
+                        <img className='vetImage' src={image} style={{ maxWidth: '100%' }} />
                     </div>
                 </Col>
                 <Col md='4'>
                     <Row>
                         <Col >
                             <div className='professionalDetailsData'>
-                                <h3>Datos personales</h3>
+                                <h3>Datos personales de {firstName} {lastName}</h3>
 
-                                <span className='data'>Nombre</span>
-                                <span className='holder'>{firstName}</span>
-                                <span className='data'>Apellidos</span>
-                                <span className='holder'>{lastName}</span>
+                                <span className='data'>Nombre Completo</span>
+                                <span className='holder'>{firstName} {lastName}</span>
+
                                 <span className='data'>Especialidad</span>
                                 <span className='holder'>{specialty}</span>
                                 <span className='data'>Urgencias:</span>
@@ -92,10 +91,10 @@ const ProfessionalCardDetails = ({
                                 <span className='data'>Dirección</span>
                                 <span className='holder'>{clinic?.address}</span>
                                 {user.role === 'Client' && (
-                                    <div className="buttonContainer">
+                                    <div className="buttonContainerVet">
                                         <Link to={`/newrequest/profesional/${_id}`}>
                                             <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}>
-                                                <strong>Consultar</strong>
+                                                <strong>Realizar Consulta</strong>
                                             </Button>
                                         </Link>
                                     </div>

@@ -17,25 +17,23 @@ const RequestCard = ({ client, question, response, _id, loadRequests, image, pro
                         <img className='clientImage' type="file" src={client.image} />
                         <div>
                             <h1>{client.firstName}</h1>
-                            <span>tiene una pregunta que hacerte</span>
                         </div>
                     </div>
                     <span className='questionResponseTitle'>Tu consulta:</span>
                     <hr className='questionrh' />
                     <span className='questionText'>{question}</span>
                     <img className='question-img' src={image} alt="Imagen" />
-                    <Link to={`/clients/${client._id}`} className="buttonProfile" >
-                        Ver perfil
-                    </Link>
+                    <Link to={`/clients/${client._id}`} className="buttonProfile" >∫Ver perfil</Link>
                 </Col>
                 <Col md='6'>
                     <div className='profileProfesional'>
-                        <div>
+                        <div className='profesionalIdentity'>
                             <h1>{professional.firstName}</h1>
-                            <span>tiene una pregunta que hacerte</span>
                         </div>
                         <img className='profesionalImage' type="file" src={professional.image} />
                     </div>
+                    <span className='questionResponseTitle'>Respuesta del experto:</span>
+                    <hr className='questionrh' />
                     <ListGroup className="list-group-flush">
                         {
                             user.role === 'Professional' && response === '' &&
@@ -47,21 +45,21 @@ const RequestCard = ({ client, question, response, _id, loadRequests, image, pro
                         {
                             user.role === 'Professional' && response != '' &&
                             <>
-                                <span className='questionResponseTitle'><img className='imageResponse' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712791972/qud1rs4rl1sdhewd1yhw.png" alt="checked image" />​ Respuesta del experto: </span>{response}
+                                {response}
                             </>
                         }
 
                         {
                             user.role === 'Client' && response === '' &&
                             <>
-                                <p><strong><img className='imageResponse' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712791972/gztu5fqjt3xthqcnaal9.png" alt="clock image" />​​ Aún sin respuesta, en breve te contestará un profesional...</strong></p>
+                                <p><strong><img className='imageResponse' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712791972/gztu5fqjt3xthqcnaal9.png" alt="clock image" />​​ Aún sin respuesta, en breve te contestará el profesional...</strong></p>
                             </>
                         }
 
                         {
                             user.role === 'Client' && response != '' &&
                             <>
-                                <h3><img className='imageResponse' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712791972/qud1rs4rl1sdhewd1yhw.png" alt="checked image" />​Respuesta del experto: </h3>{response}
+                                {response}
                             </>
                         }
                     </ListGroup>
