@@ -4,6 +4,7 @@ import ClientCardDetails from '../../components/ClientCardDetails/ClientCardDeta
 import { Container, Row, Col } from 'react-bootstrap'
 import clientServices from '../../services/client.services'
 import { useState, useEffect } from 'react'
+import './../../Pages/ClientDetailsPage/ClientDetailsPage.css'
 
 const ClientDetailsPage = () => {
 
@@ -23,23 +24,13 @@ const ClientDetailsPage = () => {
 
 
     return (
+        <div className='clientDetailsPage'>
+            <Container>
+                <ClientCardDetails {...client} />
+                <PetCard {...client.pet} />
 
-        <Container>
-
-            <Row >
-
-                <Col md={6}>
-                    <h1 className='profileTitle'> Cliente:</h1>
-                    <ClientCardDetails {...client} />
-                </Col>
-                <Col md={6}>
-                    <h1 className="profileTitle">Mascota:</h1>
-                    <PetCard {...client.pet} />
-                </Col>
-
-            </Row>
-        </Container >
-
+            </Container >
+        </div>
     )
 }
 export default ClientDetailsPage
