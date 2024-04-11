@@ -16,7 +16,7 @@
 }
 
 .euthaParagraph1 {
-    color: var(----clr-accent, #FFF);
+    color: var(----clr-accent, #45A443);
     position: absolute;
     top: 150px;
     left: 90px;
@@ -34,7 +34,7 @@ color: var(----txt-primary, #0D260D);
  */
 .euthaParagraph2 {
     align-self: stretch;
-    color: var(----txt-primary, #FFF);
+    color: var(----txt-primary, #0D260D);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -42,7 +42,7 @@ color: var(----txt-primary, #0D260D);
 }
 
 .euthaParagraphstrong {
-    color: var(----txt-primary, #45A443);
+    color: var(----txt-primary, #0D260D);
 
 }
 
@@ -93,16 +93,16 @@ color: var(----txt-primary, #0D260D);
 }
 
 .psico-icon {
-    height: auto;
-    object-fit: cover;
-    width: 200px;
-    margin-right: 85px;
+    height: 20px;
+    /* object-fit: cover; */
+    width: 20px;
+    margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-content: end;
+    align-content: center;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 10%;
     overflow: hidden;
 }
 
@@ -129,13 +129,6 @@ color: var(----txt-primary, #0D260D);
 }
 
 .mentalia-button {
-    /* color: var(----clr-accent, #45A443) !important;
-    border-radius: 12px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-decoration: none;
-    border-color: #45A443; */
     color: #0D260D !important;
     text-decoration: none;
     text-align: center;
