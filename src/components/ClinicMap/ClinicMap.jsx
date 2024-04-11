@@ -10,7 +10,7 @@ function ClinicMap({ coordinates }) {
 
     const [map, setMap] = useState(null)
 
-    const onLoad = (map) => console.log('Aquí haz lo que necesites tras la carga del mapa')
+    const onLoad = (map) => console.log('mapa')
     const onUnmount = () => setMap(null)
 
     const clinicCoordinates = { lat: coordinates[1], lng: coordinates[0] }

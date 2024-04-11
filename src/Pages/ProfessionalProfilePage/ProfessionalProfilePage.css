@@ -9,6 +9,12 @@
     font-size: 30px;
 }
 
-/* .UserProfilePage img {
-    height: 250px;
-} */
+.questionResponseTitle {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50)) !important;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

@@ -4,7 +4,6 @@
     height: 340px;
     border-radius: 5%;
     overflow: hidden;
-
 }
 
 
@@ -15,11 +14,12 @@
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-    gap: 2px;
+    gap: 3px;
     border-radius: 16px;
     border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
     background: var(----clr-white, #FFF);
     margin-bottom: 20px;
+
 }
 
 .vetName {
@@ -30,13 +30,14 @@
     display: block;
     color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
     justify-content: flex-start;
-    font-size: 16px;
+    font-size: 18px;
+
 
 }
 
 .professionalButtonContainer {
     display: flex;
-    margin: 0 auto;
+    margin-top: 10px;
     margin-left: 500px;
     width: 200px;
     align-items: center;
@@ -72,7 +73,7 @@
 .professionalName {
     display: block;
     margin-bottom: 5px;
-    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    color: #0D260D;
     justify-content: flex-start;
-    font-size: 25px;
+    font-size: 32px;
 }

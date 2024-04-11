@@ -1,5 +1,33 @@
-.ProfessionalsListPage {
-    color: #74B07A;
+.backgroundColorPage {
+    background-color: #F4FAF3;
+    padding-top: 30px;
+}
+
+.titleVetList2 {
+    color: var(----txt-primary, #0D260D);
     text-align: center;
-    margin: 20px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+    margin-top: 40px;
+}
+
+
+
+.titleVetList {
+    color: #46914E;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+    margin-top: 20px;
+}
+
+.h1VetList {
+    text-align: center;
+    margin-bottom: 20px;
 }

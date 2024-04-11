@@ -20,15 +20,15 @@ const EmergenciesList = () => {
     }
 
     return (
-        <Container>
-            <Row>
-                {professionals.map((professional, index) => (
-                    <Col md={4} key={index}>
-                        <ProfessionalCard {...professional} />
-                    </Col>
-                ))}
-            </Row>
-        </Container>
+
+        <Row>
+            {professionals.map((professional, index) => (
+                <Col key={index}>
+                    <ProfessionalCard {...professional} />
+                </Col>
+            ))}
+        </Row>
+
     )
 }
 

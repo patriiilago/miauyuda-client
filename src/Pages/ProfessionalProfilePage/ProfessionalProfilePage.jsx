@@ -5,7 +5,7 @@ import RequestList from './../../components/RequestsList/RequestsList'
 import { AuthContext } from "../../context/auth.context"
 import requestServices from "../../services/request.services"
 import './ProfessionalProfilePage.css'
-import { Col, Row, Container } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 
 const ProfessionalProfilePage = () => {
 
@@ -34,18 +34,15 @@ const ProfessionalProfilePage = () => {
     }
 
     return (
-        <Container>
-            <Row className="ProfessionalProfilePage">
-                <Col md={6}>
-                    <h1 className="professionalTitle">Datos de tu perfil:</h1>
-                    <ProfessionalCard {...professional} />
-                </Col>
 
-                <Col md={{ span: 5, offset: 1 }}>
-                    <h1 className="professionalTitle">Consultas recibidas:</h1>
-                    <RequestList requests={requests} />
-                </Col>
-            </Row>
+        <Container>
+
+            <h1 className="questionResponseTitle">Datos de tu perfil:</h1>
+            <ProfessionalCard {...professional} />
+
+            <h1 className="questionResponseTitle">Consultas recibidas:</h1>
+            <RequestList requests={requests} />
+
         </Container>
 
     )

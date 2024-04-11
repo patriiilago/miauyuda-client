@@ -1,5 +1,31 @@
-.EmergenciesPage h1 {
-    color: #74B07A;
+.backgroundColorEmergenciesPage {
+    background-color: #F4FAF3;
+    padding-top: 30px;
+}
+
+.titleEmergencies2 {
+    color: var(----txt-primary, #0D260D);
     text-align: center;
-    margin: 20px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+    margin-top: 40px;
+}
+
+.titleEmergencies {
+    color: #46914E;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+    margin-top: 35px;
+}
+
+.h1Emergencies {
+    text-align: center;
+    margin-bottom: 35px;
 }
