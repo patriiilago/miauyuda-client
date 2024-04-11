@@ -9,7 +9,7 @@ const EuthanasiaPage = () => {
 
             <Row>
                 <div className="imgEuthaContainer">
-                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712831036/sqs6xtpge3cdz9mvsjiq.jpg' alt="homePage pic" />
+                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712853751/gahdvkyhapo8refuwmff.png' alt="homePage pic" />
                 </div>
                 <div className="euthaParagraph1">
                     <p><span>Servicio <br /> Eutanasia <span className="euthaParagraphstrong"></span> </span> <span className="euthaParagraphstrong" >de</span> <br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
@@ -76,7 +76,7 @@ const EuthanasiaPage = () => {
             <Row className="psico-row">
 
                 <Col md={2} className='containerPsico'>
-                    <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712830514/lz7wu4fvjyirc5xvecqn.png' alt="psico-icon" />
+                    <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712846539/flb5lblyowirukkpkn13.png' alt="psico-icon" />
                 </Col>
                 <Col md={9}>
                     <div>
