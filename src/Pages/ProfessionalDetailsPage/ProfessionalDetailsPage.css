@@ -5,3 +5,9 @@
     justify-content: center;
     color: #74B07A
 }
+
+.mapDetails {
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+    width: 1300px;
+}

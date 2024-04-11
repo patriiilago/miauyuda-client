@@ -30,10 +30,10 @@ const ProfessionalDetails = () => {
                 <Col md={{ span: 6 }}>
                     <ProfessionalCardDetails {...professional} />
                 </Col>
-                <Col md={{ span: 6 }}>
-                    {professional.location && <ClinicMap coordinates={professional.location.coordinates} />}
-                </Col>
+
             </Row>
+            <div className='mapDetails'>  {professional.location && <ClinicMap coordinates={professional.location.coordinates} />}</div>
+
 
         </Container>
 
