@@ -1,25 +1,25 @@
 .EuthanasiaPage {
     margin-bottom: 100px;
     margin-left: 0px;
+    align-items: center
 }
 
-.imgEuthContainer {
+.imgEuthaContainer {
     position: relative;
     padding-left: 0px;
-
 }
 
-.ehthimage {
-    width: 100vw;
+.euthaImage {
+    width: 100%;
     aspect-ratio: auto;
     margin-bottom: 40px;
 }
 
 .euthaParagraph1 {
-    color: var(----clr-accent, #45A443);
+    color: var(----clr-accent, #FFF);
     position: absolute;
-    top: 400px;
-    left: 160px;
+    top: 150px;
+    left: 90px;
     align-self: stretch;
     font-size: 80px;
     font-style: normal;
@@ -27,8 +27,29 @@
     line-height: 100%;
 }
 
+/*
+color: var(----clr-accent, #45A443);
+color: var(----txt-primary, #0D260D);
+
+ */
+.euthaParagraph2 {
+    align-self: stretch;
+    color: var(----txt-primary, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
 .euthaParagraphstrong {
-    color: var(----txt-primary, #0D260D);
+    color: var(----txt-primary, #45A443);
+
+}
+
+.servText {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .servicetxt1 {
@@ -39,6 +60,7 @@
     font-weight: 600;
     line-height: 125%;
     align-self: stretch;
+    margin-bottom: 50px;
 
 }
 
@@ -71,28 +93,34 @@
 }
 
 .psico-icon {
+    height: auto;
+    object-fit: cover;
+    width: 200px;
+    margin-right: 85px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-content: end;
     width: 200px;
     height: 200px;
-    margin-right: 85px;
-    border-radius: 20px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-
-
 
 .rowTextPsico {
     color: var(----clr-accent, #45A443);
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: 125%;
     align-self: stretch;
+
 }
 
 .rowTextPsico2 {
     color: var(----txt-primary, #0D260D);
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: 125%;
@@ -101,14 +129,31 @@
 }
 
 .mentalia-button {
-    color: var(----clr-accent, #45A443) !important;
+    /* color: var(----clr-accent, #45A443) !important;
     border-radius: 12px;
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 18px;
     text-decoration: none;
+    border-color: #45A443; */
+    color: #0D260D !important;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #ffffffc0;
+    margin-right: 10px;
+}
+
+.mentaliaStrong {
+    color: var(----txt-primary, #45A443);
 }
 
 .services {
@@ -119,16 +164,24 @@
     font-weight: 600;
     line-height: 150%;
     list-style-type: none;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     justify-content: space-evenly;
 }
 
 .services-col {
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
+}
+
+.crossIcon {
+    width: 60px;
+    height: 60px;
+
 }
 
 .services-card {
     padding: 0px 20px;
+
 }
 
 .services-card li {
@@ -157,7 +210,9 @@
 }
 
 .checkIcon {
+    flex: 1;
     width: 16px;
+    max-width: 100%
 }
 
 .button-services {
@@ -169,6 +224,11 @@
     border-radius: 12px;
     background: var(----clr-accent, #45A443);
     text-decoration: none;
+}
+
+.containerPsico {
+    display: flex;
+    align-items: center;
 }
 
 /* @media only screen and (max-width: 768px) {
@@ -219,4 +279,4 @@
         margin: 20px;
     }
 
-} */
+}
