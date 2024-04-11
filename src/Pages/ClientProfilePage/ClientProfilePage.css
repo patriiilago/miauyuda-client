@@ -40,8 +40,11 @@
     border-radius: 8px;
     background-color: #E4F5E3 !important;
     color: #0D260D !important;
-    text-decoration: none;
 }
+
+/* .buttonSideBar:hover {
+    background: var(----clr-weak, #E4F5E3) !important;
+} */
 
 .profileTitle {
     margin-top: 40px;
