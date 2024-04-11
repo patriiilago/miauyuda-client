@@ -34,17 +34,17 @@ const ProfessionalProfilePage = () => {
     }
 
     return (
+        <div className="professionalPPage">
+            <Container>
 
-        <Container>
+                <h1 className="questionResponseTitle">Datos de tu perfil:</h1>
+                <ProfessionalCard {...professional} />
 
-            <h1 className="questionResponseTitle">Datos de tu perfil:</h1>
-            <ProfessionalCard {...professional} />
+                <h1 className="questionResponseTitle">Consultas recibidas:</h1>
+                <RequestList requests={requests} />
 
-            <h1 className="questionResponseTitle">Consultas recibidas:</h1>
-            <RequestList requests={requests} />
-
-        </Container>
-
+            </Container>
+        </div>
     )
 }
 

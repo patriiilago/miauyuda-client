@@ -2,7 +2,7 @@ import { Container, Button, Form, FloatingLabel, Col, Row } from "react-bootstra
 import uploadServices from "../../services/upload.services"
 import authServices from "../../services/auth.services"
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import './../../components/SignUpFormProfessional/SignUpFormProfessional.css'
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
@@ -240,9 +240,9 @@ const SignUpFormProfessional = () => {
                     <Form.Check type="checkbox" label="He leído y acepto los términos y condiciones." required />
                 </Form.Group>
 
-                <Button className="signUpFormButton" disabled={loadingImage} type="submit">
+                <Link className="signUpFormButton" disabled={loadingImage} type="submit">
                     {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
-                </Button>
+                </Link>
 
             </Form>
         </Container>

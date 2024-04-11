@@ -23,20 +23,14 @@ const ProfessionalDetails = () => {
 
 
     return (
-        <Container>
-
-
-            <Row className='ProfessionalDetailsPage'>
-                <Col md={{ span: 6 }}>
+        <div className='ProfessionalDetailsPage'>
+            <Row>
+                <Col md='12'>
                     <ProfessionalCardDetails {...professional} />
                 </Col>
-
             </Row>
             <div className='mapDetails'>  {professional.location && <ClinicMap coordinates={professional.location.coordinates} />}</div>
-
-
-        </Container>
-
+        </div>
 
     )
 }

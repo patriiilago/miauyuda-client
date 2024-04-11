@@ -1,20 +1,16 @@
 import SignUpFormProfessional from '../../components/SignUpFormProfessional/SignUpFormProfessional'
 import './../../Pages/SignUpProfessionalsPage/SignupProfessoinalsPage.css'
+import { Container } from "react-bootstrap"
 
 function SignUpFormProfessionalPage() {
 
     return (
-        <div className="SignupProfessinalsPage">
-
-
-
-            <h1>Regístrate como veterinario:</h1>
-
-            <SignUpFormProfessional />
-
-
-
-        </div>
+        <Container className="SignupProfessinalsPage">
+            <span className='profFormTitle'>Regístrate como <span className='profFormTitle1'>veterinario:</span></span>
+            <div className="form">
+                <SignUpFormProfessional />
+            </div>
+        </Container>
     )
 }
 

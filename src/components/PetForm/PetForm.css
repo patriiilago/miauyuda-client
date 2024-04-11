@@ -1,23 +1,42 @@
+.formBack {
+    background-color: #F4FAF3;
+}
+
 .PetForm {
     padding: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.h1Petform,
+
 .PetFormLabel {
-    color: #74B07A;
+    color: #0D260D;
+}
+
+.h1Petform {
     text-align: center;
+    color: #45A443;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.h1Petform1 {
+    text-align: center;
+    color: #0D260D;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
 }
 
 .PetFormInput,
 .PetFormSelect,
 #image {
-    border: 2px solid #609f69 !important;
-    border-radius: 10px !important;
-    padding: 8px !important;
-    margin-bottom: 10px !important;
-    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid var(----txt-subtle, rgba(13, 38, 13, 0.50)) !important;
+    background: var(----clr-disabled, #F4FAF3);
 }
 
 .PetFormTextarea {
@@ -30,13 +49,19 @@
 }
 
 .PetFormButton {
-    background-color: #609f69 !important;
-    border: none !important;
-    border-radius: 10px;
-    padding: 10px 40px;
-    color: white;
-    font-weight: bold;
-    margin-top: 20px;
+    color: var(----clr-white, #FFF);
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #45A443;
+    text-decoration: none;
 }
 
 .PetFormButton:hover {

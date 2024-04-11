@@ -10,11 +10,11 @@ function SignupClientPage() {
 
     return (
 
-        <Container className="SignupClientPage">
-            <h1>Registrarse como cliente:</h1>
-
-            <SignUpFormClient />
-
+        <Container className="signupClientPage">
+            <span className="clientFormTitle">Registrarse como <span className="clientFormTitle1">cliente:</span></span>
+            <div className="form">
+                <SignUpFormClient />
+            </div>
         </Container>
 
     )

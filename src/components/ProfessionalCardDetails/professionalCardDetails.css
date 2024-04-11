@@ -1,3 +1,45 @@
+.profImage {
+    width: 450px;
+    margin-bottom: 30px;
+}
+
+.profData {
+    color: var(----txt-primary, #0D260D);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 148%;
+    margin-left: 10px;
+}
+
+.profHolder {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(----txt-subtle, rgba(13, 38, 13, 0.10));
+    background: var(----clr-disabled, #F4FAF3);
+}
+
+.DataCol {
+    margin-bottom: 30px;
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+    background: var(----clr-white, #FFF);
+}
+
 .vetImage {
     width: 300px;
     height: 300px;

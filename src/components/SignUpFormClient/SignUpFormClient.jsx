@@ -1,7 +1,7 @@
 import { Button, Form, Col, Row } from "react-bootstrap"
 import '../../components/SignUpFormClient/SignUpFormClient.css'
 import { useState, useEffect } from "react"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import uploadServices from "../../services/upload.services"
 import authServices from '../../services/auth.services'
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
@@ -165,7 +165,7 @@ const SignUpFormClient = () => {
             <Row >
 
                 <Form.Group controlId="formGridAddress">
-                    <Form.Label className="signUpFormLabel">Dirección del cliente:</Form.Label>
+                    <Form.Label className="signUpFormClientLabel">Dirección del cliente:</Form.Label>
                     <GooglePlacesAutocomplete
                         selectProps={{
                             addressValue,
@@ -186,9 +186,9 @@ const SignUpFormClient = () => {
                     required />
             </Form.Group>
 
-            <Button disabled={loadingImage} className="signUpFormClientButton" type="submit">
+            <Link disabled={loadingImage} className="signUpFormClientButton" type="submit">
                 {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
-            </Button>
+            </Link>
 
         </Form>
     );

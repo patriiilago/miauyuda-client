@@ -1,3 +1,7 @@
+.professionalPPage {
+    background: #F4FAF3;
+}
+
 .Section h1 {
     text-align: center;
 }
@@ -15,6 +19,6 @@
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
-    margin-top: 25px;
     margin-bottom: 25px;
+    padding-top: 25px;
 }

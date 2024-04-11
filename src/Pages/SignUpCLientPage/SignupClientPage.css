@@ -1,4 +1,25 @@
-.SignupClientPage h1 {
-    color: #74B07A;
+.signupClientPage {
+    padding-top: 30px;
+}
+
+.clientFormTitle {
     text-align: center;
+    color: var(----clr-accent, #45A443);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.clientFormTitle1 {
+    color: var(----txt-primary, #0D260D);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.form {
+    margin-top: 20px;
 }
