@@ -24,16 +24,16 @@ const ProfessionalDetails = () => {
 
     return (
         <Container>
-            <h1 className="ProfessionalName">{`${professional.firstName} ${professional.lastName}`}</h1>
+            {/* <h1 className="ProfessionalName">{`${professional.firstName} ${professional.lastName}`}</h1> */}
 
             <Row className='ProfessionalDetailsPage'>
                 <Col md={{ span: 6 }}>
                     <ProfessionalCardDetails {...professional} />
                 </Col>
-                <Col md={{ span: 6 }}>
-                    {professional.location && <ClinicMap coordinates={professional.location.coordinates} />}
-                </Col>
+
             </Row>
+            <div className='mapDetails'>  {professional.location && <ClinicMap coordinates={professional.location.coordinates} />}</div>
+
 
         </Container>
 

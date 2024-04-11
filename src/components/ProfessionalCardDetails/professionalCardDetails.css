@@ -1,9 +1,35 @@
-.professionalData {
-    margin-bottom: 10px;
+.vetImage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50% !important;
 }
 
-.buttonContainer {
-    margin-top: 30px;
+.professionalDetailsData {
+    margin-bottom: 80px;
     display: flex;
-    justify-content: right;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+    background: var(----clr-white, #FFF);
+    display: flex;
+    width: 700px;
+
+}
+
+.professionalCardDetailsContainer {
+    margin-top: 50px;
+}
+
+.contactVetData {
+    margin-bottom: 100px;
+}
+
+.buttonContainerVet {
+    margin-bottom: 15px;
+    margin-left: 450px;
 }
