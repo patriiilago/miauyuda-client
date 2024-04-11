@@ -25,35 +25,31 @@ const ProfessionalCard = ({
 
         <Row>
             <Col md="5" >
-                <div className="professionalCardImage">   <img src={image} alt={`Foto de: ${firstName} ${lastName}`} style={{ maxWidth: '100%' }} /></div>
-
-
+                <div className="professionalCardImage"><img src={image} alt={`Foto de: ${firstName} ${lastName}`} style={{ maxWidth: '100%' }} /></div>
             </Col>
 
 
             <Col md="7" >
-
                 <div className='vetDataContainer'>
 
-
-                    <span as="h3" className='professionalName'>{`${firstName} ${lastName}`}</span>
+                    <span className='professionalName'>{`${firstName} ${lastName}`}</span>
                     <span className='professionalData'>
-                        Mi especialidad son los animales <strong>​​​​ {specialty}</strong>
+                        Especialidad: <strong>​​{specialty}</strong>
                     </span>
                     <span className='professionalData'>
-                        <strong >​​​ {emergencies ? "Sí" : "No"}</strong> realizo urgencias
+                        Urgencias: <strong >​​​{emergencies ? "Sí" : "No"}</strong>
                     </span>
                     <span className='professionalData'>
-                        Trabajo en  <strong >​​{clinic?.name}</strong>
+                        Clínica: <strong >​​{clinic?.name}</strong>
                     </span>
                     <span className='professionalData'>
-                        La dirección de la clínica es <strong >{clinic?.address}</strong>
+                        Dirección: <strong >{clinic?.address}</strong>
                     </span>
                     <span className='professionalData'>
-                        Mi teléfono de contacto es <strong >​​{phone}</strong>
+                        Teléfono: <strong >​​{phone}</strong>
                     </span >
                     <span className='professionalData'>
-                        Y mi correo electrónico es <strong >​{email}</strong>
+                        Email: <strong >​{email}</strong>
                     </span >
                     <div>
                         <Link className="professionalButtonContainer" to={`/professionals/${_id}`}>
@@ -63,6 +59,7 @@ const ProfessionalCard = ({
                                 <strong>Ver detalles</strong>
                             </Button>
                         </Link>
+
                     </div>
                 </div>
 

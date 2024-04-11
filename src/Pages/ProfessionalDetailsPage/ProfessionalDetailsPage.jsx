@@ -24,7 +24,7 @@ const ProfessionalDetails = () => {
 
     return (
         <Container>
-            {/* <h1 className="ProfessionalName">{`${professional.firstName} ${professional.lastName}`}</h1> */}
+
 
             <Row className='ProfessionalDetailsPage'>
                 <Col md={{ span: 6 }}>

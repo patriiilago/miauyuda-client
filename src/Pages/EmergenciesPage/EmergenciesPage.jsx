@@ -7,16 +7,16 @@ const EmergenciesPage = () => {
 
 
     return (
+        <div className="backgroundColorEmergenciesPage">
+            <Container>
 
-        <Container>
-            <div className="EmergenciesPage">
-
-                <h1>Veterinarios de Urgencias:</h1>
+                <h1 className='h1Emergencies'><span className="titleEmergencies">Veterinarios de</span> <span className="titleEmergencies2">urgencias</span></h1>
 
                 <EmergenciesList />
 
-            </div>
-        </Container>
+            </Container>
+        </div >
+
     )
 }
 
