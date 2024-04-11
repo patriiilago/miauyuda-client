@@ -1,13 +1,9 @@
 .RequestCard {
     margin-top: 40px !important;
-    display: flex;
     padding: 20px 20px;
     margin-left: 30px;
     margin-right: 60px;
     margin-bottom: 40px;
-    flex-direction: column;
-    gap: 24px;
-    align-self: stretch;
     border-radius: 16px;
     border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
     background: var(----clr-white, #FFF);
@@ -15,10 +11,12 @@
 
 .profileClient {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.clientImage {
+.clientImage,
+.profesionalImage {
+    object-fit: cover;
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
@@ -26,17 +24,31 @@
     margin-right: 40px;
 }
 
-.req-img {
-    width: 300px;
-    transition: width 0.5s;
+.questionResponsetTitle {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50)) !important;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
 }
 
-.image.expanded {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+.imageResponse {
+    margin-right: 15px;
+}
+
+.questionText {
+    width: 200px;
+}
+
+.questionrh {
+    margin-bottom: 15px !important;
+}
+
+.question-img {
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 .buttonProfile {
@@ -53,6 +65,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+}
+
+.profileProfesional {
+    display: flex;
+    align-items: center;
 }
 
 .RequestCardContent {
