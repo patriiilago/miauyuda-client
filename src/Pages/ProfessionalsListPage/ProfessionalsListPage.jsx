@@ -8,7 +8,8 @@ const ProfessionalsListPage = () => {
     return (
         <div>
 
-            <h1 className="ProfessionalsListPage">Listado de veterinarios:</h1>
+
+            <h1 className='h1AboutUs'><span className="titleAboutUs">Listado de</span> <span className="titleAboutUs2">Veterinarios</span></h1>
 
             <div className="ProfessionalsListPage">
 

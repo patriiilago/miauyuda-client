@@ -21,7 +21,7 @@ const professionalList = () => {
         <Container>
             <Row>
                 {professionals.map((professional, index) => (
-                    <Col md={4} key={index}>
+                    <Col md={12} key={index}>
                         <ProfessionalCard {...professional} />
                     </Col>
                 ))}

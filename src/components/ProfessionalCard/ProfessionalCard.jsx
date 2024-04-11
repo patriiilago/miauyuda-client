@@ -1,4 +1,4 @@
-import { Button, Card } from 'react-bootstrap'
+import { Button, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './ProfessionalCard.css'
 
@@ -23,40 +23,49 @@ const ProfessionalCard = ({
 
     return (
 
+        <Row>
+            <Col md="5">
 
-        <Card className="professionalCard h-80" border="secondary" style={{ marginBottom: '20px' }}>
+                <img className="professionalCardImage" src={image} alt={`Foto de: ${firstName} ${lastName}`} />
 
-            <Card.Img variant="top" className="professionalCardImage" type="file" src={image} alt={`Foto de: ${firstName} ${lastName}`} />
-            <Card.Body className="ProfessionalCardBody">
+            </Col>
 
-                <h3>{`${firstName} ${lastName}`}</h3>
-                <br />
-                <p className='professionalData'>
-                    <strong >​​​📝​ Especialidad:</strong> {specialty}
-                </p>
-                <p className='professionalData'>
-                    <strong >​​🚑​ Urgencias?:</strong> {emergencies ? "Si" : "No"}
-                </p>
-                <p className='professionalData'>
-                    <strong >​🏥​ Clínica:</strong> {clinic?.name}
-                </p>
-                <p className='professionalData'>
-                    <strong >📍 Dónde encontrarme:</strong>  {clinic?.address}
-                </p>
-                <p className='professionalData'>
-                    <strong >​📞​ Teléfono:</strong> {phone}
-                </p >
-                <p className='professionalData'>
-                    <strong >💻​ Email:</strong> {email}
-                </p >
 
-                <div className="buttonContainer">
-                    <Link to={`/professionals/${_id}`}>
-                        <Button onClick={handleOnClick} className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}><strong>Ver detalles</strong> </Button>
+            <Col md="7" className='professionalData' >
+
+                <div className='vetDataContainer'>
+
+
+                    <span as="h3" className='vetName'>{`${firstName} ${lastName}`}</span>
+                    <span className='professionalData'>
+                        Mi especialidad son los animales <strong>​​​​ {specialty}</strong>
+                    </span>
+                    <span className='professionalData'>
+                        <strong >​​​ {emergencies ? "Sí" : "No"}</strong> realizo urgencias
+                    </span>
+                    <span className='professionalData'>
+                        Trabajo en  <strong >​​{clinic?.name}</strong>
+                    </span>
+                    <span className='professionalData'>
+                        La dirección de la clínica es <strong >{clinic?.address}</strong>
+                    </span>
+                    <span className='professionalData'>
+                        📞 Mi teléfono de contacto es <strong >​​{phone}</strong>
+                    </span >
+                    <span className='professionalData'>
+                        💻 Y mi correo electrónico es <strong >​{email}</strong>
+                    </span >
+
+                    <Link className="professionalButtonContainer" to={`/professionals/${_id}`}>
+                        <Button onClick={handleOnClick}
+                            className="professionalCardButton"
+                            style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}>
+                            <strong>Ver detalles</strong>
+                        </Button>
                     </Link>
                 </div>
-            </Card.Body>
-        </Card >
+            </Col >
+        </Row>
 
     )
 }
