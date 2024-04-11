@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { format } from '@formkit/tempo'
 import { useContext } from "react"
 import { AuthContext } from "./../../context/auth.context"
-//testing
+//testingg
 const PetCard = ({
     _id: petId,
     name,
@@ -42,14 +42,14 @@ const PetCard = ({
                     <Link className='addPet' to={`/petform`}>Añadir Mascota</Link>
                 </div>
             </div>
-            <Col md='5'>
-                <img className='petImage' src={image} />
+            <Col className='petImage' md='5'>
+                <img src={image} />
             </Col>
             <Col className='petData' md='7'>
                 <div className='boxName'>
                     <h3 className='petName'>{name}</h3>
                     <Link className='edit-btn' to={`/editpetform/${petId}`}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712776511/uetctelrz4l96jfb7cts.png" alt="edit image" /></Link>
-                    <Link className='delete-btn' to={deletePet}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712776510/cbzj43pheridmqxlibbc.png" alt="delete image" /></Link>
+                    <Link className='delete-btn' onClick={deletePet}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712776510/cbzj43pheridmqxlibbc.png" alt="delete image" /></Link>
                 </div>
                 <span className='spanText'>Soy un {type} de raza {breed}</span>
                 <span className='spanText'><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712744774/kkgx9yqxtzcycwt0fh4h.png" alt="owner image" /> Mi dueñ@ es {chipOwner}</span>

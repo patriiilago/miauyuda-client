@@ -9,10 +9,10 @@ const EuthanasiaPage = () => {
 
             <Row>
                 <div className="imgEuthaContainer">
-                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1710425737/jdjaoyfrjwrrfoizdinq.jpg' alt="homePage pic" />
+                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712831036/sqs6xtpge3cdz9mvsjiq.jpg' alt="homePage pic" />
                 </div>
                 <div className="euthaParagraph1">
-                    <p><span>Servicio <br /> Eutanasia <span className="euthaParagraphstrong"></span> </span><br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
+                    <p><span>Servicio <br /> Eutanasia <span className="euthaParagraphstrong"></span> </span> <span className="euthaParagraphstrong" >de</span> <br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
                     <p className="euthaParagraph2">Ofrecemos un servicio compasivo y respetuoso de eutanasia.<br /> Brindándote apoyo y comprensión en este difícil momento.</p>
 
                 </div>
@@ -29,7 +29,7 @@ const EuthanasiaPage = () => {
                     <Card style={{ width: '29rem' }} className="services-card">
                         <Card.Title className="servicesBody">
                             <div>
-                                <img class='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712765428/r5hkofpsaiyl2ca8xyms.png" alt="crossIcon" /></div>
+                                <img className='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712765428/r5hkofpsaiyl2ca8xyms.png" alt="crossIcon" /></div>
                             <div>
                                 <h2 className="servicesCategories">Eutanasia en clínica</h2>
                             </div>
@@ -50,7 +50,7 @@ const EuthanasiaPage = () => {
                     <Card style={{ width: '29rem' }} className="services-card">
                         <Card.Title className="servicesBody" >
                             <div>
-                                <img class='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712765428/r5hkofpsaiyl2ca8xyms.png" alt="crossIcon" /></div>
+                                <img className='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712765428/r5hkofpsaiyl2ca8xyms.png" alt="crossIcon" /></div>
                             <div>
                                 <h2 className="servicesCategories">Eutanasia a domicilio</h2>
                             </div>
@@ -76,7 +76,7 @@ const EuthanasiaPage = () => {
             <Row className="psico-row">
 
                 <Col md={2} className='containerPsico'>
-                    <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712768311/kv3jm89ap0ff4kwt69yk.png' alt="psico-icon" />
+                    <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712830514/lz7wu4fvjyirc5xvecqn.png' alt="psico-icon" />
                 </Col>
                 <Col md={9}>
                     <div>
