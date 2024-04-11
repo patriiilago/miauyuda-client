@@ -23,7 +23,7 @@ const RequestCard = ({ client, question, response, _id, loadRequests, image, pro
                     <hr className='questionrh' />
                     <span className='questionText'>{question}</span>
                     <img className='question-img' src={image} alt="Imagen" />
-                    <Link to={`/clients/${client._id}`} className="buttonProfile" >∫Ver perfil</Link>
+                    <Link to={`/clients/${client._id}`} className="buttonProfile" >Ver perfil</Link>
                 </Col>
                 <Col md='6'>
                     <div className='profileProfesional'>

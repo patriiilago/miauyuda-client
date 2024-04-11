@@ -2,7 +2,7 @@
     background: var(----clr-disabled, #F4FAF3);
 }
 
-.sideBar {
+.lateralBar {
     margin-top: 40px !important;
     display: flex;
     width: 318px;
@@ -19,7 +19,7 @@
     background: var(----clr-white, #FFF);
 }
 
-.sideBarTitle {
+.LateralBarTitle {
     color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
     font-size: 30px;
     font-style: normal;
@@ -29,7 +29,7 @@
 }
 
 
-.buttonSideBar {
+.buttonLateralBar {
     font-size: 20px;
     display: flex;
     height: 59px;

@@ -6,9 +6,9 @@ import './ClientProfilePage.css'
 import RequestsList from "../../components/RequestsList/RequestsList.jsx"
 import { AuthContext } from "../../context/auth.context.jsx"
 import requestServices from "../../services/request.services.js"
-import { Row, Col, Button } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom"
-//Testing
+
 const ClientProfilePage = () => {
 
 
@@ -40,12 +40,12 @@ const ClientProfilePage = () => {
     }
     return (
         <Row className="UserProfilePage">
-            <Col className="sideBar" md='3'>
-                <h2 className="sideBarTitle">Mi cuenta</h2>
+            <Col className="lateralBar" md='3'>
+                <h2 className="lateralBarTitle">Mi cuenta</h2>
                 <hr className="profileHr" />
-                <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('profile')}><img className="profileImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ziqu6bt6fswnlwvq814c.png" alt="profile image" />Mi perfil</Link>
-                <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('pets')}> <img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ugaynodhmypjeifobqxo.svg" alt="pet image" />Mis mascotas</Link>
-                <Link className="buttonSideBar" onClick={() => handleSidebarButtonClick('requests')}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/uwyluzpg2cdajvm7ffyo.svg" alt="notification image" />Mis consultas</Link>
+                <Link className="buttonLateralBar" onClick={() => handleSidebarButtonClick('profile')}><img className="profileImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ziqu6bt6fswnlwvq814c.png" alt="profile image" />Mi perfil</Link>
+                <Link className="buttonLateralBar" onClick={() => handleSidebarButtonClick('pets')}> <img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ugaynodhmypjeifobqxo.svg" alt="pet image" />Mis mascotas</Link>
+                <Link className="buttonLateralBar" onClick={() => handleSidebarButtonClick('requests')}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/uwyluzpg2cdajvm7ffyo.svg" alt="notification image" />Mis consultas</Link>
             </Col>
             <Col md='8'>
                 {selectedCard === 'profile' && <ClientCard {...client} />}

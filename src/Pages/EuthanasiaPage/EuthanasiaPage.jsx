@@ -9,7 +9,7 @@ const EuthanasiaPage = () => {
 
             <Row>
                 <div className="imgEuthaContainer">
-                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712853751/gahdvkyhapo8refuwmff.png' alt="homePage pic" />
+                    <img className="euthaImage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712856753/izbzr7r3aacam1erisf6.png' alt="homePage pic" />
                 </div>
                 <div className="euthaParagraph1">
                     <p><span>Servicio <br /> Eutanasia <span className="euthaParagraphstrong"></span> </span> <span className="euthaParagraphstrong" >de</span> <br /> <span className="euthaParagraphstrong" >24 horas</span> </p>
