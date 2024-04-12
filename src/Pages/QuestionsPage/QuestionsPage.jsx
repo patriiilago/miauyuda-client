@@ -9,7 +9,7 @@ const QuestionsPage = () => {
 
         <div className="QestionsPage">
 
-            <h1 className="faq">Consultas <span className="faqTitle">Frecuentes</span></h1>
+            <h1 className="faq">Consultas <span className="faqTitle">Frecuentes</span></h1> <br />
             <p className="presentation">¡Descubre respuestas a tus preguntas sobre el cuidado de mascotas en MiauAyuda! Desde alimentación hasta comportamiento, <br />¡estamos aquí para ayudarte!</p>
 
             <Container className="accordionFaq">
