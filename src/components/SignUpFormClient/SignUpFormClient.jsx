@@ -186,9 +186,9 @@ const SignUpFormClient = () => {
                     required />
             </Form.Group>
 
-            <Link disabled={loadingImage} className="signUpFormClientButton" type="submit">
+            <Button disabled={loadingImage} className="signUpFormClientButton" type="submit">
                 {loadingImage ? 'Cargando imagen...' : 'Dar de alta'}
-            </Link>
+            </Button>
 
         </Form>
     );

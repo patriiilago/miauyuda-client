@@ -6,8 +6,8 @@
 }
 
 .addPet {
+    width: 160px;
     display: flex;
-    margin-left: 620px;
     padding: 12px 24px;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,10 @@
     font-weight: 500;
     line-height: 24px;
     text-decoration: none;
+}
+
+.buttonContPet {
+    margin-left: 620px;
 }
 
 .headerPet {
@@ -58,12 +62,20 @@
     line-height: 24px;
 }
 
-.petImage {
-    width: 100%;
+
+
+.imgPet {
+    width: 470px;
+}
+
+.imgbox {
+
     height: 320px;
-    margin-bottom: 30px;
     overflow: hidden;
     border-radius: 16px;
+    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
+    background: var(----clr-white, #FFF);
+    margin-bottom: 200px;
 }
 
 .petName {
@@ -76,7 +88,7 @@
 }
 
 .edit-btn {
-    margin-left: 500px;
+    margin-left: 450px;
     color: var(----clr-accent, #45A443) !important;
     text-align: center;
     font-size: 30px;

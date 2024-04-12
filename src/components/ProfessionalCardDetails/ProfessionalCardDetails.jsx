@@ -24,7 +24,9 @@ const ProfessionalCardDetails = ({
         <Container>
             <Row>
                 <Col md='5'>
-                    <img className='profImage' src={image} alt={`${firstName} ${lastName}`} />
+                    <div className='profContImage'>
+                        <img className='profImage' src={image} alt={`${firstName} ${lastName}`} />
+                    </div>
                 </Col>
                 <Col className='DataCol' md='7'>
                     <h3>Datos del profesional</h3>
@@ -32,6 +34,15 @@ const ProfessionalCardDetails = ({
                     <span className='profHolder'>{firstName}</span>
                     <span className='profData'>Apellidos</span>
                     <span className='profHolder'>{lastName}</span>
+                    {user.role === 'Client' && (
+                        <div className="buttonContainerVet">
+                            <Link to={`/newrequest/profesional/${_id}`}>
+                                <Button className="professionalCardButton" style={{ backgroundColor: '#609f69', color: 'white', border: 'none' }}>
+                                    <strong>Realizar Consulta</strong>
+                                </Button>
+                            </Link>
+                        </div>
+                    )}
                 </Col>
             </Row>
             <Row>

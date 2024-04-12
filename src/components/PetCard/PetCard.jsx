@@ -38,12 +38,19 @@ const PetCard = ({
                     <h2 className='peth2'>Mis Mascotas</h2>
                     <span className='headerPet1'>Aquí puedes consultar todos los datos de tus peluditos</span>
                 </div>
-                <div>
+                {user.role === 'Client' && (
+                    <div className="buttonContPet">
+                        <Link className='addPet' to={`/petform`}>Añadir Mascota</Link>
+                    </div>
+                )}
+                {/* <div>
                     <Link className='addPet' to={`/petform`}>Añadir Mascota</Link>
-                </div>
+                </div> */}
             </div>
-            <Col className='petImage' md='5'>
-                <img src={image} />
+            <Col className='imgPet' md='5'>
+                <div className='imgbox'>
+                    <img src={image} />
+                </div>
             </Col>
             <Col className='petData' md='7'>
                 <div className='boxName'>
