@@ -198,14 +198,24 @@
     justify-content: space-evenly;
 }
 
-.cardservicesText {
+.cardservicesText ul {
     text-align: center !important;
+    text-decoration: none;
+    list-style: none;
 }
 
 .checkIcon {
     flex: 1;
     width: 16px;
     max-width: 100%
+}
+
+.iconchk {
+    color: #0D260D;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%;
 }
 
 .button-services {

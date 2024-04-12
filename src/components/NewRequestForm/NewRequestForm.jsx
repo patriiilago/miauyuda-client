@@ -59,9 +59,7 @@ const NewRequestForm = () => {
 
     return (
         <div className="containerForm">
-            <h1>
-                Realiza tu consulta al especialista:
-            </h1>
+            <h1 className='h1FormRequest'><span className="titleFormRequest">Realiza tu consulta al</span> <span className="titleFormRequest2">especialista:</span></h1>
             <Container className="NewRequestForm">
                 <Form onSubmit={handleFormSubmit}>
                     <Form.Group className="mb-3" controlId="image">
