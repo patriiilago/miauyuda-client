@@ -1,12 +1,16 @@
 import NewRequestForm from '../../components/NewRequestForm/NewRequestForm'
+import { Container } from "react-bootstrap"
 
 const NewRequestPage = () => {
 
 
 
     return (
-        <div className="NewRequestPage">
-            <NewRequestForm />
+
+        <div className="newRequestPage">
+            <Container className='newRequestPage'>
+                <NewRequestForm />
+            </Container>
 
         </div >
     )
