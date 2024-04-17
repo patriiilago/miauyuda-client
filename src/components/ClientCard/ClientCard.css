@@ -13,16 +13,17 @@
      margin-bottom: 30px;
  }
 
- /*
-.data {
-    color: #0D260D;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 148%;
-    margin-left: 10px;
-}
 
+ .data {
+     color: #0D260D;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 148%;
+     margin-left: 10px;
+ }
+
+ /*
 hr {
     margin: 0 !important;
     color: inherit;
