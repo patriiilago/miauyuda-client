@@ -54,20 +54,20 @@
      line-height: 148%;
  }
 
- /*
-.personalData {
-    margin-bottom: 30px;
-    display: flex;
-    padding: 32px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    align-self: stretch;
-    border-radius: 16px;
-    border: 1px solid rgba(58, 148, 56, 0.20);
-    background: #FFF;
-}
+ .personalData {
+     margin-bottom: 30px;
+     display: flex;
+     padding: 32px;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 24px;
+     align-self: stretch;
+     border-radius: 16px;
+     border: 1px solid rgba(58, 148, 56, 0.20);
+     background: #FFF;
+ }
 
+ /*
 .clientCardRow {
     margin-bottom: 50px;
 }
