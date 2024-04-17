@@ -23,13 +23,14 @@
      margin-left: 10px;
  }
 
+ hr {
+     margin: 0 !important;
+     color: inherit;
+     border: 0;
+     opacity: .25;
+ }
+
  /*
-hr {
-    margin: 0 !important;
-    color: inherit;
-    border: 0;
-    opacity: .25;
-}
 
 .holder {
     color: rgba(13, 38, 13, 0.50);
