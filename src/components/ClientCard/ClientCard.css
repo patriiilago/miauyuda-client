@@ -1,12 +1,13 @@
-/* .headerProfile {
-    color: #0D260D;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 125%;
-    margin-top: 40px !important;
-}
+ .headerProfile {
+     color: #0D260D;
+     font-size: 36px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 125%;
+     margin-top: 40px !important;
+ }
 
+ /*
 .userImage {
     width: 450px;
     margin-bottom: 30px;
