@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { format } from '@formkit/tempo'
 import { useContext } from "react"
 import { AuthContext } from "./../../context/auth.context"
-//testingg
+
 const PetCard = ({
     _id: petId,
     name,
@@ -29,6 +29,7 @@ const PetCard = ({
             .then(() => navigate('/clientprofile'))
             .catch(err => console.log(err))
     }
+
 
     return (
 
@@ -72,5 +73,6 @@ const PetCard = ({
         </Row >
     );
 }
+
 
 export default PetCard;
