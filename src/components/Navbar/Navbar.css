@@ -147,12 +147,12 @@ a {
     align-items: center;
     border-radius: 16px;
     border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20)) !important;
-    background: var(----clr-white, #FFF) !important;
+    background: #FFF !important;
     margin-bottom: 10px;
 }
 
 .dropdown-toggle {
-    background: var(----clr-subtle, #46914E) !important;
+    background: #46914E !important;
 }
 
 .btn {

@@ -1,73 +1,77 @@
-.headerProfile {
-    color: var(----txt-primary, #0D260D);
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 125%;
-    margin-top: 40px !important;
-}
+ .headerProfile {
+     color: #0D260D;
+     font-size: 36px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 125%;
+     margin-top: 40px !important;
+ }
 
-.userImage {
-    width: 450px;
-    margin-bottom: 30px;
-}
 
-.data {
-    color: var(----txt-primary, #0D260D);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 148%;
-    margin-left: 10px;
-}
+ .userImage {
+     width: 450px;
+     margin-bottom: 30px;
+ }
 
-hr {
-    margin: 0 !important;
-    color: inherit;
-    border: 0;
-    opacity: .25;
-}
 
-.holder {
-    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 170%;
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
-    align-self: stretch;
-    border-radius: 8px;
-    border: 1px solid var(----txt-subtle, rgba(13, 38, 13, 0.10));
-    background: var(----clr-disabled, #F4FAF3);
-}
+ .data {
+     color: #0D260D;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 148%;
+     margin-left: 10px;
+ }
 
-.headerProfile1 {
-    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 148%;
-}
+ hr {
+     margin: 0 !important;
+     color: inherit;
+     border: 0;
+     opacity: .25;
+ }
 
-.personalData {
-    margin-bottom: 30px;
-    display: flex;
-    padding: 32px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    align-self: stretch;
-    border-radius: 16px;
-    border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
-    background: var(----clr-white, #FFF);
-}
 
+ .holder {
+     color: rgba(13, 38, 13, 0.50);
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 170%;
+     padding-left: 10px;
+     display: flex;
+     align-items: center;
+     align-self: stretch;
+     border-radius: 8px;
+     border: 1px solid rgba(13, 38, 13, 0.10);
+     background: #F4FAF3;
+ }
+
+ .headerProfile1 {
+     color: rgba(13, 38, 13, 0.50);
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 148%;
+ }
+
+ .personalData {
+     margin-bottom: 30px;
+     display: flex;
+     padding: 32px;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 24px;
+     align-self: stretch;
+     border-radius: 16px;
+     border: 1px solid rgba(58, 148, 56, 0.20);
+     background: #FFF;
+ }
+
+ /*
 .clientCardRow {
     margin-bottom: 50px;
 }
 
 .contactData {
     margin-bottom: 100px;
-}
+} */
