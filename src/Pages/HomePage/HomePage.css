@@ -302,6 +302,14 @@
     margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 390px) {
+    .tags {
+        margin-bottom: 60px;
+
+
+    }
+}
+
 @media screen and (max-width: 768px) {
     .introParagraph p {
         font-size: 16px;

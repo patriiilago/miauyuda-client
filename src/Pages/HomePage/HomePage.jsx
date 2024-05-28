@@ -21,7 +21,7 @@ const HomePage = () => {
                 <p className="sharedlovetxt3">Estos son nuestros valores con los clientes y los peluditos</p>
             </div>
             <Row className="RowOfLove">
-                <Col col-md-3 custom-md-2-cols>
+                <Col md={6} lg={3} className="custom-md-2-cols">
                     <div className="tags">
                         <div>
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
@@ -31,7 +31,7 @@ const HomePage = () => {
                             Intentamos siempre dar un servicio personalizado y de confianza para vosotros y vuestros peques. </p>
                     </div>
                 </Col>
-                <Col col-md-3 custom-md-2-cols>
+                <Col md={6} lg={3} className="custom-md-2-cols">
                     <div className="tags">
                         <div>
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
@@ -41,7 +41,7 @@ const HomePage = () => {
                             El amor para los animales es lo que une a todos nosotros en la comunidad de Miauyuda. </p>
                     </div>
                 </Col>
-                <Col col-md-3 custom-md-2-cols>
+                <Col md={6} lg={3} className="custom-md-2-cols">
                     <div className="tags">
                         <div>
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
@@ -51,7 +51,7 @@ const HomePage = () => {
                             Pendientes de cualquier problema, para que vosotros y vuestras mascotas os sintáis en vuestra casa. </p>
                     </div>
                 </Col>
-                <Col col-md-3 custom-md-2-cols>
+                <Col md={6} lg={3} className="custom-md-2-cols">
                     <div className="tags">
                         <div>
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
