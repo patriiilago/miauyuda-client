@@ -240,3 +240,207 @@
 .arcoirisPhoto {
     height: 30px;
 }
+
+@media only screen and (max-width: 992px) {
+    .titleAboutUs {
+        font-size: 40px;
+    }
+
+    .detailsTitle,
+    .turkaTitle {
+        font-size: 30px;
+    }
+
+    .oscarDetails,
+    .teresaDetails,
+    .patriDetails,
+    .turkaDetails {
+        padding-top: 20px;
+    }
+
+    .oscarImg,
+    .teresaImg,
+    .patriImg,
+    .turkaImg {
+        width: 400px;
+        height: 400px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .titleAboutUs {
+        font-size: 35px;
+    }
+
+    .detailsTitle,
+    .turkaTitle {
+        font-size: 25px;
+    }
+
+    .oscarDetails,
+    .teresaDetails,
+    .patriDetails,
+    .turkaDetails {
+        padding-top: 15px;
+    }
+
+    .oscarImg,
+    .teresaImg,
+    .patriImg,
+    .turkaImg {
+        width: 300px;
+        height: 300px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .aboutButton {
+        padding: 15px 30px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .titleAboutUs {
+        font-size: 30px;
+    }
+
+    .detailsTitle,
+    .turkaTitle {
+        font-size: 20px;
+    }
+
+    .presentationAboutUs {
+        margin: 50px;
+    }
+
+    .oscarDetails,
+    .teresaDetails,
+    .patriDetails,
+    .turkaDetails {
+        padding-top: 10px;
+    }
+
+    .oscarImg,
+    .teresaImg,
+    .patriImg,
+    .turkaImg {
+        width: 250px;
+        height: 250px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .aboutButton {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    .arcoirisPhoto {
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .titleAboutUs {
+        font-size: 40px;
+    }
+
+    .detailsTitle,
+    .turkaTitle {
+        font-size: 30px;
+    }
+
+    .oscarDetails,
+    .teresaDetails,
+    .patriDetails,
+    .turkaDetails {
+        padding-top: 20px;
+    }
+
+    .oscarImg,
+    .teresaImg,
+    .patriImg,
+    .turkaImg {
+        width: 400px;
+        height: 400px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .titleAboutUs {
+        font-size: 35px;
+    }
+
+    .detailsTitle,
+    .turkaTitle {
+        font-size: 25px;
+    }
+
+    .oscarDetails,
+    .teresaDetails,
+    .patriDetails,
+    .turkaDetails {
+        padding-top: 15px;
+    }
+
+    .oscarImg,
+    .teresaImg,
+    .patriImg,
+    .turkaImg {
+        width: 300px;
+        height: 300px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .aboutButton {
+        padding: 15px 30px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .titleAboutUs {
+        font-size: 30px;
+    }
+
+    .detailsTitle,
+    .turkaTitle {
+        font-size: 20px;
+    }
+
+    .presentationAboutUs {
+        margin: 50px;
+    }
+
+    .oscarDetails,
+    .teresaDetails,
+    .patriDetails,
+    .turkaDetails {
+        padding-top: 10px;
+    }
+
+    .oscarImg,
+    .teresaImg,
+    .patriImg,
+    .turkaImg {
+        width: 250px;
+        height: 250px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .aboutButton {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    .arcoirisPhoto {
+        height: 20px;
+    }
+}

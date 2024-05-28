@@ -27,7 +27,6 @@ a {
     color: white !important;
 }
 
-
 .btnSignup {
     color: #0D260D !important;
     text-decoration: none;
@@ -43,7 +42,6 @@ a {
     border-radius: 12px;
     background-color: #ffffffc0;
     margin-right: 10px;
-
 }
 
 .btnLogin {
@@ -149,6 +147,8 @@ a {
     border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20)) !important;
     background: #FFF !important;
     margin-bottom: 10px;
+    z-index: 1000;
+    /* Asegura que el dropdown esté por encima del contenido */
 }
 
 .dropdown-toggle {
@@ -203,7 +203,4 @@ a {
 .imageProfile {
     border-radius: 50%;
     width: 50px;
-    height: 50px;
-    margin-right: 10px;
-
 }

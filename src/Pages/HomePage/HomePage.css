@@ -1,6 +1,20 @@
-.imgContainer {
+.drop-navbar {
     position: relative;
-    display: inline block;
+    z-index: 1000;
+    padding-right: 40px !important;
+    padding-left: 50px !important;
+    background-color: #46914E !important;
+    color: #f5ffe2;
+    font-size: 1.2em;
+}
+
+.imgContainer {
+    margin-top: 80px;
+}
+
+.introParagraph1 {
+    padding: 20px;
+    margin-top: 30px;
 }
 
 .picHomePage {
@@ -8,6 +22,8 @@
     aspect-ratio: auto;
     margin-bottom: 40px;
 }
+
+
 
 .introParagraph1 {
     color: var(----clr-accent, #45A443);
@@ -42,7 +58,6 @@
 
 .introParagraphstrong {
     color: var(----txt-primary, #0D260D);
-
 }
 
 .textOfLove {
@@ -243,7 +258,6 @@
     font-weight: 400;
     line-height: 150%;
     text-align: left;
-
 }
 
 .plans-card ul {
@@ -251,7 +265,6 @@
     text-align: center;
     list-style-type: none !important;
 }
-
 
 .cardText {
     text-align: center !important;
@@ -279,6 +292,28 @@
     text-decoration: none;
 }
 
+.introParagraph {
+    padding: 0 20px;
+}
+
+.introParagraph p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .introParagraph p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .introParagraph p {
+        font-size: 14px;
+    }
+
+}
 
 @media only screen and (max-width: 768px) {
     .custom-md-2-cols {
@@ -482,5 +517,53 @@
 
     .plansCategories {
         margin-left: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .introParagraph1 {
+        top: 250px;
+        left: 80px;
+        font-size: 30px;
+    }
+
+    .sharedlovetxt1 {
+        font-size: 30px;
+    }
+
+    .sharedlovetxt2 {
+        font-size: 30px;
+    }
+
+    .sharedlovetxt3 {
+        font-size: 15px;
+    }
+
+    .plans {
+        padding: 0px 50px;
+    }
+
+    .plans-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .plansCategories {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .cardBody {
+        flex-direction: column;
+    }
+
+    .cardText {
+        text-align: center !important;
+    }
+
+    .button-plans {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

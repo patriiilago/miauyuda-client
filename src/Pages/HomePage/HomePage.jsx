@@ -1,7 +1,7 @@
 import { Row, Col, Card, Accordion } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import './HomePage.css'
-// testing
+
 const HomePage = () => {
 
     return (

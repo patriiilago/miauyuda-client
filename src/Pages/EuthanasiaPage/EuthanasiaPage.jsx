@@ -1,7 +1,7 @@
 import './../../Pages/EuthanasiaPage/EuthanasiaPage.css'
 import { Link } from 'react-router-dom'
 import { Row, Col, Card } from 'react-bootstrap'
-//testingg
+
 const EuthanasiaPage = () => {
 
     return (
@@ -89,13 +89,10 @@ const EuthanasiaPage = () => {
                             <span className="rowTextPsico">Nunca estás solo en tu camino hacia la </span> <span className="rowTextPsico2">sanación emocional✨</span>
                         </p>
 
-                        <p className='textMentalia'>En momentos difíciles de despedida, contar con un espacio de apoyo puede ser fundamental. Mentalia, fundada por <span className="mentaliaStrong" >Lara Aguerre y Fran Pazos</span>, ofrece recursos y herramientas para ayudarte en tu proceso emocional.
-                            Explora artículos, terapia en línea y grupos de apoyo. Únete a nuestra comunidad en línea y encuentra la luz en la oscuridad.
-                            Visita Mentalia y da el primer paso hacia la sanación emocional.
+                        <p className='textMentalia'>En momentos difíciles de despedida, contar con un espacio de apoyo puede ser fundamental. Hay webs que ofrecen recursos y herramientas para ayudarte en tu proceso emocional.
+                            Explora artículos, terapia en línea y grupos de apoyo. No dudes en preguntarnos, ¡también podemos ayudarte con eso!
                         </p>
-                        <div>
-                            <Link className='mentalia-button' to="https://mentalia.netlify.app">Entra en Mentalia</Link>
-                        </div>
+
                     </div>
                 </Col>
             </Row>
