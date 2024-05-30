@@ -47,7 +47,7 @@ const ClientProfilePage = () => {
                 <Link className="buttonLateralBar" onClick={() => handleSidebarButtonClick('pets')}> <img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/ugaynodhmypjeifobqxo.svg" alt="pet image" />Mis mascotas</Link>
                 <Link className="buttonLateralBar" onClick={() => handleSidebarButtonClick('requests')}><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712680681/uwyluzpg2cdajvm7ffyo.svg" alt="notification image" />Mis consultas</Link>
             </Col>
-            <Col md='8'>
+            <Col md={8}>
                 {selectedCard === 'profile' && <ClientCard {...client} />}
                 {selectedCard === 'pets' && <PetCard {...client.pet} />}
                 {selectedCard === 'requests' && <RequestsList requests={requests} loadRequests={loadRequests} />}
