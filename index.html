@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <div id="chatbot-container"></div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
@@ -35,6 +36,27 @@
       "themeColor": "#2563eb"
     });
   </script>
+  </div>
+  <style>
+    #chatbot-container {
+      width: 100%;
+      max-width: 400px;
+      /* Máximo ancho para pantallas grandes */
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 1000;
+      /* Asegura que esté encima de otros elementos */
+    }
+
+    @media screen and (max-width: 600px) {
+      #chatbot-container {
+        max-width: 100%;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  </style>
 </body>
 
 </html>
