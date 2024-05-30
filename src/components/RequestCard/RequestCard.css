@@ -1,4 +1,4 @@
-.RequestCard {
+/* .RequestCard {
     margin-top: 40px !important;
     padding: 20px 20px;
     margin-left: 30px;
@@ -53,15 +53,16 @@
 }
 
 .question-img {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin-top: 20px;
     margin-bottom: 20px;
-
+    border-radius: 5%;
 }
 
 .buttonProfile {
     display: flex;
-    width: 300px;
+    width: 200px;
     padding: 12px 24px;
     justify-content: center;
     align-items: center;
@@ -74,6 +75,7 @@
     font-weight: 500;
     line-height: 24px;
     text-decoration: none;
+    margin-top: 25px;
 }
 
 .profileProfesional {
@@ -126,12 +128,173 @@
     height: 30px;
 }
 
-
-
-
-
-
 .card-text {
     font-size: 1.3em;
     text-align: left;
+} */
+
+.RequestCard {
+    margin-top: 40px !important;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--clr-accent-20, rgba(58, 148, 56, 0.20));
+    background: var(--clr-white, #FFF);
+}
+
+.profileClient,
+.profileProfesional {
+    display: flex;
+    align-items: center;
+}
+
+.clientImage,
+.profesionalImage {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profesionalImage {
+    margin-left: auto;
+}
+
+.profesionalIdentity {
+    flex-grow: 1;
+}
+
+.questionResponseTitle {
+    color: var(--txt-subtle, rgba(13, 38, 13, 0.50)) !important;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin-top: 10px;
+}
+
+.imageResponse {
+    margin-right: 15px;
+}
+
+.questionText {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.questionrh {
+    margin-bottom: 15px !important;
+}
+
+.question-img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttonProfile {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(--clr-accent, #45A443);
+    color: var(--clr-accent, #45A443) !important;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    margin-top: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .RequestCard {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .questionResponseTitle {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .profileClient,
+    .profileProfesional {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .clientImage,
+    .profesionalImage {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .question-img {
+        width: 100%;
+    }
+
+    .buttonProfile {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .RequestCard {
+        margin: 10px 5px;
+        padding: 10px;
+    }
+
+    .questionResponseTitle {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .clientImage,
+    .profesionalImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    .question-img {
+        width: 100%;
+    }
+
+    .buttonProfile {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .questionResponseTitle {
+        font-size: 32px;
+    }
+
+    .clientImage,
+    .profesionalImage {
+        width: 200px;
+        height: 200px;
+    }
+
+    .question-img {
+        max-width: 600px;
+    }
+
+    .buttonProfile {
+        max-width: 350px;
+        font-size: 20px;
+    }
 }

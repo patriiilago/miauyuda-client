@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../../context/auth.context'
 import ResponseForm from '../ResponseForm/ResponseForm'
 import { Link } from 'react-router-dom'
-//testing
+
 const RequestCard = ({ client, question, response, _id, loadRequests, image, professional }) => {
 
     const { user } = useContext(AuthContext)
@@ -22,7 +22,9 @@ const RequestCard = ({ client, question, response, _id, loadRequests, image, pro
                     <span className='questionResponseTitle'>Tu consulta:</span>
                     <hr className='questionrh' />
                     <span className='questionText'>{question}</span>
-                    <img className='question-img' src={image} alt="Imagen" />
+                    {image && (
+                        <img className='question-img' src={image} alt="Imagen" />
+                    )}
                     <Link to={`/clients/${client._id}`} className="buttonProfile" >Ver perfil</Link>
                 </Col>
                 <Col md='6'>
@@ -32,7 +34,7 @@ const RequestCard = ({ client, question, response, _id, loadRequests, image, pro
                         </div>
                         <img className='profesionalImage' type="file" src={professional.image} />
                     </div>
-                    <span className='questionResponseTitle'>Respuesta del experto:</span>
+                    <span className='questionResponseTitle'>Respuesta del profesional:</span>
                     <hr className='questionrh' />
                     <ListGroup className="list-group-flush">
                         {

@@ -44,13 +44,11 @@ const PetCard = ({
                         <Link className='addPet' to={`/petform`}>Añadir Mascota</Link>
                     </div>
                 )}
-                {/* <div>
-                    <Link className='addPet' to={`/petform`}>Añadir Mascota</Link>
-                </div> */}
+
             </div>
-            <Col className='imgPet' md='5'>
+            <Col className='imgPet' md={5}>
                 <div className='imgbox'>
-                    <img src={image} />
+                    {image && <img src={image} alt={`${name}`} />}
                 </div>
             </Col>
             <Col className='petData' md='7'>

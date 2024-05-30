@@ -1,4 +1,3 @@
-import { Row, Col } from "react-bootstrap"
 import RequestCard from "../RequestCard/RequestCard"
 import './RequestList.css'
 
