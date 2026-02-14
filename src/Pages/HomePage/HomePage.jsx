@@ -5,7 +5,7 @@ import './HomePage.css'
 const HomePage = () => {
 
     return (
-        <div className="HomePage">
+        <div className="homePage">
             <div className="imgContainer">
                 <img className="picHomePage" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712570812/vwtgpy48uckirvhzkhnc.png' alt="homePage pic" />
             </div>
@@ -27,7 +27,7 @@ const HomePage = () => {
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
 
                         </div>
-                        <p><strong className="headertag">Servicio</strong><br />
+                        <p><strong className="headertag">Servicio</strong>
                             Intentamos siempre dar un servicio personalizado y de confianza para vosotros y vuestros peques. </p>
                     </div>
                 </Col>
@@ -37,7 +37,7 @@ const HomePage = () => {
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
 
                         </div>
-                        <p><strong className="headertag">Amor incondicional</strong><br />
+                        <p><strong className="headertag">Amor incondicional</strong>
                             El amor para los animales es lo que une a todos nosotros en la comunidad de Miauyuda. </p>
                     </div>
                 </Col>
@@ -47,8 +47,8 @@ const HomePage = () => {
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
 
                         </div>
-                        <p><strong className="headertag">Centrado en el cliente</strong><br />
-                            Pendientes de cualquier problema, para que vosotros y vuestras mascotas os sintáis en vuestra casa. </p>
+                        <p><strong className="headertag">Siempre Contigo</strong>
+                            Pendientes de cualquier problema, para que vosotros y vuestras mascotas os sintáis en vuestra casa.</p>
                     </div>
                 </Col>
                 <Col md={6} lg={3} className="custom-md-2-cols">
@@ -57,7 +57,7 @@ const HomePage = () => {
                             <img src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712575091/fv2ptt3aexllvly27l1x.png' alt="icon service" className="itemsOfLove" />
 
                         </div>
-                        <p><strong className="headertag">Innovación</strong><br />
+                        <p><strong className="headertag">Innovación</strong>
                             Siempre en búsqueda de veterinarios y voluntarios que puedan dar el mejor trato a tus peluditos. </p>
                     </div>
                 </Col>
@@ -65,7 +65,7 @@ const HomePage = () => {
 
             <Row className="pug-row">
                 <Col md='6' className="dogQuestions">
-                    <p><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">perros</span></p>
+                    <p className="rowTitle"><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">perros</span></p>
                     <div>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -93,22 +93,26 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link to="/questions" className="button-faqs">Saber mas</Link>
+                        <Link to="/questions" className="button-faqs">Saber más</Link>
                     </div>
                 </Col>
-                <Col md='6'>
-                    <img className="pug-img" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579100/vcpbfa4crh0klorzqdsx.png' alt="dog-photo" />
+                <Col md='6' className="img-col-center">
+                    <div className="img-wrapper">
+                        <img className="pug-img" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579100/vcpbfa4crh0klorzqdsx.png' alt="dog-photo" />
+                    </div>
                 </Col>
 
             </Row>
 
             <Row className="cat-row">
 
-                <Col md='6'>
-                    <img className="cat-img" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579117/mtwbjxihqcnabgc4znyu.png' alt="cat-photo" />
+                <Col md='6' className="img-col-center">
+                    <div className="img-wrapper">
+                        <img className="cat-img" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579117/mtwbjxihqcnabgc4znyu.png' alt="cat-photo" />
+                    </div>
                 </Col>
                 <Col md='6' className="catQquestions">
-                    <p><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">gatos</span></p>
+                    <p className="rowTitle"><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">gatos</span></p>
                     <div>
                         <Accordion className="catAccordion" defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -136,14 +140,14 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link to="/questions" className="button-faqs">Saber mas</Link>
+                        <Link to="/questions" className="button-faqs">Saber más</Link>
                     </div>
                 </Col>
             </Row>
 
             <Row className="exotic-row">
                 <Col md='6' className="exoticQuestions">
-                    <p><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">animales exóticos</span></p>
+                    <p className="rowTitle"><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">animales exóticos</span></p>
                     <div>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -192,22 +196,24 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link to="/questions" className="button-faqs">Saber mas</Link>
+                        <Link to="/questions" className="button-faqs">Saber más</Link>
                     </div>
                 </Col>
-                <Col md='6'>
-                    <img className="exotic-img" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579100/hcisbmbf3buvqv8tzeai.png' alt="exotic-animal-photo" />
+                <Col md='6' className="img-col-center">
+                    <div className="img-wrapper">
+                        <img className="exotic-img" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579100/hcisbmbf3buvqv8tzeai.png' alt="exotic-animal-photo" />
+                    </div>
                 </Col>
 
             </Row>
 
 
-            <Row className="pug-row-600">
-                <Col md='6'>
+            {/* <Row className="pug-row-600">
+                <Col md='6' className="img-col-center">
                     <img className="rowtxt1" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579100/vcpbfa4crh0klorzqdsx.png' alt="dog-photo" />
                 </Col>
                 <Col md='6' className="dogQuestions">
-                    <p><span className="sharedlovetxt1">Sobre tus </span> <span className="rowtxt2">perros</span></p>
+                    <p className="rowTitle"><span className="sharedlovetxt1">Sobre tus </span> <span className="rowtxt2">perros</span></p>
                     <div>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -235,17 +241,17 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link to="/questions" className="button-faqs">Saber mas</Link>
+                        <Link to="/questions" className="button-faqs">Saber más</Link>
                     </div>
                 </Col>
             </Row>
 
             <Row className="cat-row-600">
-                <Col md='6'>
+                <Col md='6' className="img-col-center">
                     <img className="cat-img-600" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579117/mtwbjxihqcnabgc4znyu.png' alt="cat-photo" />
                 </Col>
                 <Col md='6' className="catQquestions">
-                    <p><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">gatos</span></p>
+                    <p className="rowTitle"><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">gatos</span></p>
                     <div>
                         <Accordion className="catAccordion" defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -273,17 +279,17 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link to="/questions" className="button-faqs">Saber mas</Link>
+                        <Link to="/questions" className="button-faqs">Saber más</Link>
                     </div>
                 </Col>
             </Row>
 
             <Row className="exotic-row-600">
-                <Col md='6'>
+                <Col md='6' className="img-col-center" >
                     <img className="exotic-img-600" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712579100/hcisbmbf3buvqv8tzeai.png' alt="exotic-animal-photo" />
                 </Col>
                 <Col md='6' className="exoticQuestions">
-                    <p><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">animales exóticos</span></p>
+                    <p className="rowTitle"><span className="rowtxt1">Sobre tus </span> <span className="rowtxt2">animales exóticos</span></p>
                     <div>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -332,10 +338,10 @@ const HomePage = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        <Link to="/questions" className="button-faqs">Saber mas</Link>
+                        <Link to="/questions" className="button-faqs">Saber más</Link>
                     </div>
                 </Col>
-            </Row>
+            </Row> */}
 
             <div className="plansText">
                 <h2><span className="sharedlovetxt1">Planes económicos </span><span className="sharedlovetxt2">para tus peluditos</span></h2>
@@ -343,8 +349,8 @@ const HomePage = () => {
             </div>
             <Row className="plans">
                 <Col md={4} className="puppies-col">
-                    <Card style={{ width: '29rem' }} className="plans-card">
-                        <Card.Title className="cardBody">
+                    <Card className="plans-card">
+                        <Card.Title className="cardTitle">
                             <div><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712595224/c57p3jotvw8kkrf8ck7m.png" alt="image of an animal pad" /></div>
                             <div>
                                 <h2 className="plansCategories">Cachorros</h2>
@@ -352,22 +358,22 @@ const HomePage = () => {
                             </div>
                         </Card.Title>
                         <hr />
-                        <Card.Body>
+                        <Card.Body className="cardBody">
                             <Card.Text className="cardText">
                                 <h3>179 € / 290 €</h3>
                                 <ul>
-                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de atención veterinaria básica</li>
+                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura completa de atención veterinaria básica</li>
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de emergencias y accidentes</li>
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados especializados</li>
                                 </ul>
                             </Card.Text>
-                            <Link className="button-plans">Leer mas</Link>
+                            <Link className="button-plans">Leer más</Link>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col md={4} className="adults-col">
-                    <Card style={{ width: '29rem' }} className="plans-card">
-                        <Card.Title className="cardBody">
+                    <Card className="plans-card">
+                        <Card.Title className="cardTitle">
                             <div><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712595224/c57p3jotvw8kkrf8ck7m.png" alt="image of an animal pad" /></div>
                             <div>
                                 <h2 className="plansCategories">Adultos</h2>
@@ -375,22 +381,22 @@ const HomePage = () => {
                             </div>
                         </Card.Title>
                         <hr />
-                        <Card.Body>
+                        <Card.Body className="cardBody">
                             <Card.Text className="cardText">
                                 <h3>210 € / 310 €</h3>
                                 <ul>
-                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de enfermedades crónicas</li>
+                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura completa de enfermedades crónicas</li>
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de exámenes diagnósticos</li>
-                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados preventivos avanzados</li>
+                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados preventivos</li>
                                 </ul>
                             </Card.Text>
-                            <Link className="button-plans">Leer mas</Link>
+                            <Link className="button-plans">Leer más</Link>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col md={4} className="senior-col">
-                    <Card style={{ width: '29rem' }} className="plans-card">
-                        <Card.Title className="cardBody">
+                    <Card className="plans-card">
+                        <Card.Title className="cardTitle">
                             <div><img src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712595224/c57p3jotvw8kkrf8ck7m.png" alt="image of an animal pad" /></div>
                             <div>
                                 <h2 className="plansCategories">Senior</h2>
@@ -398,16 +404,16 @@ const HomePage = () => {
                             </div>
                         </Card.Title>
                         <hr />
-                        <Card.Body>
+                        <Card.Body className="cardBody">
                             <Card.Text className="cardText">
                                 <h3>300 € / 410 €</h3>
                                 <ul>
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de medicamentos y terapias crónicas</li>
                                     <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de exámenes de salud geriátricos</li>
-                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados paliativos y de final de vida</li>
+                                    <li><img className="checkImg" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cobertura de cuidados paliativos y vida</li>
                                 </ul>
                             </Card.Text>
-                            <Link className="button-plans">Leer mas</Link>
+                            <Link className="button-plans">Leer más</Link>
                         </Card.Body>
                     </Card>
                 </Col>

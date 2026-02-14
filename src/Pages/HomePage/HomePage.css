@@ -8,13 +8,14 @@
     font-size: 1.2em;
 }
 
-.imgContainer {
-    margin-top: 80px;
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.introParagraph1 {
-    padding: 20px;
-    margin-top: 30px;
+.imgContainer {
+    margin-top: 15px;
 }
 
 .picHomePage {
@@ -23,13 +24,13 @@
     margin-bottom: 40px;
 }
 
-
-
 .introParagraph1 {
     color: var(----clr-accent, #45A443);
     position: absolute;
-    top: 400px;
-    left: 160px;
+    top: 300px;
+    left: 100px;
+    padding: 20px;
+    margin-top: 30px;
     align-self: stretch;
     font-size: 80px;
     font-style: normal;
@@ -40,7 +41,7 @@
 .introParagraph2 {
     align-self: stretch;
     color: var(----txt-primary, #0D260D);
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -49,7 +50,7 @@
 .introParagraph3 {
     align-self: stretch;
     color: var(----txt-primary, #0D260D);
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -61,7 +62,7 @@
 }
 
 .textOfLove {
-    margin-bottom: 20px;
+    margin: 20px 20px;
     text-align: center;
 }
 
@@ -97,7 +98,7 @@
 
 .RowOfLove {
     display: flex;
-    padding: 56px 80px 0px;
+    padding: 0px 80px;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -112,11 +113,10 @@
 .tags {
     height: 250px;
     display: flex;
-    padding: 32px;
+    padding: 28px;
     flex-direction: column;
     justify-content: center;
-    align-items: baseline;
-    text-align: left;
+    text-align: center;
     gap: 8px;
     flex: 1 0 0;
     border-radius: 16px;
@@ -128,7 +128,10 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
 }
 
 .tags p {
@@ -139,12 +142,6 @@
     font-weight: 400;
 }
 
-.accordion-item {
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-}
-
 .accordion-button {
     font-size: 1.3rem !important;
     height: 60px;
@@ -153,37 +150,27 @@
     box-shadow: none !important;
 }
 
-.pug-row-600,
-.cat-row-600,
-.exotic-row-600 {
-    display: none !important;
-}
-
 .pug-row,
 .cat-row,
 .exotic-row {
     display: block;
-}
-
-.pug-img,
-.exotic-img {
-    margin-left: 170px;
-    align-content: end;
-}
-
-.pug-row,
-.exotic-row {
-    padding: 80px 100px;
+    padding: 80px 10px;
 }
 
 .cat-row {
-    padding: 40px 100px;
+    width: 100%; 
+    padding: 80px 0; 
     background: var(----clr-weak, #E4F5E3);
 }
 
-.cat-img {
-    width: 550px;
-    margin-right: 85px;
+.img-col-center {
+    display: block;
+}
+
+.pug-img,
+.cat-img,
+.exotic-img {
+    width: 100%;
     align-content: end;
 }
 
@@ -193,6 +180,10 @@
 
 .catAccordion .accordion-button {
     background: var(----clr-weak, #E4F5E3) !important;
+}
+
+.rowTitle {
+    text-align: center;
 }
 
 .rowtxt1 {
@@ -228,22 +219,16 @@
 }
 
 .plansText {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .plans {
-    padding: 0px 112px;
     color: var(----txt-primary, #0D260D);
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%;
-    list-style-type: none;
     margin-bottom: 100px;
-}
-
-.plans-card {
     padding: 0px 20px;
 }
 
@@ -251,34 +236,59 @@
     color: var(----txt-primary, #0D260D);
 }
 
+.plansCategories {
+    margin: 0px;
+}
+
 .plans-card li {
-    color: var(----txt-subtle, rgba(13, 38, 13, 0.50)) !important;
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%;
     text-align: left;
 }
 
 .plans-card ul {
     padding-left: 0px;
     text-align: center;
-    list-style-type: none !important;
+    list-style-type: none;
 }
 
-.cardText {
-    text-align: center !important;
+.plans-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.cardBody {
+.cardTitle {
     padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
+.cardText {
+    text-align: center;
+    margin-bottom: 0px;
+    min-height: 150px;
+}
+
 .checkImg {
     width: 16px;
+}
+
+.puppies-col,
+.adults-col,
+.senior-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.puppies-col>.plans-card,
+.adults-col>.plans-card,
+.senior-col>.plans-card {
+    flex: 1;
 }
 
 .button-plans {
@@ -286,53 +296,20 @@
     padding: 12px 24px;
     justify-content: center;
     align-items: center;
-    align-self: stretch;
     border-radius: 12px;
     background: var(----clr-accent, #45A443);
     text-decoration: none;
 }
 
-.introParagraph {
-    padding: 0 20px;
-}
+/* ==================== MEDIA QUERIES ==================== */
 
-.introParagraph p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-@media only screen and (max-width: 390px) {
-    .tags {
-        margin-bottom: 60px;
-
-
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .introParagraph p {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .introParagraph p {
-        font-size: 14px;
-    }
-
-}
-
-@media only screen and (max-width: 768px) {
-    .custom-md-2-cols {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+/* Tablet (768px a 1024px) */
+@media (max-width: 1024px) {
 
     .introParagraph1 {
         color: var(----clr-accent, #45A443);
         position: absolute;
-        top: 200px;
+        top: 170px !important;
         left: 65px;
         align-self: stretch;
         font-size: 40px;
@@ -351,227 +328,167 @@
         font-size: 15px;
     }
 
-    .tags {
-        height: 350px;
-        display: flex;
-        justify-content: center;
-        text-align: left;
-        border-radius: 16px;
-        flex: 0 0 50%;
-        max-width: 50%;
-        border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-    .introParagraph1 {
-        color: var(----clr-accent, #45A443);
-        position: absolute;
-        top: 144px;
-        left: 31px;
-        align-self: stretch;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%;
-        margin-bottom: 0px;
-    }
-
-    .introParagraph2 {
-        display: none;
-    }
-
-    .introParagraph3 {
-        display: block;
-        font-size: 8px;
-    }
-
-    .sharedlovetxt1 {
-        color: var(----clr-accent, #45A443);
-        text-align: center;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 125%;
-        align-self: stretch;
-    }
-
-    .sharedlovetxt2 {
-        color: var(----txt-primary, #0D260D);
-        text-align: center;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 125%;
-        align-self: stretch;
-        margin-bottom: 1px;
-    }
-
     .sharedlovetxt3 {
-        color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
-        text-align: center;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 170%;
-        padding: 0px 17px;
     }
 
     .tags {
-        height: 250px;
-        display: flex;
-        padding: 32px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: baseline;
-        text-align: left;
-        gap: 8px;
-        flex: 1 0 0;
-        border-radius: 16px;
-        border: 1px solid var(----clr-accent-20, rgba(58, 148, 56, 0.20));
-    }
-
-    .col-md-3 {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     .pug-row,
     .cat-row,
     .exotic-row {
-        display: none !important;
+        padding: 50px 20px;
     }
 
-    .pug-row-600,
-    .cat-row-600,
-    .exotic-row-600 {
-        display: block !important;
-    }
-
-    .pug-row-600,
-    .exotic-row-600,
-    .cat-row-600 {
-        padding: 5px;
-    }
-
-    .cat-row-600 {
-        background: var(----clr-weak, #E4F5E3);
-        padding-top: 10px;
-    }
-
-    .pug-img-600,
-    .exotic-img-600,
-    .cat-img-600 {
-        width: 300px;
-        margin-left: 40px;
-        margin-bottom: 20px;
-    }
-
-    .button-faqs {
-        color: var(----clr-accent, #45A443);
-        border-radius: 12px;
+    .img-col-center {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
-        margin-top: 20px;
-        margin-left: 20px;
     }
 
-    .rowtxt1 {
-        color: var(----clr-accent, #45A443);
-        text-align: center;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 125%;
-        align-self: stretch;
-        margin-left: 20px;
+    .img-wrapper {
+        display: block;
     }
 
-    .rowtxt2 {
-        color: var(----txt-primary, #0D260D);
-        text-align: center;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 125%;
-        align-self: stretch;
-        margin-bottom: 1px;
-    }
-
-    .plans {
-        padding: 0px;
-        color: var(----txt-primary, #0D260D);
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%;
-        list-style-type: none;
-        margin-bottom: 100px;
-    }
-
-    .plans-card {
-        width: 350px !important;
-        margin-bottom: 20px;
-        margin-left: 20px;
-    }
-
-    .cardBody {
-        padding-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    .plansCategories {
-        margin-left: 30px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .introParagraph1 {
-        top: 250px;
-        left: 80px;
-        font-size: 30px;
-    }
-
-    .sharedlovetxt1 {
-        font-size: 30px;
-    }
-
-    .sharedlovetxt2 {
-        font-size: 30px;
-    }
-
-    .sharedlovetxt3 {
-        font-size: 15px;
-    }
-
-    .plans {
-        padding: 0px 50px;
-    }
-
-    .plans-card {
+    .pug-img,
+    .cat-img,
+    .exotic-img {
         width: 100%;
-        margin-bottom: 20px;
+        height: 100%;
     }
 
-    .plansCategories {
-        margin-left: 0px;
-        text-align: center;
+    .rowtxt1,
+    .rowtxt2 {
+        font-size: 35px;
     }
 
-    .cardBody {
-        flex-direction: column;
+    /* Acordeones */
+    .accordion-button {
+        font-size: 1.1rem ! important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .accordion-body {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Planes económicos*/
+    .plans .col-md-4 {
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
+        margin-bottom: 3rem;
+    }
+
+    .plans {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .cardText {
-        text-align: center !important;
+        min-height: auto;
     }
 
     .button-plans {
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 10px 20px;
+    }
+}
+
+/* Móviles (menos de 767px) */
+@media (max-width: 767px) {
+
+    /* Intro text */
+    .introParagraph1 {
+        font-size: 1.5rem;
+        top: 110px !important;
+        left: 20px;
+    }
+
+    .introParagraph3 {
+        display: none;
+    }
+
+    .sharedlovetxt1,
+    .sharedlovetxt2 {
+        font-size: 2rem;
+    }
+
+    .sharedlovetxt3 {
+        font-size: 16px;
+    }
+
+    .pug-row,
+    .cat-row,
+    .exotic-row {
+        flex-direction: column;
+    }
+
+    .img-col-center {
+        order: 0;
+        margin-bottom: 20px;
+    }
+
+    .dogQuestions,
+    .catQquestions,
+    .exoticQuestions {
+        order: -1;
+    }
+
+    .accordion-button {
+        font-size: 1rem !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .accordion-body {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+
+    /* Planes económicos*/
+    .sharedlovetxt1,
+    .sharedlovetxt2 {
+        font-size: 2rem;
+    }
+
+    .plans .col-md-4 {
+        flex: 0 0 80% !important;
+        max-width: 80% !important;
+        margin-bottom: 2.5rem;
+    }
+
+    .plansCategories {
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .cardTitle {
+        padding: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .cardTitle img {
+        width: 80%;
+    }
+
+    .plans-card li {
+        text-align: left;
+    }
+
+    .button-plans {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        background: var(----clr-accent, #45A443);
+        text-decoration: none;
     }
 }
