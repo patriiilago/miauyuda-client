@@ -1,12 +1,74 @@
-.NotFoundPage {
+.notFoundContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #212529;
+    background-color: #E4F5E3; /* Verde claro similar a tu AboutUs */
+    text-align: center;
+    padding: 20px;
 }
 
-.notfoundimage {
-    max-width: 100%;
-    max-height: 100%;
+.notFoundContent {
+    max-width: 800px;
+}
+
+.notFoundTitle {
+    font-size: 50px;
+    font-weight: 600;
+    color: #45A443; /* Mismo verde de tu título */
+    margin-bottom: 20px;
+}
+
+.notFoundText {
+    font-size: 20px;
+    color: rgba(13, 38, 13, 0.7); /* Similar a tus textos sutiles */
+    margin-bottom: 30px;
+}
+
+.notFoundImage {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.notFoundButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.notFoundButton {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 1000px;
+    border: 1px solid #45A443;
+    background-color: transparent;
+    color: #0D260D;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notFoundButton:hover {
+    background-color: #45A443;
+    color: #FFF;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 576px) {
+    .notFoundTitle {
+        font-size: 35px;
+    }
+
+    .notFoundText {
+        font-size: 16px;
+    }
+
+    .notFoundImage {
+        max-width: 200px;
+    }
+
+    .notFoundButton {
+        padding: 10px 20px;
+    }
 }

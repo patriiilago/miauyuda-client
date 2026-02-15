@@ -10,11 +10,10 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 35px !important;
 }
 
 .euthaImage {
-    width: 100vW;
+    width: 102vW;
     aspect-ratio: auto;
     margin-bottom: 40px;
     border-radius: 40px !important;
@@ -32,11 +31,10 @@
     line-height: 100%;
 }
 
-
 .euthaParagraph2 {
     align-self: stretch;
     color: var(----txt-primary, #0D260D);
-    font-size: 16px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -85,12 +83,108 @@
     line-height: 170%;
 }
 
-.psico-row {
-    padding: 40px 100px;
-    background: var(----clr-weak, #E4F5E3);
-    align-items: flex-start;
-    align-content: center;
 
+
+/*ESTILOS DE LAS CARD*/
+.services {
+    padding: 0px 112px;
+    color: var(----txt-primary, #0D260D);
+    font-size: 20px;
+    margin-bottom: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+.services-col {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.crossIcon {
+    width: 60px;
+    height: 60px;
+}
+
+.services-card h2 {
+    color: var(----txt-primary, #0D260D);
+}
+
+.servicesBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.services-card .card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body p {
+    margin-bottom: 0px;
+}
+
+.cardservicesText ul {
+    list-style: none;
+}
+
+.services-card li {
+    color: var(----txt-subtle, rgba(13, 38, 13, 0.50));
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.checkIcon {
+    flex: 1;
+    width: 16px;
+    max-width: 100%
+}
+
+.button-plans,
+.button-services {
+    margin-top: auto;
+}
+
+.button-services {
+    font-weight: 600;
+    display: flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: var(----clr-accent, #45A443);
+    text-decoration: none;
+}
+
+
+/* ESTILOS SECCIÓN APOYO PSICOLÓGICO */
+
+.psico-row {
+    padding: 40px 80px;
+    background: var(----clr-weak, #E4F5E3);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.containerPsico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .psico-icon {
@@ -104,6 +198,10 @@
     height: 200px;
     border-radius: 10%;
     overflow: hidden;
+}
+
+.psico-text {
+    text-align: center;
 }
 
 .rowTextPsico {
@@ -128,113 +226,124 @@
     margin-bottom: 1px;
 }
 
-.mentalia-button {
-    color: #0D260D !important;
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    display: flex;
-    padding: 6px 16px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    background-color: #ffffffc0;
-    margin-right: 10px;
-}
+/* ==================== MEDIA QUERIES ==================== */
+/* Tablet (768px a 1024px) */
+@media (max-width: 1024px) {
 
-.mentaliaStrong {
-    color: var(----txt-primary, #45A443);
-}
+    .euthaParagraph1 {
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        font-size: 55px;
+        line-height: 120%;
+    }
 
-.services {
-    padding: 0px 112px;
-    color: var(----txt-primary, #0D260D);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-    list-style-type: none;
-    margin-bottom: 80px;
-    justify-content: space-evenly;
-}
+    .euthaParagraph2 {
+        margin-top: 30px;
+        font-size: 22px;
+        line-height: 160%;
+    }
 
-.services-col {
-    display: flex;
-    justify-content: space-between;
-}
+    .servicetxt1,
+    .servicetxt2 {
+        font-size: 40px;
+    }
 
-.crossIcon {
-    width: 60px;
-    height: 60px;
+    .servicetxt3 {
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
 
-}
+    .services-card {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
 
-.services-card {
-    padding: 0px 20px;
+    .services {
+        padding: 0 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 
-}
-
-.services-card li {
-    color: var(----txt-subtle, rgba(13, 38, 13, 0.50)) !important;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    text-align: left;
+    .psico-icon{
+        width: 60%;
+        height: 60%;
+    }
 
 }
 
-.services-card h3 {
-    color: var(----txt-primary, #0D260D);
+/* Móvil: menos de 768px */
+@media (max-width: 767px) {
+
+    .euthaParagraph1 {
+        position: absolute;
+        top: 110px;
+        left: 20px;
+        font-size: 27px;
+        line-height: 120%;
+    }
+
+    .euthaParagraph2 {
+        display: none;
+    }
+
+    .servicetxt1,
+    .servicetxt2 {
+        font-size: 30px;
+    }
+
+    .servicetxt3 {
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 310px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
+    .services-col {
+        width: 100%;
+        max-width: 100%;
+        /* ocupa todo el ancho posible */
+        margin-bottom: 1.5rem;
+    }
+
+    .services-card {
+        width: 100%;
+        padding: 1rem;
+        /* menos padding en móvil */
+    }
+
+    .services-card .servicesBody {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .services-card .cardservicesText ul li {
+        font-size: 15px;
+    }
+
+    .psico-row {
+        padding: 40px 60px;
+    }
+
+    .psico-icon{
+        width: 60%;
+        height: 60%;
+    }
+
 }
 
-.servicesBody {
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
 
-.cardservicesText ul {
-    text-align: center !important;
-    text-decoration: none;
-    list-style: none;
-}
-
-.checkIcon {
-    flex: 1;
-    width: 16px;
-    max-width: 100%
-}
-
-.iconchk {
-    color: #0D260D;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 148%;
-}
-
-.button-services {
-    display: flex;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch;
-    border-radius: 12px;
-    background: var(----clr-accent, #45A443);
-    text-decoration: none;
-}
-
-.containerPsico {
-    display: flex;
-    align-items: center;
-}
-
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) {
     .euthaParagraph1 {
         top: 200px;
         left: 40px;
@@ -249,9 +358,9 @@
     .servicetxt3 {
         font-size: 18px;
     }
-}
+} */
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .euthaParagraph1 {
         top: 144px;
         left: 31px;
@@ -266,4 +375,4 @@
     .servicetxt3 {
         font-size: 15px;
     }
-}
+} */

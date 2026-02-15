@@ -19,15 +19,17 @@ const EuthanasiaPage = () => {
             </Row>
 
             <div className="servText">
-                <h2><span className="servicetxt1">Servicios especializados </span> <br /> <span className="servicetxt2">eutanasia compasiva</span></h2>
+                <h2><span className="servicetxt1">Servicios especializados </span> <br /> <span className="servicetxt2">eutanasia compasiva</span>
+                </h2>
                 <p className="servicetxt3"> <br /> Sentimos mucho que hayas tenido que llegar hasta aquí... <br />
-                    En Miauyuda proporcionamos servicios de eutanasia para mascotas de todas las edades, asegurando atención médica <br /> apropiada y asequible tanto para cachorros, adultos como para mascotas mayores.</p>
+                    En Miauyuda proporcionamos servicios de eutanasia para mascotas de todas las edades, asegurando atención médica apropiada y asequible tanto para cachorros, adultos como para mascotas mayores.
+                    </p>
             </div>
 
 
             <Row className="services">
-                <Col md={4} className="services-col">
-                    <Card style={{ width: '29rem' }} className="services-card">
+                <Col xs={12} md={6} lg={4} className="services-col">
+                    <Card className="services-card">
                         <Card.Title className="servicesBody">
                             <div>
                                 <img className='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712916369/ellxsb9l72fhj8vb6ydz.png" alt="crossIcon" /></div>
@@ -39,17 +41,23 @@ const EuthanasiaPage = () => {
                         <Card.Body>
                             <Card.Text className="cardservicesText">
                                 <ul>
-                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio de despedida en clínica</li>
-                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Incluye sedación y anestesia </li>
-                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio incluído de incineración</li>
+                                    <li>
+                                        <img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio de despedida en clínica
+                                    </li>
+                                    <li>
+                                        <img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Incluye sedación y anestesia completa
+                                    </li>
+                                    <li>
+                                        <img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Servicio incluído de incineración
+                                    </li>
                                 </ul>
                             </Card.Text>
-                            <Link className="button-plans" to="/professionals">Leer mas</Link>
+                            <Link className="button-services" to="/professionals">Leer más</Link>
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={4} className="services-col">
-                    <Card style={{ width: '29rem' }} className="services-card">
+                <Col xs={12} md={6} lg={4}  className="services-col">
+                    <Card className="services-card">
                         <Card.Title className="servicesBody" >
                             <div>
                                 <img className='crossIcon' src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712916369/ellxsb9l72fhj8vb6ydz.png" alt="crossIcon" /></div>
@@ -61,12 +69,18 @@ const EuthanasiaPage = () => {
                         <Card.Body>
                             <Card.Text className="cardservicesText">
                                 <ul>
-                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Visita a domicilio y valoración</li>
-                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cuidado paliativo previo a la eutanasia</li>
-                                    <li><img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Despedida personalizada en el hogar</li>
+                                    <li>
+                                        <img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Visita a domicilio y valoración
+                                    </li>
+                                    <li>
+                                        <img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Cuidado paliativo previo a la eutanasia
+                                    </li>
+                                    <li>
+                                        <img className="checkIcon" src="https://res.cloudinary.com/dxfey6stw/image/upload/v1712597206/uk1tyxumki37qjjzqged.png" alt="check-image" />  Despedida personalizada en el hogar
+                                    </li>
                                 </ul>
                             </Card.Text>
-                            <Link className="button-services" to="/professionals">Leer mas</Link>
+                            <Link className="button-services" to="/professionals">Leer más</Link>
                         </Card.Body>
 
                     </Card>
@@ -79,12 +93,12 @@ const EuthanasiaPage = () => {
 
             <Row className="psico-row">
 
-                <Col md={2} className='containerPsico'>
+                <Col xs={12} md={6} lg={3}className='containerPsico'>
                     <img className="psico-icon" src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712846539/flb5lblyowirukkpkn13.png' alt="psico-icon" />
                 </Col>
-                <Col md={9}>
-                    <div>
-                        <br />
+                <Col xs={12} md={10} lg={6}>
+                    <div className='psico-text'>
+                        
                         <p>
                             <span className="rowTextPsico">Nunca estás solo en tu camino hacia la </span> <span className="rowTextPsico2">sanación emocional✨</span>
                         </p>

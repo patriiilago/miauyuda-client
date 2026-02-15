@@ -1,4 +1,4 @@
-import { Container, Accordion, Row, Button } from "react-bootstrap"
+import { Container, Accordion, Row} from "react-bootstrap"
 import './QuestionsPage.css'
 
 

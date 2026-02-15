@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap"
 
 function AboutUsPage() {
     return (
-        <div className='AboutUs'>
+        <div className='aboutUs'>
             <div className='presentationAboutUs'>
                 <h1 className='h1AboutUs'><span className="titleAboutUs">Conoce el</span> <span className="titleAboutUs2">proyecto</span></h1>
                 <p className='pAboutUs' >
@@ -21,11 +21,11 @@ function AboutUsPage() {
                 <a href="#turka" className="aboutButton"><strong>Turka</strong> </a>
             </div>
 
-            <Row>
-                <Col md='8' className="oscarDetails">
+            <Row className='aboutUsRow background-green'>
+                <Col className="profileDetails">
                     <section id="oscar" />
                     <span className="detailsTitle">Óscar</span> <span className="detailsTitle2">Gómez</span>
-                    <div>
+                    <div className='text-profile-container'>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='oscarText'>Óscar Gómez Díez es un desarrollador Full Stack con una sólida experiencia previa como fotógrafo de comercio electrónico, lo que le proporciona una valiosa perspectiva sobre la estética en el mundo digital.
                             Sus habilidades técnicas abarcan tecnologías como React, JavaScript, Node.js, MongoDB, Bootstrap, así como herramientas de diseño de la suite Adobe.</p>
@@ -63,24 +63,24 @@ function AboutUsPage() {
                         </p>
                     </div>
                 </Col>
-                <Col md='4' className="oscarDetails">
-                    <img className="oscarImg"
+                <Col className="profileDetailsImage">
+                    <img className="profileImg"
                         src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712766663/jizhd962zxg8di7lnc62.jpg'
                         alt="oscar-photo" />
                 </Col>
             </Row>
 
 
-            <Row>
-                <Col md='6' className="teresaDetails">
+            <Row className='aboutUsRow'>
+                <Col className="profileDetailsImage">
                     <section id="teresa" />
-                    <img className="teresaImg"
+                    <img className="profileImg"
                         src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712766623/ecsk7qvdbup6gdr5qwvi.jpg'
                         alt="teresa-photo" />
                 </Col>
-                <Col md='6' className="teresaDetails">
+                <Col className="profileDetails">
                     <p><span className="detailsTitle">Teresa</span> <span className="detailsTitle2">Arranz</span></p>
-                    <div>
+                    <div className='text-profile-container'>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='tereText'>Teresa es una desarrolladora Full Stack que recientemente completó un bootcamp intensivo en desarrollo web en Ironhack. Antes de su transición al campo de la tecnología, Teresa tenía más de 10 años de experiencia en recursos humanos, donde gestionó todo el proceso laboral para cientos de trabajadores en diferentes sectores y convenios colectivos.</p>
                         <p className='tereText'> La combinación de su experiencia previa en recursos humanos y su reciente formación en desarrollo web le brinda a Teresa una perspectiva única y valiosa en el mundo tecnológico. Está preparada para enfrentar los desafíos del desarrollo web con un enfoque orientado a resolver problemas y agregar valor a través de soluciones innovadoras. Su determinación, habilidades de adaptación y pasión por el aprendizaje continuo la hacen una adición invaluable a cualquier equipo de desarrollo.
@@ -123,11 +123,11 @@ function AboutUsPage() {
             </Row>
 
 
-            <Row>
-                <Col md='8' className="patriDetails">
+            <Row className='aboutUsRow background-green'>
+                <Col className="profileDetails">
                     <section id="patri" />
                     <span className="detailsTitle">Patri</span> <span className="detailsTitle2">Lago</span>
-                    <div>
+                    <div className='text-profile-container'>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='patriText'>Patri Lago es una desarrolladora Full Stack con un trasfondo en el sector de ventas, lo que le brinda una perspectiva única en el mundo del desarrollo web. Su experiencia previa en ventas y gestión de inventario le ha permitido perfeccionar habilidades en resolución de problemas, organización de proyectos y toma de decisiones estratégicas.  </p>
                         <p className='patriText'>La combinación de su experiencia en ventas y su reciente incursión en el desarrollo web la convierten en una adición valiosa a cualquier equipo. Está preparada para enfrentar los desafíos del desarrollo web con un enfoque orientado a la resolución de problemas y la innovación. <br /> Su dedicación, adaptabilidad y curiosidad constante la destacan como un activo fundamental en cualquier proyecto de desarrollo tecnológico.</p>
@@ -164,23 +164,23 @@ function AboutUsPage() {
 
                     </div>
                 </Col>
-                <Col md='4' className="patriDetails">
-                    <img className="patriImg"
+                <Col className="profileDetailsImage">
+                    <img className="profileImg"
                         src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712766905/qihc3jimoscunlwbrmqo.jpg'
                         alt="patri-photo" />
                 </Col>
             </Row>
 
-            <Row >
-                <Col md='6' className="turkaDetails">
-                    <img className="turkaImg"
+            <Row className='aboutUsRow'>
+                <Col className="profileDetailsImage">
+                    <img className="profileImg"
                         src='https://res.cloudinary.com/dxfey6stw/image/upload/v1712766938/kk3738h5w7hzh6p1udj0.jpg'
                         alt="turka-photo" />
                 </Col>
-                <Col md='6' className="turkaDetails">
+                <Col className="profileDetails">
                     <section id="turka" />
-                    <p><span className="turkaTitle">Turka</span> <span className="turkaTitle2">Arranz</span></p>
-                    <div>
+                    <p><span className="detailsTitle">Turka</span> <span className="detailsTitle2">Arranz</span></p>
+                    <div className='text-profile-container'>
                         <h5 className='titlesAbout'>¿Quién es?</h5>
                         <p className='turkaText'>Turka es el motivo principal de este proyecto.
                             Tras 14 años de ronroneos tuvo que irse al arcoíris en diciembre de 2023, no sin antes enseñarnos la necesidad de crear una plataforma para que todas las mascotas del mundo reciban tanto amor como ellos nos regalan cada día.</p>
@@ -198,7 +198,7 @@ function AboutUsPage() {
             </Row>
 
 
-            <Col md='12' className="footerAboutUs">
+            <Col md='12' className="footerAboutUs background-green">
                 <div>
                     <p className='footerAboutUsText'>🖤 Miauyuda® App - Una dosis de amor para nuestros peludos 🖤</p>
                 </div>

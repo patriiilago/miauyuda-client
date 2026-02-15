@@ -53,6 +53,13 @@
     align-items: center;
 }
 
+#generales,
+#perros,
+#gatos,
+#exoticos {
+    scroll-margin-top: 120px;
+}
+
 .questionsH2 {
     align-self: stretch;
     color: var(----clr-accent, #45A443);
@@ -78,6 +85,7 @@
     align-items: center;
     gap: 40px;
     align-self: stretch;
+    margin-bottom: 12vh;
 }
 
 .textHeaderAccordion {
@@ -167,3 +175,4 @@
     border-left: none !important;
     border-right: none !important;
 }
+
