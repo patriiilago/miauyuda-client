@@ -8,7 +8,6 @@ It is a **Single Page Application (SPA)** that connects pets with veterinarians 
 ## ⚠️ Project Status
 Miauyuda was fully functional at the time of completion in 2024.  
 Currently, some features may not work due to updates in dependencies and hosting platforms.  
-**I plan to revisit and update the project in the coming weeks to restore full functionality.**
 
 ---
 
