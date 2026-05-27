@@ -55,5 +55,5 @@ Currently, some features may not work due to updates in dependencies and hosting
 
 ## Deployment
 
-**Client:** [https://miauyuda.netlify.app/](https://miauyuda.netlify.app/)  
+**Client:** [https://miiauyuda.netlify.app/](https://miauyuda.netlify.app/)  
 **Server:** [https://miauyuda.fly.dev/](https://miauyuda.fly.dev/)
